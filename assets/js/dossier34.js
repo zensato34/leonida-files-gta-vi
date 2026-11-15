@@ -79,14 +79,14 @@ async function loadAutoNewsFeed(){
  nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu?.setAttribute('aria-expanded','false');}));
  if('IntersectionObserver' in window){const map=new Map($$('#navlinks a').map(a=>[a.getAttribute('href')?.slice(1),a]));const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){$$('#navlinks a').forEach(a=>a.classList.remove('active'));map.get(e.target.id)?.classList.add('active');}}),{rootMargin:'-25% 0px -65% 0px'});$$('main section[id]').forEach(s=>io.observe(s));}
  const palette=$('#commandPalette'),input=$('#commandInput'),results=$('#commandResults');let focusBack=null,index=[];
- function buildIndex(){index=[];$$('main section[id]').forEach(s=>index.push({title:s.querySelector('h2')?.textContent?.trim()||s.id,group:'Sección',target:s.id,desc:s.querySelector('.section-head p')?.textContent||''}));$$('#newsList .news,#personajes .character-file,#atlas .place,#radios .radio-card').forEach(c=>{const title=c.querySelector('h3,b')?.textContent?.trim();if(title)index.push({title,group:c.classList.contains('news')?'Noticia':c.classList.contains('place')?'Región':c.classList.contains('radio-card')?'Emisora':'Personaje',target:c.id||c.closest('section')?.id,desc:c.innerText.replace(/\s+/g,' ').slice(0,130)});});}
+ function buildIndex(){index=[];$$('main section[id]').forEach(s=>index.push({title:s.querySelector('h2')?.textContent?.trim()||s.id,group:'Sección',target:s.id,desc:s.querySelector('.section-head p')?.textContent||''}));$$('#newsList .news,#personajes .character-file,#atlas .place,#radios .radio-card,#hangar .vehicle-card').forEach(c=>{const title=c.querySelector('h3,b')?.textContent?.trim();if(title)index.push({title,group:c.classList.contains('news')?'Noticia':c.classList.contains('place')?'Región':c.classList.contains('radio-card')?'Emisora':c.classList.contains('vehicle-card')?'Vehículo':c.classList.contains('place')?'Región':'Personaje',target:c.id||c.closest('section')?.id,desc:c.innerText.replace(/\s+/g,' ').slice(0,130)});});}
  function closePalette(){if(!palette)return;palette.hidden=true;document.body.classList.remove('dialog-open');focusBack?.focus?.();}
  function showResults(q=''){if(!results)return;buildIndex();results.replaceChildren();const term=q.trim().toLocaleLowerCase('es');const found=index.filter(x=>(x.title+' '+x.group+' '+x.desc).toLocaleLowerCase('es').includes(term)).slice(0,25);if(!found.length){const p=document.createElement('p');p.className='muted';p.textContent='No hay resultados en el archivo.';results.append(p);return;}found.forEach(x=>{const b=document.createElement('button');b.type='button';b.className='command-result';b.setAttribute('role','option');const span=document.createElement('span');span.textContent=x.title;const small=document.createElement('small');small.textContent=x.group;b.append(span,small);b.addEventListener('click',()=>{closePalette();document.getElementById(x.target)?.scrollIntoView({behavior:reduced?'auto':'smooth'});});results.append(b);});}
  function openPalette(){if(!palette)return;focusBack=document.activeElement;palette.hidden=false;document.body.classList.add('dialog-open');showResults(input?.value||'');setTimeout(()=>input?.focus(),20);}
  $('#openCommand')?.addEventListener('click',openPalette);$('#closeCommand')?.addEventListener('click',closePalette);palette?.addEventListener('click',e=>{if(e.target===palette)closePalette();});input?.addEventListener('input',()=>showResults(input.value));
  const favoriteDialog=$('#favoritesDrawer'),favoriteList=$('#favoritesList'),favoriteCount=$('#favoriteCount');let favorites=json('lf34:favorites',[]);if(!Array.isArray(favorites))favorites=[];
- const candidates=()=>$$('#newsList .news,#personajes .character-file,#radios .radio-card,#atlas .place');
- function keyFor(card){if(card.dataset.favoriteKey)return card.dataset.favoriteKey;const name=card.querySelector('h3,b')?.textContent?.trim()||'registro';const slug=name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,60);card.dataset.favoriteKey=(card.classList.contains('news')?'news':card.classList.contains('character-file')?'personaje':card.classList.contains('radio-card')?'radio':'region')+':'+slug;return card.dataset.favoriteKey;}
+ const candidates=()=>$('#newsList .news,#personajes .character-file,#radios .radio-card,#atlas .place,#hangar .vehicle-card');
+ function keyFor(card){if(card.dataset.favoriteKey)return card.dataset.favoriteKey;const name=card.querySelector('h3,b')?.textContent?.trim()||'registro';const slug=name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,60);card.dataset.favoriteKey=(card.classList.contains('news')?'news':card.classList.contains('character-file')?'personaje':card.classList.contains('radio-card')?'radio':card.classList.contains('vehicle-card')?'vehiculo':card.classList.contains('place')?'region':'registro')+':'+slug;return card.dataset.favoriteKey;}
  function renderFavorites(){if(!favoriteList)return;favoriteList.replaceChildren();if(favoriteCount)favoriteCount.textContent=String(favorites.length);const empty=$('#favoritesEmpty');if(empty)empty.hidden=!!favorites.length;favorites.forEach(f=>{const row=document.createElement('div');row.className='favorite-row';const a=document.createElement('a');a.href='#'+f.target;a.textContent=f.title;a.addEventListener('click',closeFavorites);const del=document.createElement('button');del.type='button';del.textContent='Quitar';del.addEventListener('click',()=>{favorites=favorites.filter(x=>x.key!==f.key);persist();syncFavorites();renderFavorites();});row.append(a,del);favoriteList.append(row);});}
  function persist(){write('lf34:favorites',JSON.stringify(favorites));}
  function syncFavorites(){candidates().forEach(card=>{const key=keyFor(card);let b=card.querySelector(':scope > .favorite-toggle');if(!b){b=document.createElement('button');b.type='button';b.className='favorite-toggle';b.addEventListener('click',()=>toggle(card));card.append(b);}const active=favorites.some(x=>x.key===key);b.textContent=active?'★ Guardado':'☆ Guardar';b.setAttribute('aria-pressed',String(active));b.setAttribute('aria-label',(active?'Quitar de favoritos: ':'Guardar en favoritos: ')+(card.querySelector('h3,b')?.textContent?.trim()||'elemento'));});}
@@ -114,7 +114,8 @@ async function loadAutoNewsFeed(){
   else if(e.key==='Escape'){if(palette&&!palette.hidden)closePalette();if(favoriteDialog&&!favoriteDialog.hidden)closeFavorites();}
   else if(e.key==='Enter'&&palette&&!palette.hidden)results?.querySelector('button')?.click();
  });
- $$('#atlas [data-region-filter]').forEach(b=>b.addEventListener('click',()=>{$$('#atlas [data-region-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$$('#atlas .places-grid .place').forEach(c=>c.classList.toggle('hidden',b.dataset.regionFilter!=='all'&&c.querySelector('b')?.textContent?.trim()!==b.dataset.regionFilter));}));
+ $('#atlas [data-region-filter]').forEach(b=>b.addEventListener('click',()=>{$('#atlas [data-region-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));activeRegion=b.dataset.regionFilter||'all';filterRegionCards();}));
+ $('#hangar [data-vehicle-filter]').forEach(b=>b.addEventListener('click',()=>{$('#hangar [data-vehicle-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));activeVehicle=b.dataset.vehicleFilter||'all';filterVehicleCards();}));
  $$('#evidencias [data-evidence-filter]').forEach(b=>b.addEventListener('click',()=>{$$('#evidencias [data-evidence-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const f=$('#newsFilter');if(f){f.value=b.dataset.evidenceFilter;f.dispatchEvent(new Event('change',{bubbles:true}));}$('#noticias')?.scrollIntoView({behavior:reduced?'auto':'smooth'});}));
  const months={ENE:0,ENERO:0,FEB:1,FEBRERO:1,MAR:2,MARZO:2,ABR:3,ABRIL:3,MAY:4,MAYO:4,JUN:5,JUNIO:5,JUL:6,JULIO:6,AGO:7,AGOSTO:7,SEP:8,SEPT:8,SEPTIEMBRE:8,OCT:9,OCTUBRE:9,NOV:10,NOVIEMBRE:10,DIC:11,DICIEMBRE:11};
  function parseNewsDate(card){const iso=Date.parse(card.dataset.publishedAt||'');if(Number.isFinite(iso))return iso;const label=card.querySelector('time')?.textContent?.trim().toUpperCase()||'';const m=label.match(/(\d{1,2})\s+([A-ZÁÉÍÓÚ]+)\s+(\d{4})/);if(!m||months[m[2]]===undefined)return 0;return new Date(Number(m[3]),months[m[2]],Number(m[1])).getTime();}
@@ -224,15 +225,51 @@ async function loadAutoNewsFeed(){
   });
   grid.replaceChildren(fragment);
  }
- function renderRegions(records){
-  const grid=byId('atlas')?.querySelector('.places-grid');if(!grid)return;
+ function renderRegions(records,characters=[]){
+  const grid=byId('regionCards');if(!grid)return;
+  const names=new Map(characters.map(person=>[person.id,person.name]));
   const fragment=document.createDocumentFragment();
   records.forEach(region=>{
-   const card=node('div','place');card.dataset.entityType='region';card.dataset.entityId=region.id;
-   card.append(node('b',null,region.name),node('span',null,region.description));fragment.append(card);
+   const card=node('article','place region-card');card.id=region.id;
+   card.dataset.entityType='region';card.dataset.entityId=region.id;
+   card.dataset.regionName=region.name;card.dataset.regionType=region.region_type||'';
+   const visual=node('div','region-image'),img=node('img');
+   img.loading='lazy';img.decoding='async';img.src=region.image_url;img.alt=region.image_alt||('Captura oficial de '+region.name);
+   visual.append(img,node('span','region-frame-code','LEONIDA FILES / REGIONAL EVIDENCE'));
+   const body=node('div','region-content');
+   body.append(node('span','eyebrow',region.region_type_label||'REGIÓN'),node('b',null,region.name),node('span',null,region.description));
+   const meta=node('div','region-meta');
+   meta.append(node('span',null,String(region.gallery_count||0)+' capturas en la colección oficial'),node('span',null,region.gallery_label||'Galería Rockstar'));
+   body.append(meta);
+   const gallery=safeLink(region.gallery_url,'Abrir galería oficial ↗','source');
+   if(gallery)body.append(gallery);
+   if(Array.isArray(region.related_character_ids)&&region.related_character_ids.length){
+    const related=node('div','region-related');related.append(node('small',null,'EXPEDIENTES RELACIONADOS'));
+    region.related_character_ids.forEach(id=>{
+     const link=node('a',null,names.get(id)||id);link.href='#'+id;related.append(link);
+    });
+    body.append(related);
+   }
+   card.append(visual,body);fragment.append(card);
   });
   grid.replaceChildren(fragment);
+  filterRegionCards();
+  syncFavorites();
  }
+ let activeRegion='all';
+ function filterRegionCards(){
+  const grid=byId('regionCards');if(!grid)return;
+  const query=(byId('regionSearch')?.value||'').trim().toLocaleLowerCase('es');
+  let visible=0;
+  grid.querySelectorAll('.region-card').forEach(card=>{
+   const matchesRegion=activeRegion==='all'||card.dataset.entityId===activeRegion;
+   const matchesQuery=!query||card.textContent.toLocaleLowerCase('es').includes(query);
+   const show=matchesRegion&&matchesQuery;
+   card.classList.toggle('hidden',!show);if(show)visible++;
+  });
+  const count=byId('regionCount');if(count)count.textContent=visible+' / '+grid.querySelectorAll('.region-card').length+' REGIONES';
+ }
+ byId('regionSearch')?.addEventListener('input',filterRegionCards);
  function renderRadios(records){
   const grid=byId('radios')?.querySelector('.grid.three');if(!grid)return;
   const fragment=document.createDocumentFragment();
@@ -278,10 +315,49 @@ async function loadAutoNewsFeed(){
   });
  }
  function renderVehicleStatus(records){
-  const target=byId('hangarCatalogState');if(!target)return;
-  target.replaceChildren(node('strong',null,records.length+' fichas documentadas'));
-  target.append(node('span',null,records.length?'El catálogo se alimenta de identificaciones con evidencia.':'Catálogo preparado; todavía no se publican fichas de vehículos sin identificación verificable.'));
+  const target=byId('hangarCatalogState');if(target){
+   target.replaceChildren(node('strong',null,records.length+' FICHAS OFICIALES DESTACADAS'));
+   target.append(node('span',null,'Selección de nombres publicados por Rockstar; no representa el total de vehículos de GTA VI.'));
+  }
+  const grid=byId('vehicleCatalog');if(!grid)return;
+  const fragment=document.createDocumentFragment();
+  records.forEach(vehicle=>{
+   const card=node('article','hangar-card vehicle-card');card.id=vehicle.id;
+   card.dataset.entityType='vehicle';card.dataset.entityId=vehicle.id;
+   card.dataset.vehicleCategory=vehicle.category||'other';
+   const visual=node('div','vehicle-image'),img=node('img');
+   img.loading='lazy';img.decoding='async';img.src=vehicle.image_url;img.alt=vehicle.image_alt||('Imagen oficial de '+vehicle.name);
+   visual.append(img,node('span','vehicle-index-stamp','HANGAR 34 / OFFICIAL REFERENCE'));
+   const body=node('div','vehicle-body'),meta=node('div','vehicle-meta');
+   meta.append(node('span','vehicle-category',vehicle.category_label||'Transporte'));
+   meta.append(node('span','vehicle-evidence',vehicle.evidence_label||'Referencia oficial'));
+   body.append(meta,node('h3',null,vehicle.name),node('p','vehicle-maker',vehicle.manufacturer||'Fabricante no especificado'),node('p',null,vehicle.description));
+   body.append(node('div','vehicle-edition',vehicle.edition_context||'Contexto oficial no especificado'));
+   const gallery=safeLink(vehicle.gallery_url,'Ver imagen y galería oficial ↗','source');if(gallery)body.append(gallery);
+   const sources=node('div','vehicle-sources');
+   (vehicle.source_ids||[]).forEach(id=>{const source=sourceMapForVehicle.get(id);if(source){const link=safeLink(source.url,source.domain,'vehicle-source-link');if(link)sources.append(link);}});
+   if(sources.childNodes.length)body.append(sources);
+   card.append(visual,body);fragment.append(card);
+  });
+  grid.replaceChildren(fragment);
+  filterVehicleCards();
+  syncFavorites();
  }
+ let activeVehicle='all';
+ const sourceMapForVehicle=new Map();
+ function filterVehicleCards(){
+  const grid=byId('vehicleCatalog');if(!grid)return;
+  const query=(byId('vehicleSearch')?.value||'').trim().toLocaleLowerCase('es');
+  let visible=0;
+  grid.querySelectorAll('.vehicle-card').forEach(card=>{
+   const matchesType=activeVehicle==='all'||card.dataset.vehicleCategory===activeVehicle;
+   const matchesQuery=!query||card.textContent.toLocaleLowerCase('es').includes(query);
+   const show=matchesType&&matchesQuery;
+   card.classList.toggle('hidden',!show);if(show)visible++;
+  });
+  const count=byId('vehicleCount');if(count)count.textContent=visible+' / '+grid.querySelectorAll('.vehicle-card').length+' REGISTROS';
+ }
+ byId('vehicleSearch')?.addEventListener('input',filterVehicleCards);
  async function loadStructuredCatalogs(){
   const status=byId('catalogStatus');
   const names=['sources.json','news.json','characters.json','regions.json','radios.json','songs.json','vehicles.json'];
@@ -292,9 +368,10 @@ async function loadAutoNewsFeed(){
    return;
   }
   const sources=new Map(data.sources.items.map(item=>[item.id,item]));
+  sourceMapForVehicle.clear();data.sources.items.forEach(item=>sourceMapForVehicle.set(item.id,item));
   if(data.news)renderNews(data.news.items,sources);
   if(data.characters)renderCharacters(data.characters.items,sources);
-  if(data.regions)renderRegions(data.regions.items);
+  if(data.regions)renderRegions(data.regions.items,data.characters?.items||[]);
   if(data.radios)renderRadios(data.radios.items);
   if(data.songs)renderSongs(data.songs.items);
   if(data.vehicles)renderVehicleStatus(data.vehicles.items);
@@ -303,7 +380,7 @@ async function loadAutoNewsFeed(){
    status.replaceChildren(node('strong',null,'CATÁLOGOS CONECTADOS'),document.createTextNode(' · '+
     (data.news?.items.length||0)+' noticias · '+(data.characters?.items.length||0)+' expedientes · '+
     (data.regions?.items.length||0)+' regiones · '+(data.radios?.items.length||0)+' emisoras · '+
-    (data.songs?.items.length||0)+' pistas · '+data.sources.items.length+' fuentes'));
+    (data.songs?.items.length||0)+' pistas · '+(data.vehicles?.items.length||0)+' vehículos · '+data.sources.items.length+' fuentes'));
   }
   window.dispatchEvent(new Event('catalog:updated'));
  }
