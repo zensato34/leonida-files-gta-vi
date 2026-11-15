@@ -31,13 +31,13 @@ class EditorialCatalogTests(unittest.TestCase):
         for label, records in (
             ("sources", self.sources), ("news", self.news),
             ("characters", self.characters), ("regions", self.regions),
-            ("radios", self.radios), ("songs", self.songs),
+            ("radios", self.radios), ("songs", self.songs), ("vehicles", self.vehicles),
         ):
             values = [item["id"] for item in records]
             self.assertEqual(len(values), len(set(values)), f"Duplicate IDs in {label}")
 
     def test_all_references_resolve(self):
-        for dataset in (self.news, self.characters, self.regions, self.radios, self.songs):
+        for dataset in (self.news, self.characters, self.regions, self.radios, self.songs, self.vehicles):
             for record in dataset:
                 for source_id in record.get("source_ids", []):
                     self.assertIn(source_id, self.source_ids, f"{record['id']} -> {source_id}")
