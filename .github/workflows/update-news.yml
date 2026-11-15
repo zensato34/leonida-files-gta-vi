@@ -1,0 +1,33 @@
+name: Actualizar noticias de GTA VI
+
+on:
+  schedule:
+    - cron: '15 12 * * *' # 08:15 America/Santo_Domingo (UTC-4)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recopilar titulares recientes
+        run: python scripts/update_news.py
+      - name: Guardar cambios del feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news-feed.json
+          if git diff --cached --quiet; then
+            echo "No hay cambios en el feed."
+          else
+            git commit -m "Actualizar feed diario de noticias GTA VI"
+            git push
+          fi
