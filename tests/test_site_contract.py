@@ -40,9 +40,14 @@ class SiteContractTests(unittest.TestCase):
         missing = sorted({target for target in self.parser.links if target not in self.parser.ids})
         self.assertEqual([], missing, f"Broken internal anchors: {missing}")
 
-    def test_no_external_runtime_dependencies(self):
-        self.assertEqual([], self.parser.script_sources, "The site must keep inline vanilla JS")
-        self.assertEqual([], self.parser.stylesheet_links, "The site must keep inline CSS")
+    def test_runtime_assets_are_local_and_present(self):
+        assets = self.parser.script_sources + self.parser.stylesheet_links
+        self.assertTrue(self.parser.script_sources, "The local site engine must be linked")
+        self.assertTrue(self.parser.stylesheet_links, "The local stylesheet must be linked")
+        for asset in assets:
+            self.assertFalse(asset.startswith(("http://", "https://", "//")), f"Remote runtime asset: {asset}")
+            self.assertFalse(".." in asset.split("/"), f"Path traversal in asset: {asset}")
+            self.assertTrue((ROOT / asset).is_file(), f"Missing local runtime asset: {asset}")
 
     def test_reduced_motion_and_keyboard_accessibility_are_present(self):
         self.assertRegex(HTML, r"@media\s*\(prefers-reduced-motion:\s*reduce\)")
