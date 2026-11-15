@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "dataset": "radios",
+  "reviewed_at": "2026-11-15",
+  "description": "Estaciones y perfiles de radio con recursos alojados por Rockstar.",
+  "items": [
+    {
+      "id": "cocoteo-fm",
+      "name": "Cocoteo FM",
+      "hosts": "El Martillo · La Gata",
+      "description": "Latino moderno: bachata, merengue, dembow y reguetón. “El party que nunca se apaga”.",
+      "logo_url": "https://www.rockstargames.com/VI/_next/static/media/cocoteo-logo.0f_q~~9u45zf5.png?akim=1&imdensity=1&imwidth=400",
+      "logo_alt": "Logo oficial de Cocoteo FM, Rockstar Games",
+      "background_url": "https://www.rockstargames.com/VI/_next/static/media/cocoteo-background.0~6dq9w0~ac7f.jpg?akim=1&imdensity=1&imwidth=900",
+      "status": "official_station_profile",
+      "source_ids": [
+        "src-018",
+        "src-027"
+      ]
+    },
+    {
+      "id": "back-country-radio",
+      "name": "Back Country Radio",
+      "hosts": "MW · Delta Dawne",
+      "description": "Country renegado para los pantanos y los airboats; incluye reporteros y personajes recurrentes del aire.",
+      "logo_url": "https://www.rockstargames.com/VI/_next/static/media/country-logo.0_u9b8toxgaqe.png?akim=1&imdensity=1&imwidth=400",
+      "logo_alt": "Logo oficial de Back Country Radio, Rockstar Games",
+      "background_url": "https://www.rockstargames.com/VI/_next/static/media/country-background.0dgx5dx.44v.x.jpg?akim=1&imdensity=1&imwidth=900",
+      "status": "official_station_profile",
+      "source_ids": [
+        "src-018",
+        "src-027"
+      ]
+    },
+    {
+      "id": "afrobank-fm",
+      "name": "AfroBank FM",
+      "hosts": "Burna · Palmsy",
+      "description": "Clásicos africanos, joyas por descubrir, amapiano, 3-step y sonidos contemporáneos.",
+      "logo_url": "https://www.rockstargames.com/VI/_next/static/media/afrobank-logo.0r-.t_v9b~9l_.png?akim=1&imdensity=1&imwidth=400",
+      "logo_alt": "Logo oficial de AfroBank FM, Rockstar Games",
+      "background_url": "https://www.rockstargames.com/VI/_next/static/media/afrobank-background.140-_kytq55lt.jpg?akim=1&imdensity=1&imwidth=900",
+      "status": "official_station_profile",
+      "source_ids": [
+        "src-018",
+        "src-027"
+      ]
+    },
+    {
+      "id": "the-chamber-106-6",
+      "name": "The Chamber 106.6",
+      "hosts": "DJ Kerry · DJ Tom",
+      "description": "Metal y décadas de himnos del género; Rockstar la define como la estación más contundente de Leonida.",
+      "logo_url": "https://www.rockstargames.com/VI/_next/static/media/chamber-logo.039x21cy5jsiv.png?akim=1&imdensity=1&imwidth=400",
+      "logo_alt": "Logo oficial de The Chamber 106.6, Rockstar Games",
+      "background_url": "https://www.rockstargames.com/VI/_next/static/media/chamber-background.0bdn5.jnvwos2.jpg?akim=1&imdensity=1&imwidth=900",
+      "status": "official_station_profile",
+      "source_ids": [
+        "src-018",
+        "src-027"
+      ]
+    },
+    {
+      "id": "flash-fm",
+      "name": "Flash FM",
+      "hosts": "Robyn · Alex",
+      "description": "La institución pop de Vice City: música pop, ritmos pegadizos y ambiente de fiesta.",
+      "logo_url": "https://www.rockstargames.com/VI/_next/static/media/flash-logo.04o~oki.8dgm0.png?akim=1&imdensity=1&imwidth=400",
+      "logo_alt": "Logo oficial de Flash FM, Rockstar Games",
+      "background_url": "https://www.rockstargames.com/VI/_next/static/media/flash-background.0tc3kakjq4vi6.jpg?akim=1&imdensity=1&imwidth=900",
+      "status": "official_station_profile",
+      "source_ids": [
+        "src-018",
+        "src-027"
+      ]
+    },
+    {
+      "id": "dirty-south-classics",
+      "name": "Dirty South Classics",
+      "hosts": "Trick · Trina",
+      "description": "Rap regional del sur y clásicos del hip-hop, con hospitalidad sureña y sabor local.",
+      "logo_url": "https://www.rockstargames.com/VI/_next/static/media/dirty-south-logo.0oparlmygi1zd.png?akim=1&imdensity=1&imwidth=400",
+      "logo_alt": "Logo oficial de Dirty South Classics, Rockstar Games",
+      "background_url": "https://www.rockstargames.com/VI/_next/static/media/dirty-south-background.05~e07omgorbi.jpg?akim=1&imdensity=1&imwidth=900",
+      "status": "official_station_profile",
+      "source_ids": [
+        "src-018",
+        "src-027"
+      ]
+    }
+  ]
+}
