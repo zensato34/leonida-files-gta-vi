@@ -1,0 +1,35 @@
+name: Importar paquete completo de LEONIDA FILES
+
+on:
+  push:
+    paths:
+      - 'LEONIDA_FILES_zentato34.zip'
+
+permissions:
+  contents: write
+
+jobs:
+  import-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Extraer el sitio
+        run: |
+          test -f LEONIDA_FILES_zentato34.zip
+          mkdir -p /tmp/leonida-files
+          unzip -q LEONIDA_FILES_zentato34.zip -d /tmp/leonida-files
+          test -f /tmp/leonida-files/vice_city_files_zentato34/index.html
+          cp -a /tmp/leonida-files/vice_city_files_zentato34/. .
+          rm -f LEONIDA_FILES_zentato34.zip
+      - name: Guardar el sitio en main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No hay cambios que guardar."
+          else
+            git commit -m "Publicar sitio LEONIDA FILES completo"
+            git push
+          fi
