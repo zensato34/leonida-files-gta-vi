@@ -49,6 +49,8 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn('aria-label="Abrir búsqueda global"', HTML)
         self.assertIn('aria-modal="true"', HTML)
         self.assertIn("Escape", HTML)
+        self.assertIn("trapTab", HTML)
+        self.assertIn("if(e.key==='Tab')", HTML)
 
     def test_auto_feed_remains_pending_and_text_only(self):
         self.assertIn("Pendiente de verificación", HTML)
