@@ -1,6 +1,6 @@
 # LEONIDA FILES — GTA VI por zensato34
 
-Sitio fan-made en español, adaptable a móviles, con animaciones de interfaz, contador en vivo hasta el lanzamiento del 19 de noviembre de 2026, barra de lectura, dossiers separados para Jason, Lucía, Cal, Boobie, Dre’Quan, Bae-Luxe, Roxy, Raul y Brian; sección de figuras relacionadas mencionadas por Rockstar; descripción editorial del proyecto fan y enlaces a recursos oficiales. Las imágenes integradas proceden del CDN oficial de Rockstar; no se generan imágenes con IA.
+Sitio fan-made en español, adaptable a móviles, con identidad cinematográfica de archivo clasificado, Atlas temático no cartográfico, centro de evidencias, cronología editorial, Hangar 34, búsqueda global, favoritos locales y resumen de novedades por visita. Conserva personajes, radios, música, ediciones, tiendas y media oficial de Rockstar. Las imágenes integradas proceden del CDN oficial; no se generan imágenes con IA.
 
 ## Abrir ahora
 
@@ -11,6 +11,27 @@ Abre `index.html` con un navegador moderno. El contador usa la hora local del di
 El sitio ya está publicado en GitHub Pages: **https://zensato34.github.io/leonida-files-gta-vi/**. El repositorio público es `zensato34/leonida-files-gta-vi`, en la rama `main`, carpeta `/ (root)`. GitHub Pages está configurado con **Deploy from a branch**.
 
 Para actualizarlo, realiza los cambios en `main`; GitHub Pages inicia una nueva publicación automáticamente. El workflow de noticias dispone de permisos de escritura sobre el contenido del repositorio y se ejecuta cada día a las 08:15 de República Dominicana (12:15 UTC).
+
+
+## Interfaz Dossier 34
+
+- **Búsqueda global:** usa el botón «Buscar archivo» o `Ctrl/⌘ + K`; también puedes abrirla con `/` cuando no estés escribiendo.
+- **Mi archivo:** guarda noticias, personajes, emisoras y regiones en favoritos locales del navegador. No requiere cuenta ni envía datos a un servidor.
+- **Atlas de Leonida:** índice temático de las regiones nombradas en el portal. No es un mapa oficial ni atribuye coordenadas o distancias.
+- **Evidence Center:** muestra recuentos y filtros por estado editorial. Los titulares automáticos mantienen el estado «Pendiente de verificación».
+- **Cronología:** ordena las entradas existentes; no inventa hitos ni fechas.
+- **Hangar 34:** estructura preparada para fichas de movilidad, sin inventar modelos, marcas o estadísticas.
+- **Novedades desde tu última visita:** utiliza fechas del feed RSS y almacenamiento local del navegador.
+
+## Pruebas
+
+Ejecuta las pruebas de estructura desde la raíz del repositorio:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+Las pruebas comprueban anchors, IDs, navegación móvil, accesibilidad básica, reducción de movimiento, búsqueda, feed pendiente y ausencia de dependencias runtime externas.
 
 ## Qué automatiza y qué no
 
