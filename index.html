@@ -347,7 +347,6 @@ fetch('./data/news-feed.json').then(r=>r.ok?r.json():null).then(data=>{
  refresh();window.addEventListener('newsfeed:updated',refresh);window.addEventListener('pagehide',()=>write('lf34:lastVisit',String(Date.now())));
  if(!reduced&&matchMedia('(hover:hover) and (pointer:fine)').matches){const hero=$('.hero');hero?.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--pointer-x',(((e.clientX-r.left)/r.width-.5)*8).toFixed(2)+'px');hero.style.setProperty('--pointer-y',(((e.clientY-r.top)/r.height-.5)*6).toFixed(2)+'px');},{passive:true});}
 })();
-);
 
 </script>
 </body></html>
