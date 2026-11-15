@@ -3,7 +3,7 @@ name: Importar paquete completo de LEONIDA FILES
 on:
   push:
     paths:
-      - 'LEONIDA_FILES_zentato34.zip'
+      - 'IMPORT_LEONIDA_NOW'
 
 permissions:
   contents: write
@@ -14,14 +14,17 @@ jobs:
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
-      - name: Extraer el sitio
+      - name: Reconstruir y extraer el sitio
         run: |
-          test -f LEONIDA_FILES_zentato34.zip
+          test -f IMPORT_LEONIDA_NOW
+          test -d import-parts
+          cat import-parts/part-*.txt | base64 -d > /tmp/LEONIDA_FILES_zentato34.zip
+          unzip -tq /tmp/LEONIDA_FILES_zentato34.zip
           mkdir -p /tmp/leonida-files
-          unzip -q LEONIDA_FILES_zentato34.zip -d /tmp/leonida-files
+          unzip -q /tmp/LEONIDA_FILES_zentato34.zip -d /tmp/leonida-files
           test -f /tmp/leonida-files/vice_city_files_zentato34/index.html
           cp -a /tmp/leonida-files/vice_city_files_zentato34/. .
-          rm -f LEONIDA_FILES_zentato34.zip
+          rm -rf import-parts IMPORT_LEONIDA_NOW
       - name: Guardar el sitio en main
         run: |
           git config user.name "github-actions[bot]"
