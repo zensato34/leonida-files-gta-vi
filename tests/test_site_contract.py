@@ -33,7 +33,7 @@ class SiteContractTests(unittest.TestCase):
         cls.parser.feed(HTML)
 
     def test_new_dossier_modules_and_controls_exist(self):
-        required = {"atlas", "evidencias", "cronologia", "hangar", "regionSearch", "regionCards", "vehicleSearch", "vehicleCatalog", "commandPalette", "commandInput", "openCommand", "favoritesDrawer", "sinceLastVisit", "bootScreen"}
+        required = {"atlas", "evidencias", "cronologia", "hangar", "regionSearch", "regionCards", "regionCount", "vehicleSearch", "vehicleCatalog", "vehicleCount", "commandPalette", "commandInput", "openCommand", "favoritesDrawer", "sinceLastVisit", "bootScreen"}
         self.assertTrue(required.issubset(self.parser.ids), f"Missing IDs: {sorted(required - self.parser.ids)}")
 
     def test_internal_navigation_links_resolve(self):
