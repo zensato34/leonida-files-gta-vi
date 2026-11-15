@@ -59,7 +59,7 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("Proyecto fan-made, independiente y no oficial", HTML)
         self.assertIn("zensato34", HTML)
         self.assertIn("no se han creado imágenes con IA", HTML)
-        self.assertRegex(HTML, r"https://www\\.rockstargames\\.com/VI/_next/static/media/")
+        self.assertRegex(HTML, r"https://www\.rockstargames\.com/VI/_next/static/media/")
 
     def test_no_duplicate_dom_ids(self):
         duplicates = sorted({x for x in self.parser.id_values if self.parser.id_values.count(x) > 1})
