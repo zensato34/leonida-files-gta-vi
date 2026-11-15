@@ -1,0 +1,42 @@
+name: Validar LEONIDA FILES — Dossier 34
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'tests/**'
+      - '.github/workflows/test-dossier34.yml'
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  site-contract:
+    name: Pruebas de estructura y JavaScript
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ejecutar pruebas de contrato
+        run: python -m unittest discover -s tests -v
+      - name: Comprobar sintaxis JavaScript inline
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          html = Path("index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script(?:\\s[^>]*)?>(.*?)</script>", html, re.S | re.I)
+          if not scripts:
+              raise SystemExit("No se encontró el JavaScript inline del sitio")
+          for index, source in enumerate(scripts):
+              Path(f"/tmp/dossier34-{index}.js").write_text(source, encoding="utf-8")
+          PY
+          for script in /tmp/dossier34-*.js; do
+            node --check "$script"
+          done
