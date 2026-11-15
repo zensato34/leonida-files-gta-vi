@@ -40,14 +40,14 @@ def fetch_feed(query: str) -> list[dict]:
         title = (item.findtext("title") or "").strip()
         link = (item.findtext("link") or "").strip()
         description = re.sub(r"<[^>]+>", " ", item.findtext("description") or "")
-        description = re.sub(r"\\s+", " ", description).strip()
+        description = re.sub(r"\s+", " ", description).strip()
         pub = item.findtext("pubDate") or ""
         source_el = item.find("source")
         source = (source_el.text or "Google News") if source_el is not None else "Google News"
         if not title or not link:
             continue
         # Avoid cross-topic and unrelated GTA hits.
-        if not re.search(r"\\b(GTA\\s*VI|GTA\\s*6|Grand Theft Auto VI)\\b", title, re.I):
+        if not re.search(r"\b(GTA\s*VI|GTA\s*6|Grand Theft Auto VI)\b", title, re.I):
             continue
         try:
             dt = parsedate_to_datetime(pub).astimezone(timezone.utc).isoformat()
