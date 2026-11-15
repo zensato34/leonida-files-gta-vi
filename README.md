@@ -6,14 +6,11 @@ Sitio fan-made en español, adaptable a móviles, con animaciones de interfaz, c
 
 Abre `index.html` con un navegador moderno. El contador usa la hora local del dispositivo y llega a las 00:00 del 19/11/2026; Rockstar Support indica que el juego se desbloquea a medianoche local en todas las regiones. Las animaciones respetan `prefers-reduced-motion`. Para que funcione el feed JSON al abrirlo localmente, ejecútalo con un servidor estático (por ejemplo, `python -m http.server 8000`) y visita `http://localhost:8000`.
 
-## Publicarlo gratis con GitHub Pages
+## Publicación actual
 
-1. Crea un repositorio público nuevo en GitHub, por ejemplo `leonida-files-gta-vi`.
-2. Sube **todo el contenido** de esta carpeta a la rama principal (`main`).
-3. En el repositorio, abre **Settings → Pages** y selecciona **Deploy from a branch**, rama `main`, carpeta `/ (root)`.
-4. En **Settings → Actions → General**, permite que los workflows tengan permiso de lectura y escritura del contenido del repositorio.
-5. En **Actions**, habilita los workflows si GitHub lo solicita. El workflow `Actualizar noticias de GTA VI` se ejecuta cada día a las 08:15 de República Dominicana (12:15 UTC) y también puede iniciarse manualmente.
-6. GitHub Pages publicará la página en una URL del tipo `https://TU-USUARIO.github.io/leonida-files-gta-vi/`.
+El sitio ya está publicado en GitHub Pages: **https://zensato34.github.io/leonida-files-gta-vi/**. El repositorio público es `zensato34/leonida-files-gta-vi`, en la rama `main`, carpeta `/ (root)`. GitHub Pages está configurado con **Deploy from a branch**.
+
+Para actualizarlo, realiza los cambios en `main`; GitHub Pages inicia una nueva publicación automáticamente. El workflow de noticias dispone de permisos de escritura sobre el contenido del repositorio y se ejecuta cada día a las 08:15 de República Dominicana (12:15 UTC).
 
 ## Qué automatiza y qué no
 
@@ -21,7 +18,7 @@ Abre `index.html` con un navegador moderno. El contador usa la hora local del di
 
 **Límite editorial deliberado:** las entradas nuevas aparecen como **Pendiente de verificación**. El recolector RSS no tiene capacidad para decidir por sí solo si una filtración es cierta. Comprueba cada historia en el Newswire de Rockstar, soporte oficial, PlayStation/Xbox o medios reconocidos antes de cambiarla a confirmada. Las nuevas funciones del juego, cambios de fecha, precios y detalles de ediciones deben contrastarse con la fuente primaria.
 
-La web pública no queda publicada por entregar este ZIP. Para tener una URL pública debes crear/conectar tu propio repositorio y activar GitHub Pages siguiendo los pasos anteriores.
+La publicación pública ya está activa. Este ZIP es una copia de respaldo del proyecto que también puedes usar para desplegarlo en otro alojamiento.
 
 ## Personajes y tratamiento del canon
 
