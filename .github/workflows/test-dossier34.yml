@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - 'index.html'
+      - 'assets/**'
+      - 'data/**'
+      - 'scripts/**'
       - 'tests/**'
       - '.github/workflows/test-dossier34.yml'
   push:
@@ -14,7 +17,7 @@ permissions:
 
 jobs:
   site-contract:
-    name: Pruebas de estructura y JavaScript
+    name: Pruebas editoriales, datos y JavaScript
     runs-on: ubuntu-latest
     steps:
       - name: Descargar repositorio
@@ -23,20 +26,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Ejecutar pruebas de contrato
+      - name: Ejecutar pruebas de contrato y catálogos
         run: python -m unittest discover -s tests -v
-      - name: Comprobar sintaxis JavaScript inline
-        run: |
-          python - <<'PY'
-          import re
-          from pathlib import Path
-          html = Path("index.html").read_text(encoding="utf-8")
-          scripts = re.findall(r"<script>(.*?)</script>", html, re.S | re.I)
-          if not scripts:
-              raise SystemExit("No se encontró el JavaScript inline del sitio")
-          for index, source in enumerate(scripts):
-              Path(f"/tmp/dossier34-{index}.js").write_text(source, encoding="utf-8")
-          PY
-          for script in /tmp/dossier34-*.js; do
-            node --check "$script"
-          done
+      - name: Validar referencias y autoridad de fuentes
+        run: python scripts/validate_catalog.py
+      - name: Comprobar sintaxis del motor local
+        run: node --check assets/js/dossier34.js

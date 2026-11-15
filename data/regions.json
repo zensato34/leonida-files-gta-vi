@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "dataset": "regions",
+  "reviewed_at": "2026-11-15",
+  "description": "Índice de regiones nombradas; no contiene coordenadas ni una cartografía oficial.",
+  "items": [
+    {
+      "id": "vice-city",
+      "name": "Vice City",
+      "description": "Ciudad costera de neón, ocio, barrios y vida nocturna; reinterpretación ficticia de Miami.",
+      "status": "official_named_region",
+      "map_status": "no_official_coordinates_in_this_catalog",
+      "source_ids": [
+        "src-028"
+      ],
+      "related_character_ids": [
+        "boobie-ike",
+        "drequan-priest"
+      ]
+    },
+    {
+      "id": "leonida-keys",
+      "name": "Leonida Keys",
+      "description": "Archipiélago y zona de cayos; ambiente de marinas, embarcaciones y contrabando.",
+      "status": "official_named_region",
+      "map_status": "no_official_coordinates_in_this_catalog",
+      "source_ids": [
+        "src-028"
+      ],
+      "related_character_ids": [
+        "jason-duval",
+        "brian-heder",
+        "cal-hampton"
+      ]
+    },
+    {
+      "id": "grassrivers",
+      "name": "Grassrivers",
+      "description": "Territorio de humedales y pantanos, con aerodeslizadores y vida salvaje.",
+      "status": "official_named_region",
+      "map_status": "no_official_coordinates_in_this_catalog",
+      "source_ids": [
+        "src-028"
+      ],
+      "related_character_ids": []
+    },
+    {
+      "id": "port-gellhorn",
+      "name": "Port Gellhorn",
+      "description": "Área portuaria y costera; se relaciona con el mundo de MW y Delta Dawne.",
+      "status": "official_named_region",
+      "map_status": "no_official_coordinates_in_this_catalog",
+      "source_ids": [
+        "src-028"
+      ],
+      "related_character_ids": []
+    },
+    {
+      "id": "ambrosia",
+      "name": "Ambrosia",
+      "description": "Región interior de Leonida; Rockstar la presenta entre los destinos por descubrir.",
+      "status": "official_named_region",
+      "map_status": "no_official_coordinates_in_this_catalog",
+      "source_ids": [
+        "src-028"
+      ],
+      "related_character_ids": []
+    },
+    {
+      "id": "mount-kalaga-national-park",
+      "name": "Mount Kalaga National Park",
+      "description": "Parque nacional y espacio natural de la región; el detalle completo del mapa no ha sido publicado.",
+      "status": "official_named_region",
+      "map_status": "no_official_coordinates_in_this_catalog",
+      "source_ids": [
+        "src-028"
+      ],
+      "related_character_ids": []
+    }
+  ]
+}

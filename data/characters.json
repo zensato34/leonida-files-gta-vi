@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "dataset": "characters",
+  "reviewed_at": "2026-11-15",
+  "description": "Expedientes de personajes. Bae-Luxe y Roxy conservan la nota de biografía conjunta de Real Dimez.",
+  "items": [
+    {
+      "id": "jason-duval",
+      "name": "Jason Duval",
+      "role": "Protagonista jugable",
+      "summary": "Jason creció rodeado de estafadores y delincuentes. Después de servir en el Ejército —un intento de dejar atrás una adolescencia problemática— terminó en los Leonida Keys trabajando para traficantes locales. Quiere una vida sencilla, pero parece que cada paso lo complica más.",
+      "biography": [
+        "Jason creció rodeado de estafadores y delincuentes. Después de servir en el Ejército —un intento de dejar atrás una adolescencia problemática— terminó en los Leonida Keys trabajando para traficantes locales. Quiere una vida sencilla, pero parece que cada paso lo complica más.",
+        "Su encuentro con Lucía puede convertirse en lo mejor o lo peor que le haya ocurrido. Rockstar lo presenta como alguien que desea una vida tranquila, aunque está metido en un entorno criminal que no se lo pondrá fácil."
+      ],
+      "facts": [
+        "Pasado militar y adolescencia difícil.",
+        "Trabaja para narcotraficantes de los Keys.",
+        "Su relación con Lucía está en el centro de la historia."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Jason_Lucia_Lock_And_Load_landscape.0l9s5w7ih9p~3.jpg?akim=1&imdensity=1&imwidth=900",
+      "image_alt": "Jason Duval en imagen oficial de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "individual_profile",
+      "shared_group": null,
+      "individual_bio_available": true,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": [
+        {
+          "target_id": "lucia-caminos",
+          "relationship": "Dúo protagonista"
+        },
+        {
+          "target_id": "cal-hampton",
+          "relationship": "Amigo"
+        },
+        {
+          "target_id": "brian-heder",
+          "relationship": "Asociado"
+        }
+      ]
+    },
+    {
+      "id": "lucia-caminos",
+      "name": "Lucía Caminos",
+      "role": "Protagonista jugable",
+      "summary": "Su padre le enseñó a pelear desde que era muy pequeña. Una lucha por su familia terminó llevándola a la Penitenciaría de Leonida; salió de allí por pura suerte y ahora quiere tomar decisiones más calculadas.",
+      "biography": [
+        "Su padre le enseñó a pelear desde que era muy pequeña. Una lucha por su familia terminó llevándola a la Penitenciaría de Leonida; salió de allí por pura suerte y ahora quiere tomar decisiones más calculadas.",
+        "Lucía persigue la buena vida que su madre soñaba desde los días en Liberty City. Ya no quiere depender de fantasías ni esperar a que las cosas cambien: está decidida a tomar el control de su propio destino, y ve en Jason una posible salida."
+      ],
+      "facts": [
+        "Acaba de salir de prisión.",
+        "Su familia y el sueño de su madre motivan sus ambiciones.",
+        "Su vínculo con Jason puede ser una oportunidad o un riesgo."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Jason_Lucia_Rooftop_landscape.0c6p5do~-8~7..jpg?akim=1&imdensity=1&imwidth=900",
+      "image_alt": "Lucía Caminos en imagen oficial de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "individual_profile",
+      "shared_group": null,
+      "individual_bio_available": true,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": [
+        {
+          "target_id": "jason-duval",
+          "relationship": "Dúo protagonista"
+        }
+      ]
+    },
+    {
+      "id": "cal-hampton",
+      "name": "Cal Hampton",
+      "role": "Amigo de Jason · Asociado de Brian",
+      "summary": "Cal es amigo de Jason y trabaja en el mismo círculo de Brian. Se siente mucho más cómodo en casa que en la calle, donde pasa el tiempo interceptando comunicaciones de la Guardia Costera, acompañado de cerveza y de sus pestañas privadas del navegador.",
+      "biography": [
+        "Cal es amigo de Jason y trabaja en el mismo círculo de Brian. Se siente mucho más cómodo en casa que en la calle, donde pasa el tiempo interceptando comunicaciones de la Guardia Costera, acompañado de cerveza y de sus pestañas privadas del navegador.",
+        "Rockstar lo describe como un paranoico casual que cree que muchas teorías de internet podrían ser ciertas. Mientras Cal observa el mundo desde casa, Jason tiene planes mucho más grandes."
+      ],
+      "facts": [
+        "Relacionado con Jason y Brian.",
+        "Espía comunicaciones de la Guardia Costera.",
+        "Su personalidad está marcada por la desconfianza y las conspiraciones."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Cal_Hampton_landscape.17k7bnt3myg.2.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Cal Hampton, arte oficial de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "individual_profile",
+      "shared_group": null,
+      "individual_bio_available": true,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": [
+        {
+          "target_id": "jason-duval",
+          "relationship": "Amigo"
+        },
+        {
+          "target_id": "brian-heder",
+          "relationship": "Asociado"
+        }
+      ]
+    },
+    {
+      "id": "boobie-ike",
+      "name": "Boobie Ike",
+      "role": "Empresario · Figura de Vice City",
+      "summary": "Boobie es una leyenda local de Vice City. Consiguió transformar su pasado callejero en un imperio que combina bienes raíces, un club de striptease y un estudio de grabación. Suele mostrarse sonriente, pero cuando se habla de negocios cambia el tono.",
+      "biography": [
+        "Boobie es una leyenda local de Vice City. Consiguió transformar su pasado callejero en un imperio que combina bienes raíces, un club de striptease y un estudio de grabación. Suele mostrarse sonriente, pero cuando se habla de negocios cambia el tono.",
+        "Aunque parece pensar primero en sí mismo, Rockstar señala que una de sus apuestas más importantes es su sociedad con Dre’Quan Priest en Only Raw Records. Ambos necesitan encontrar un éxito musical que impulse el sello."
+      ],
+      "facts": [
+        "Su negocio mezcla propiedades, entretenimiento y música.",
+        "Socio de Dre’Quan en Only Raw Records.",
+        "Su pasado está ligado a las calles de Vice City."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Boobie_Ike_landscape.0ldnbn87k-8mq.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Boobie Ike, arte oficial de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "individual_profile",
+      "shared_group": null,
+      "individual_bio_available": true,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": [
+        {
+          "target_id": "drequan-priest",
+          "relationship": "Socio empresarial"
+        }
+      ]
+    },
+    {
+      "id": "drequan-priest",
+      "name": "Dre’Quan Priest",
+      "role": "Productor · Sello discográfico",
+      "summary": "Dre’Quan siempre fue más buscavidas que gánster. Aunque llegó a vender en la calle para mantenerse, su verdadera meta era abrirse camino en la música. Comenzó reservando artistas para el club de Boobie, utilizando el talento del local como una forma de detectar futuros éxitos.",
+      "biography": [
+        "Dre’Quan siempre fue más buscavidas que gánster. Aunque llegó a vender en la calle para mantenerse, su verdadera meta era abrirse camino en la música. Comenzó reservando artistas para el club de Boobie, utilizando el talento del local como una forma de detectar futuros éxitos.",
+        "Con Real Dimez ya firmado por Only Raw Records, Dre’Quan quiere dejar atrás la contratación de actuaciones en el club y entrar de lleno en la escena musical de Vice City."
+      ],
+      "facts": [
+        "Su objetivo principal es triunfar en la industria musical.",
+        "Trabaja junto a Boobie Ike.",
+        "Firmó a Real Dimez para Only Raw Records."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/DreQuan_Priest_landscape.0_b7hszyze6cy.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Dre’Quan Priest, arte oficial de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "individual_profile",
+      "shared_group": null,
+      "individual_bio_available": true,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": [
+        {
+          "target_id": "boobie-ike",
+          "relationship": "Socio empresarial"
+        },
+        {
+          "target_id": "bae-luxe",
+          "relationship": "Sello discográfico"
+        },
+        {
+          "target_id": "roxy",
+          "relationship": "Sello discográfico"
+        }
+      ]
+    },
+    {
+      "id": "bae-luxe",
+      "name": "Bae-Luxe",
+      "role": "Artista · Integrante de Real Dimez",
+      "summary": "Bae-Luxe es una de las dos integrantes de Real Dimez. Rockstar cuenta que ella y Roxy son amigas desde la secundaria y encontraron una forma de convertir sus actividades de extorsión a distribuidores locales en dinero mediante canciones de rap provocadoras y una presencia constante en redes sociales.",
+      "biography": [
+        "Bae-Luxe es una de las dos integrantes de Real Dimez. Rockstar cuenta que ella y Roxy son amigas desde la secundaria y encontraron una forma de convertir sus actividades de extorsión a distribuidores locales en dinero mediante canciones de rap provocadoras y una presencia constante en redes sociales.",
+        "El dúo consiguió atención con un sencillo temprano junto al rapero local DWNPLY. Tras cinco años y muchos problemas, ambas firmaron con Only Raw Records con la esperanza de volver a alcanzar el éxito."
+      ],
+      "facts": [
+        "Amiga de Roxy desde la escuela secundaria.",
+        "Miembro del dúo musical Real Dimez.",
+        "Rockstar aún no publica una biografía separada ni rasgos individuales de Bae-Luxe."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Real_Dimez_landscape.0637akp_a5a_q.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Bae-Luxe y Roxy de Real Dimez, arte oficial conjunto de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "shared_group",
+      "shared_group": "Real Dimez",
+      "individual_bio_available": false,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": [
+        {
+          "target_id": "roxy",
+          "relationship": "Dúo musical"
+        },
+        {
+          "target_id": "drequan-priest",
+          "relationship": "Sello discográfico"
+        }
+      ]
+    },
+    {
+      "id": "roxy",
+      "name": "Roxy",
+      "role": "Artista · Integrante de Real Dimez",
+      "summary": "Roxy forma con Bae-Luxe el dúo Real Dimez. La historia oficial describe a las dos como amigas desde la secundaria que aprovecharon su astucia callejera para crear canciones de rap y una presencia viral en redes.",
+      "biography": [
+        "Roxy forma con Bae-Luxe el dúo Real Dimez. La historia oficial describe a las dos como amigas desde la secundaria que aprovecharon su astucia callejera para crear canciones de rap y una presencia viral en redes.",
+        "El primer impulso llegó con un tema junto al rapero DWNPLY. Después de cinco años y de atravesar numerosos problemas, el grupo consiguió un contrato con Only Raw Records para intentar repetir aquel éxito."
+      ],
+      "facts": [
+        "Amiga de Bae-Luxe desde la escuela secundaria.",
+        "Miembro de Real Dimez y artista de Only Raw Records.",
+        "La historia oficial disponible es compartida; no se han publicado datos personales individuales."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Real_Dimez_landscape.0637akp_a5a_q.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Roxy y Bae-Luxe de Real Dimez, arte oficial conjunto de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "shared_group",
+      "shared_group": "Real Dimez",
+      "individual_bio_available": false,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": [
+        {
+          "target_id": "bae-luxe",
+          "relationship": "Dúo musical"
+        },
+        {
+          "target_id": "drequan-priest",
+          "relationship": "Sello discográfico"
+        }
+      ]
+    },
+    {
+      "id": "raul-bautista",
+      "name": "Raul Bautista",
+      "role": "Ladrón de bancos · Criminal experimentado",
+      "summary": "Raul es un asaltante de bancos experimentado, seguro de sí mismo, carismático y astuto. Busca personas con talento que estén dispuestas a asumir riesgos importantes a cambio de grandes recompensas.",
+      "biography": [
+        "Raul es un asaltante de bancos experimentado, seguro de sí mismo, carismático y astuto. Busca personas con talento que estén dispuestas a asumir riesgos importantes a cambio de grandes recompensas.",
+        "Su carácter temerario hace que cada golpe sea más peligroso. Rockstar deja abierta la tensión principal de su grupo: llegará un momento en que tendrán que apostar más fuerte o retirarse antes de perderlo todo."
+      ],
+      "facts": [
+        "Especialista en robos bancarios.",
+        "Recluta talento para golpes de alto riesgo.",
+        "Su imprudencia puede poner en peligro a todo el equipo."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Raul_Bautista_landscape.11_3hd0fr69~j.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Raul Bautista, arte oficial de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "individual_profile",
+      "shared_group": null,
+      "individual_bio_available": true,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": []
+    },
+    {
+      "id": "brian-heder",
+      "name": "Brian Heder",
+      "role": "Contrabandista · Leonida Keys",
+      "summary": "Brian pertenece a la vieja generación de contrabandistas de los Keys. Sigue moviendo mercancía desde su astillero y cuenta con la ayuda de su tercera esposa, Lori. Tras tantos años en el negocio, prefiere que otras personas se encarguen del trabajo sucio.",
+      "biography": [
+        "Brian pertenece a la vieja generación de contrabandistas de los Keys. Sigue moviendo mercancía desde su astillero y cuenta con la ayuda de su tercera esposa, Lori. Tras tantos años en el negocio, prefiere que otras personas se encarguen del trabajo sucio.",
+        "Le permite a Jason vivir sin pagar alquiler en una de sus propiedades, siempre que este le ayude con cobros y extorsiones locales y se deje ver de vez en cuando para compartir la sangría de Lori."
+      ],
+      "facts": [
+        "Veterano del contrabando en los Keys.",
+        "Opera desde un astillero y tiene vínculos con Jason y Cal.",
+        "Lori es su tercera esposa, según la biografía oficial."
+      ],
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Brian_Heder_landscape.0a-egj5b8yo1q.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Brian Heder, arte oficial de Rockstar Games",
+      "profile_status": "official_profile",
+      "biography_scope": "individual_profile",
+      "shared_group": null,
+      "individual_bio_available": true,
+      "source_ids": [
+        "src-028"
+      ],
+      "relations": [
+        {
+          "target_id": "jason-duval",
+          "relationship": "Asociado"
+        },
+        {
+          "target_id": "cal-hampton",
+          "relationship": "Asociado"
+        }
+      ]
+    }
+  ]
+}

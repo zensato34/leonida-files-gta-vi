@@ -40,22 +40,30 @@ class SiteContractTests(unittest.TestCase):
         missing = sorted({target for target in self.parser.links if target not in self.parser.ids})
         self.assertEqual([], missing, f"Broken internal anchors: {missing}")
 
-    def test_no_external_runtime_dependencies(self):
-        self.assertEqual([], self.parser.script_sources, "The site must keep inline vanilla JS")
-        self.assertEqual([], self.parser.stylesheet_links, "The site must keep inline CSS")
+    def test_runtime_assets_are_local_and_present(self):
+        assets = self.parser.script_sources + self.parser.stylesheet_links
+        self.assertTrue(self.parser.script_sources, "The local site engine must be linked")
+        self.assertTrue(self.parser.stylesheet_links, "The local stylesheet must be linked")
+        for asset in assets:
+            self.assertFalse(asset.startswith(("http://", "https://", "//")), f"Remote runtime asset: {asset}")
+            self.assertFalse(".." in asset.split("/"), f"Path traversal in asset: {asset}")
+            self.assertTrue((ROOT / asset).is_file(), f"Missing local runtime asset: {asset}")
 
     def test_reduced_motion_and_keyboard_accessibility_are_present(self):
-        self.assertRegex(HTML, r"@media\s*\(prefers-reduced-motion:\s*reduce\)")
+        css = (ROOT / "assets/css/dossier34.css").read_text(encoding="utf-8")
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertRegex(css, r"@media\s*\(prefers-reduced-motion:\s*reduce\)")
         self.assertIn('aria-label="Abrir búsqueda global"', HTML)
         self.assertIn('aria-modal="true"', HTML)
-        self.assertIn("Escape", HTML)
-        self.assertIn("trapTab", HTML)
-        self.assertIn("if(e.key==='Tab')", HTML)
+        self.assertIn("Escape", script)
+        self.assertIn("trapTab", script)
+        self.assertIn("if(e.key==='Tab')", script)
 
     def test_auto_feed_remains_pending_and_text_only(self):
-        self.assertIn("Pendiente de verificación", HTML)
-        self.assertIn("textContent=String(item.title", HTML)
-        self.assertIn("textContent=String(item.description", HTML)
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertIn("Pendiente de verificación", script)
+        self.assertIn("textContent=String(item.title", script)
+        self.assertIn("textContent=String(item.description", script)
 
     def test_independent_credit_and_official_art_policy_remain_visible(self):
         self.assertIn("Proyecto fan-made, independiente y no oficial", HTML)
@@ -68,25 +76,30 @@ class SiteContractTests(unittest.TestCase):
         self.assertEqual([], duplicates, f"Duplicate IDs: {duplicates}")
 
     def test_mobile_navigation_has_single_toggle_handler(self):
-        self.assertNotIn("menuBtn=document.getElementById('menuBtn')", HTML)
-        self.assertIn("menu?.addEventListener('click'", HTML)
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertNotIn("menuBtn=document.getElementById('menuBtn')", script)
+        self.assertIn("menu?.addEventListener('click'", script)
         self.assertIn('aria-expanded="false"', HTML)
         self.assertIn('class="cmd-icon"', HTML)
-        self.assertIn('.cmd-icon{display:inline!important', HTML)
+        css = (ROOT / "assets/css/dossier34.css").read_text(encoding="utf-8")
+        self.assertIn('.cmd-icon{display:inline!important', css)
 
     def test_debunked_evidence_filter_has_matching_news_option(self):
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
         self.assertIn('<option value="desmentido">Desmentido</option>', HTML)
-        self.assertIn("f==='desmentido'&&k==='desmentido'", HTML)
+        self.assertIn("f==='desmentido'&&k==='desmentido'", script)
 
     def test_global_search_indexes_news_and_auto_feed_timestamps(self):
-        self.assertIn("#newsList .news,#personajes .character-file", HTML)
-        self.assertIn("el.dataset.publishedAt=String(item.published_at||item.date||'')", HTML)
-        self.assertIn("newsfeed:updated", HTML)
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertIn("#newsList .news,#personajes .character-file", script)
+        self.assertIn("el.dataset.publishedAt=String(item.published_at||item.date||'')", script)
+        self.assertIn("newsfeed:updated", script)
 
     def test_browser_storage_is_guarded(self):
-        self.assertRegex(HTML, r"function\s+safeStorage|const\s+safeStorage")
-        self.assertIn("try{", HTML)
-        self.assertIn("catch", HTML)
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertRegex(script, r"function\s+safeStorage|const\s+safeStorage")
+        self.assertIn("try{", script)
+        self.assertIn("catch", script)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

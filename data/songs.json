@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "dataset": "songs",
+  "reviewed_at": "2026-11-15",
+  "description": "Pistas del álbum con separación entre lanzamientos oficiales y temas atribuidos a una filtración.",
+  "items": [
+    {
+      "id": "track-01",
+      "track_number": 1,
+      "title": "Starting From Zero",
+      "artist": "Justice feat. Michael McDonald",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-02",
+      "track_number": 2,
+      "title": "That’s It",
+      "artist": "Yung Lean feat. Future & Metro Boomin",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-03",
+      "track_number": 3,
+      "title": "Ahh Yea",
+      "artist": "Playboi Carti",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-04",
+      "track_number": 4,
+      "title": "RHYNO",
+      "artist": "Travis Scott",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-05",
+      "track_number": 5,
+      "title": "Sexy Magic",
+      "artist": "CA7RIEL & Paco Amoroso, PinkPantheress, Fred again.. & Étienne de Crécy",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-06",
+      "track_number": 6,
+      "title": "Flower in a Hurricane",
+      "artist": "Justice feat. Tame Impala, SZA & King Gizzard & The Lizard Wizard",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-07",
+      "track_number": 7,
+      "title": "Go Easy",
+      "artist": "Dua Lipa",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-08",
+      "track_number": 8,
+      "title": "Last Thing You Need",
+      "artist": "Morgan Wallen",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-09",
+      "track_number": 9,
+      "title": "X",
+      "artist": "Jhayco",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-10",
+      "track_number": 10,
+      "title": "Suzuki",
+      "artist": "Fuerza Regida",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-11",
+      "track_number": 11,
+      "title": "Macacoa 2000",
+      "artist": "Rauw Alejandro",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-12",
+      "track_number": 12,
+      "title": "Dance With Me",
+      "artist": "A Boogie Wit Da Hoodie (la filtración también atribuye a Elkan)",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-13",
+      "track_number": 13,
+      "title": "Bigger",
+      "artist": "Burna Boy",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-14",
+      "track_number": 14,
+      "title": "Count Up",
+      "artist": "Gunna",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-15",
+      "track_number": 15,
+      "title": "Let’s Rock",
+      "artist": "Kodak Black & Don Toliver",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-16",
+      "track_number": 16,
+      "title": "Wakin Up Flex",
+      "artist": "Young Thug",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-17",
+      "track_number": 17,
+      "title": "IKYFL",
+      "artist": "Tee Grizzley",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-18",
+      "track_number": 18,
+      "title": "TF?",
+      "artist": "Don Toliver",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-19",
+      "track_number": 19,
+      "title": "Don’t Chart",
+      "artist": "Cardi B",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-20",
+      "track_number": 20,
+      "title": "GMA",
+      "artist": "JT",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-21",
+      "track_number": 21,
+      "title": "Power Trip",
+      "artist": "JENNIE",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-22",
+      "track_number": 22,
+      "title": "Blood in Your Eyes",
+      "artist": "Tove Lo",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-23",
+      "track_number": 23,
+      "title": "Fast Emotion",
+      "artist": "Zara Larsson",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-24",
+      "track_number": 24,
+      "title": "Sweet Like Candy",
+      "artist": "Camila Cabello",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-25",
+      "track_number": 25,
+      "title": "Only One",
+      "artist": "Fcukers",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-26",
+      "track_number": 26,
+      "title": "Sandunguea",
+      "artist": "Arca",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-27",
+      "track_number": 27,
+      "title": "TRDWFE",
+      "artist": "Rina Sawayama",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-28",
+      "track_number": 28,
+      "title": "All Again",
+      "artist": "Rose Gray",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-29",
+      "track_number": 29,
+      "title": "Crazy for You",
+      "artist": "Lana Del Rey",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-30",
+      "track_number": 30,
+      "title": "Lárgate",
+      "artist": "Kali Uchis & Helado Negro",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-31",
+      "track_number": 31,
+      "title": "No Me Busques",
+      "artist": "Omar Apollo",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-32",
+      "track_number": 32,
+      "title": "Bright Lights, Big City",
+      "artist": "Keith Richards",
+      "status": "official_release",
+      "source_ids": [
+        "src-027"
+      ]
+    },
+    {
+      "id": "track-33",
+      "track_number": 33,
+      "title": "Stone Kold Krazy Luuv",
+      "artist": "Jesse Johnson & DāM-FunK",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    },
+    {
+      "id": "track-34",
+      "track_number": 34,
+      "title": "Overtown Lights",
+      "artist": "Stanley Clarke, Yussef Dayes & Robert Glasper",
+      "status": "reported_leak",
+      "source_ids": [
+        "src-015",
+        "src-003"
+      ]
+    }
+  ]
+}

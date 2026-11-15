@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "dataset": "news",
+  "reviewed_at": "2026-11-15",
+  "description": "Entradas editoriales manuales. El RSS automático vive por separado en news-feed.json y nunca se confirma por sí solo.",
+  "items": [
+    {
+      "id": "rockstar-explica-su-enfoque-de-empatia-y-libertad",
+      "title": "Rockstar explica su enfoque de empatía y libertad",
+      "summary": "Rob Nelson dice que GTA VI incorpora por primera vez mecanismos que pueden fomentar empatía, sin castigar a quien prefiera el caos habitual de la saga. Las decisiones sí pueden influir en cómo se desarrolla la historia.",
+      "date_label": "15 NOV 2026",
+      "date_start": "2026-11-15",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "reporte",
+      "source_ids": [
+        "src-029"
+      ],
+      "source_label": "15 NOV 2026 Entrevista / fuente reconocida Gameplay Rockstar explica su enfoque de empatía y libertad Rob Nelson dice que GTA VI incorpora por primera vez mecanismos que pueden fomentar empatía, sin castigar a quien prefiera el caos habitual de la saga. Las decisiones sí pueden influir en cómo se desarrolla la historia. Leer reportaje de The Guardian ↗",
+      "tags": [
+        "Entrevista / fuente reconocida",
+        "Gameplay"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Atribuido a una fuente externa identificada; no debe presentarse como anuncio directo de Rockstar.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "jason-y-lucia-comienzan-con-delitos-de-poca-monta",
+      "title": "Jason y Lucía comienzan con delitos de poca monta",
+      "summary": "Al inicio podrán forzar vehículos de bajo nivel y abrir cerraduras sencillas. Para acceder a golpes de mayor valor deberán progresar, reconocer objetivos, estudiar cámaras, entradas traseras y códigos de cajas fuertes.",
+      "date_label": "15 NOV 2026",
+      "date_start": "2026-11-15",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "reporte",
+      "source_ids": [
+        "src-029"
+      ],
+      "source_label": "15 NOV 2026 Detalles de entrevista Jason y Lucía comienzan con delitos de poca monta Al inicio podrán forzar vehículos de bajo nivel y abrir cerraduras sencillas. Para acceder a golpes de mayor valor deberán progresar, reconocer objetivos, estudiar cámaras, entradas traseras y códigos de cajas fuertes. Fuente: The Guardian ↗",
+      "tags": [
+        "Detalles de entrevista"
+      ],
+      "entity_ids": [
+        "jason-duval",
+        "lucia-caminos"
+      ],
+      "editorial_note": "Atribuido a una fuente externa identificada; no debe presentarse como anuncio directo de Rockstar.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "relacion-dinamica-entre-jason-y-lucia",
+      "title": "Relación dinámica entre Jason y Lucía",
+      "summary": "La mayor parte del tiempo se podrá cambiar entre ambos; algunas misiones fijan un personaje. Cuando estén separados pueden llamarse y escribirse. El jugador puede cuidar o descuidar su relación; incluso pueden salir juntos y tomarse de la mano.",
+      "date_label": "15 NOV 2026",
+      "date_start": "2026-11-15",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "reporte",
+      "source_ids": [
+        "src-029"
+      ],
+      "source_label": "15 NOV 2026 Gameplay descrito Relación dinámica entre Jason y Lucía La mayor parte del tiempo se podrá cambiar entre ambos; algunas misiones fijan un personaje. Cuando estén separados pueden llamarse y escribirse. El jugador puede cuidar o descuidar su relación; incluso pueden salir juntos y tomarse de la mano. Fuente: The Guardian ↗",
+      "tags": [
+        "Gameplay descrito"
+      ],
+      "entity_ids": [
+        "jason-duval",
+        "lucia-caminos"
+      ],
+      "editorial_note": "Atribuido a una fuente externa identificada; no debe presentarse como anuncio directo de Rockstar.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "62-especies-de-aves-y-registro-de-fauna",
+      "title": "62 especies de aves y registro de fauna",
+      "summary": "Con binoculares se pueden observar aves y registrarlas en un libro de fauna. También se describen peatones con conversaciones que el jugador puede escuchar o interrumpir, y la posibilidad de acariciar un perro.",
+      "date_label": "15 NOV 2026",
+      "date_start": "2026-11-15",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "reporte",
+      "source_ids": [
+        "src-029"
+      ],
+      "source_label": "15 NOV 2026 Detalle de mundo 62 especies de aves y registro de fauna Con binoculares se pueden observar aves y registrarlas en un libro de fauna. También se describen peatones con conversaciones que el jugador puede escuchar o interrumpir, y la posibilidad de acariciar un perro. Fuente: The Guardian ↗",
+      "tags": [
+        "Detalle de mundo"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Atribuido a una fuente externa identificada; no debe presentarse como anuncio directo de Rockstar.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "precarga-disponible-y-objetivos-tecnicos-publicados",
+      "title": "Precarga disponible y objetivos técnicos publicados",
+      "summary": "Rockstar activó la precarga para reservas digitales y códigos físicos recibidos. La compañía declara que el juego apunta a 30 FPS en ambas consolas; PS5 Pro añade PSSR para mayor claridad y sombras con trazado de rayos.",
+      "date_label": "14 NOV 2026",
+      "date_start": "2026-11-14",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "confirmado",
+      "source_ids": [
+        "src-021"
+      ],
+      "source_label": "14 NOV 2026 Rockstar / noticia oficial Precarga disponible y objetivos técnicos publicados Rockstar activó la precarga para reservas digitales y códigos físicos recibidos. La compañía declara que el juego apunta a 30 FPS en ambas consolas; PS5 Pro añade PSSR para mayor claridad y sombras con trazado de rayos. Anuncio oficial de precarga ↗",
+      "tags": [
+        "Rockstar / noticia oficial"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Respaldado por un canal oficial de Rockstar o soporte oficial.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "las-cajas-fisicas-contienen-un-codigo-no-un-disco",
+      "title": "Las cajas físicas contienen un código, no un disco",
+      "summary": "Rockstar confirma que la caja incluye un código de descarga y que no trae disco. Los códigos dependen de la región de la cuenta de PlayStation; Microsoft indica que los códigos Xbox no tienen bloqueo regional.",
+      "date_label": "10 NOV 2026",
+      "date_start": "2026-11-10",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "confirmado",
+      "source_ids": [
+        "src-009"
+      ],
+      "source_label": "10 NOV 2026 Rockstar / formato físico Las cajas físicas contienen un código, no un disco Rockstar confirma que la caja incluye un código de descarga y que no trae disco. Los códigos dependen de la región de la cuenta de PlayStation; Microsoft indica que los códigos Xbox no tienen bloqueo regional. Soporte oficial: ediciones y códigos ↗",
+      "tags": [
+        "Rockstar / formato físico"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Respaldado por un canal oficial de Rockstar o soporte oficial.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "gta-vi-the-festival-miami-21-de-noviembre",
+      "title": "GTA VI: The Festival — Miami, 21 de noviembre",
+      "summary": "Evento musical de lanzamiento en Mana Wynwood con dos escenarios. La alineación anunciada incluye Travis Scott, Don Toliver, Kodak Black, Sofaygo, Cardi B, CA7RIEL & Paco Amoroso, Justice, Metro Boomin, Rauw & Friends, Tainy y otros.",
+      "date_label": "09 NOV 2026",
+      "date_start": "2026-11-09",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "confirmado",
+      "source_ids": [
+        "src-022"
+      ],
+      "source_label": "09 NOV 2026 Evento oficial GTA VI: The Festival — Miami, 21 de noviembre Evento musical de lanzamiento en Mana Wynwood con dos escenarios. La alineación anunciada incluye Travis Scott, Don Toliver, Kodak Black, Sofaygo, Cardi B, CA7RIEL & Paco Amoroso, Justice, Metro Boomin, Rauw & Friends, Tainy y otros. Anuncio oficial del festival ↗",
+      "tags": [
+        "Evento oficial"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Respaldado por un canal oficial de Rockstar o soporte oficial.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "rockstar-amplia-el-archivo-de-imagenes-y-videos",
+      "title": "Rockstar amplía el archivo de imágenes y videos",
+      "summary": "La página oficial de medios reúne cinco videos, nueve clips, 138 capturas, 51 imágenes de beneficios Ultimate, 12 del Vintage Vice City Pack y 27 piezas de arte y fondos de pantalla.",
+      "date_label": "05 NOV 2026",
+      "date_start": "2026-11-05",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "confirmado",
+      "source_ids": [
+        "src-024"
+      ],
+      "source_label": "05 NOV 2026 Galería oficial Rockstar amplía el archivo de imágenes y videos La página oficial de medios reúne cinco videos, nueve clips, 138 capturas, 51 imágenes de beneficios Ultimate, 12 del Vintage Vice City Pack y 27 piezas de arte y fondos de pantalla. Abrir galería oficial ↗",
+      "tags": [
+        "Galería oficial"
+      ],
+      "entity_ids": [
+        "vice-city"
+      ],
+      "editorial_note": "Respaldado por un canal oficial de Rockstar o soporte oficial.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "circula-la-lista-completa-de-34-canciones-de-the-album",
+      "title": "Circula la lista completa de 34 canciones de The Album",
+      "summary": "Una fotografía de la contraportada de un vinilo adelantado habría revelado el listado completo. Diez temas ya aparecen en la página musical oficial; los otros 24 siguen siendo una filtración que Rockstar no ha confirmado pista por pista.",
+      "date_label": "14–15 NOV 2026",
+      "date_start": "2026-11-14",
+      "date_end": "2026-11-15",
+      "date_precision": "range",
+      "classification": "reporte",
+      "source_ids": [
+        "src-015"
+      ],
+      "source_label": "14–15 NOV 2026 Filtración reportada por medios Circula la lista completa de 34 canciones de The Album Una fotografía de la contraportada de un vinilo adelantado habría revelado el listado completo. Diez temas ya aparecen en la página musical oficial; los otros 24 siguen siendo una filtración que Rockstar no ha confirmado pista por pista. Cobertura de NME ↗",
+      "tags": [
+        "Filtración reportada por medios"
+      ],
+      "entity_ids": [
+        "soundtrack-the-album"
+      ],
+      "editorial_note": "Atribuido a una fuente externa identificada; no debe presentarse como anuncio directo de Rockstar.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "incidencias-aisladas-con-codigos-en-cajas-fisicas",
+      "title": "Incidencias aisladas con códigos en cajas físicas",
+      "summary": "Compradores han reportado cajas en las que el código faltaría o estaría mal impreso. No hay base para afirmar que sea un fallo general de todas las unidades. La solución razonable es reclamar al vendedor con comprobante y fotografías.",
+      "date_label": "14 NOV 2026",
+      "date_start": "2026-11-14",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "reporte",
+      "source_ids": [
+        "src-002"
+      ],
+      "source_label": "14 NOV 2026 Reportes de compradores Incidencias aisladas con códigos en cajas físicas Compradores han reportado cajas en las que el código faltaría o estaría mal impreso. No hay base para afirmar que sea un fallo general de todas las unidades. La solución razonable es reclamar al vendedor con comprobante y fotografías. Cobertura de RockstarINTEL ↗",
+      "tags": [
+        "Reportes de compradores"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Atribuido a una fuente externa identificada; no debe presentarse como anuncio directo de Rockstar.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "macca-friends-posible-programa-animado-de-weazel",
+      "title": "“Macca & Friends”, posible programa animado de Weazel",
+      "summary": "Medios informaron de un teaser de una caricatura dentro del universo del juego, fechada para el 19 de noviembre en Weazel. Rockstar no ha publicado una ficha oficial con episodios, duración o elenco; esos datos siguen sin confirmar.",
+      "date_label": "13 NOV 2026",
+      "date_start": "2026-11-13",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "reporte",
+      "source_ids": [
+        "src-012"
+      ],
+      "source_label": "13 NOV 2026 Teaser de terceros “Macca & Friends”, posible programa animado de Weazel Medios informaron de un teaser de una caricatura dentro del universo del juego, fechada para el 19 de noviembre en Weazel. Rockstar no ha publicado una ficha oficial con episodios, duración o elenco; esos datos siguen sin confirmar. Resumen de reportes ↗",
+      "tags": [
+        "Teaser de terceros"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Atribuido a una fuente externa identificada; no debe presentarse como anuncio directo de Rockstar.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "tematica-de-vice-city-en-discord",
+      "title": "Temática de Vice City en Discord",
+      "summary": "El video original comenta una supuesta renovación de perfil, tipografía y estética de Discord por GTA VI. La ficha oficial del juego en Discord existe, pero no confirma por sí sola los cosméticos o cambios visuales descritos.",
+      "date_label": "15 NOV 2026",
+      "date_start": "2026-11-15",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "rumor",
+      "source_ids": [
+        "src-001"
+      ],
+      "source_label": "15 NOV 2026 Rumor / sin confirmación oficial Temática de Vice City en Discord El video original comenta una supuesta renovación de perfil, tipografía y estética de Discord por GTA VI. La ficha oficial del juego en Discord existe, pero no confirma por sí sola los cosméticos o cambios visuales descritos. Ficha de GTA VI en Discord ↗",
+      "tags": [
+        "Rumor / sin confirmación oficial"
+      ],
+      "entity_ids": [
+        "vice-city"
+      ],
+      "editorial_note": "No confirmado oficialmente; conservar como rumor o interpretación.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "mas-de-una-decada-de-produccion-y-cerca-de-5-000-personas",
+      "title": "Más de una década de producción y cerca de 5.000 personas",
+      "summary": "The Guardian sitúa la investigación inicial en Miami en 2015 y describe un equipo global de casi 5.000 personas. Rob Nelson explica que el límite actual no es tanto técnico como humano: cuánto contenido puede construir físicamente un equipo. Rockstar eligió una apuesta grande en lugar de lanzar una secuela incremental más rápida.",
+      "date_label": "2015–NOV 2026",
+      "date_start": null,
+      "date_end": null,
+      "date_precision": "label_only",
+      "classification": "reporte",
+      "source_ids": [
+        "src-029"
+      ],
+      "source_label": "2015–NOV 2026 Contexto del desarrollo Más de una década de producción y cerca de 5.000 personas The Guardian sitúa la investigación inicial en Miami en 2015 y describe un equipo global de casi 5.000 personas. Rob Nelson explica que el límite actual no es tanto técnico como humano: cuánto contenido puede construir físicamente un equipo. Rockstar eligió una apuesta grande en lugar de lanzar una secuela incremental más rápida. Fuente: The Guardian ↗",
+      "tags": [
+        "Contexto del desarrollo"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Atribuido a una fuente externa identificada; no debe presentarse como anuncio directo de Rockstar.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "85-millones-de-npc-distintos-afirmacion-sin-confirmacion",
+      "title": "“85 millones de NPC distintos”: afirmación sin confirmación",
+      "summary": "El presentador del video menciona 85 millones de NPC diferentes. No aparece respaldado por la entrevista accesible de The Guardian ni por una ficha oficial de Rockstar. Lo comprobable es que los peatones reciben diseño individual, incluso en la ropa; la cifra de 85 millones debe seguir marcada como no verificada.",
+      "date_label": "15 NOV 2026",
+      "date_start": "2026-11-15",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "rumor",
+      "source_ids": [
+        "src-029"
+      ],
+      "source_label": "15 NOV 2026 Cifra no corroborada “85 millones de NPC distintos”: afirmación sin confirmación El presentador del video menciona 85 millones de NPC diferentes. No aparece respaldado por la entrevista accesible de The Guardian ni por una ficha oficial de Rockstar. Lo comprobable es que los peatones reciben diseño individual, incluso en la ropa; la cifra de 85 millones debe seguir marcada como no verificada. Contraste con The Guardian ↗",
+      "tags": [
+        "Cifra no corroborada"
+      ],
+      "entity_ids": [],
+      "editorial_note": "No confirmado oficialmente; conservar como rumor o interpretación.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "burger-shot-rusty-anchor-y-la-supuesta-referencia-a-arion-kurtaj",
+      "title": "Burger Shot, Rusty Anchor y la supuesta referencia a Arion Kurtaj",
+      "summary": "El video muestra locales y decoraciones temáticas y propone que una fotografía sería una referencia al responsable vinculado a la filtración de 2022. Se conserva como reporte del creador; la intención de homenaje y los detalles de la activación no quedan demostrados por un anuncio oficial de Rockstar.",
+      "date_label": "15 NOV 2026",
+      "date_start": "2026-11-15",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "rumor",
+      "source_ids": [
+        "src-033"
+      ],
+      "source_label": "15 NOV 2026 Rumor / interpretación Burger Shot, Rusty Anchor y la supuesta referencia a Arion Kurtaj El video muestra locales y decoraciones temáticas y propone que una fotografía sería una referencia al responsable vinculado a la filtración de 2022. Se conserva como reporte del creador; la intención de homenaje y los detalles de la activación no quedan demostrados por un anuncio oficial de Rockstar. Volver al video fuente ↗",
+      "tags": [
+        "Rumor / interpretación"
+      ],
+      "entity_ids": [],
+      "editorial_note": "No confirmado oficialmente; conservar como rumor o interpretación.",
+      "origin": "legacy_news_section"
+    },
+    {
+      "id": "la-luz-ultravioleta-para-revelar-codigos",
+      "title": "La luz ultravioleta para revelar códigos",
+      "summary": "La teoría comentada en el video no quedó demostrada. Pruebas de medios no lograron reproducir de forma fiable la visualización de códigos. No debe tratarse como un método confirmado ni como una vulnerabilidad universal del empaque.",
+      "date_label": "15 NOV 2026",
+      "date_start": "2026-11-15",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "rumor",
+      "source_ids": [
+        "src-011"
+      ],
+      "source_label": "15 NOV 2026 Teoría descartada / no demostrada La luz ultravioleta para revelar códigos La teoría comentada en el video no quedó demostrada. Pruebas de medios no lograron reproducir de forma fiable la visualización de códigos. No debe tratarse como un método confirmado ni como una vulnerabilidad universal del empaque. Verificación periodística (si disponible) ↗",
+      "tags": [
+        "Teoría descartada / no demostrada"
+      ],
+      "entity_ids": [],
+      "editorial_note": "No confirmado oficialmente; conservar como rumor o interpretación.",
+      "origin": "legacy_news_section"
+    }
+  ]
+}

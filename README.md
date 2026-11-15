@@ -33,6 +33,32 @@ python -m unittest discover -s tests -v
 
 Las pruebas comprueban anchors, IDs, navegación móvil, accesibilidad básica, reducción de movimiento, búsqueda, feed pendiente y ausencia de dependencias runtime externas.
 
+
+## Motor editorial y datos estructurados
+
+El contenido principal está separado de la presentación en catálogos versionados dentro de `data/`:
+
+- `news.json`: noticias manuales con estado editorial y fuentes asociadas.
+- `characters.json`: expedientes y relaciones navegables entre personajes.
+- `regions.json`: índice de regiones publicado por Rockstar, sin coordenadas no verificadas.
+- `radios.json`: emisoras, locutores y arte oficial.
+- `songs.json`: 34 pistas con estado individual: lanzamiento oficial o pista reportada.
+- `sources.json`: registro común de procedencia y autoridad.
+- `vehicles.json`: estructura preparada; permanece sin fichas hasta disponer de evidencia.
+- `news-feed.json`: feed separado de titulares automáticos, siempre pendientes de verificación.
+
+La presentación se separa en `assets/css/dossier34.css` y `assets/js/dossier34.js`. El motor carga los catálogos locales y reconstruye las fichas sin usar `innerHTML` con contenido editorial; el HTML conserva contenido de respaldo si un JSON no está disponible.
+
+### Validación de datos
+
+```bash
+python scripts/validate_catalog.py
+python -m unittest discover -s tests -v
+node --check assets/js/dossier34.js
+```
+
+Las noticias con estado `confirmado` requieren al menos una fuente primaria de Rockstar o Rockstar Support. Los artículos de medios se clasifican como reportes atribuidos a esos medios, no como comunicados directos de Rockstar.
+
 ## Qué automatiza y qué no
 
 `scripts/update_news.py` consulta Google News RSS con búsquedas sobre Rockstar, GTA VI y filtraciones. Guarda titulares, extractos, fuentes y enlaces en `data/news-feed.json`. El workflow de GitHub Actions lo ejecuta diariamente y sube el feed al repositorio; la página lee ese JSON y añade sus entradas a la sección de noticias.
