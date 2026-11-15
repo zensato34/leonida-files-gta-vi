@@ -87,7 +87,7 @@
 - Consumes: stable IDs / article headings and RSS `published_at`.
 - Produces: `#favoritesDrawer`, `#sinceLastVisit`, local saved items and a browser-local previous-visit timestamp.
 
-- [ ] **Step 1:** Add save controls to supported news, character, region, radio and media cards.
+- [ ] **Step 1:** Add save controls to supported news, character, region and radio cards. Media tiles remain direct official-source links so no interactive button is nested inside an anchor.
 - [ ] **Step 2:** Persist favorites locally with guarded storage access; render a drawer with working section links and remove actions.
 - [ ] **Step 3:** Compare RSS timestamps with the previous visit and display a “Novedades desde tu última visita” count without modifying editorial status.
 - [ ] **Step 4:** Test behavior with blocked/empty storage and malformed timestamps; run the full test suite.
