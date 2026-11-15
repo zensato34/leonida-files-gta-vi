@@ -16,6 +16,7 @@ ALLOWED_SOURCE_TYPES = {
 }
 ALLOWED_NEWS_STATUS = {"confirmado", "reporte", "rumor", "desmentido"}
 ALLOWED_SONG_STATUS = {"official_release", "reported_leak"}
+ALLOWED_VEHICLE_CATEGORIES = {"car", "motorcycle", "watercraft", "customized_vehicle", "offroad_buggy"}
 ROCKSTAR_CDN = "www.rockstargames.com"
 
 def load_dataset(name: str, root: Path = ROOT) -> dict:
@@ -59,7 +60,7 @@ def validate_catalogs(root: Path = ROOT) -> list[str]:
         if parsed.scheme != "https" or not parsed.netloc:
             errors.append(f"Fuente {source.get('id')}: URL no HTTPS o inválida")
 
-    for name in ("news", "characters", "regions", "radios", "songs"):
+    for name in ("news", "characters", "regions", "radios", "songs", "vehicles"):
         for record in items[name]:
             for source_id in record.get("source_ids", []):
                 if source_id not in source_ids:
@@ -100,6 +101,30 @@ def validate_catalogs(root: Path = ROOT) -> list[str]:
             host = urlparse(radio.get(field, "")).netloc
             if host != ROCKSTAR_CDN:
                 errors.append(f"Emisora {radio.get('id')}: {field} no apunta al CDN oficial")
+
+    for region in items["regions"]:
+        if region.get("map_status") != "no_official_coordinates_in_this_catalog":
+            errors.append(f"Región {region.get('id')}: estado cartográfico no permitido")
+        if not isinstance(region.get("gallery_count"), int) or region["gallery_count"] < 1:
+            errors.append(f"Región {region.get('id')}: recuento de galería inválido")
+        if not region.get("gallery_label") or not region.get("gallery_url"):
+            errors.append(f"Región {region.get('id')}: falta referencia a la galería oficial")
+        if urlparse(region.get("image_url", "")).netloc != ROCKSTAR_CDN:
+            errors.append(f"Región {region.get('id')}: imagen fuera del CDN de Rockstar")
+        if any(key in region for key in ("lat", "latitude", "lon", "long", "longitude", "coordinates")):
+            errors.append(f"Región {region.get('id')}: no se permiten coordenadas no verificadas")
+
+    for vehicle in items["vehicles"]:
+        if vehicle.get("category") not in ALLOWED_VEHICLE_CATEGORIES:
+            errors.append(f"Vehículo {vehicle.get('id')}: categoría desconocida")
+        if not vehicle.get("name") or not vehicle.get("manufacturer") or not vehicle.get("edition_context"):
+            errors.append(f"Vehículo {vehicle.get('id')}: ficha incompleta")
+        if not vehicle.get("image_url") or urlparse(vehicle.get("image_url", "")).netloc != ROCKSTAR_CDN:
+            errors.append(f"Vehículo {vehicle.get('id')}: imagen ausente o fuera del CDN de Rockstar")
+        if not vehicle.get("source_ids") or not vehicle.get("official_gallery_label"):
+            errors.append(f"Vehículo {vehicle.get('id')}: falta evidencia oficial")
+        if vehicle.get("evidence_status") not in {"official_edition_benefit", "official_media_label", "official_preorder_benefit"}:
+            errors.append(f"Vehículo {vehicle.get('id')}: estado de evidencia desconocido")
 
     track_numbers = [item.get("track_number") for item in items["songs"]]
     if len(track_numbers) != len(set(track_numbers)):
