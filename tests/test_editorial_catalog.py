@@ -75,6 +75,10 @@ class EditorialCatalogTests(unittest.TestCase):
         self.assertEqual(24, sum(x["status"] == "reported_leak" for x in self.songs))
         self.assertEqual([], self.vehicles)
 
+    def test_catalog_validator_reports_no_integrity_errors(self):
+        from scripts.validate_catalog import validate_catalogs
+        self.assertEqual([], validate_catalogs(ROOT))
+
     def test_structured_assets_are_linked_locally(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn('href="assets/css/dossier34.css"', html)
