@@ -45,7 +45,7 @@ class SiteContractTests(unittest.TestCase):
         self.assertEqual([], self.parser.stylesheet_links, "The site must keep inline CSS")
 
     def test_reduced_motion_and_keyboard_accessibility_are_present(self):
-        self.assertRegex(HTML, r"@media\\s*\\(prefers-reduced-motion:\\s*reduce\\)")
+        self.assertRegex(HTML, r"@media\s*\(prefers-reduced-motion:\s*reduce\)")
         self.assertIn('aria-label="Abrir búsqueda global"', HTML)
         self.assertIn('aria-modal="true"', HTML)
         self.assertIn("Escape", HTML)
@@ -76,7 +76,7 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("newsfeed:updated", HTML)
 
     def test_browser_storage_is_guarded(self):
-        self.assertRegex(HTML, r"function\\s+safeStorage|const\\s+safeStorage")
+        self.assertRegex(HTML, r"function\s+safeStorage|const\s+safeStorage")
         self.assertIn("try{", HTML)
         self.assertIn("catch", HTML)
 
