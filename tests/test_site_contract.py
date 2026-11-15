@@ -69,6 +69,8 @@ class SiteContractTests(unittest.TestCase):
         self.assertNotIn("menuBtn=document.getElementById('menuBtn')", HTML)
         self.assertIn("menu?.addEventListener('click'", HTML)
         self.assertIn('aria-expanded="false"', HTML)
+        self.assertIn('class="cmd-icon"', HTML)
+        self.assertIn('.cmd-icon{display:inline!important', HTML)
 
     def test_global_search_indexes_news_and_auto_feed_timestamps(self):
         self.assertIn("#newsList .news,#personajes .character-file", HTML)
