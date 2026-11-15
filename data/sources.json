@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "dataset": "sources",
+  "reviewed_at": "2026-11-15",
+  "items": [
+    {
+      "id": "src-001",
+      "name": "Ficha de GTA VI en Discord ↗",
+      "domain": "discord.com",
+      "url": "https://discord.com/game/grand-theft-auto-vi-1445160676522856458",
+      "type": "platform_reference",
+      "authority": "Página de plataforma · no confirma por sí sola el rumor"
+    },
+    {
+      "id": "src-002",
+      "name": "Cobertura de RockstarINTEL ↗",
+      "domain": "rockstarintel.com",
+      "url": "https://rockstarintel.com/",
+      "type": "third_party",
+      "authority": "Fuente externa identificada"
+    },
+    {
+      "id": "src-003",
+      "name": "RockstarINTEL ↗",
+      "domain": "rockstarintel.com",
+      "url": "https://rockstarintel.com/full-gta-vi-the-album-track-list-leaked/",
+      "type": "third_party",
+      "authority": "Fuente externa identificada"
+    },
+    {
+      "id": "src-004",
+      "name": "Comprar Standard · PS Store ES ↗",
+      "domain": "store.playstation.com",
+      "url": "https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVISTANDARD001",
+      "type": "official_store",
+      "authority": "Tienda o plataforma oficial"
+    },
+    {
+      "id": "src-005",
+      "name": "Comprar Ultimate · PS Store ES ↗",
+      "domain": "store.playstation.com",
+      "url": "https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVIULTIMATE001",
+      "type": "official_store",
+      "authority": "Tienda o plataforma oficial"
+    },
+    {
+      "id": "src-006",
+      "name": "Rockstar Store ↗",
+      "domain": "store.rockstargames.com",
+      "url": "https://store.rockstargames.com/game/buy-gta-vi?drm=PlayStation+5",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-007",
+      "name": "Rockstar Support",
+      "domain": "support.rockstargames.com",
+      "url": "https://support.rockstargames.com/",
+      "type": "official_support",
+      "authority": "Fuente primaria · Rockstar Support"
+    },
+    {
+      "id": "src-008",
+      "name": "Ver horarios oficiales ↗",
+      "domain": "support.rockstargames.com",
+      "url": "https://support.rockstargames.com/articles/29jV3Cv2cCgvwM1XgtMO5o/grand-theft-auto-vi-regional-pre-load-and-release-times-on-playstation-5-and-xbox-series-x-or-s",
+      "type": "official_support",
+      "authority": "Fuente primaria · Rockstar Support"
+    },
+    {
+      "id": "src-009",
+      "name": "Soporte oficial: ediciones y códigos ↗",
+      "domain": "support.rockstargames.com",
+      "url": "https://support.rockstargames.com/articles/4QfG4FmZCf5W1gS8jy4UVT/grand-theft-auto-vi-platform-editions-and-versions",
+      "type": "official_support",
+      "authority": "Fuente primaria · Rockstar Support"
+    },
+    {
+      "id": "src-010",
+      "name": "política de Rockstar sobre materiales protegidos",
+      "domain": "support.rockstargames.com",
+      "url": "https://support.rockstargames.com/articles/7bNaeoMFTV0iUDGhStTXvz/policy-on-posting-copyrighted-rockstar-games-material",
+      "type": "official_support",
+      "authority": "Fuente primaria · Rockstar Support"
+    },
+    {
+      "id": "src-011",
+      "name": "Verificación periodística (si disponible) ↗",
+      "domain": "gamesradar.com",
+      "url": "https://www.gamesradar.com/games/grand-theft-auto-6/",
+      "type": "recognized_media",
+      "authority": "Medio editorial identificado"
+    },
+    {
+      "id": "src-012",
+      "name": "Resumen de reportes ↗",
+      "domain": "gta6everything.com",
+      "url": "https://www.gta6everything.com/news/gta-6-macca-and-friends-in-game-animated-series-weazel",
+      "type": "third_party",
+      "authority": "Fuente externa identificada"
+    },
+    {
+      "id": "src-013",
+      "name": "IGN",
+      "domain": "ign.com",
+      "url": "https://www.ign.com/",
+      "type": "recognized_media",
+      "authority": "Medio editorial identificado"
+    },
+    {
+      "id": "src-014",
+      "name": "NME",
+      "domain": "nme.com",
+      "url": "https://www.nme.com/",
+      "type": "recognized_media",
+      "authority": "Medio editorial identificado"
+    },
+    {
+      "id": "src-015",
+      "name": "Cobertura de NME ↗",
+      "domain": "nme.com",
+      "url": "https://www.nme.com/news/music/lana-del-rey-dua-lipa-zara-larsson-gta-vi-the-album-full-tracklist-3975990",
+      "type": "recognized_media",
+      "authority": "Medio editorial identificado"
+    },
+    {
+      "id": "src-016",
+      "name": "PC Gamer",
+      "domain": "pcgamer.com",
+      "url": "https://www.pcgamer.com/",
+      "type": "recognized_media",
+      "authority": "Medio editorial identificado"
+    },
+    {
+      "id": "src-017",
+      "name": "PlayStation",
+      "domain": "playstation.com",
+      "url": "https://www.playstation.com/",
+      "type": "third_party",
+      "authority": "Fuente externa identificada"
+    },
+    {
+      "id": "src-018",
+      "name": "Artículo oficial de emisoras (español) ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/es/newswire/article/o3982oa93a23k4/the-music-of-grand-theft-auto-vi-in-game-radio-stations?pubDate=20261030",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-019",
+      "name": "Rockstar Newswire",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/newswire",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-020",
+      "name": "Anuncio oficial del score ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/newswire/article/39ak8a12395591/grand-theft-auto-vi-original-score-by-justice",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-021",
+      "name": "Anuncio oficial de precarga ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-022",
+      "name": "Anuncio oficial del festival ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/newswire/article/o39o87a435a25a/grand-theft-auto-vi-the-festival",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-023",
+      "name": "Rockstar · GTA VI ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/VI",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-024",
+      "name": "Abrir galería oficial ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/VI/media",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-025",
+      "name": "Artes oficiales de personajes ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/VI/media/artwork-wallpapers",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-026",
+      "name": "Clips oficiales ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/VI/media/videos",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-027",
+      "name": "Escuchar muestras oficiales ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/VI/music",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-028",
+      "name": "Explorar “Only in Leonida” ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/VI/only-in-leonida",
+      "type": "official_primary",
+      "authority": "Fuente primaria · Rockstar Games"
+    },
+    {
+      "id": "src-029",
+      "name": "Leer reportaje de The Guardian ↗",
+      "domain": "theguardian.com",
+      "url": "https://www.theguardian.com/games/ng-interactive/2026/nov/15/grand-theft-auto-vi-inside-rockstar-games",
+      "type": "recognized_media",
+      "authority": "Medio editorial identificado"
+    },
+    {
+      "id": "src-030",
+      "name": "Xbox",
+      "domain": "xbox.com",
+      "url": "https://www.xbox.com/",
+      "type": "official_store",
+      "authority": "Tienda o plataforma oficial"
+    },
+    {
+      "id": "src-031",
+      "name": "Comprar Standard · Xbox ↗",
+      "domain": "xbox.com",
+      "url": "https://www.xbox.com/en-US/games/store/grand-theft-auto-vi/9NL3WWNZLZZN",
+      "type": "official_store",
+      "authority": "Tienda o plataforma oficial"
+    },
+    {
+      "id": "src-032",
+      "name": "Comprar Ultimate · Xbox ↗",
+      "domain": "xbox.com",
+      "url": "https://www.xbox.com/en-US/games/store/grand-theft-auto-vi/9NNZSNHLR63L",
+      "type": "official_store",
+      "authority": "Tienda o plataforma oficial"
+    },
+    {
+      "id": "src-033",
+      "name": "Volver al video fuente ↗",
+      "domain": "youtu.be",
+      "url": "https://youtu.be/SJWEmWPKXcE",
+      "type": "video_source",
+      "authority": "Video fuente · requiere atribución"
+    }
+  ]
+}
