@@ -266,6 +266,22 @@
       "url": "https://youtu.be/SJWEmWPKXcE",
       "type": "video_source",
       "authority": "Video fuente · requiere atribución"
+    },
+    {
+      "id": "src-034",
+      "name": "Galería oficial de capturas de GTA VI",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/VI/media/screenshots",
+      "type": "official_primary",
+      "authority": "Fuente primaria · galería oficial de capturas por región y beneficios"
+    },
+    {
+      "id": "src-035",
+      "name": "Rockstar Store · catálogo oficial de GTA VI",
+      "domain": "store.rockstargames.com",
+      "url": "https://store.rockstargames.com/es-419/game/buy-gta-vi?drm=PlayStation+5",
+      "type": "official_store",
+      "authority": "Tienda oficial · nombres de contenido y bonificaciones"
     }
   ]
 }
