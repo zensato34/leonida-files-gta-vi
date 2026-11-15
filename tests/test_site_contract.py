@@ -72,6 +72,10 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn('class="cmd-icon"', HTML)
         self.assertIn('.cmd-icon{display:inline!important', HTML)
 
+    def test_debunked_evidence_filter_has_matching_news_option(self):
+        self.assertIn('<option value="desmentido">Desmentido</option>', HTML)
+        self.assertIn("f==='desmentido'&&k==='desmentido'", HTML)
+
     def test_global_search_indexes_news_and_auto_feed_timestamps(self):
         self.assertIn("#newsList .news,#personajes .character-file", HTML)
         self.assertIn("el.dataset.publishedAt=String(item.published_at||item.date||'')", HTML)
