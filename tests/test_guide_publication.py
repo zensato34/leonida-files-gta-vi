@@ -96,5 +96,22 @@ class GuidePublicationGateTests(unittest.TestCase):
         published = catalog["categories"][0]["entries"][0]
         self.assertIsNone(published["region_id"])
 
+
+    def test_verified_walkthrough_fields_are_exported_but_private_notes_are_not(self):
+        item = draft_entry()
+        item.update({"trackable": True, "region_id": "vice-city", "location_details": "Ubicación comprobada", "unlock_requirement": "Requisito confirmado", "requirements": ["Condición A"], "steps": ["Paso 1", "Paso 2"], "reward": "Recompensa observada", "missable": True, "notes_private": "NO EXPORTAR"})
+        catalog, _ = build_public_catalog(GUIDE, self.drafts([item]), date(2026, 11, 21))
+        public = catalog["categories"][0]["entries"][0]
+        self.assertIs(public["trackable"], True)
+        self.assertEqual("vice-city", public["region_id"])
+        self.assertEqual(["Paso 1", "Paso 2"], public["steps"])
+        self.assertIs(public["missable"], True)
+        self.assertNotIn("NO EXPORTAR", json.dumps(public))
+
+    def test_untrusted_region_values_are_not_exported(self):
+        item = draft_entry(region_id=["not", "a", "region"])
+        catalog, _ = build_public_catalog(GUIDE, self.drafts([item]), date(2026, 11, 21))
+        self.assertIsNone(catalog["categories"][0]["entries"][0]["region_id"])
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
