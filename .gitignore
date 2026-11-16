@@ -1,2 +1,5 @@
 __pycache__/
 .DS_Store
+
+# Borradores privados: nunca subirlos al repositorio público
+/private-guide/
