@@ -32,5 +32,13 @@ class PwaContractTests(unittest.TestCase):
         self.assertIn("cache.match('./index.html')", script)
         self.assertIn("if(url.origin!==self.location.origin)return", script)
 
+
+    def test_android_install_icons_include_192_and_512_png_fallbacks(self):
+        icons = MANIFEST["icons"]
+        self.assertTrue(any(icon.get("sizes") == "192x192" and icon.get("type") == "image/png" for icon in icons))
+        self.assertTrue(any(icon.get("sizes") == "512x512" and icon.get("type") == "image/png" for icon in icons))
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn('rel="apple-touch-icon"', html)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
