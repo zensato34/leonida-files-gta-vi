@@ -32,3 +32,5 @@ jobs:
         run: python scripts/validate_catalog.py
       - name: Comprobar sintaxis del motor local
         run: node --check assets/js/dossier34.js
+      - name: Comprobar sintaxis del módulo de guía
+        run: node --check assets/js/guide34.js
