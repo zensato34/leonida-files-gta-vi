@@ -1,13 +1,13 @@
 (()=>{'use strict';
 const root=document.getElementById('progreso');if(!root)return;const $=id=>document.getElementById(id);
-const el={search:$('progressSearch'),region:$('progressRegionFilter'),status:$('progressStatusFilter'),categories:$('progressCategories'),statusText:$('progressStatus'),empty:$('progressEmpty'),percent:$('trackedPercent'),bar:$('trackedBar'),done:$('trackedDone'),total:$('trackedTotal'),coverage:$('trackedCoverage'),goalCount:$('personalGoalCount'),goalSummary:$('personalGoalSummary'),goalForm:$('personalGoalForm'),goalCategory:$('personalGoalCategory'),goalTitle:$('personalGoalTitle'),goalList:$('personalGoalList'),export:$('exportProgress'),import:$('importProgress'),importFile:$('importProgressFile'),backupStatus:$('progressBackupStatus'),guideSpoilers:$('guideSpoilers'),explorerMode:$('explorerMode'),completistMode:$('completistMode'),discoveryForm:$('privateDiscoveryForm'),discoveryCategory:$('privateDiscoveryCategory'),discoveryRegion:$('privateDiscoveryRegion'),discoveryTitle:$('privateDiscoveryTitle'),discoveryNote:$('privateDiscoveryNote'),discoveryEvidence:$('privateDiscoveryEvidence'),discoverySource:$('privateDiscoverySource'),discoverySpoiler:$('privateDiscoverySpoiler'),discoveryCount:$('privateDiscoveryCount'),discoveryList:$('privateDiscoveryList'),atlasPointForm:$('atlasPointForm'),atlasPointRegion:$('atlasPointRegion'),atlasPointType:$('atlasPointType'),atlasPointStatus:$('atlasPointStatus'),atlasPointTitle:$('atlasPointTitle'),atlasPointDetails:$('atlasPointDetails'),atlasPointSource:$('atlasPointSource'),atlasPointSpoiler:$('atlasPointSpoiler'),atlasPointCount:$('atlasPointCount'),atlasPointSearch:$('atlasPointSearch'),atlasPointFilterRegion:$('atlasPointFilterRegion'),atlasPointFilterStatus:$('atlasPointFilterStatus'),atlasPointList:$('atlasPointList'),garageSearch:$('garageSearch'),garageFilter:$('garageFilter'),garageCatalog:$('garageCatalog'),garageTotal:$('garageTotal'),garageWanted:$('garageWanted'),garageOwned:$('garageOwned')};
+const el={search:$('progressSearch'),region:$('progressRegionFilter'),status:$('progressStatusFilter'),categories:$('progressCategories'),statusText:$('progressStatus'),empty:$('progressEmpty'),percent:$('trackedPercent'),bar:$('trackedBar'),done:$('trackedDone'),total:$('trackedTotal'),coverage:$('trackedCoverage'),goalCount:$('personalGoalCount'),goalSummary:$('personalGoalSummary'),goalForm:$('personalGoalForm'),goalCategory:$('personalGoalCategory'),goalTitle:$('personalGoalTitle'),goalList:$('personalGoalList'),export:$('exportProgress'),import:$('importProgress'),importFile:$('importProgressFile'),backupStatus:$('progressBackupStatus'),guideSpoilers:$('guideSpoilers'),explorerMode:$('explorerMode'),completistMode:$('completistMode'),discoveryForm:$('privateDiscoveryForm'),discoveryCategory:$('privateDiscoveryCategory'),discoveryRegion:$('privateDiscoveryRegion'),discoveryTitle:$('privateDiscoveryTitle'),discoveryNote:$('privateDiscoveryNote'),discoveryEvidence:$('privateDiscoveryEvidence'),discoverySource:$('privateDiscoverySource'),discoverySpoiler:$('privateDiscoverySpoiler'),discoveryCount:$('privateDiscoveryCount'),discoveryList:$('privateDiscoveryList'),atlasPointForm:$('atlasPointForm'),atlasPointRegion:$('atlasPointRegion'),atlasPointType:$('atlasPointType'),atlasPointStatus:$('atlasPointStatus'),atlasPointTitle:$('atlasPointTitle'),atlasPointDetails:$('atlasPointDetails'),atlasPointSource:$('atlasPointSource'),atlasPointSpoiler:$('atlasPointSpoiler'),atlasPointCount:$('atlasPointCount'),atlasPointSearch:$('atlasPointSearch'),atlasPointFilterRegion:$('atlasPointFilterRegion'),atlasPointFilterStatus:$('atlasPointFilterStatus'),atlasPointList:$('atlasPointList'),garageSearch:$('garageSearch'),garageFilter:$('garageFilter'),garageCatalog:$('garageCatalog'),garageTotal:$('garageTotal'),garageWanted:$('garageWanted'),garageOwned:$('garageOwned'),sessionForm:$('gameSessionForm'),sessionDate:$('gameSessionDate'),sessionMinutes:$('gameSessionMinutes'),sessionCharacter:$('gameSessionCharacter'),sessionRegion:$('gameSessionRegion'),sessionTitle:$('gameSessionTitle'),sessionNotes:$('gameSessionNotes'),sessionSpoiler:$('gameSessionSpoiler'),sessionCount:$('gameSessionCount'),sessionDuration:$('gameSessionDuration'),sessionLatest:$('gameSessionLatest'),sessionSearch:$('gameSessionSearch'),sessionCharacterFilter:$('gameSessionCharacterFilter'),sessionRegionFilter:$('gameSessionRegionFilter'),sessionList:$('gameSessionList')};
 const storageKey='dossier34-progress-v1',spoilerKey='dossier34-guide-spoilers';
 const fallbackCategories=[{id:'story-missions',title:'Historia y misiones',description:'Seguimiento de misiones verificadas.'},{id:'activities',title:'Actividades y desafíos',description:'Actividades secundarias y desafíos verificados.'},{id:'collectibles',title:'Coleccionables',description:'Coleccionables con ubicación contrastada.'},{id:'secrets',title:'Secretos y easter eggs',description:'Hallazgos verificados.'},{id:'trophies',title:'Trofeos y logros',description:'Trofeos confirmados.'},{id:'completion',title:'Ruta del 100 %',description:'Requisitos globales confirmados.'}];
-let state={checked:{},customGoals:[],privateDiscoveries:[],atlasPoints:[],garageVehicles:[]},meta={catalog_complete:false,total_requirements:null},categories=[],regions=[],tasks=[],vehicleRecords=[],spoilersVisible=false;
+let state={checked:{},customGoals:[],privateDiscoveries:[],atlasPoints:[],garageVehicles:[],gameSessions:[]},meta={catalog_complete:false,total_requirements:null},categories=[],regions=[],tasks=[],vehicleRecords=[],spoilersVisible=false;
 const normalize=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 function make(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=String(text);return node}
 function say(message){el.statusText.textContent=message}
-function safeSave(){try{localStorage.setItem(storageKey,JSON.stringify({version:4,checked:state.checked,customGoals:state.customGoals,privateDiscoveries:state.privateDiscoveries,atlasPoints:state.atlasPoints,garageVehicles:state.garageVehicles}));el.backupStatus.textContent='Guardado localmente en este navegador.';return true}catch(_){el.backupStatus.textContent='El navegador no permitió guardar. Exporta el respaldo y comprueba el almacenamiento del sitio.';return false}}
+function safeSave(){try{localStorage.setItem(storageKey,JSON.stringify({version:5,checked:state.checked,customGoals:state.customGoals,privateDiscoveries:state.privateDiscoveries,atlasPoints:state.atlasPoints,garageVehicles:state.garageVehicles,gameSessions:state.gameSessions}));el.backupStatus.textContent='Guardado localmente en este navegador.';return true}catch(_){el.backupStatus.textContent='El navegador no permitió guardar. Exporta el respaldo y comprueba el almacenamiento del sitio.';return false}}
 function normalizeDiscovery(item){
  if(!item||typeof item!=='object'||Array.isArray(item))return null;
  const categories=fallbackCategories.map(cat=>cat.id),regionIds=['vice-city','leonida-keys','grassrivers','port-gellhorn','ambrosia','mount-kalaga-national-park'];
@@ -55,6 +55,70 @@ function renderGarage(){
  });
  if(!visible)el.garageCatalog.append(make('p','progress-loading','No hay vehículos que coincidan con la búsqueda o el filtro.'))
 }
+function localIsoDate(){
+ const now=new Date(),local=new Date(now.getTime()-now.getTimezoneOffset()*60000);
+ return local.toISOString().slice(0,10);
+}
+function normalizeGameSession(item){
+ if(!item||typeof item!=='object'||Array.isArray(item))return null;
+ const regionIds=['vice-city','leonida-keys','grassrivers','port-gellhorn','ambrosia','mount-kalaga-national-park'];
+ const characters=['jason','lucia','both','unknown'];
+ const played=typeof item.played_on==='string'?item.played_on:'';
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(played))return null;
+ const parsedDate=new Date(played+'T00:00:00Z');
+ if(Number.isNaN(parsedDate.getTime())||parsedDate.toISOString().slice(0,10)!==played||played>localIsoDate())return null;
+ const duration=Number(item.duration_min);
+ if(!Number.isInteger(duration)||duration<1||duration>1440)return null;
+ const title=typeof item.title==='string'?item.title.trim().slice(0,120):'';
+ if(!title)return null;
+ const notes=typeof item.notes==='string'?item.notes.trim().slice(0,1800):'';
+ return {id:typeof item.id==='string'?item.id.slice(0,90):makeId(),played_on:played,duration_min:duration,character:characters.includes(item.character)?item.character:'unknown',region_id:regionIds.includes(item.region_id)?item.region_id:null,title,notes,spoiler:item.spoiler===true,created_at:typeof item.created_at==='string'?item.created_at:new Date().toISOString()};
+}
+function normalizeGameSessions(items){
+ const byId=new Map();if(!Array.isArray(items))return [];
+ items.slice(0,1000).forEach(item=>{const session=normalizeGameSession(item);if(session)byId.set(session.id,session)});
+ return [...byId.values()].sort((a,b)=>b.played_on.localeCompare(a.played_on)||b.created_at.localeCompare(a.created_at)).slice(0,500);
+}
+function formatDuration(minutes){
+ const hours=Math.floor(minutes/60),rest=minutes%60;
+ return hours?hours+' h '+rest+' min':rest+' min';
+}
+function renderGameSessions(){
+ el.sessionList.replaceChildren();
+ const total=state.gameSessions.length,totalMinutes=state.gameSessions.reduce((sum,item)=>sum+item.duration_min,0);
+ el.sessionCount.textContent=String(total);el.sessionDuration.textContent=formatDuration(totalMinutes);
+ const latest=[...state.gameSessions].sort((a,b)=>b.played_on.localeCompare(a.played_on))[0];
+ el.sessionLatest.textContent=latest?latest.played_on:'—';
+ if(!total){el.sessionList.append(make('p','progress-loading','Todavía no has registrado sesiones.'));return}
+ const regionMap=Object.fromEntries(regions.map(region=>[region.id,region.name]));
+ const charLabels={jason:'Jason',lucia:'Lucía',both:'Jason y Lucía',unknown:'No especificado'};
+ const query=normalize(el.sessionSearch.value),charFilter=el.sessionCharacterFilter.value,regionFilter=el.sessionRegionFilter.value;
+ let visible=0;
+ state.gameSessions.slice().sort((a,b)=>b.played_on.localeCompare(a.played_on)||b.created_at.localeCompare(a.created_at)).forEach(item=>{
+  const hiddenSpoiler=item.spoiler&&!spoilersVisible;
+  const contentText=hiddenSpoiler?'':normalize(item.title+' '+item.notes);
+  const regionText=regionMap[item.region_id]||'';
+  const matchesQuery=!query||contentText.includes(query);
+  const matchesCharacter=charFilter==='all'||charFilter===item.character;
+  const matchesRegion=regionFilter==='all'||(regionFilter==='none'?!item.region_id:regionFilter===item.region_id);
+  if(!matchesQuery||!matchesCharacter||!matchesRegion)return;
+  visible++;
+  const card=make('article','game-session-card');
+  const head=make('div','game-session-card-head');
+  head.append(make('strong','game-session-title',hiddenSpoiler?'Registro con spoilers oculto':item.title),make('span','game-session-date',item.played_on));
+  card.append(head);
+  const meta=make('div','progress-task-meta');
+  meta.append(make('span','',formatDuration(item.duration_min)),make('span','',charLabels[item.character]||'No especificado'));
+  if(!hiddenSpoiler)meta.append(make('span','',regionText||'Región sin asignar'));
+  if(item.spoiler)meta.append(make('span','progress-task-spoiler','SPOILER'));
+  card.append(meta);
+  if(!hiddenSpoiler&&item.notes)card.append(make('p','game-session-notes',item.notes));
+  const remove=make('button','personal-goal-remove','Eliminar sesión');remove.type='button';
+  remove.addEventListener('click',()=>{if(!window.confirm('¿Eliminar este registro de sesión?'))return;state.gameSessions=state.gameSessions.filter(entry=>entry.id!==item.id);safeSave();renderGameSessions()});
+  card.append(remove);el.sessionList.append(card)
+ });
+ if(!visible)el.sessionList.append(make('p','progress-loading','No hay sesiones que coincidan con los filtros.'))
+}
 function normalizeAtlasPoint(item){
  if(!item||typeof item!=='object'||Array.isArray(item))return null;
  const regionIds=['vice-city','leonida-keys','grassrivers','port-gellhorn','ambrosia','mount-kalaga-national-park'];
@@ -67,23 +131,28 @@ function normalizeAtlasPoint(item){
 function loadState(){
  try{
   const parsed=JSON.parse(localStorage.getItem(storageKey)||'{}');
-  if(parsed&&[1,2,3,4].includes(parsed.version)&&parsed.checked&&typeof parsed.checked==='object'&&!Array.isArray(parsed.checked))state.checked=Object.fromEntries(Object.entries(parsed.checked).filter(([key,value])=>typeof key==='string'&&key.length<=120&&typeof value==='boolean').slice(0,5000));
+  if(parsed&&[1,2,3,4,5].includes(parsed.version)&&parsed.checked&&typeof parsed.checked==='object'&&!Array.isArray(parsed.checked))state.checked=Object.fromEntries(Object.entries(parsed.checked).filter(([key,value])=>typeof key==='string'&&key.length<=120&&typeof value==='boolean').slice(0,5000));
   if(parsed&&Array.isArray(parsed.customGoals))state.customGoals=parsed.customGoals.filter(item=>item&&typeof item.id==='string'&&typeof item.title==='string'&&typeof item.category==='string').slice(0,250).map(item=>({id:item.id.slice(0,90),title:item.title.trim().slice(0,120),category:item.category,done:item.done===true,created_at:typeof item.created_at==='string'?item.created_at:''})).filter(item=>item.title&&fallbackCategories.some(cat=>cat.id===item.category));
   if(parsed&&Array.isArray(parsed.privateDiscoveries))state.privateDiscoveries=parsed.privateDiscoveries.map(normalizeDiscovery).filter(Boolean).slice(0,250);
   if(parsed&&Array.isArray(parsed.atlasPoints))state.atlasPoints=parsed.atlasPoints.map(normalizeAtlasPoint).filter(Boolean).slice(0,500);
   if(parsed&&Array.isArray(parsed.garageVehicles))state.garageVehicles=normalizeGarageVehicles(parsed.garageVehicles);
- }catch(_){state={checked:{},customGoals:[],privateDiscoveries:[],atlasPoints:[],garageVehicles:[]};el.backupStatus.textContent='No se pudo leer el almacenamiento local anterior; se inicia una sesión de progreso vacía.'}
+  if(parsed&&Array.isArray(parsed.gameSessions))state.gameSessions=normalizeGameSessions(parsed.gameSessions);
+ }catch(_){state={checked:{},customGoals:[],privateDiscoveries:[],atlasPoints:[],garageVehicles:[],gameSessions:[]};el.backupStatus.textContent='No se pudo leer el almacenamiento local anterior; se inicia una sesión de progreso vacía.'}
 }
 function addRegions(){
  el.region.replaceChildren();el.region.append(new Option('Todas las regiones','all'));
  el.discoveryRegion.replaceChildren();el.discoveryRegion.append(new Option('Sin confirmar / sin asignar',''));
  el.atlasPointRegion.replaceChildren();el.atlasPointRegion.append(new Option('Selecciona región',''));
  el.atlasPointFilterRegion.replaceChildren();el.atlasPointFilterRegion.append(new Option('Todas las regiones','all'));
+ el.sessionRegion.replaceChildren();el.sessionRegion.append(new Option('Sin asignar',''));
+ el.sessionRegionFilter.replaceChildren();el.sessionRegionFilter.append(new Option('Todas','all'),new Option('Sin asignar','none'));
  regions.forEach(region=>{
   el.region.append(new Option(region.name,region.id));
   el.discoveryRegion.append(new Option(region.name,region.id));
   el.atlasPointRegion.append(new Option(region.name,region.id));
   el.atlasPointFilterRegion.append(new Option(region.name,region.id));
+  el.sessionRegion.append(new Option(region.name,region.id));
+  el.sessionRegionFilter.append(new Option(region.name,region.id));
  })
 }
 function sourceUrl(entry){const source=entry.verification&&Array.isArray(entry.verification.sources)?entry.verification.sources.find(item=>item&&typeof item.url==='string'&&item.url.startsWith('https://')):null;return source?source.url:''}
@@ -140,28 +209,40 @@ function renderDiscoveries(){
 function setMode(showSpoilers){
  spoilersVisible=showSpoilers;if(el.guideSpoilers){el.guideSpoilers.checked=showSpoilers;el.guideSpoilers.dispatchEvent(new Event('change',{bubbles:true}))}
  try{localStorage.setItem(spoilerKey,String(showSpoilers))}catch(_){}
- const explorer=!showSpoilers;el.explorerMode.classList.toggle('is-active',explorer);el.explorerMode.setAttribute('aria-pressed',String(explorer));el.completistMode.classList.toggle('is-active',showSpoilers);el.completistMode.setAttribute('aria-pressed',String(showSpoilers));el.backupStatus.textContent=showSpoilers?'Modo completista: se muestran fichas marcadas como spoiler.':'Modo explorador: los spoilers permanecen ocultos.';applyFilters()
+ renderGameSessions();const explorer=!showSpoilers;el.explorerMode.classList.toggle('is-active',explorer);el.explorerMode.setAttribute('aria-pressed',String(explorer));el.completistMode.classList.toggle('is-active',showSpoilers);el.completistMode.setAttribute('aria-pressed',String(showSpoilers));el.backupStatus.textContent=showSpoilers?'Modo completista: se muestran fichas marcadas como spoiler.':'Modo explorador: los spoilers permanecen ocultos.';applyFilters()
 }
 function updateStats(){const total=tasks.length,done=tasks.filter(task=>state.checked[task.id]===true).length;el.done.textContent=String(done);el.total.textContent=String(total);el.bar.hidden=total===0;if(total>0){const percent=Math.round(done/total*100);el.percent.textContent=percent+'%';el.bar.value=percent;el.coverage.textContent=meta.catalog_complete?'Porcentaje de la checklist verificada y publicada. La guía declara cobertura completa del catálogo conocido; revisa sus criterios y fuentes.':'Porcentaje de las tareas verificadas actualmente publicadas ('+done+' de '+total+'). No representa el porcentaje real total del juego porque el catálogo aún no se ha declarado completo.'}else{el.percent.textContent='Pendiente';el.coverage.textContent='Todavía no hay requisitos de progreso verificados y publicados. No se muestra 0 %, porque eso daría a entender que ya existe un catálogo completo.'}for(const category of categories){const count=tasks.filter(task=>task.category_id===category.id).length,complete=tasks.filter(task=>task.category_id===category.id&&state.checked[task.id]===true).length;const label=el.categories.querySelector('[data-category-count="'+category.id+'"]');if(label)label.textContent=complete+' / '+count}const personalTotal=state.customGoals.length,personalDone=state.customGoals.filter(goal=>goal.done).length;el.goalCount.textContent=String(personalDone)+' / '+String(personalTotal);el.goalSummary.textContent=personalTotal+' objetivo'+(personalTotal===1?'':'s')}
 function renderGoals(){el.goalList.replaceChildren();if(!state.customGoals.length){el.goalList.append(make('p','progress-loading','Todavía no has añadido objetivos.'));updateStats();return}state.customGoals.forEach(goal=>{const row=make('div','personal-goal');row.classList.toggle('is-done',goal.done);const checkbox=make('input');checkbox.type='checkbox';checkbox.checked=goal.done;checkbox.setAttribute('aria-label','Marcar como completado: '+goal.title);const text=make('div');text.append(make('span','personal-goal-title',goal.title));const category=fallbackCategories.find(item=>item.id===goal.category);text.append(make('span','personal-goal-category',category?category.title:'Objetivo personal'));const remove=make('button','personal-goal-remove','Eliminar');remove.type='button';remove.addEventListener('click',()=>{if(!window.confirm('¿Eliminar este objetivo personal?'))return;state.customGoals=state.customGoals.filter(item=>item.id!==goal.id);safeSave();renderGoals()});checkbox.addEventListener('change',()=>{goal.done=checkbox.checked;row.classList.toggle('is-done',goal.done);safeSave();updateStats()});row.append(checkbox,text,remove);el.goalList.append(row)});updateStats()}
 function makeId(){if(window.crypto&&typeof window.crypto.randomUUID==='function')return window.crypto.randomUUID();return 'goal-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,10)}
 function exportBackup(){
- const payload={format:'leonida-files-progress',version:4,exported_at:new Date().toISOString(),checked:state.checked,customGoals:state.customGoals,privateDiscoveries:state.privateDiscoveries,atlasPoints:state.atlasPoints,garageVehicles:state.garageVehicles};
+ const payload={format:'leonida-files-progress',version:5,exported_at:new Date().toISOString(),checked:state.checked,customGoals:state.customGoals,privateDiscoveries:state.privateDiscoveries,atlasPoints:state.atlasPoints,garageVehicles:state.garageVehicles,gameSessions:state.gameSessions};
  const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),link=make('a');link.href=url;link.download='leonida-files-progress-backup.json';document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);el.backupStatus.textContent='Respaldo JSON exportado con marcas, objetivos y hallazgos privados. Guárdalo en un lugar seguro.'
 }
 function importBackup(file){
  if(!file)return;if(file.size>1048576){el.backupStatus.textContent='El archivo supera el límite de 1 MB.';return}
  file.text().then(text=>{
-  const data=JSON.parse(text);if(!data||data.format!=='leonida-files-progress'||![1,2,3,4].includes(data.version)||!data.checked||typeof data.checked!=='object'||!Array.isArray(data.customGoals)||(data.version>=2&&!Array.isArray(data.privateDiscoveries))||(data.version>=3&&!Array.isArray(data.atlasPoints))||(data.version>=4&&!Array.isArray(data.garageVehicles)))throw new Error('Formato de respaldo no válido');
+  const data=JSON.parse(text);if(!data||data.format!=='leonida-files-progress'||![1,2,3,4,5].includes(data.version)||!data.checked||typeof data.checked!=='object'||!Array.isArray(data.customGoals)||(data.version>=2&&!Array.isArray(data.privateDiscoveries))||(data.version>=3&&!Array.isArray(data.atlasPoints))||(data.version>=4&&!Array.isArray(data.garageVehicles))||(data.version>=5&&!Array.isArray(data.gameSessions)))throw new Error('Formato de respaldo no válido');
   if(!window.confirm('Importar reemplazará las marcas, objetivos y hallazgos privados guardados en este navegador. ¿Continuar?'))return;
   const checked=Object.fromEntries(Object.entries(data.checked).filter(([id,value])=>typeof id==='string'&&id.length<=120&&typeof value==='boolean').slice(0,5000));
   const goals=data.customGoals.filter(goal=>goal&&typeof goal.id==='string'&&typeof goal.title==='string'&&fallbackCategories.some(cat=>cat.id===goal.category)).slice(0,250).map(goal=>({id:goal.id.slice(0,90),title:goal.title.trim().slice(0,120),category:goal.category,done:goal.done===true,created_at:typeof goal.created_at==='string'?goal.created_at:''})).filter(goal=>goal.title);
   const discoveries=(Array.isArray(data.privateDiscoveries)?data.privateDiscoveries:[]).map(normalizeDiscovery).filter(Boolean).slice(0,250);
   const atlasPoints=(Array.isArray(data.atlasPoints)?data.atlasPoints:[]).map(normalizeAtlasPoint).filter(Boolean).slice(0,500);
   const garageVehicles=normalizeGarageVehicles(Array.isArray(data.garageVehicles)?data.garageVehicles:[]);
-  state={checked,customGoals:goals,privateDiscoveries:discoveries,atlasPoints,garageVehicles};safeSave();renderCatalog();renderGoals();renderDiscoveries();renderAtlasPoints();renderGarage();el.backupStatus.textContent='Respaldo importado correctamente.'
+  const gameSessions=normalizeGameSessions(Array.isArray(data.gameSessions)?data.gameSessions:[]);
+  state={checked,customGoals:goals,privateDiscoveries:discoveries,atlasPoints,garageVehicles,gameSessions};safeSave();renderCatalog();renderGoals();renderDiscoveries();renderAtlasPoints();renderGarage();renderGameSessions();el.backupStatus.textContent='Respaldo importado correctamente.'
  }).catch(()=>{el.backupStatus.textContent='No se pudo importar: el archivo está dañado o no tiene el formato de LEONIDA FILES.'}).finally(()=>{el.importFile.value=''})
 }
+el.sessionDate.value=localIsoDate();el.sessionDate.max=localIsoDate();
+el.sessionForm.addEventListener('submit',event=>{
+ event.preventDefault();
+ const title=el.sessionTitle.value.trim(),date=el.sessionDate.value,duration=Number(el.sessionMinutes.value);
+ if(!title||!date||!Number.isInteger(duration)||duration<1||duration>1440){el.sessionTitle.focus();return}
+ if(state.gameSessions.length>=500){el.backupStatus.textContent='Has alcanzado el máximo de 500 sesiones personales.';return}
+ const session=normalizeGameSession({id:makeId(),played_on:date,duration_min:duration,character:el.sessionCharacter.value,region_id:el.sessionRegion.value||null,title,notes:el.sessionNotes.value,spoiler:el.sessionSpoiler.checked,created_at:new Date().toISOString()});
+ if(!session){el.backupStatus.textContent='No se pudo validar la sesión. Comprueba la fecha y la duración.';return}
+ state.gameSessions.unshift(session);safeSave();renderGameSessions();el.sessionTitle.value='';el.sessionNotes.value='';el.sessionMinutes.value='60';el.sessionCharacter.value='jason';el.sessionRegion.value='';el.sessionSpoiler.checked=false;el.backupStatus.textContent='Sesión guardada en tu diario privado.';el.sessionTitle.focus()
+});
+el.sessionSearch.addEventListener('input',renderGameSessions);el.sessionCharacterFilter.addEventListener('change',renderGameSessions);el.sessionRegionFilter.addEventListener('change',renderGameSessions);
 el.atlasPointForm.addEventListener('submit',event=>{
  event.preventDefault();
  const title=el.atlasPointTitle.value.trim(),details=el.atlasPointDetails.value.trim(),source=el.atlasPointSource.value.trim();
@@ -185,7 +266,7 @@ el.discoveryForm.addEventListener('submit',event=>{
 el.explorerMode.addEventListener('click',()=>setMode(false));el.completistMode.addEventListener('click',()=>setMode(true));
 el.goalForm.addEventListener('submit',event=>{event.preventDefault();const title=el.goalTitle.value.trim();const category=el.goalCategory.value;if(!title){el.goalTitle.focus();return}if(!fallbackCategories.some(item=>item.id===category)){el.backupStatus.textContent='Selecciona un módulo válido.';return}if(state.customGoals.length>=250){el.backupStatus.textContent='Has alcanzado el máximo de 250 objetivos personales.';return}state.customGoals.push({id:makeId(),title:title.slice(0,120),category,done:false,created_at:new Date().toISOString()});el.goalTitle.value='';safeSave();renderGoals();el.goalTitle.focus()});
 el.search.addEventListener('input',applyFilters);el.region.addEventListener('change',applyFilters);el.status.addEventListener('change',applyFilters);el.export.addEventListener('click',exportBackup);el.import.addEventListener('click',()=>el.importFile.click());el.importFile.addEventListener('change',()=>importBackup(el.importFile.files&&el.importFile.files[0]));
-if(el.guideSpoilers){try{spoilersVisible=localStorage.getItem(spoilerKey)==='true'}catch(_){spoilersVisible=false}el.guideSpoilers.addEventListener('change',()=>{spoilersVisible=el.guideSpoilers.checked;const explorer=!spoilersVisible;el.explorerMode.classList.toggle('is-active',explorer);el.explorerMode.setAttribute('aria-pressed',String(explorer));el.completistMode.classList.toggle('is-active',spoilersVisible);el.completistMode.setAttribute('aria-pressed',String(spoilersVisible));applyFilters()})}
-async function load(){loadState();try{const [guideResponse,progressResponse,regionResponse,vehiclesResponse]=await Promise.all([fetch('data/guide.json',{cache:'no-store'}),fetch('data/progress.json',{cache:'no-store'}),fetch('data/regions.json',{cache:'no-store'}),fetch('data/vehicles.json',{cache:'no-store'})]);if(!guideResponse.ok||!progressResponse.ok||!regionResponse.ok||!vehiclesResponse.ok)throw new Error('No se pudo cargar uno de los catálogos');const [guide,progress,regionData,vehicleData]=await Promise.all([guideResponse.json(),progressResponse.json(),regionResponse.json(),vehiclesResponse.json()]);if(guide.dataset!=='guide'||progress.dataset!=='progress'||regionData.dataset!=='regions'||vehicleData.dataset!=='vehicles')throw new Error('Formato de catálogo inválido');categories=guide.categories;meta=progress;regions=regionData.items||[];vehicleRecords=Array.isArray(vehicleData.items)?vehicleData.items:[];addRegions();renderCatalog();renderGoals();renderDiscoveries();renderAtlasPoints();renderGarage();setMode(spoilersVisible);const total=tasks.length;say(total?total+' tareas verificadas disponibles. Las marcas se guardan localmente.':'Catálogos cargados: 0 tareas verificadas para seguimiento. Los módulos están preparados, no se inventan requisitos.')}catch(error){categories=fallbackCategories;regions=[];vehicleRecords=[];addRegions();renderCatalog();renderGoals();renderDiscoveries();renderAtlasPoints();renderGarage();setMode(spoilersVisible);say('No se pudo cargar toda la checklist oficial. Tus objetivos personales siguen disponibles; no se calculará progreso oficial hasta recuperar los catálogos.')}}
+if(el.guideSpoilers){try{spoilersVisible=localStorage.getItem(spoilerKey)==='true'}catch(_){spoilersVisible=false}el.guideSpoilers.addEventListener('change',()=>{spoilersVisible=el.guideSpoilers.checked;const explorer=!spoilersVisible;el.explorerMode.classList.toggle('is-active',explorer);el.explorerMode.setAttribute('aria-pressed',String(explorer));el.completistMode.classList.toggle('is-active',spoilersVisible);el.completistMode.setAttribute('aria-pressed',String(spoilersVisible));renderGameSessions();applyFilters()})}
+async function load(){loadState();try{const [guideResponse,progressResponse,regionResponse,vehiclesResponse]=await Promise.all([fetch('data/guide.json',{cache:'no-store'}),fetch('data/progress.json',{cache:'no-store'}),fetch('data/regions.json',{cache:'no-store'}),fetch('data/vehicles.json',{cache:'no-store'})]);if(!guideResponse.ok||!progressResponse.ok||!regionResponse.ok||!vehiclesResponse.ok)throw new Error('No se pudo cargar uno de los catálogos');const [guide,progress,regionData,vehicleData]=await Promise.all([guideResponse.json(),progressResponse.json(),regionResponse.json(),vehiclesResponse.json()]);if(guide.dataset!=='guide'||progress.dataset!=='progress'||regionData.dataset!=='regions'||vehicleData.dataset!=='vehicles')throw new Error('Formato de catálogo inválido');categories=guide.categories;meta=progress;regions=regionData.items||[];vehicleRecords=Array.isArray(vehicleData.items)?vehicleData.items:[];addRegions();renderCatalog();renderGoals();renderDiscoveries();renderAtlasPoints();renderGarage();renderGameSessions();setMode(spoilersVisible);const total=tasks.length;say(total?total+' tareas verificadas disponibles. Las marcas se guardan localmente.':'Catálogos cargados: 0 tareas verificadas para seguimiento. Los módulos están preparados, no se inventan requisitos.')}catch(error){categories=fallbackCategories;regions=[];vehicleRecords=[];addRegions();renderCatalog();renderGoals();renderDiscoveries();renderAtlasPoints();renderGarage();renderGameSessions();setMode(spoilersVisible);say('No se pudo cargar toda la checklist oficial. Tus objetivos personales siguen disponibles; no se calculará progreso oficial hasta recuperar los catálogos.')}}
 load();
 })();
