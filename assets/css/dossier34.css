@@ -131,3 +131,57 @@ body{background:radial-gradient(ellipse at 82% 2%,#16343a88 0,transparent 35%),r
 .track.official .track-status{color:var(--green)}
 .news .source-type{font-size:.62rem;color:#9eb1a7}
 @media(max-width:620px){.source-registry{padding:13px}.source-registry-search{width:100%}.source-entry{flex:1 1 100%}.hangar-data-state{align-items:flex-start;flex-direction:column}}
+
+
+/* FASE 3 — Atlas regional y Hangar 34 */
+.atlas-map-warning{display:grid;gap:5px;margin:16px 0;padding:14px 16px;border:1px solid #e5ae5855;border-left:3px solid #e5ae58;border-radius:4px;background:#211b12;color:#c8bda7}
+.atlas-map-warning strong{font:900 .68rem ui-monospace,monospace;letter-spacing:.12em;color:#f1c477}
+.atlas-map-warning span{font-size:.78rem;line-height:1.5}
+.atlas-explorer,.hangar-explorer{margin-top:18px;padding:16px;border:1px solid #34484b;border-radius:7px;background:linear-gradient(145deg,#101d21,#0d1519)}
+.atlas-explorer-head,.hangar-explorer-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:13px}
+.atlas-explorer-head strong,.hangar-explorer-head strong{display:block;margin-top:4px;color:#e7eee9;font-size:1.02rem;letter-spacing:-.02em}
+.region-count,.vehicle-count{color:var(--aqua);font:800 .65rem ui-monospace,monospace;letter-spacing:.1em}
+.region-search,.vehicle-search{display:block;width:100%;margin:0 0 12px;border:1px solid #42575b;border-radius:4px;background:#091317;color:var(--ink);padding:11px 13px;font:500 .82rem inherit}
+.region-search:focus,.vehicle-search:focus{outline:2px solid #69cfc3;outline-offset:2px}
+.region-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.region-card{padding:0!important;overflow:hidden;display:flex;flex-direction:column;min-width:0;min-height:100%;border-radius:5px!important;background:linear-gradient(150deg,#15252a,#0c1519)!important}
+.region-image,.vehicle-image{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0a1114;border-bottom:1px solid #ffffff18}
+.region-image img,.vehicle-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s var(--motion-ease),filter .4s}
+.region-card:hover .region-image img,.vehicle-card:hover .vehicle-image img{transform:scale(1.045);filter:saturate(1.07)}
+.region-image:after,.vehicle-image:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(0deg,#071013d9,transparent);pointer-events:none}
+.region-frame-code,.vehicle-index-stamp{position:absolute;z-index:1;left:9px;bottom:8px;color:#d5e4dc;font:800 .56rem ui-monospace,monospace;letter-spacing:.09em;text-shadow:0 1px 4px #000}
+.region-content,.vehicle-body{padding:14px;display:flex;flex-direction:column;flex:1;min-width:0}
+.region-content .eyebrow{font-size:.59rem;letter-spacing:.14em;color:var(--aqua)}
+.region-content>b{display:block;margin:5px 0 7px;color:#f0f0e7;font-size:1.04rem}
+.region-content>span:not(.eyebrow){color:#bbc8c1;font-size:.78rem;line-height:1.5}
+.region-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:13px 0 4px;padding-top:10px;border-top:1px solid #ffffff16;color:#94a89f;font:700 .59rem ui-monospace,monospace;text-transform:uppercase;letter-spacing:.04em}
+.region-content .source{align-self:flex-start;margin-top:auto;padding-top:12px}
+.region-related{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:10px 0 2px}
+.region-related small{width:100%;color:#8ea39a;font:800 .57rem ui-monospace,monospace;letter-spacing:.1em}
+.region-related a{border:1px solid #69cfc333;border-radius:3px;padding:5px 7px;color:#c0e5d9;font-size:.65rem;font-weight:800}
+.region-related a:hover{border-color:var(--aqua);text-decoration:none}
+.atlas-footnote{margin-top:14px;font-size:.75rem;line-height:1.6}
+.hangar-data-state{margin:14px 0;border:1px solid #69cfc344;background:#0c1b20;border-radius:4px;padding:12px 15px}
+.hangar-data-state strong{font:900 .68rem ui-monospace,monospace;letter-spacing:.11em;color:var(--aqua)}
+.hangar-data-state span{font-size:.74rem;color:#aabbb3}
+.hangar-filters{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 14px}
+.hangar-filter{border:1px solid #3b5054;border-radius:3px;background:#101d21;color:#b7c6bf;padding:7px 10px;font:800 .62rem ui-monospace,monospace;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.hangar-filter[aria-pressed=true],.hangar-filter:hover{border-color:var(--aqua);background:#153036;color:#d9f6ed}
+.vehicle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.vehicle-card{padding:0!important;display:flex;flex-direction:column;overflow:hidden;min-width:0;border-radius:5px;background:linear-gradient(150deg,#19272b,#10181b)}
+.vehicle-image{aspect-ratio:16/10}
+.vehicle-body{gap:7px}
+.vehicle-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.vehicle-category{color:var(--aqua);font:800 .58rem ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
+.vehicle-evidence{color:#e5bd78;font:700 .55rem ui-monospace,monospace;text-transform:uppercase;letter-spacing:.05em}
+.vehicle-body h3{margin:3px 0 0;color:#f1f1e9;font-size:1.05rem;line-height:1.2}
+.vehicle-maker{margin:0!important;color:#94aaa0!important;font:800 .62rem ui-monospace,monospace!important;text-transform:uppercase;letter-spacing:.08em}
+.vehicle-body>p:not(.vehicle-maker){margin:3px 0;color:#bbc8c1;font-size:.77rem;line-height:1.5}
+.vehicle-edition{margin-top:auto;padding:9px 0 2px;border-top:1px solid #ffffff16;color:#a6b6ad;font-size:.66rem;line-height:1.45}
+.vehicle-body .source{align-self:flex-start;margin-top:5px}
+.vehicle-sources{display:flex;gap:8px;flex-wrap:wrap}
+.vehicle-source-link{color:#91aaa0;font:700 .58rem ui-monospace,monospace}
+.vehicle-source-link:hover{color:var(--aqua)}
+.vehicle-count{white-space:nowrap}
+@media(max-width:900px){.region-grid,.vehicle-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.atlas-explorer,.hangar-explorer{padding:11px;margin-left:-2px;margin-right:-2px}.region-grid,.vehicle-grid{grid-template-columns:1fr}.region-card,.vehicle-card{max-width:100%}.region-image,.vehicle-image{aspect-ratio:16/9}.region-content,.vehicle-body{padding:13px}.atlas-explorer-head,.hangar-explorer-head{align-items:flex-start;flex-direction:column;gap:6px}.region-meta{font-size:.56rem}}

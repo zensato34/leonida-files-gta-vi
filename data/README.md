@@ -18,7 +18,7 @@ Todos los catálogos usan UTF-8 y el mismo sobre:
 | `radios.json` | Emisoras, locutores, descripciones y arte oficial |
 | `songs.json` | Pistas con separación entre sencillos oficiales y lista reportada |
 | `sources.json` | Registro de fuentes, dominio, tipo y autoridad |
-| `vehicles.json` | Catálogo preparado; solo se agregan fichas con evidencia |
+| `vehicles.json` | Siete registros oficiales destacados; no representa el parque vehicular completo |
 | `news-feed.json` | Titulares RSS automáticos, siempre pendientes de verificación |
 
 ## Política editorial
@@ -39,3 +39,10 @@ python -m unittest discover -s tests -v
 ```
 
 La interfaz se sirve con `assets/css/dossier34.css` y `assets/js/dossier34.js`. Si falla la carga de un JSON, el HTML conserva el contenido de respaldo.
+
+
+## Atlas y Hangar 34
+
+El Atlas guarda una imagen oficial, el rótulo de la colección de capturas y su recuento por región. El campo `map_status` impide presentar esas tarjetas como geografía cartográfica; no se usan coordenadas.
+
+Hangar 34 incluye únicamente nombres de vehículos publicados en galerías o beneficios oficiales. Cada entrada tiene una categoría editorial, contexto de edición, imagen oficial y fuentes asociadas. No se rellenan prestaciones, precios ni disponibilidad de modelos que Rockstar no haya descrito.

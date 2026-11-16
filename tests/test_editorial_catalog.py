@@ -31,13 +31,13 @@ class EditorialCatalogTests(unittest.TestCase):
         for label, records in (
             ("sources", self.sources), ("news", self.news),
             ("characters", self.characters), ("regions", self.regions),
-            ("radios", self.radios), ("songs", self.songs),
+            ("radios", self.radios), ("songs", self.songs), ("vehicles", self.vehicles),
         ):
             values = [item["id"] for item in records]
             self.assertEqual(len(values), len(set(values)), f"Duplicate IDs in {label}")
 
     def test_all_references_resolve(self):
-        for dataset in (self.news, self.characters, self.regions, self.radios, self.songs):
+        for dataset in (self.news, self.characters, self.regions, self.radios, self.songs, self.vehicles):
             for record in dataset:
                 for source_id in record.get("source_ids", []):
                     self.assertIn(source_id, self.source_ids, f"{record['id']} -> {source_id}")
@@ -73,7 +73,34 @@ class EditorialCatalogTests(unittest.TestCase):
         self.assertEqual(34, len(self.songs))
         self.assertEqual(10, sum(x["status"] == "official_release" for x in self.songs))
         self.assertEqual(24, sum(x["status"] == "reported_leak" for x in self.songs))
-        self.assertEqual([], self.vehicles)
+        self.assertEqual(7, len(self.vehicles))
+        self.assertEqual(2, sum(x["category"] == "car" for x in self.vehicles))
+        self.assertEqual(1, sum(x["category"] == "motorcycle" for x in self.vehicles))
+        self.assertEqual(2, sum(x["category"] == "watercraft" for x in self.vehicles))
+        self.assertEqual(1, sum(x["category"] == "offroad_buggy" for x in self.vehicles))
+        self.assertEqual(1, sum(x["category"] == "customized_vehicle" for x in self.vehicles))
+
+    def test_atlas_regions_have_official_images_and_screenshot_groups(self):
+        for region in self.regions:
+            self.assertTrue(region["image_url"].startswith("https://www.rockstargames.com/VI/_next/static/media/"))
+            self.assertGreater(region["gallery_count"], 0)
+            self.assertEqual("no_official_coordinates_in_this_catalog", region["map_status"])
+            self.assertIn("src-034", region["source_ids"])
+            for key in ("lat", "latitude", "lon", "long", "longitude", "coordinates"):
+                self.assertNotIn(key, region)
+
+    def test_vehicle_catalog_contains_only_officially_named_records(self):
+        ids = {item["id"] for item in self.vehicles}
+        self.assertEqual({
+            "veh-grotti-cheetah-95", "veh-dinka-enduro", "veh-crest-kayak",
+            "veh-ganado-retro-build", "veh-shitzu-squalo",
+            "veh-vapid-dominator-buggy-67", "veh-vapid-stanier-55",
+        }, ids)
+        for vehicle in self.vehicles:
+            self.assertTrue(vehicle["image_url"].startswith("https://www.rockstargames.com/VI/_next/static/media/"))
+            self.assertTrue(vehicle["source_ids"])
+            self.assertTrue(vehicle["edition_context"])
+            self.assertTrue(vehicle["official_gallery_label"])
 
     def test_catalog_validator_reports_no_integrity_errors(self):
         from scripts.validate_catalog import validate_catalogs
@@ -85,6 +112,8 @@ class EditorialCatalogTests(unittest.TestCase):
         self.assertIn('src="assets/js/dossier34.js"', html)
         self.assertIn('id="sourcesRegister"', html)
         self.assertIn('id="catalogStatus"', html)
+        for element_id in ("regionSearch", "regionCards", "regionCount", "vehicleSearch", "vehicleCatalog", "vehicleCount"):
+            self.assertIn(f'id="{element_id}"', html)
         self.assertTrue((ROOT / "assets/css/dossier34.css").exists())
         self.assertTrue((ROOT / "assets/js/dossier34.js").exists())
 
@@ -94,6 +123,10 @@ class EditorialCatalogTests(unittest.TestCase):
             self.assertIn(path, script)
         self.assertIn("textContent", script)
         self.assertIn("loadStructuredCatalogs", script)
+        self.assertIn("filterRegionCards", script)
+        self.assertIn("filterVehicleCards", script)
+        self.assertIn("window.setDossierRegionFilter", script)
+        self.assertIn("window.setDossierVehicleFilter", script)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

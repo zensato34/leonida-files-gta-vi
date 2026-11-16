@@ -40,14 +40,20 @@ El contenido principal está separado de la presentación en catálogos versiona
 
 - `news.json`: noticias manuales con estado editorial y fuentes asociadas.
 - `characters.json`: expedientes y relaciones navegables entre personajes.
-- `regions.json`: índice de regiones publicado por Rockstar, sin coordenadas no verificadas.
+- `regions.json`: seis regiones con capturas oficiales agrupadas y advertencia cartográfica. No contiene coordenadas ni reconstruye el mapa.
 - `radios.json`: emisoras, locutores y arte oficial.
 - `songs.json`: 34 pistas con estado individual: lanzamiento oficial o pista reportada.
 - `sources.json`: registro común de procedencia y autoridad.
-- `vehicles.json`: estructura preparada; permanece sin fichas hasta disponer de evidencia.
+- `vehicles.json`: siete fichas destacadas con nombre e imagen oficial, distinguiendo beneficios de Ultimate Edition y Vintage Vice City Pack. No es el inventario completo del juego.
 - `news-feed.json`: feed separado de titulares automáticos, siempre pendientes de verificación.
 
 La presentación se separa en `assets/css/dossier34.css` y `assets/js/dossier34.js`. El motor carga los catálogos locales y reconstruye las fichas sin usar `innerHTML` con contenido editorial; el HTML conserva contenido de respaldo si un JSON no está disponible.
+
+### Atlas regional y Hangar 34
+
+El Atlas funciona como explorador visual de las seis colecciones regionales nombradas en la galería oficial. Cada expediente enlaza con las capturas de Rockstar y muestra cuántas imágenes aparecen bajo ese rótulo. No se colocan pines, coordenadas, distancias o límites territoriales hasta disponer de cartografía oficial verificable.
+
+Hangar 34 muestra siete registros oficiales destacados: ’95 Grotti Cheetah, Dinka Enduro, Crest Kayak, Ganado Retro Build, Shitzu Squalo, ’67 Vapid Dominator Buggy y ’55 Vapid Stanier Sedan. Cada ficha informa si corresponde a un beneficio de Ultimate Edition o al Vintage Vice City Pack. El filtro distingue autos, motos, transporte acuático, todoterreno y modificaciones. La ausencia de una aeronave o de otro modelo en este índice no significa que no exista en el juego.
 
 ### Validación de datos
 

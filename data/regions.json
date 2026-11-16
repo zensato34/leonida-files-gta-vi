@@ -2,7 +2,7 @@
   "schema_version": 1,
   "dataset": "regions",
   "reviewed_at": "2026-11-15",
-  "description": "Índice de regiones nombradas; no contiene coordenadas ni una cartografía oficial.",
+  "description": "Explorador editorial con capturas oficiales agrupadas por región. No contiene coordenadas, distancias ni un mapa oficial.",
   "items": [
     {
       "id": "vice-city",
@@ -11,12 +11,21 @@
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
-        "src-028"
+        "src-028",
+        "src-034"
       ],
       "related_character_ids": [
         "boobie-ike",
         "drequan-priest"
-      ]
+      ],
+      "region_type": "urban",
+      "region_type_label": "Núcleo urbano",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Vice_City_01.135x56yoeu.6t.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Captura oficial agrupada bajo Vice City 01",
+      "gallery_count": 27,
+      "gallery_label": "Vice City 01–27",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "evidence_status": "official_screenshot_collection"
     },
     {
       "id": "leonida-keys",
@@ -25,13 +34,22 @@
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
-        "src-028"
+        "src-028",
+        "src-034"
       ],
       "related_character_ids": [
         "jason-duval",
         "brian-heder",
         "cal-hampton"
-      ]
+      ],
+      "region_type": "islands",
+      "region_type_label": "Cayos e islas",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Leonida_Keys_01.0zgz7tveur6y8.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Captura oficial agrupada bajo Leonida Keys 01",
+      "gallery_count": 7,
+      "gallery_label": "Leonida Keys 01–07",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "evidence_status": "official_screenshot_collection"
     },
     {
       "id": "grassrivers",
@@ -40,9 +58,18 @@
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
-        "src-028"
+        "src-028",
+        "src-034"
       ],
-      "related_character_ids": []
+      "related_character_ids": [],
+      "region_type": "wetlands",
+      "region_type_label": "Humedales",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Grassrivers_01.1096rw4lbjur_.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Captura oficial agrupada bajo Grassrivers 01",
+      "gallery_count": 8,
+      "gallery_label": "Grassrivers 01–08",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "evidence_status": "official_screenshot_collection"
     },
     {
       "id": "port-gellhorn",
@@ -51,9 +78,18 @@
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
-        "src-028"
+        "src-028",
+        "src-034"
       ],
-      "related_character_ids": []
+      "related_character_ids": [],
+      "region_type": "coastal",
+      "region_type_label": "Puerto y costa",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Port_Gellhorn_01.0fmisvza-5-cq.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Captura oficial agrupada bajo Port Gellhorn 01",
+      "gallery_count": 7,
+      "gallery_label": "Port Gellhorn 01–07",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "evidence_status": "official_screenshot_collection"
     },
     {
       "id": "ambrosia",
@@ -62,9 +98,18 @@
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
-        "src-028"
+        "src-028",
+        "src-034"
       ],
-      "related_character_ids": []
+      "related_character_ids": [],
+      "region_type": "interior",
+      "region_type_label": "Región interior",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Ambrosia_01.0rqphs0gazkm..jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Captura oficial agrupada bajo Ambrosia 01",
+      "gallery_count": 6,
+      "gallery_label": "Ambrosia 01–06",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "evidence_status": "official_screenshot_collection"
     },
     {
       "id": "mount-kalaga-national-park",
@@ -73,9 +118,18 @@
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
-        "src-028"
+        "src-028",
+        "src-034"
       ],
-      "related_character_ids": []
+      "related_character_ids": [],
+      "region_type": "protected_nature",
+      "region_type_label": "Parque nacional",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/Mount_Kalaga_National_Park_01.0v5fl0f83hjv_.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Captura oficial agrupada bajo Mount Kalaga National Park 01",
+      "gallery_count": 6,
+      "gallery_label": "Mount Kalaga National Park 01–06",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "evidence_status": "official_screenshot_collection"
     }
   ]
 }

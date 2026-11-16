@@ -2,6 +2,154 @@
   "schema_version": 1,
   "dataset": "vehicles",
   "reviewed_at": "2026-11-15",
-  "description": "Catálogo preparado. No hay fichas añadidas sin identificación y evidencia suficientes.",
-  "items": []
+  "description": "Siete registros destacados nombrados o ilustrados oficialmente en los beneficios de edición de GTA VI. No es un catálogo completo del parque vehicular del juego; no se inventan modelos, precios ni estadísticas.",
+  "items": [
+    {
+      "id": "veh-grotti-cheetah-95",
+      "name": "’95 Grotti Cheetah",
+      "manufacturer": "Grotti",
+      "year": 1995,
+      "category": "car",
+      "category_label": "Automóvil deportivo",
+      "description": "Modelo nombrado e ilustrado por Rockstar dentro de los beneficios de Ultimate Edition. Esta ficha no atribuye velocidad, manejo ni estadísticas.",
+      "edition_context": "Ultimate Edition",
+      "edition_key": "ultimate",
+      "evidence_status": "official_edition_benefit",
+      "evidence_label": "Beneficio de Ultimate Edition",
+      "official_gallery_label": "’95 Grotti Cheetah 01",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/ULTIMATE_EDITION_GROTTI_CHEETAH_01.0a.wy3s_ogjey.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Imagen oficial del ’95 Grotti Cheetah, galería de Rockstar Games",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "source_ids": [
+        "src-009",
+        "src-034"
+      ]
+    },
+    {
+      "id": "veh-dinka-enduro",
+      "name": "Dinka Enduro",
+      "manufacturer": "Dinka",
+      "year": null,
+      "category": "motorcycle",
+      "category_label": "Motocicleta",
+      "description": "Motocicleta identificada por su nombre en la galería oficial de beneficios de Ultimate Edition. No se añaden datos de cilindrada, rendimiento ni manejo.",
+      "edition_context": "Ultimate Edition · vehículos del refugio de Jason",
+      "edition_key": "ultimate",
+      "evidence_status": "official_media_label",
+      "evidence_label": "Nombre en galería oficial",
+      "official_gallery_label": "Dinka Enduro Motorcycle",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/ULTIMATE_EDITION_SAFEHOUSE_VEHICLES_02.0-2n5rm9n8.rq.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Imagen oficial de la Dinka Enduro Motorcycle, galería de Rockstar Games",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "source_ids": [
+        "src-034",
+        "src-009"
+      ]
+    },
+    {
+      "id": "veh-crest-kayak",
+      "name": "Crest Kayak",
+      "manufacturer": "Crest",
+      "year": null,
+      "category": "watercraft",
+      "category_label": "Kayak",
+      "description": "Kayak identificado por nombre en la galería oficial de beneficios de Ultimate Edition. No se infieren materiales, velocidad o capacidad.",
+      "edition_context": "Ultimate Edition · vehículos del refugio de Jason",
+      "edition_key": "ultimate",
+      "evidence_status": "official_media_label",
+      "evidence_label": "Nombre en galería oficial",
+      "official_gallery_label": "Crest Kayak",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/ULTIMATE_EDITION_SAFEHOUSE_VEHICLES_03.0c9.qtpdi.tf..jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Imagen oficial del Crest Kayak, galería de Rockstar Games",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "source_ids": [
+        "src-034",
+        "src-009"
+      ]
+    },
+    {
+      "id": "veh-ganado-retro-build",
+      "name": "Ganado Retro Build",
+      "manufacturer": "Vapid",
+      "year": null,
+      "category": "customized_vehicle",
+      "category_label": "Vehículo personalizado",
+      "description": "Paquete de modificación retro para la Ganado, presentado por Rockstar como parte de Ultimate Edition. Se cataloga como personalización, no como modelo independiente confirmado.",
+      "edition_context": "Ultimate Edition",
+      "edition_key": "ultimate",
+      "evidence_status": "official_edition_benefit",
+      "evidence_label": "Beneficio de Ultimate Edition",
+      "official_gallery_label": "Ganado Retro Build",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/ULTIMATE_EDITION_VAPID_GANADO_RETRO_BUILD_01.062dgvkwdynw5.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Imagen oficial del Ganado Retro Build, galería de Rockstar Games",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "source_ids": [
+        "src-009",
+        "src-034"
+      ]
+    },
+    {
+      "id": "veh-shitzu-squalo",
+      "name": "Shitzu Squalo",
+      "manufacturer": "Shitzu",
+      "year": null,
+      "category": "watercraft",
+      "category_label": "Embarcación",
+      "description": "Vehículo acuático identificado por Rockstar como Shitzu Squalo en la galería de beneficios de Ultimate Edition. No se añaden prestaciones ni especificaciones.",
+      "edition_context": "Ultimate Edition",
+      "edition_key": "ultimate",
+      "evidence_status": "official_edition_benefit",
+      "evidence_label": "Beneficio de Ultimate Edition",
+      "official_gallery_label": "Shitzu Squalo 01",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/ULTIMATE_EDITION_SQUALO_01.0cim7hj58ypb1.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Imagen oficial del Shitzu Squalo, galería de Rockstar Games",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "source_ids": [
+        "src-009",
+        "src-034"
+      ]
+    },
+    {
+      "id": "veh-vapid-dominator-buggy-67",
+      "name": "’67 Vapid Dominator Buggy",
+      "manufacturer": "Vapid",
+      "year": 1967,
+      "category": "offroad_buggy",
+      "category_label": "Buggy todoterreno",
+      "description": "Buggy identificado por nombre en los beneficios de Ultimate Edition y en la galería oficial. No se asignan cifras de rendimiento ni capacidades fuera de lo publicado.",
+      "edition_context": "Ultimate Edition",
+      "edition_key": "ultimate",
+      "evidence_status": "official_edition_benefit",
+      "evidence_label": "Beneficio de Ultimate Edition",
+      "official_gallery_label": "’67 Vapid Dominator Buggy 01",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/ULTIMATE_EDITION_VAPID_BUGGY_01.0jxfiql~371ik.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Imagen oficial del ’67 Vapid Dominator Buggy, galería de Rockstar Games",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "source_ids": [
+        "src-009",
+        "src-034"
+      ]
+    },
+    {
+      "id": "veh-vapid-stanier-55",
+      "name": "’55 Vapid Stanier Sedan",
+      "manufacturer": "Vapid",
+      "year": 1955,
+      "category": "car",
+      "category_label": "Sedán",
+      "description": "Sedán que Rockstar incluye en los beneficios del Vintage Vice City Pack, junto con un garaje. No se presenta como contenido de la Ultimate Edition.",
+      "edition_context": "Vintage Vice City Pack · bonificación de reserva",
+      "edition_key": "vintage",
+      "evidence_status": "official_preorder_benefit",
+      "evidence_label": "Bonificación del Vintage Vice City Pack",
+      "official_gallery_label": "’55 Vapid Stanier 01",
+      "image_url": "https://www.rockstargames.com/VI/_next/static/media/VINTAGE_VICE_CITY_PACK_VAPID_STANIER_01.004m_8d1~qngy.jpg?akim=1&imdensity=1&imwidth=1200",
+      "image_alt": "Imagen oficial del ’55 Vapid Stanier Sedan, galería de Rockstar Games",
+      "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
+      "source_ids": [
+        "src-035",
+        "src-034"
+      ]
+    }
+  ]
 }
