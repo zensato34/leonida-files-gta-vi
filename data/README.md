@@ -46,3 +46,6 @@ La interfaz se sirve con `assets/css/dossier34.css` y `assets/js/dossier34.js`. 
 El Atlas guarda una imagen oficial, el rótulo de la colección de capturas y su recuento por región. El campo `map_status` impide presentar esas tarjetas como geografía cartográfica; no se usan coordenadas.
 
 Hangar 34 incluye únicamente nombres de vehículos publicados en galerías o beneficios oficiales. Cada entrada tiene una categoría editorial, contexto de edición, imagen oficial y fuentes asociadas. No se rellenan prestaciones, precios ni disponibilidad de modelos que Rockstar no haya descrito.
+
+
+- `progress.json`: metadatos del centro de progreso. No contiene un inventario inventado; declara que el catálogo está incompleto y que cualquier porcentaje futuro se calculará solo sobre tareas verificadas y publicadas.
