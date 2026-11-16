@@ -320,6 +320,34 @@
   <div class="private-discovery-list" id="privateDiscoveryList"><p class="progress-loading">Todavía no has guardado hallazgos.</p></div>
   <p class="progress-footnote">Las capturas y vídeos no se cargan automáticamente desde PS5. Adjunta el archivo en tu conversación de ChatGPT para que podamos revisarlo. Este cuaderno guarda texto y enlaces en el navegador; incluye sus apuntes en el respaldo JSON.</p>
  </div>
+
+ <div class="game-session-panel" id="gameSessionJournal">
+  <div class="game-session-head">
+   <div><div class="eyebrow">DIARIO PERSONAL · SOLO ESTE NAVEGADOR</div><h3>Mis sesiones en Leonida</h3><p>Registra cada partida y conserva un historial de tu aventura. No se conecta a tu PS5 ni lee automáticamente los datos del juego; tú decides qué anotar.</p></div>
+   <div class="game-session-stats">
+    <span><b id="gameSessionCount">0</b> sesiones</span>
+    <span><b id="gameSessionDuration">0 min</b> tiempo registrado</span>
+    <span><b id="gameSessionLatest">—</b> última partida</span>
+   </div>
+  </div>
+  <form id="gameSessionForm" class="game-session-form">
+   <label for="gameSessionDate"><span class="eyebrow">FECHA</span><input id="gameSessionDate" type="date" required></label>
+   <label for="gameSessionMinutes"><span class="eyebrow">DURACIÓN · MINUTOS</span><input id="gameSessionMinutes" type="number" min="1" max="1440" step="1" value="60" required></label>
+   <label for="gameSessionCharacter"><span class="eyebrow">PERSONAJE</span><select id="gameSessionCharacter"><option value="jason">Jason</option><option value="lucia">Lucía</option><option value="both">Jason y Lucía</option><option value="unknown">No especificado</option></select></label>
+   <label for="gameSessionRegion"><span class="eyebrow">REGIÓN</span><select id="gameSessionRegion"><option value="">Sin asignar</option></select></label>
+   <label class="game-session-wide" for="gameSessionTitle"><span class="eyebrow">¿QUÉ HICISTE?</span><input id="gameSessionTitle" type="text" maxlength="120" placeholder="Ej.: Exploración libre, misiones principales…" required></label>
+   <label class="game-session-wide" for="gameSessionNotes"><span class="eyebrow">NOTAS DE LA SESIÓN (OPCIONAL)</span><textarea id="gameSessionNotes" rows="3" maxlength="1800" placeholder="Anota actividades, objetivos, descubrimientos o dónde dejaste la partida…"></textarea></label>
+   <label class="game-session-spoiler"><input id="gameSessionSpoiler" type="checkbox"><span>Puede contener spoilers</span></label>
+   <button class="progress-action add-goal" type="submit">Guardar sesión +</button>
+  </form>
+  <div class="game-session-toolbar">
+   <label for="gameSessionSearch"><span class="eyebrow">BUSCAR SESIONES</span><input id="gameSessionSearch" type="search" placeholder="Buscar por título o notas…"></label>
+   <label for="gameSessionCharacterFilter"><span class="eyebrow">PERSONAJE</span><select id="gameSessionCharacterFilter"><option value="all">Todos</option><option value="jason">Jason</option><option value="lucia">Lucía</option><option value="both">Jason y Lucía</option><option value="unknown">No especificado</option></select></label>
+   <label for="gameSessionRegionFilter"><span class="eyebrow">REGIÓN</span><select id="gameSessionRegionFilter"><option value="all">Todas</option><option value="none">Sin asignar</option></select></label>
+  </div>
+  <div id="gameSessionList" class="game-session-list" aria-live="polite"><p class="progress-loading">Todavía no has registrado sesiones.</p></div>
+  <p class="game-session-footnote">El total de tiempo suma los minutos que registres manualmente; no es un dato leído de tu consola. Los registros son privados y se incluyen en el respaldo general.</p>
+ </div>
  <p class="progress-footnote" id="progressBackupStatus">Tus marcas y objetivos se guardan localmente en este navegador. No se envían a Rockstar ni al servidor de LEONIDA FILES. Exporta un respaldo antes de cambiar de dispositivo o borrar los datos del navegador.</p>
 </section>
 </main>

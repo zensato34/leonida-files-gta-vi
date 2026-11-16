@@ -48,8 +48,8 @@ class ProgressCatalogTests(unittest.TestCase):
 
     def test_old_backups_remain_importable_and_new_backups_include_private_notes(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
-        self.assertIn("version:4", script)
-        self.assertIn("![1,2,3,4].includes(data.version)", script)
+        self.assertIn("version:5", script)
+        self.assertIn("![1,2,3,4,5].includes(data.version)", script)
         self.assertIn("privateDiscoveries:state.privateDiscoveries", script)
 
 
@@ -57,8 +57,8 @@ class ProgressCatalogTests(unittest.TestCase):
         self.assertIn("atlas_points", PROGRESS["local_storage"]["includes"])
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
         self.assertIn("atlasPoints", script)
-        self.assertIn("version:4", script)
-        self.assertIn("![1,2,3,4].includes(data.version)", script)
+        self.assertIn("version:5", script)
+        self.assertIn("![1,2,3,4,5].includes(data.version)", script)
 
     def test_atlas_points_are_region_bound_and_private(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
@@ -81,9 +81,29 @@ class ProgressCatalogTests(unittest.TestCase):
     def test_garage_statuses_are_personal_and_included_in_backup_v4(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
         self.assertIn("garageVehicles", script)
-        self.assertIn("version:4", script)
-        self.assertIn("![1,2,3,4].includes(data.version)", script)
+        self.assertIn("version:5", script)
+        self.assertIn("![1,2,3,4,5].includes(data.version)", script)
         self.assertIn("garage_vehicles", PROGRESS["local_storage"]["includes"])
+
+
+    def test_session_journal_is_private_and_backup_v5_remains_backward_compatible(self):
+        script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("gameSessions", script)
+        self.assertIn("version:5", script)
+        self.assertIn("![1,2,3,4,5].includes(data.version)", script)
+        self.assertIn("game_sessions", PROGRESS["local_storage"]["includes"])
+        self.assertIn('id="gameSessionForm"', html)
+        self.assertIn("played_on", script)
+        self.assertIn("duration_min", script)
+        self.assertIn("hiddenSpoiler", script)
+
+    def test_session_journal_has_manual_duration_and_no_console_integration(self):
+        script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn('type="number" min="1" max="1440"', html)
+        self.assertIn("localStorage", script)
+        self.assertNotIn("PlayStation API", script)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

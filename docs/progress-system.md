@@ -38,3 +38,10 @@ La bitácora se guarda localmente junto con el resto de progreso. No crea coorde
 El Hangar ofrece una colección personal construida exclusivamente a partir de `data/vehicles.json`. El usuario puede marcar cada referencia como «Quiero conseguirlo» o «Lo conseguí», y filtrar por búsqueda y estado. Es un registro personal, no confirma propiedades del juego ni completa fichas editoriales.
 
 Los estados se guardan localmente en `garageVehicles` y se incluyen en el respaldo JSON versión 4. La importación mantiene compatibilidad con respaldos de las versiones 1, 2 y 3. No se asume que las fichas existentes sean la lista total de vehículos de GTA VI.
+
+
+## Diario de sesiones
+
+El diario personal permite registrar hasta 500 sesiones con fecha local, duración manual en minutos, personaje, región opcional, título, notas y marca de spoiler. Se puede buscar por texto y filtrar por personaje y región; el resumen muestra sesiones registradas, tiempo acumulado y fecha de la última partida.
+
+Los registros se guardan solo en localStorage; no hay conexión con partidas guardadas de PS5 ni lectura automática del tiempo jugado. En modo Explorador, el contenido marcado como spoiler se oculta; en modo Completista vuelve a mostrarse. El respaldo JSON versión 5 incorpora `gameSessions` y admite importaciones anteriores de versiones 1 a 4.
