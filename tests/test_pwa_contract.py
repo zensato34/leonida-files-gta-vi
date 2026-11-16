@@ -12,7 +12,7 @@ class PwaContractTests(unittest.TestCase):
         self.assertTrue(MANIFEST["start_url"].startswith("./"))
         for icon in MANIFEST["icons"]:
             self.assertTrue((ROOT / icon["src"]).is_file())
-            self.assertEqual("image/svg+xml", icon["type"])
+        self.assertTrue(any(icon["type"] == "image/svg+xml" and icon["sizes"] == "any" for icon in MANIFEST["icons"]))
 
     def test_service_worker_precaches_only_local_existing_assets(self):
         script = (ROOT / "service-worker.js").read_text(encoding="utf-8")
@@ -31,6 +31,14 @@ class PwaContractTests(unittest.TestCase):
         self.assertIn("networkFirst(request,CACHE_DATA)", script)
         self.assertIn("cache.match('./index.html')", script)
         self.assertIn("if(url.origin!==self.location.origin)return", script)
+
+
+    def test_android_install_icons_include_192_and_512_png_fallbacks(self):
+        icons = MANIFEST["icons"]
+        self.assertTrue(any(icon.get("sizes") == "192x192" and icon.get("type") == "image/png" for icon in icons))
+        self.assertTrue(any(icon.get("sizes") == "512x512" and icon.get("type") == "image/png" for icon in icons))
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn('rel="apple-touch-icon"', html)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
