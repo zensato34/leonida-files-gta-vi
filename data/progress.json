@@ -15,7 +15,8 @@
     "server_sync": false,
     "includes": [
       "checked_task_ids",
-      "personal_goals"
+      "personal_goals",
+      "private_discoveries"
     ]
   },
   "categories": [
