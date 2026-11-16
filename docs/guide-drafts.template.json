@@ -49,7 +49,13 @@
       "notes_private": "Notas internas: clasificar qué es observación, reporte o confirmación."
     },
     "trackable": false,
-    "region_id": null
+    "region_id": null,
+    "location_details": "Descripción de ubicación solo después de comprobarla en partida.",
+    "unlock_requirement": "",
+    "requirements": [],
+    "steps": [],
+    "reward": "",
+    "missable": false
   },
   "publication_rules": {
     "must_be_after_release_date": true,
