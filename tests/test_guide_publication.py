@@ -37,7 +37,7 @@ class GuidePublicationGateTests(unittest.TestCase):
 
     def test_public_catalog_starts_without_unverified_entries(self):
         self.assertTrue(all(category["entries"] == [] for category in GUIDE["categories"]))
-        self.assertIn("guide-drafts.json", (ROOT / ".gitignore").read_text(encoding="utf-8"))
+        self.assertIn("/private-guide/", (ROOT / ".gitignore").read_text(encoding="utf-8"))
 
     def test_no_entry_is_published_before_release_even_when_marked_verified(self):
         catalog, stats = build_public_catalog(GUIDE, self.drafts([draft_entry()]), date(2026, 11, 18))
