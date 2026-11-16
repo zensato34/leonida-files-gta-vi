@@ -48,8 +48,8 @@ class ProgressCatalogTests(unittest.TestCase):
 
     def test_old_backups_remain_importable_and_new_backups_include_private_notes(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
-        self.assertIn("version:4", script)
-        self.assertIn("![1,2,3,4].includes(data.version)", script)
+        self.assertIn("version:5", script)
+        self.assertIn("![1,2,3,4,5].includes(data.version)", script)
         self.assertIn("privateDiscoveries:state.privateDiscoveries", script)
 
 
