@@ -10,6 +10,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DRAFTS = ROOT / "private-guide" / "guide-drafts.json"
 DEFAULT_PUBLIC = ROOT / "data" / "guide.json"
+ALLOWED_REGION_IDS = {"vice-city", "leonida-keys", "grassrivers", "port-gellhorn", "ambrosia", "mount-kalaga-national-park"}
 
 
 def _date(value: Any) -> date | None:
@@ -97,6 +98,8 @@ def build_public_catalog(base: dict[str, Any], drafts: dict[str, Any], today: da
                 "spoiler": entry.get("spoiler", False),
                 "status": "verified",
                 "status_label": "Verificado en el juego",
+                "trackable": entry.get("trackable") is True,
+                "region_id": entry.get("region_id") if entry.get("region_id") in ALLOWED_REGION_IDS else None,
                 "verification": {
                     "gameplay_checked": True,
                     "checked_at": verification["checked_at"],
@@ -138,7 +141,7 @@ def main() -> int:
         print(f"Bloqueo pre-lanzamiento: no se publica ninguna ficha antes del {base['release_date']}.")
     print("Borradores: {draft_entries} | publicadas: {published_entries} | excluidas: {excluded_entries}".format(**stats))
     if not args.dry_run:
-        args.output.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        args.output.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"Catálogo público actualizado: {args.output}")
     return 0
 
