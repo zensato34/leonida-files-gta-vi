@@ -62,5 +62,11 @@
       "spoiler": false,
       "entries": []
     }
-  ]
+  ],
+  "progress_tracking": {
+    "catalog_complete": false,
+    "total_requirements": null,
+    "percent_scope": "verified_published_checklist_only",
+    "note": "El portal no afirma un porcentaje global de GTA VI hasta que exista una lista de requisitos completa y verificada."
+  }
 }
