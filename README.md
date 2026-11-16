@@ -64,6 +64,15 @@ La interfaz incluye búsqueda, filtros por fichas verificadas o pendientes, cont
 
 Rockstar mantiene como fecha oficial de lanzamiento el **19 de noviembre de 2026**: https://www.rockstargames.com/VI. El portal es un proyecto fan independiente y no oficial.
 
+
+### Separación de borradores privados y guía pública
+
+Los borradores no verificados **no se guardan en este repositorio público**: ocultar una ficha con CSS/JavaScript no protege su JSON, que seguiría siendo descargable. La plantilla editable está en `docs/guide-drafts.template.json`; el archivo privado de trabajo debe residir en `private-guide/guide-drafts.json`, carpeta excluida por `.gitignore`, y mantenerse también en la Biblioteca privada del propietario. Nunca lo añadas a un commit.
+
+`scripts/build_guide_public.py` genera `data/guide.json` usando una lista permitida de campos. Solo expone fichas con estado `verified`, visibilidad `public`, comprobación directa del juego posterior al 19/11/2026 y al menos una fuente HTTPS titulada. Antes de la fecha oficial bloquea toda publicación de fichas de juego. Los rumores, notas privadas, pistas no corroboradas y datos incompletos permanecen fuera del catálogo público; las notas internas nunca se exportan.
+
+Consulta `docs/guide-publication-workflow.md` para el procedimiento y las pruebas. El contenido de spoilers verificado puede incorporarse, pero el interruptor sigue apagado por defecto.
+
 ### Validación de datos
 
 ```bash
