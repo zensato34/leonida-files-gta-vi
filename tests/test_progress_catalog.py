@@ -48,8 +48,8 @@ class ProgressCatalogTests(unittest.TestCase):
 
     def test_old_backups_remain_importable_and_new_backups_include_private_notes(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
-        self.assertIn("version:3", script)
-        self.assertIn("![1,2,3].includes(data.version)", script)
+        self.assertIn("version:4", script)
+        self.assertIn("![1,2,3,4].includes(data.version)", script)
         self.assertIn("privateDiscoveries:state.privateDiscoveries", script)
 
 
@@ -57,8 +57,8 @@ class ProgressCatalogTests(unittest.TestCase):
         self.assertIn("atlas_points", PROGRESS["local_storage"]["includes"])
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
         self.assertIn("atlasPoints", script)
-        self.assertIn("version:3", script)
-        self.assertIn("![1,2,3].includes(data.version)", script)
+        self.assertIn("version:4", script)
+        self.assertIn("![1,2,3,4].includes(data.version)", script)
 
     def test_atlas_points_are_region_bound_and_private(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
