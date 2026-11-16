@@ -78,5 +78,23 @@ class GuidePublicationGateTests(unittest.TestCase):
         unsafe = draft_entry(verification={"gameplay_checked": True, "checked_at": "2026-11-20", "sources": [{"title": "Fuente", "url": "http://example.com", "kind": "source"}]})
         self.assertFalse(is_publishable(unsafe, date(2026, 11, 21), date(2026, 11, 19)))
 
+
+    def test_trackable_flag_and_verified_region_are_explicitly_exported(self):
+        item = draft_entry()
+        item["trackable"] = True
+        item["region_id"] = "vice-city"
+        catalog, _ = build_public_catalog(GUIDE, self.drafts([item]), date(2026, 11, 21))
+        published = catalog["categories"][0]["entries"][0]
+        self.assertIs(published["trackable"], True)
+        self.assertEqual("vice-city", published["region_id"])
+
+    def test_unknown_region_is_not_exported_as_a_valid_filter(self):
+        item = draft_entry()
+        item["trackable"] = True
+        item["region_id"] = "invented-place"
+        catalog, _ = build_public_catalog(GUIDE, self.drafts([item]), date(2026, 11, 21))
+        published = catalog["categories"][0]["entries"][0]
+        self.assertIsNone(published["region_id"])
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
