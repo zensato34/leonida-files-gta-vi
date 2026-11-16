@@ -48,8 +48,8 @@ class ProgressCatalogTests(unittest.TestCase):
 
     def test_old_backups_remain_importable_and_new_backups_include_private_notes(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
-        self.assertIn("version:3", script)
-        self.assertIn("![1,2,3].includes(data.version)", script)
+        self.assertIn("version:4", script)
+        self.assertIn("![1,2,3,4].includes(data.version)", script)
         self.assertIn("privateDiscoveries:state.privateDiscoveries", script)
 
 
@@ -57,8 +57,8 @@ class ProgressCatalogTests(unittest.TestCase):
         self.assertIn("atlas_points", PROGRESS["local_storage"]["includes"])
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
         self.assertIn("atlasPoints", script)
-        self.assertIn("version:3", script)
-        self.assertIn("![1,2,3].includes(data.version)", script)
+        self.assertIn("version:4", script)
+        self.assertIn("![1,2,3,4].includes(data.version)", script)
 
     def test_atlas_points_are_region_bound_and_private(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
@@ -66,6 +66,24 @@ class ProgressCatalogTests(unittest.TestCase):
         self.assertIn("region_id:item.region_id", script)
         self.assertIn("atlasPointForm", script)
         self.assertIn("no se publican", (ROOT / "index.html").read_text(encoding="utf-8").lower())
+
+
+    def test_personal_garage_uses_only_the_current_official_vehicle_catalog(self):
+        script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        vehicles = json.loads((ROOT / "data" / "vehicles.json").read_text(encoding="utf-8"))
+        self.assertIn('fetch("data/vehicles.json"', script) if 'fetch("data/vehicles.json"' in script else self.assertIn("fetch('data/vehicles.json'", script)
+        self.assertIn('id="garageCatalog"', html)
+        self.assertIn("vehicleRecords=[]", script)
+        self.assertIn("vehicleRecords=Array.isArray(vehicleData.items)", script)
+        self.assertEqual("vehicles", vehicles["dataset"])
+
+    def test_garage_statuses_are_personal_and_included_in_backup_v4(self):
+        script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
+        self.assertIn("garageVehicles", script)
+        self.assertIn("version:4", script)
+        self.assertIn("![1,2,3,4].includes(data.version)", script)
+        self.assertIn("garage_vehicles", PROGRESS["local_storage"]["includes"])
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

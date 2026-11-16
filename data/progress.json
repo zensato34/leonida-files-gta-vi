@@ -17,7 +17,8 @@
       "checked_task_ids",
       "personal_goals",
       "private_discoveries",
-      "atlas_points"
+      "atlas_points",
+      "garage_vehicles"
     ]
   },
   "categories": [
