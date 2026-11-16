@@ -118,7 +118,7 @@ class NewsFeedUpdaterTests(unittest.TestCase):
             urls = {item["url"] for item in final["items"]}
             self.assertEqual({"https://example.com/old", "https://example.com/new"}, urls)
             self.assertEqual(2, len(final["items"]))
-            self.assertIn("no es una fuente primaria", final["notice"])
+            self.assertIn("ni una confirmación editorial", final["notice"])
             self.assertTrue(all(item["status"] == "Pendiente de verificación" for item in final["items"] if item["url"].endswith("/new")))
 
 
