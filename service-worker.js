@@ -7,6 +7,8 @@ const CORE_ASSETS=[
  './index.html',
  './manifest.webmanifest',
  './assets/icons/dossier34.svg',
+ './assets/icons/dossier34-192.png',
+ './assets/icons/dossier34-512.png',
  './assets/css/dossier34.css',
  './assets/css/guide34.css',
  './assets/css/progress34.css',
