@@ -31,3 +31,10 @@ El respaldo JSON versión 2 incluye marcas, objetivos personales y cuaderno priv
 El Atlas permite guardar hasta 500 lugares personales, cada uno vinculado a una de las seis regiones identificadas en el catálogo. Cada registro contiene un nombre, tipo de lugar, estado personal (pendiente, visitado o comprobado por el usuario), notas, URL HTTPS opcional y marca de spoiler. Puede buscarse y filtrarse por región y estado.
 
 La bitácora se guarda localmente junto con el resto de progreso. No crea coordenadas ni marcadores cartográficos, no se publica y no se presenta como dato oficial. El respaldo JSON versión 3 incorpora `atlasPoints` y sigue permitiendo importar versiones 1 y 2.
+
+
+## Mi Garaje 34
+
+El Hangar ofrece una colección personal construida exclusivamente a partir de `data/vehicles.json`. El usuario puede marcar cada referencia como «Quiero conseguirlo» o «Lo conseguí», y filtrar por búsqueda y estado. Es un registro personal, no confirma propiedades del juego ni completa fichas editoriales.
+
+Los estados se guardan localmente en `garageVehicles` y se incluyen en el respaldo JSON versión 4. La importación mantiene compatibilidad con respaldos de las versiones 1, 2 y 3. No se asume que las fichas existentes sean la lista total de vehículos de GTA VI.
