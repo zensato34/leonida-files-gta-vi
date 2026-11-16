@@ -91,6 +91,7 @@ def build_public_catalog(base: dict[str, Any], drafts: dict[str, Any], today: da
             seen_ids.add(entry_id)
             verification = entry["verification"]
             # Explicit allowlist: internal notes and all draft-only fields stay private.
+            region_candidate = entry.get("region_id")
             public_entries.append({
                 "id": entry_id,
                 "title": str(entry["title"]).strip()[:180],
@@ -99,7 +100,13 @@ def build_public_catalog(base: dict[str, Any], drafts: dict[str, Any], today: da
                 "status": "verified",
                 "status_label": "Verificado en el juego",
                 "trackable": entry.get("trackable") is True,
-                "region_id": entry.get("region_id") if entry.get("region_id") in ALLOWED_REGION_IDS else None,
+                "region_id": region_candidate if isinstance(region_candidate, str) and region_candidate in ALLOWED_REGION_IDS else None,
+                "location_details": entry.get("location_details", "").strip()[:600] if isinstance(entry.get("location_details", ""), str) else "",
+                "unlock_requirement": entry.get("unlock_requirement", "").strip()[:400] if isinstance(entry.get("unlock_requirement", ""), str) else "",
+                "requirements": [str(value).strip()[:280] for value in entry.get("requirements", []) if isinstance(value, str) and value.strip()][:10] if isinstance(entry.get("requirements", []), list) else [],
+                "steps": [str(value).strip()[:400] for value in entry.get("steps", []) if isinstance(value, str) and value.strip()][:14] if isinstance(entry.get("steps", []), list) else [],
+                "reward": entry.get("reward", "").strip()[:320] if isinstance(entry.get("reward", ""), str) else "",
+                "missable": entry.get("missable") is True,
                 "verification": {
                     "gameplay_checked": True,
                     "checked_at": verification["checked_at"],

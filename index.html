@@ -246,6 +246,11 @@
   <label for="progressStatusFilter"><span class="eyebrow">ESTADO</span><select id="progressStatusFilter"><option value="all">Todas</option><option value="pending">Pendientes</option><option value="done">Completadas</option></select></label>
   <div class="progress-backup-actions"><button type="button" class="progress-action" id="exportProgress">Exportar respaldo</button><button type="button" class="progress-action secondary" id="importProgress">Importar respaldo</button><input type="file" id="importProgressFile" accept=".json,application/json" hidden></div>
  </div>
+ <div class="progress-mode-control" role="group" aria-label="Modo de juego">
+  <span class="eyebrow">MODO DE JUEGO</span>
+  <button type="button" class="progress-mode is-active" id="explorerMode" aria-pressed="true">Explorador · sin spoilers</button>
+  <button type="button" class="progress-mode" id="completistMode" aria-pressed="false">Completista · mostrar spoilers</button>
+ </div>
  <p class="progress-status" id="progressStatus" role="status" aria-live="polite">Cargando catálogo de tareas verificadas…</p>
  <div class="progress-category-grid" id="progressCategories" aria-live="polite"><p class="progress-loading">Preparando los módulos de progreso…</p></div>
  <p class="progress-empty" id="progressEmpty" hidden>No hay tareas que coincidan con esos filtros.</p>
@@ -257,6 +262,21 @@
    <button class="progress-action add-goal" type="submit">Añadir objetivo +</button>
   </form>
   <div class="personal-goal-list" id="personalGoalList"><p class="progress-loading">Todavía no has añadido objetivos.</p></div>
+ </div>
+ <div class="private-discoveries-panel">
+  <div class="personal-goals-head"><div><div class="eyebrow">CUADERNO PRIVADO · SOLO ESTE NAVEGADOR</div><h3>Registrar un hallazgo</h3><p>Guarda observaciones, pistas, ubicaciones provisionales y enlaces para revisarlos después. Ningún apunte aparece en la web ni cuenta para el 100 %.</p></div><span class="personal-goals-count" id="privateDiscoveryCount">0 apuntes</span></div>
+  <form id="privateDiscoveryForm" class="private-discovery-form">
+   <label for="privateDiscoveryCategory"><span class="eyebrow">MÓDULO</span><select id="privateDiscoveryCategory" required><option value="story-missions">Historia y misiones</option><option value="activities">Actividades y desafíos</option><option value="collectibles">Coleccionables</option><option value="secrets">Secretos y easter eggs</option><option value="trophies">Trofeos y logros</option><option value="completion">Ruta del 100 %</option></select></label>
+   <label for="privateDiscoveryRegion"><span class="eyebrow">REGIÓN</span><select id="privateDiscoveryRegion"><option value="">Sin confirmar / sin asignar</option></select></label>
+   <label class="private-discovery-wide" for="privateDiscoveryTitle"><span class="eyebrow">TÍTULO DEL HALLAZGO</span><input id="privateDiscoveryTitle" type="text" maxlength="120" placeholder="Ej.: Símbolo extraño junto a una gasolinera" required></label>
+   <label class="private-discovery-wide" for="privateDiscoveryNote"><span class="eyebrow">QUÉ ENCONTRASTE</span><textarea id="privateDiscoveryNote" rows="3" maxlength="2400" placeholder="Anota qué ocurrió, dónde lo viste, cómo repetirlo y qué falta comprobar…" required></textarea></label>
+   <label for="privateDiscoveryEvidence"><span class="eyebrow">TIPO DE EVIDENCIA</span><select id="privateDiscoveryEvidence"><option value="gameplay_observation">Observación en partida</option><option value="own_screenshot_video">Captura o vídeo propio</option><option value="official_source">Fuente oficial</option><option value="media_report">Reporte de un medio</option><option value="rumor">Rumor / pista no confirmada</option></select></label>
+   <label for="privateDiscoverySource"><span class="eyebrow">ENLACE HTTPS (OPCIONAL)</span><input id="privateDiscoverySource" type="url" maxlength="500" placeholder="https://…"></label>
+   <label class="private-discovery-spoiler"><input id="privateDiscoverySpoiler" type="checkbox"><span>Puede contener spoilers</span></label>
+   <button class="progress-action add-goal" type="submit">Guardar apunte privado +</button>
+  </form>
+  <div class="private-discovery-list" id="privateDiscoveryList"><p class="progress-loading">Todavía no has guardado hallazgos.</p></div>
+  <p class="progress-footnote">Las capturas y vídeos no se cargan automáticamente desde PS5. Adjunta el archivo en tu conversación de ChatGPT para que podamos revisarlo. Este cuaderno guarda texto y enlaces en el navegador; incluye sus apuntes en el respaldo JSON.</p>
  </div>
  <p class="progress-footnote" id="progressBackupStatus">Tus marcas y objetivos se guardan localmente en este navegador. No se envían a Rockstar ni al servidor de LEONIDA FILES. Exporta un respaldo antes de cambiar de dispositivo o borrar los datos del navegador.</p>
 </section>
