@@ -96,6 +96,30 @@
 <a class="source" href="https://www.rockstargames.com/VI/media/screenshots" target="_blank" rel="noopener noreferrer">Abrir galería oficial ↗</a></div></article></div></div>
 <p class="muted atlas-footnote">La galería de Rockstar agrupa capturas bajo los nombres Vice City, Leonida Keys, Port Gellhorn, Ambrosia, Grassrivers y Mount Kalaga National Park. El archivo utiliza esos rótulos como evidencia de identificación, no como cartografía oficial.</p>
 <a class="source" href="https://www.rockstargames.com/VI/only-in-leonida" target="_blank" rel="noopener noreferrer">Explorar “Only in Leonida” ↗</a> · <a href="https://www.rockstargames.com/VI/media/screenshots" target="_blank" rel="noopener noreferrer">Galería oficial de capturas ↗</a>
+
+<div class="atlas-personal-panel" id="atlasPersonal">
+ <div class="atlas-personal-head">
+  <div><div class="eyebrow">BITÁCORA PERSONAL · GUARDADO LOCAL</div><h3>Mis puntos de Leonida</h3><p>Registra lugares que quieras visitar, ya hayas visitado o hayas comprobado dentro de tu partida. Se agrupan por región; no dibujan coordenadas ni posiciones inventadas en un mapa.</p></div>
+  <div class="atlas-personal-counter" id="atlasPointCount">0 lugares</div>
+ </div>
+ <form id="atlasPointForm" class="atlas-point-form">
+  <label for="atlasPointRegion"><span class="eyebrow">REGIÓN</span><select id="atlasPointRegion" required><option value="">Selecciona región</option></select></label>
+  <label for="atlasPointType"><span class="eyebrow">TIPO DE LUGAR</span><select id="atlasPointType"><option value="landmark">Punto de interés</option><option value="business">Negocio / establecimiento</option><option value="collectible">Coleccionable</option><option value="mission">Misión / actividad</option><option value="secret">Secreto / curiosidad</option><option value="other">Otro</option></select></label>
+  <label for="atlasPointStatus"><span class="eyebrow">ESTADO PERSONAL</span><select id="atlasPointStatus"><option value="planned">Pendiente de visitar</option><option value="visited">Visitado</option><option value="confirmed">Comprobado por mí</option></select></label>
+  <label class="atlas-point-wide" for="atlasPointTitle"><span class="eyebrow">NOMBRE DEL LUGAR</span><input id="atlasPointTitle" type="text" maxlength="120" placeholder="Ej.: Mirador al norte de la ciudad" required></label>
+  <label class="atlas-point-wide" for="atlasPointDetails"><span class="eyebrow">NOTAS / REFERENCIA PARA ENCONTRARLO</span><textarea id="atlasPointDetails" rows="3" maxlength="1200" placeholder="Describe cómo llegar, qué hay cerca o cómo lo identificaste. No hace falta inventar coordenadas." required></textarea></label>
+  <label for="atlasPointSource"><span class="eyebrow">ENLACE DE REFERENCIA (OPCIONAL)</span><input id="atlasPointSource" type="url" maxlength="500" placeholder="https://…"></label>
+  <label class="atlas-point-spoiler"><input id="atlasPointSpoiler" type="checkbox"><span>Contiene spoilers</span></label>
+  <button class="progress-action add-goal" type="submit">Guardar lugar +</button>
+ </form>
+ <div class="atlas-point-toolbar">
+  <label for="atlasPointSearch"><span class="eyebrow">BUSCAR MIS LUGARES</span><input id="atlasPointSearch" type="search" placeholder="Buscar por nombre o nota…"></label>
+  <label for="atlasPointFilterRegion"><span class="eyebrow">REGIÓN</span><select id="atlasPointFilterRegion"><option value="all">Todas las regiones</option></select></label>
+  <label for="atlasPointFilterStatus"><span class="eyebrow">ESTADO</span><select id="atlasPointFilterStatus"><option value="all">Todos los estados</option><option value="planned">Pendientes</option><option value="visited">Visitados</option><option value="confirmed">Comprobados por mí</option></select></label>
+ </div>
+ <div id="atlasPointList" class="atlas-point-list" aria-live="polite"><p class="progress-loading">Todavía no has guardado lugares.</p></div>
+ <p class="atlas-personal-footnote">Los lugares se guardan solo en este navegador. Para moverlos a otro dispositivo usa <a href="#progreso">Exportar respaldo en el centro de progreso</a>. Los puntos personales no se publican ni se convierten en ubicaciones verificadas del portal.</p>
+</div>
 </section>
 
 <section class="section" id="personajes"><div class="section-head"><div><div class="section-no">03 / EXPEDIENTES PERSONALES</div><h2>Personajes de Leonida</h2></div><p>Biografías y conexiones basadas en los perfiles oficiales publicados por Rockstar. Las fichas de Bae-Luxe y Roxy se separan aquí para facilitar la lectura, aunque Rockstar presenta a ambas como el dúo Real Dimez.</p></div>

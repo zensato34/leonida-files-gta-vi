@@ -16,7 +16,8 @@
     "includes": [
       "checked_task_ids",
       "personal_goals",
-      "private_discoveries"
+      "private_discoveries",
+      "atlas_points"
     ]
   },
   "categories": [

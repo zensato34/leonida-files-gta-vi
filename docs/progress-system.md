@@ -24,3 +24,10 @@ La interfaz ofrece dos modos: **Explorador** (oculta fichas marcadas como spoile
 El panel «Registrar un hallazgo» permite guardar observaciones, región provisional, tipo de evidencia, URL HTTPS opcional y marca de spoiler. Estos apuntes se guardan únicamente en localStorage del navegador. Su estado siempre es `pending_review`: nunca se consideran verificados, nunca alimentan automáticamente data/guide.json y nunca cuentan para el porcentaje. Para revisión, adjunta aquí en ChatGPT tus capturas o vídeos y proporciona el apunte correspondiente.
 
 El respaldo JSON versión 2 incluye marcas, objetivos personales y cuaderno privado. Puede importar respaldos versión 1 anteriores y versión 2. La importación reemplaza los datos actuales solo después de confirmación. Los archivos son responsabilidad del usuario; exporta una copia antes de limpiar el navegador.
+
+
+## Bitácora personal del Atlas
+
+El Atlas permite guardar hasta 500 lugares personales, cada uno vinculado a una de las seis regiones identificadas en el catálogo. Cada registro contiene un nombre, tipo de lugar, estado personal (pendiente, visitado o comprobado por el usuario), notas, URL HTTPS opcional y marca de spoiler. Puede buscarse y filtrarse por región y estado.
+
+La bitácora se guarda localmente junto con el resto de progreso. No crea coordenadas ni marcadores cartográficos, no se publica y no se presenta como dato oficial. El respaldo JSON versión 3 incorpora `atlasPoints` y sigue permitiendo importar versiones 1 y 2.

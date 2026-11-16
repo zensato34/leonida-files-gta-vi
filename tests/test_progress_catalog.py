@@ -48,9 +48,24 @@ class ProgressCatalogTests(unittest.TestCase):
 
     def test_old_backups_remain_importable_and_new_backups_include_private_notes(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
-        self.assertIn("version:2", script)
-        self.assertIn("[1,2].includes(data.version)", script)
+        self.assertIn("version:3", script)
+        self.assertIn("![1,2,3].includes(data.version)", script)
         self.assertIn("privateDiscoveries:state.privateDiscoveries", script)
+
+
+    def test_progress_schema_documents_private_atlas_points(self):
+        self.assertIn("atlas_points", PROGRESS["local_storage"]["includes"])
+        script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
+        self.assertIn("atlasPoints", script)
+        self.assertIn("version:3", script)
+        self.assertIn("![1,2,3].includes(data.version)", script)
+
+    def test_atlas_points_are_region_bound_and_private(self):
+        script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
+        self.assertIn("normalizeAtlasPoint", script)
+        self.assertIn("region_id:item.region_id", script)
+        self.assertIn("atlasPointForm", script)
+        self.assertIn("no se publican", (ROOT / "index.html").read_text(encoding="utf-8").lower())
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
