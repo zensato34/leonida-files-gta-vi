@@ -73,6 +73,18 @@ Los borradores no verificados **no se guardan en este repositorio público**: oc
 
 Consulta `docs/guide-publication-workflow.md` para el procedimiento y las pruebas. El contenido de spoilers verificado puede incorporarse, pero el interruptor sigue apagado por defecto.
 
+### Centro de progreso — Completion System
+
+La sección #progreso utiliza fichas de data/guide.json verificadas, aprobadas para publicación y marcadas explícitamente con trackable: true. data/progress.json define los seis módulos y declara que el catálogo aún está incompleto. El portal no presenta el 0 % ni el 100 % del juego como si existiera una lista total; el porcentaje visible, cuando haya tareas, se limita a las tareas verificadas publicadas.
+
+El usuario puede buscar tareas, filtrar por estado y región, marcar elementos, crear objetivos personales y exportar/importar un respaldo JSON. Las marcas y objetivos se guardan solo en localStorage; no hay sincronización de servidor. Los objetivos personales no cuentan como requisitos del 100 %.
+
+Consulta docs/progress-system.md para las reglas de cobertura, el respaldo y la privacidad.
+
+### Conexión con Radar diario de GTA VI
+
+El radar programado de las 08:15 (America/Santo_Domingo) tiene como destino editorial el feed data/news-feed.json de este repositorio. Si GitHub está disponible en esa ejecución, fusiona las nuevas entradas después de leer el SHA, conserva lo anterior y verifica la escritura. Si el conector no está disponible, entrega el bloque FEED_PATCH sin afirmar que publicó. El workflow RSS de GitHub corre a las 08:45 para evitar que dos escritores automáticos coincidan en la misma hora. Las entradas RSS externas permanecen pendientes de verificación.
+
 ### Validación de datos
 
 ```bash

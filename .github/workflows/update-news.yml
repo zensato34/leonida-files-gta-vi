@@ -2,7 +2,7 @@ name: Actualizar noticias de GTA VI
 
 on:
   schedule:
-    - cron: '15 12 * * *' # 08:15 America/Santo_Domingo (UTC-4)
+    - cron: '45 12 * * *' # 08:45 America/Santo_Domingo (UTC-4), después del radar diario
   workflow_dispatch:
 
 permissions:

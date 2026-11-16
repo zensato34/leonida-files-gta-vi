@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "dataset": "progress",
+  "reviewed_at": "2026-11-16",
+  "release_date": "2026-11-19",
+  "status": "prelaunch_catalog_incomplete",
+  "catalog_complete": false,
+  "total_requirements": null,
+  "completion_percent_scope": "verified_published_checklist_only",
+  "description": "Metadatos del sistema de seguimiento. Los requisitos reales se alimentan exclusivamente de fichas verificadas del catálogo público data/guide.json.",
+  "completion_policy": "El porcentaje mostrado mide solo tareas de checklist verificadas y publicadas. No representa el porcentaje real de GTA VI ni permite declarar el 100 % del juego mientras catalog_complete sea false.",
+  "local_storage": {
+    "key": "dossier34-progress-v1",
+    "browser_only": true,
+    "server_sync": false,
+    "includes": [
+      "checked_task_ids",
+      "personal_goals"
+    ]
+  },
+  "categories": [
+    {
+      "id": "story-missions",
+      "title": "Historia y misiones",
+      "description": "Seguimiento de misiones verificadas.",
+      "region_filter": false
+    },
+    {
+      "id": "activities",
+      "title": "Actividades y desafíos",
+      "description": "Actividades secundarias y desafíos verificados.",
+      "region_filter": true
+    },
+    {
+      "id": "collectibles",
+      "title": "Coleccionables",
+      "description": "Coleccionables con ubicación contrastada.",
+      "region_filter": true
+    },
+    {
+      "id": "secrets",
+      "title": "Secretos y easter eggs",
+      "description": "Hallazgos verificados, con avisos de spoiler.",
+      "region_filter": true
+    },
+    {
+      "id": "trophies",
+      "title": "Trofeos y logros",
+      "description": "Trofeos confirmados y requisitos documentados.",
+      "region_filter": false
+    },
+    {
+      "id": "completion",
+      "title": "Ruta del 100 %",
+      "description": "Requisitos globales confirmados del juego.",
+      "region_filter": false
+    }
+  ]
+}

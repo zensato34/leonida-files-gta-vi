@@ -34,3 +34,5 @@ jobs:
         run: node --check assets/js/dossier34.js
       - name: Comprobar sintaxis del módulo de guía
         run: node --check assets/js/guide34.js
+      - name: Comprobar sintaxis del centro de progreso
+        run: node --check assets/js/progress34.js

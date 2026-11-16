@@ -1,4 +1,5 @@
 from html.parser import HTMLParser
+import json
 from pathlib import Path
 import re
 import unittest
@@ -33,7 +34,7 @@ class SiteContractTests(unittest.TestCase):
         cls.parser.feed(HTML)
 
     def test_new_dossier_modules_and_controls_exist(self):
-        required = {"atlas", "evidencias", "cronologia", "hangar", "guia", "guideTitle", "guideSearch", "guideSpoilers", "guideStatus", "guideCatalog", "guideEmpty", "regionSearch", "regionCards", "regionCount", "vehicleSearch", "vehicleCatalog", "vehicleCount", "commandPalette", "commandInput", "openCommand", "favoritesDrawer", "sinceLastVisit", "bootScreen"}
+        required = {"atlas", "evidencias", "cronologia", "hangar", "guia", "guideTitle", "guideSearch", "guideSpoilers", "guideStatus", "guideCatalog", "guideEmpty", "progreso", "progressTitle", "progressSearch", "progressRegionFilter", "progressStatusFilter", "progressCategories", "progressStatus", "trackedPercent", "trackedBar", "trackedDone", "trackedTotal", "personalGoalForm", "personalGoalTitle", "personalGoalCategory", "personalGoalList", "exportProgress", "importProgress", "importProgressFile", "regionSearch", "regionCards", "regionCount", "vehicleSearch", "vehicleCatalog", "vehicleCount", "commandPalette", "commandInput", "openCommand", "favoritesDrawer", "sinceLastVisit", "bootScreen"}
         self.assertTrue(required.issubset(self.parser.ids), f"Missing IDs: {sorted(required - self.parser.ids)}")
 
     def test_internal_navigation_links_resolve(self):
@@ -100,6 +101,17 @@ class SiteContractTests(unittest.TestCase):
         self.assertRegex(script, r"function\s+safeStorage|const\s+safeStorage")
         self.assertIn("try{", script)
         self.assertIn("catch", script)
+
+
+    def test_progress_runtime_assets_are_linked(self):
+        self.assertIn('assets/css/progress34.css', HTML)
+        self.assertIn('assets/js/progress34.js', HTML)
+
+    def test_progress_percent_does_not_claim_complete_game_data(self):
+        data = json.loads((ROOT / "data/progress.json").read_text(encoding="utf-8"))
+        self.assertFalse(data["catalog_complete"])
+        self.assertIsNone(data["total_requirements"])
+        self.assertIn("No representa el porcentaje real total", (ROOT / "assets/js/progress34.js").read_text(encoding="utf-8"))
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
