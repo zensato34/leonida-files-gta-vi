@@ -27,5 +27,29 @@ class ProgressCatalogTests(unittest.TestCase):
                 self.assertEqual("verified", entry["status"])
                 self.assertNotIn("notes_private", json.dumps(entry))
 
+
+    def test_guide_trackable_tasks_use_only_known_regions(self):
+        allowed = {"vice-city", "leonida-keys", "grassrivers", "port-gellhorn", "ambrosia", "mount-kalaga-national-park"}
+        for category in GUIDE["categories"]:
+            for entry in category["entries"]:
+                if entry.get("trackable") is True and entry.get("region_id") is not None:
+                    self.assertIn(entry["region_id"], allowed)
+
+    def test_private_discovery_and_mode_controls_are_local_only(self):
+        script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("privateDiscoveries", script)
+        self.assertIn("pending_review", script)
+        self.assertIn("explorerMode", script)
+        self.assertIn("completistMode", script)
+        self.assertIn('id="privateDiscoveryForm"', html)
+        self.assertNotIn("fetch(", script[script.index("function renderDiscoveries"):script.index("function setMode")])
+
+    def test_old_backups_remain_importable_and_new_backups_include_private_notes(self):
+        script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
+        self.assertIn("version:2", script)
+        self.assertIn("[1,2].includes(data.version)", script)
+        self.assertIn("privateDiscoveries:state.privateDiscoveries", script)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
