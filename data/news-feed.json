@@ -1,5 +1,17 @@
 {
-  "generated_at": "2026-11-15T14:15:00-04:00",
+  "generated_at": "2026-11-16T09:15:15-04:00",
   "notice": "Feed inicial. Las nuevas entradas automáticas se etiquetan como pendientes de verificación.",
-  "items": []
+  "items": [
+    {
+      "id": "2026-11-15-gta-vi-the-album-tracklist-leak",
+      "title": "Se filtra el listado completo de 34 canciones de GTA VI: The Album",
+      "description": "PC Gamer y NME informan que imágenes de copias anticipadas del vinilo muestran las 34 pistas; PC Gamer señala que fuentes de Rolling Stone y Billboard corroboraron la lista. Rockstar aún no ha publicado el listado completo: tratar como filtración pendiente de verificación oficial.",
+      "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-soundtrack-leak-confirmed-accurate-with-new-songs-from-lana-del-rey-playboi-carti-and-keith-richards/",
+      "source": "PC Gamer",
+      "published_at": "2026-11-15",
+      "date": "2026-11-15",
+      "kind": "rumor",
+      "status": "Pendiente de verificación"
+    }
+  ]
 }
