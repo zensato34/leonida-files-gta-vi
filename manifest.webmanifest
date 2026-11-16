@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "LEONIDA FILES — Dossier 34",
+  "short_name": "LEONIDA FILES",
+  "description": "Archivo independiente en español de GTA VI, creado y curado por zensato34.",
+  "lang": "es",
+  "start_url": "./?source=pwa#inicio",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0d1013",
+  "theme_color": "#101114",
+  "categories": ["games", "entertainment", "reference"],
+  "icons": [
+    {
+      "src": "assets/icons/dossier34.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
