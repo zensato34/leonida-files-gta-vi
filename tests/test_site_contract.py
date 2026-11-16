@@ -15,6 +15,7 @@ class SiteParser(HTMLParser):
         self.links = []
         self.script_sources = []
         self.stylesheet_links = []
+        self.manifest_links = []
     def handle_starttag(self, tag, attrs):
         data = dict(attrs)
         if data.get("id"):
@@ -22,6 +23,8 @@ class SiteParser(HTMLParser):
             self.id_values.append(data["id"])
         if tag == "a" and (data.get("href") or "").startswith("#"):
             self.links.append(data["href"][1:])
+        if tag == "link" and "manifest" in (data.get("rel") or "").split():
+            self.manifest_links.append(data.get("href", ""))
         if tag == "script" and data.get("src"):
             self.script_sources.append(data["src"])
         if tag == "link" and "stylesheet" in (data.get("rel") or ""):
@@ -34,7 +37,7 @@ class SiteContractTests(unittest.TestCase):
         cls.parser.feed(HTML)
 
     def test_new_dossier_modules_and_controls_exist(self):
-        required = {"atlas", "evidencias", "cronologia", "hangar", "guia", "guideTitle", "guideSearch", "guideSpoilers", "guideStatus", "guideCatalog", "guideEmpty", "progreso", "progressTitle", "progressSearch", "progressRegionFilter", "progressStatusFilter", "progressCategories", "progressStatus", "trackedPercent", "trackedBar", "trackedDone", "trackedTotal", "personalGoalForm", "personalGoalTitle", "personalGoalCategory", "personalGoalList", "exportProgress", "importProgress", "importProgressFile", "regionSearch", "regionCards", "regionCount", "vehicleSearch", "vehicleCatalog", "vehicleCount", "commandPalette", "commandInput", "openCommand", "favoritesDrawer", "sinceLastVisit", "bootScreen", "explorerMode", "completistMode", "privateDiscoveryForm", "privateDiscoveryCategory", "privateDiscoveryRegion", "privateDiscoveryTitle", "privateDiscoveryNote", "privateDiscoveryEvidence", "privateDiscoverySource", "privateDiscoverySpoiler", "privateDiscoveryList", "privateDiscoveryCount", "atlasPersonal", "atlasPointForm", "atlasPointRegion", "atlasPointType", "atlasPointStatus", "atlasPointTitle", "atlasPointDetails", "atlasPointSource", "atlasPointSpoiler", "atlasPointCount", "atlasPointSearch", "atlasPointFilterRegion", "atlasPointFilterStatus", "atlasPointList", "miGaraje", "garageSearch", "garageFilter", "garageCatalog", "garageTotal", "garageWanted", "garageOwned"}
+        required = {"pwaInstallButton","atlas", "evidencias", "cronologia", "hangar", "guia", "guideTitle", "guideSearch", "guideSpoilers", "guideStatus", "guideCatalog", "guideEmpty", "progreso", "progressTitle", "progressSearch", "progressRegionFilter", "progressStatusFilter", "progressCategories", "progressStatus", "trackedPercent", "trackedBar", "trackedDone", "trackedTotal", "personalGoalForm", "personalGoalTitle", "personalGoalCategory", "personalGoalList", "exportProgress", "importProgress", "importProgressFile", "regionSearch", "regionCards", "regionCount", "vehicleSearch", "vehicleCatalog", "vehicleCount", "commandPalette", "commandInput", "openCommand", "favoritesDrawer", "sinceLastVisit", "bootScreen", "explorerMode", "completistMode", "privateDiscoveryForm", "privateDiscoveryCategory", "privateDiscoveryRegion", "privateDiscoveryTitle", "privateDiscoveryNote", "privateDiscoveryEvidence", "privateDiscoverySource", "privateDiscoverySpoiler", "privateDiscoveryList", "privateDiscoveryCount", "atlasPersonal", "atlasPointForm", "atlasPointRegion", "atlasPointType", "atlasPointStatus", "atlasPointTitle", "atlasPointDetails", "atlasPointSource", "atlasPointSpoiler", "atlasPointCount", "atlasPointSearch", "atlasPointFilterRegion", "atlasPointFilterStatus", "atlasPointList", "miGaraje", "garageSearch", "garageFilter", "garageCatalog", "garageTotal", "garageWanted", "garageOwned"}
         self.assertTrue(required.issubset(self.parser.ids), f"Missing IDs: {sorted(required - self.parser.ids)}")
 
     def test_internal_navigation_links_resolve(self):

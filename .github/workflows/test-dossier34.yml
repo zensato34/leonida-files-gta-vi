@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'index.html'
+      - 'manifest.webmanifest'
+      - 'service-worker.js'
       - 'assets/**'
       - 'data/**'
       - 'scripts/**'
@@ -36,3 +38,7 @@ jobs:
         run: node --check assets/js/guide34.js
       - name: Comprobar sintaxis del centro de progreso
         run: node --check assets/js/progress34.js
+      - name: Comprobar sintaxis del instalador PWA
+        run: node --check assets/js/pwa34.js
+      - name: Comprobar sintaxis del service worker
+        run: node --check service-worker.js

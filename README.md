@@ -123,3 +123,12 @@ La sección de personajes parte de los ocho perfiles que Rockstar muestra en su 
 ## Crédito y derechos
 
 Creado y curado por **zensato34**. Proyecto independiente y no oficial, sin afiliación, licencia, autorización ni patrocinio de Rockstar Games o Take-Two Interactive. Grand Theft Auto, Grand Theft Auto VI, GTA, Vice City, Leonida, logotipos, personajes, música, capturas, vídeos, ilustraciones y demás materiales del juego pertenecen a Rockstar Games / Take-Two Interactive y a sus respectivos titulares. **© 2026 Rockstar Games. Todos los derechos reservados.** El portal no reclama propiedad sobre esos materiales. La política de Rockstar indica que, en general, Take-Two no se opone a ciertos usos no comerciales por fans, pero se reserva el derecho de retirar su material; revisa siempre la política vigente: https://support.rockstargames.com/articles/7bNaeoMFTV0iUDGhStTXvz/policy-on-posting-copyrighted-rockstar-games-material
+
+
+## Aplicación instalable y uso sin conexión
+
+LEONIDA FILES incluye un manifiesto PWA y un service worker para permitir la instalación desde navegadores compatibles. El botón «Instalar» aparece cuando el navegador ofrece el flujo nativo de instalación.
+
+La primera visita requiere conexión para descargar la página, los catálogos y los recursos base. Después, el portal puede abrir su estructura, scripts, estilos y catálogos locales sin conexión. Las imágenes oficiales alojadas en Rockstar, las noticias externas y las actualizaciones del feed siguen requiriendo conexión; el service worker no descarga ni redistribuye esas imágenes.
+
+El caché de catálogos utiliza estrategia de red primero y respaldo local: intenta obtener la versión reciente y recurre a la copia guardada cuando no hay conexión. Para recibir cambios publicados, vuelve a abrir el portal con Internet.
