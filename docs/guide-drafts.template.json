@@ -47,7 +47,9 @@
       "checked_at": null,
       "sources": [],
       "notes_private": "Notas internas: clasificar qué es observación, reporte o confirmación."
-    }
+    },
+    "trackable": false,
+    "region_id": null
   },
   "publication_rules": {
     "must_be_after_release_date": true,
@@ -56,6 +58,7 @@
     "gameplay_checked_must_be": true,
     "checked_at_must_be_on_or_after_release": true,
     "at_least_one_https_source_required": true,
-    "private_notes_are_never_exported": true
+    "private_notes_are_never_exported": true,
+    "trackable_must_be_explicit": true
   }
 }
