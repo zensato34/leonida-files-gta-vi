@@ -74,7 +74,8 @@ class ProgressCatalogTests(unittest.TestCase):
         vehicles = json.loads((ROOT / "data" / "vehicles.json").read_text(encoding="utf-8"))
         self.assertIn('fetch("data/vehicles.json"', script) if 'fetch("data/vehicles.json"' in script else self.assertIn("fetch('data/vehicles.json'", script)
         self.assertIn('id="garageCatalog"', html)
-        self.assertIn("vehicleRecords", script)
+        self.assertIn("vehicleRecords=[]", script)
+        self.assertIn("vehicleRecords=Array.isArray(vehicleData.items)", script)
         self.assertEqual("vehicles", vehicles["dataset"])
 
     def test_garage_statuses_are_personal_and_included_in_backup_v4(self):
