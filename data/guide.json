@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "dataset": "guide",
+  "reviewed_at": "2026-11-15",
+  "release_date": "2026-11-19",
+  "release_source_url": "https://www.rockstargames.com/VI",
+  "editorial_policy": "No publicar recorridos, ubicaciones, requisitos, coleccionables ni trofeos sin verificación en la versión final y una fuente documentada. Distinguir confirmación oficial, observación de partida y reporte atribuido. Toda revelación argumental debe marcarse como spoiler.",
+  "spoiler_default_hidden": true,
+  "description": "Índice de seis módulos de la guía fan de GTA VI. Las listas de contenido están vacías de forma deliberada hasta la verificación de la versión final.",
+  "categories": [
+    {
+      "id": "story-missions",
+      "title": "Historia y misiones",
+      "description": "Misiones principales, objetivos, requisitos y secuencia narrativa documentados en partida.",
+      "status": "pending_gameplay_verification",
+      "status_label": "Pendiente de verificación",
+      "spoiler": false,
+      "entries": []
+    },
+    {
+      "id": "activities",
+      "title": "Actividades y desafíos",
+      "description": "Actividades secundarias, pruebas, minijuegos y retos con condiciones comprobadas.",
+      "status": "pending_gameplay_verification",
+      "status_label": "Pendiente de verificación",
+      "spoiler": false,
+      "entries": []
+    },
+    {
+      "id": "collectibles",
+      "title": "Coleccionables",
+      "description": "Objetos, conjuntos y recompensas con ubicaciones contrastadas y referencias visuales.",
+      "status": "pending_gameplay_verification",
+      "status_label": "Pendiente de verificación",
+      "spoiler": false,
+      "entries": []
+    },
+    {
+      "id": "secrets",
+      "title": "Secretos y easter eggs",
+      "description": "Hallazgos ocultos, referencias y eventos especiales; las revelaciones narrativas se etiquetarán.",
+      "status": "pending_gameplay_verification",
+      "status_label": "Pendiente de verificación",
+      "spoiler": false,
+      "entries": []
+    },
+    {
+      "id": "trophies",
+      "title": "Trofeos y logros",
+      "description": "Listado oficial, requisitos, condiciones perdibles y rutas de obtención una vez confirmado.",
+      "status": "pending_gameplay_verification",
+      "status_label": "Pendiente de verificación",
+      "spoiler": false,
+      "entries": []
+    },
+    {
+      "id": "completion",
+      "title": "Ruta del 100 %",
+      "description": "Requisitos de completado y seguimiento del progreso según los criterios reales del juego.",
+      "status": "pending_gameplay_verification",
+      "status_label": "Pendiente de verificación",
+      "spoiler": false,
+      "entries": []
+    }
+  ]
+}

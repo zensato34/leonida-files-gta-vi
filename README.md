@@ -55,6 +55,15 @@ El Atlas funciona como explorador visual de las seis colecciones regionales nomb
 
 Hangar 34 muestra siete registros oficiales destacados: ’95 Grotti Cheetah, Dinka Enduro, Crest Kayak, Ganado Retro Build, Shitzu Squalo, ’67 Vapid Dominator Buggy y ’55 Vapid Stanier Sedan. Cada ficha informa si corresponde a un beneficio de Ultimate Edition o al Vintage Vice City Pack. El filtro distingue autos, motos, transporte acuático, todoterreno y modificaciones. La ausencia de una aeronave o de otro modelo en este índice no significa que no exista en el juego.
 
+
+### Guía de Leonida
+
+La guía incorpora seis módulos preparados: historia y misiones, actividades y desafíos, coleccionables, secretos y easter eggs, trofeos y logros, y ruta del 100 %. El índice vive en `data/guide.json`; cada módulo mantiene su estado y una lista de fichas que solo se publicará tras verificar la información en la versión final. Antes del lanzamiento, las listas permanecen vacías deliberadamente: no se inventan recorridos, ubicaciones, requisitos ni trofeos.
+
+La interfaz incluye búsqueda, filtros por fichas verificadas o pendientes, contador de cobertura editorial y un interruptor de spoilers ocultos por defecto. La preferencia de spoilers se guarda localmente en el navegador. El contador de la guía mide el contenido editorial publicado, no el porcentaje de la partida.
+
+Rockstar mantiene como fecha oficial de lanzamiento el **19 de noviembre de 2026**: https://www.rockstargames.com/VI. El portal es un proyecto fan independiente y no oficial.
+
 ### Validación de datos
 
 ```bash
