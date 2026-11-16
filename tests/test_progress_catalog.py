@@ -20,6 +20,7 @@ class ProgressCatalogTests(unittest.TestCase):
     def test_browser_storage_is_local_only(self):
         self.assertIs(PROGRESS["local_storage"]["browser_only"], True)
         self.assertIs(PROGRESS["local_storage"]["server_sync"], False)
+        self.assertIn("private_discoveries", PROGRESS["local_storage"]["includes"])
 
     def test_progress_tasks_only_come_from_verified_public_guide_entries(self):
         for category in GUIDE["categories"]:
