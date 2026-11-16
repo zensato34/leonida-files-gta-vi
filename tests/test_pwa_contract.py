@@ -1,0 +1,36 @@
+import json
+from pathlib import Path
+import unittest
+
+ROOT = Path(__file__).resolve().parents[1]
+MANIFEST = json.loads((ROOT / "manifest.webmanifest").read_text(encoding="utf-8"))
+
+class PwaContractTests(unittest.TestCase):
+    def test_manifest_points_to_local_app_scope_and_svg_icon(self):
+        self.assertEqual("standalone", MANIFEST["display"])
+        self.assertEqual("./", MANIFEST["scope"])
+        self.assertTrue(MANIFEST["start_url"].startswith("./"))
+        for icon in MANIFEST["icons"]:
+            self.assertTrue((ROOT / icon["src"]).is_file())
+            self.assertEqual("image/svg+xml", icon["type"])
+
+    def test_service_worker_precaches_only_local_existing_assets(self):
+        script = (ROOT / "service-worker.js").read_text(encoding="utf-8")
+        start = script.index("const CORE_ASSETS=[")
+        end = script.index("];", start)
+        block = script[start:end]
+        import re
+        paths = re.findall(r"'(\./[^']+)'", block)
+        self.assertGreaterEqual(len(paths), 15)
+        for path in paths:
+            self.assertTrue((ROOT / path[2:]).exists(), f"Missing PWA cache asset: {path}")
+
+    def test_offline_fallback_and_live_data_refresh_are_defined(self):
+        script = (ROOT / "service-worker.js").read_text(encoding="utf-8")
+        self.assertIn("request.mode==='navigate'", script)
+        self.assertIn("networkFirst(request,CACHE_DATA)", script)
+        self.assertIn("cache.match('./index.html')", script)
+        self.assertIn("if(url.origin!==self.location.origin)return", script)
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)
