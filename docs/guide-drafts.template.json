@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "dataset": "guide_drafts_private",
+  "release_date": "2026-11-19",
+  "description": "Borradores editoriales privados para LEONIDA FILES. Este archivo no debe subirse al repositorio público ni servirse desde GitHub Pages.",
+  "categories": [
+    {
+      "id": "story-missions",
+      "title": "Historia y misiones",
+      "entries": []
+    },
+    {
+      "id": "activities",
+      "title": "Actividades y desafíos",
+      "entries": []
+    },
+    {
+      "id": "collectibles",
+      "title": "Coleccionables",
+      "entries": []
+    },
+    {
+      "id": "secrets",
+      "title": "Secretos y easter eggs",
+      "entries": []
+    },
+    {
+      "id": "trophies",
+      "title": "Trofeos y logros",
+      "entries": []
+    },
+    {
+      "id": "completion",
+      "title": "Ruta del 100 %",
+      "entries": []
+    }
+  ],
+  "entry_template": {
+    "id": "identificador-unico",
+    "title": "Título provisional",
+    "summary": "Apunte de trabajo todavía no publicado.",
+    "spoiler": false,
+    "status": "pending",
+    "visibility": "private",
+    "verification": {
+      "gameplay_checked": false,
+      "checked_at": null,
+      "sources": [],
+      "notes_private": "Notas internas: clasificar qué es observación, reporte o confirmación."
+    }
+  },
+  "publication_rules": {
+    "must_be_after_release_date": true,
+    "status_must_equal": "verified",
+    "visibility_must_equal": "public",
+    "gameplay_checked_must_be": true,
+    "checked_at_must_be_on_or_after_release": true,
+    "at_least_one_https_source_required": true,
+    "private_notes_are_never_exported": true
+  }
+}
