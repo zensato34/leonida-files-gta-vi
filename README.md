@@ -10,7 +10,7 @@ Abre `index.html` con un navegador moderno. El contador usa la hora local del di
 
 El sitio ya está publicado en GitHub Pages: **https://zensato34.github.io/leonida-files-gta-vi/**. El repositorio público es `zensato34/leonida-files-gta-vi`, en la rama `main`, carpeta `/ (root)`. GitHub Pages está configurado con **Deploy from a branch**.
 
-Para actualizarlo, realiza los cambios en `main`; GitHub Pages inicia una nueva publicación automáticamente. El workflow de noticias dispone de permisos de escritura sobre el contenido del repositorio y se ejecuta cada día a las 08:15 de República Dominicana (12:15 UTC).
+Para actualizarlo, realiza los cambios en `main`; GitHub Pages inicia una nueva publicación automáticamente. El workflow de noticias dispone de permisos de escritura sobre el contenido del repositorio y se ejecuta cada día a las 08:45 de República Dominicana (12:45 UTC), después del Radar diario de GTA VI, que mantiene su horario de las 08:15.
 
 
 ## Interfaz Dossier 34
