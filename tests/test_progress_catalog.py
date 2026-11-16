@@ -58,7 +58,7 @@ class ProgressCatalogTests(unittest.TestCase):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
         self.assertIn("atlasPoints", script)
         self.assertIn("version:3", script)
-        self.assertIn("[1,2,3].includes(data.version)", script)
+        self.assertIn("![1,2,3].includes(data.version)", script)
 
     def test_atlas_points_are_region_bound_and_private(self):
         script = (ROOT / "assets" / "js" / "progress34.js").read_text(encoding="utf-8")
