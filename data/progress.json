@@ -18,7 +18,8 @@
       "personal_goals",
       "private_discoveries",
       "atlas_points",
-      "garage_vehicles"
+      "garage_vehicles",
+      "game_sessions"
     ]
   },
   "categories": [
