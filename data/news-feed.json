@@ -3,6 +3,17 @@
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación.",
   "items": [
     {
+      "id": "gta-vi-justice-score-first-and-last-game-soundtrack-nme-20261116",
+      "title": "Justice dice que el score de GTA VI será su primera y última banda sonora para videojuegos",
+      "description": "En una entrevista con Rockyrama, Justice describe el proyecto como su primera y última banda sonora para un videojuego. NME habla de una colección de 50 pistas y tres horas, pero Rockstar describe oficialmente 30 temas más pistas digitales extra; esa diferencia sigue sin aclararse.",
+      "url": "https://www.nme.com/news/gaming-news/justice-grand-theft-auto-6-score-interview-proper-album-video-game-music-3976101",
+      "source": "NME",
+      "published_at": "2026-11-16T14:01:00Z",
+      "date": "2026-11-16",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
+    },
+    {
       "id": "gta-vi-leonida-map-poster-photo-leak-uol-20261116",
       "title": "Fotografías filtradas del póster de la Collector’s Box muestran más nombres del mapa de Leonida",
       "description": "UOL informa que fotografías de un póster incluido en la Collector’s Box muestran carreteras, islas y nombres adicionales atribuidos a Leonida. Rockstar ha anunciado el póster, pero no ha autenticado las fotografías ni los topónimos y detalles nuevos; deben tratarse como filtración pendiente de verificación.",
