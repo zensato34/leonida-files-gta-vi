@@ -3,6 +3,17 @@
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación.",
   "items": [
     {
+      "id": "gta-vi-vgc-review-5-of-5-2026-11-18",
+      "title": "VGC otorga 5/5 a Grand Theft Auto VI y destaca su mundo abierto y a Jason y Lucia",
+      "description": "VGC publica su reseña de GTA VI con una puntuación de 5/5. Destaca la escala de Leonida, la relación entre los protagonistas, la interacción del mundo y la música; señala caídas ocasionales de fotogramas en zonas densas. Análisis sin reproducir spoilers.",
+      "url": "https://www.videogameschronicle.com/review/grand-theft-auto-6/",
+      "source": "VGC",
+      "published_at": "2026-11-18T11:00:00Z",
+      "date": "2026-11-18",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
       "id": "gta-vi-the-guardian-review-nov-18-2026",
       "title": "The Guardian publica su análisis de Grand Theft Auto VI antes del lanzamiento",
       "description": "La crítica de Keza MacDonald destaca la enorme densidad del mundo de Leonida, la variedad de actividades y la relación entre Jason y Lucia; también señala controles complejos y situaciones frustrantes. Reseña sin spoilers.",
