@@ -23,3 +23,7 @@ h1{letter-spacing:-.025em}h2{text-transform:uppercase;letter-spacing:.01em!impor
 @media(max-width:620px){.support-grid,.platform-lab-grid,.profile-form-grid,.profile-preferences,.edition-compare-notes{grid-template-columns:1fr}.experience-banner{border-radius:14px}.experience-banner-copy{padding:20px}.experience-banner-image{min-height:200px}.support-toolbar{align-items:stretch;flex-direction:column}.updates-overview{padding:16px;align-items:flex-start}.updates-stamp{width:76px;height:76px;flex-basis:76px}.updates-stamp b{font-size:1.7rem}.lab-gallery{gap:7px}.lab-gallery figure{min-height:120px}.lab-gallery figure:first-child{min-height:180px}.edition-selector label{width:100%;min-width:0}.profile-actions .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){.experience-section .section-head,.support-topic,.platform-lab-card,.profile-card,.profile-privacy-card,.edition-compare-output,.updates-stamp{animation:none!important}.lab-gallery img{transition:none!important}}
 html[data-motion="reduced"] *,html[data-motion="reduced"] *:before,html[data-motion="reduced"] *:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+
+/* Keep the quick-jump rail usable on narrow screens with the expanded navigation. */
+.quick-nav-inner{display:flex;align-items:center;gap:8px;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;white-space:nowrap;padding-block:8px}
+.quick-nav-inner>a{flex:0 0 auto}
