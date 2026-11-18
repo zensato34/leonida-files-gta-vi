@@ -151,6 +151,57 @@ def validate_catalogs(root: Path = ROOT) -> list[str]:
         if not song_authorities.intersection({"official_primary", "official_support"}):
             errors.append(f"Pista {song.get('id')}: falta fuente primaria de publicación")
 
+    guide_path = root / "data" / "guide.json"
+    if guide_path.exists():
+        try:
+            guide = json.loads(guide_path.read_text(encoding="utf-8"))
+            if guide.get("dataset") != "guide" or not isinstance(guide.get("categories"), list):
+                errors.append("guide.json: esquema o categorías inválidas")
+            external_refs = guide.get("external_references", [])
+            quick_tips = guide.get("quick_tips", [])
+            if not isinstance(external_refs, list) or not isinstance(quick_tips, list):
+                errors.append("guide.json: external_references y quick_tips deben ser listas")
+                external_refs = []
+                quick_tips = []
+            external_ids: set[str] = set()
+            for item in external_refs:
+                if not isinstance(item, dict):
+                    errors.append("guide.json: referencia externa no válida")
+                    continue
+                ref_id = str(item.get("id") or "")
+                if not ref_id or ref_id in external_ids:
+                    errors.append(f"guide.json: id externo vacío o duplicado ({ref_id})")
+                external_ids.add(ref_id)
+                source_id = item.get("source_id")
+                source = source_by_id.get(source_id)
+                if source is None:
+                    errors.append(f"Guía externa {ref_id}: fuente no registrada ({source_id})")
+                parsed = urlparse(str(item.get("url") or ""))
+                if parsed.scheme != "https" or not parsed.netloc or parsed.username or parsed.password:
+                    errors.append(f"Guía externa {ref_id}: URL HTTPS inválida")
+                elif source and item.get("url") != source.get("url"):
+                    errors.append(f"Guía externa {ref_id}: URL no coincide con sources.json")
+                if item.get("status") != "external_report":
+                    errors.append(f"Guía externa {ref_id}: debe permanecer como external_report")
+                if "no verificada por LEONIDA FILES" not in str(item.get("status_label") or ""):
+                    errors.append(f"Guía externa {ref_id}: falta etiqueta de atribución")
+            for tip in quick_tips:
+                if not isinstance(tip, dict):
+                    errors.append("guide.json: consejo de arranque no válido")
+                    continue
+                tip_id = str(tip.get("id") or "sin-id")
+                if not tip.get("source_ids"):
+                    errors.append(f"Consejo {tip_id}: falta source_ids")
+                for source_id in tip.get("source_ids", []):
+                    if source_id not in source_ids:
+                        errors.append(f"Consejo {tip_id}: fuente no registrada ({source_id})")
+                for source in tip.get("sources", []):
+                    parsed = urlparse(str(source.get("url") or ""))
+                    if parsed.scheme != "https" or not parsed.netloc:
+                        errors.append(f"Consejo {tip_id}: enlace externo no HTTPS")
+        except (OSError, json.JSONDecodeError) as exc:
+            errors.append(f"guide.json: {exc}")
+
     feed_path = root / "data" / "news-feed.json"
     if feed_path.exists():
         try:
