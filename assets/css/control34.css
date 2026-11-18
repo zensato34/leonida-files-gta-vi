@@ -146,3 +146,52 @@ main{padding-top:55px}
  html{scroll-behavior:auto}
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* Experience refinements: warm Vice City palette, profile preferences and data archive */
+html[data-theme="sunset"]{
+ --bg:#120c19;--panel:#1a1729;--panel2:#2b2037;--line:#594257;
+ --pink:#ff8e9d;--aqua:#72ded1;--yellow:#ffc078;--violet:#d3a0ff;
+ --shadow:0 20px 65px #09040fcc;
+}
+html[data-theme="blue-hour"]{--bg:#080d18;--panel:#101a2a;--panel2:#17253a;--pink:#ff789d;--aqua:#56e1df;--yellow:#ffd078}
+.control-preferences{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.control-motion{display:flex;align-items:flex-start;gap:10px;max-width:440px;padding:11px 13px;border:1px solid #6d8aa540;border-radius:11px;background:#07132180;cursor:pointer}
+.control-motion input{margin-top:3px;accent-color:var(--aqua)}
+.control-motion span{display:grid;gap:3px}
+.control-motion strong{font-size:.74rem;color:var(--ink)}
+.control-motion small{font-size:.66rem;line-height:1.5;color:var(--muted)}
+.control-visual-banner{position:relative;min-height:155px;margin:6px 0 20px;overflow:hidden;border:1px solid #75cfdc40;border-radius:17px;background:#101a2a;box-shadow:var(--shadow)}
+.control-visual-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;opacity:.56}
+.control-visual-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080d18f2 0%,#080d18c4 44%,#080d1840 100%),linear-gradient(0deg,#080d1877,transparent 65%)}
+.control-visual-banner>div{position:relative;z-index:1;display:grid;gap:5px;align-content:center;min-height:155px;padding:20px 25px;max-width:590px}
+.control-visual-banner strong{font:800 clamp(1.8rem,3vw,2.45rem)/1 var(--control-display,"Barlow Condensed","Arial Narrow",sans-serif);color:#f4f6fb;letter-spacing:.015em}
+.control-visual-banner small{font-size:.76rem;color:#c1d1df}
+.patch-archive{display:grid;gap:10px}
+.patch-archive>.control-status{margin:0}
+.patch-list{display:grid;gap:10px}
+.patch-list .patch-empty{padding:16px;border-style:dashed}
+.patch-list .patch-empty h4{margin:8px 0}
+.patch-list .patch-empty p{font-size:.74rem;line-height:1.65}
+.patch-entry{padding:16px;border:1px solid #6d8aa540;border-radius:12px;background:#091523a6}
+.patch-entry time{font-size:.69rem;color:var(--pink);font-weight:850}
+.patch-entry h4{margin:7px 0;font-size:1.15rem}
+.patch-entry p{font-size:.76rem;color:#b8c7d8;line-height:1.6}
+.patch-entry .patch-version{color:var(--aqua);font-weight:850}
+.patch-platforms{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}
+.patch-platforms span{padding:4px 8px;border:1px solid #6d8aa540;border-radius:99px;font-size:.62rem;color:#bfcede}
+.patch-entry a{font-size:.72rem;font-weight:850;color:var(--aqua)}
+.edition-price-compare{display:grid;gap:9px;margin-top:15px}
+.edition-price-heading{font:800 .78rem "Barlow Condensed","Arial Narrow",sans-serif;letter-spacing:.12em;color:var(--aqua)}
+.edition-price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.edition-price-card{display:grid;gap:6px;padding:13px;border:1px solid #6d8aa540;border-radius:12px;background:linear-gradient(145deg,#17283cdd,#0e1929f2)}
+.edition-price-card span{font-size:.72rem;color:#c7d5e4;font-weight:800}
+.edition-price-card strong{font:900 1.8rem "Barlow Condensed","Arial Narrow",sans-serif;color:#f4f7fb}
+.edition-price-card small{font-size:.64rem;color:#91a6bb;line-height:1.4}
+.edition-price-card a{font-size:.7rem;color:var(--aqua);font-weight:850}
+.quick-nav-inner{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;white-space:nowrap}
+.quick-nav-inner>a{flex:0 0 auto}
+@keyframes controlCardGlow{0%,100%{box-shadow:0 0 0 #56e1df00}50%{box-shadow:0 0 26px #56e1df16}}
+.control-visual-banner{animation:controlCardGlow 9s ease-in-out infinite}
+@media(max-width:620px){.edition-price-grid{grid-template-columns:1fr}.control-visual-banner>div{padding:16px;min-height:135px}.control-visual-banner{min-height:135px}}
+@media(prefers-reduced-motion:reduce){.control-visual-banner{animation:none!important}}
+html[data-motion="reduced"] *,html[data-motion="reduced"] *:before,html[data-motion="reduced"] *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
