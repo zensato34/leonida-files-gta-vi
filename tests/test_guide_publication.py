@@ -113,5 +113,13 @@ class GuidePublicationGateTests(unittest.TestCase):
         catalog, _ = build_public_catalog(GUIDE, self.drafts([item]), date(2026, 11, 21))
         self.assertIsNone(catalog["categories"][0]["entries"][0]["region_id"])
 
+
+    def test_external_reference_directory_never_counts_as_verified_guide_entries(self):
+        guide = json.loads((ROOT / "data" / "guide.json").read_text(encoding="utf-8"))
+        self.assertGreater(len(guide.get("external_references", [])), 0)
+        for category in guide["categories"]:
+            self.assertEqual([], category["entries"])
+        self.assertIn("no cuentan como fichas propias verificadas", guide["external_research_note"])
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
