@@ -131,6 +131,12 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("19:00 RD", HTML)
 
 
+    def test_release_timer_does_not_claim_live_store_availability(self):
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertIn("spain-window-reached", script)
+        self.assertNotIn("Disponible en PS Store España", script)
+        self.assertIn("parsed.username", script)
+
     def test_homepage_has_quick_navigation_and_post_launch_guide_copy(self):
         self.assertIn('class="quick-nav"', HTML)
         for target in ("#noticias", "#atlas", "#personajes", "#musica", "#guia", "#progreso"):
