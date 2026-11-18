@@ -1,7 +1,62 @@
 {
-  "generated_at": "2026-11-17T21:19:38.018811+00:00",
+  "generated_at": "2026-11-18T13:12:52Z",
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación.",
   "items": [
+    {
+      "id": "gta-vi-the-guardian-review-nov-18-2026",
+      "title": "The Guardian publica su análisis de Grand Theft Auto VI antes del lanzamiento",
+      "description": "La crítica de Keza MacDonald destaca la enorme densidad del mundo de Leonida, la variedad de actividades y la relación entre Jason y Lucia; también señala controles complejos y situaciones frustrantes. Reseña sin spoilers.",
+      "url": "https://www.theguardian.com/games/2026/nov/18/grand-theft-auto-vi-gta-6-review-playstation-rockstar",
+      "source": "The Guardian",
+      "published_at": "2026-11-18T11:00:00Z",
+      "date": "2026-11-18",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
+      "id": "gta-vi-single-player-no-online-announcement-uol-2026-11-18",
+      "title": "Rockstar todavía no ha anunciado GTA VI Online",
+      "description": "UOL repasa que las fichas oficiales presentan GTA VI como experiencia para un jugador y que Rockstar no ha anunciado nombre, fecha ni funciones para un modo online propio. La ausencia de anuncio no demuestra que nunca vaya a existir; tampoco hay confirmación de transferencias desde GTA Online.",
+      "url": "https://www.uol.com.br/tilt/noticias/redacao/2026/11/18/gta-6-tera-modo-online-veja-o-que-a-rockstar-ja-confirmou.ghtm",
+      "source": "UOL Tilt",
+      "published_at": "2026-11-18T08:30:00Z",
+      "date": "2026-11-18",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
+    },
+    {
+      "id": "gta-vi-language-support-english-voice-13-text-languages-uol-2026-11-18",
+      "title": "PlayStation confirma voces en inglés y texto en 13 idiomas para GTA VI",
+      "description": "UOL recoge la tabla oficial de PlayStation: inglés es el único idioma de voces; español de España, español de México y otros idiomas están disponibles para texto. No se anuncia doblaje al español.",
+      "url": "https://www.uol.com.br/tilt/noticias/redacao/2026/11/18/gta-6-tera-dublagem-em-portugues-veja-o-que-esta-confirmado.ghtm",
+      "source": "UOL Tilt",
+      "published_at": "2026-11-18T08:30:00Z",
+      "date": "2026-11-18",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
+      "id": "gta-vi-china-douyin-approval-preorders-estimate-reuters-2026-11-18",
+      "title": "Reuters informa de la promoción de GTA VI en Douyin y de la falta de aprobación comercial en China continental",
+      "description": "Reuters verificó una publicación del canal de Douyin de Rockstar que anima a precargar el juego, aunque GTA VI no figura entre los títulos importados aprobados para venta oficial en China continental. Sensor Tower estima 15,9 millones de reservas digitales globales al 17 de noviembre; es una estimación externa, no una cifra oficial de Rockstar.",
+      "url": "https://www.reuters.com/technology/rockstar-promotes-gta-vi-china-despite-lack-sales-approval-2026-11-18/",
+      "source": "Reuters",
+      "published_at": "2026-11-18T07:57:00Z",
+      "date": "2026-11-18",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
+      "id": "gta-vi-review-score-99-metacritic-nme-2026-11-18",
+      "title": "GTA VI alcanza un 99 en Metacritic en el primer recuento de reseñas",
+      "description": "NME informa que GTA VI llegó a 99/100 en Metacritic con 115 reseñas críticas el 18 de noviembre. Es una captura temporal de un agregador que puede cambiar al incorporarse más análisis; no es una puntuación de usuarios.",
+      "url": "https://www.nme.com/news/gaming-news/grand-theft-auto-6-best-reviewed-game-2026-critic-review-score-3976317",
+      "source": "NME",
+      "published_at": "2026-11-18",
+      "date": "2026-11-18",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
+    },
     {
       "id": "why-should-i-care-about-gta-6-kotaku-48f20cc2c3e8",
       "title": "Why Should I Care About GTA 6? - Kotaku",
