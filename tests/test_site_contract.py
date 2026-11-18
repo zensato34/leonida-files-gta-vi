@@ -126,7 +126,7 @@ class SiteContractTests(unittest.TestCase):
     def test_regional_countdown_targets_spain_psn_and_handles_unlock(self):
         script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
         self.assertIn("2026-11-18T23:00:00Z", script)
-        self.assertIn("2026-11-18T11:00:00Z", script)
+        self.assertIn("2026-11-18T10:00:00Z", script)
         self.assertIn("PS Store España", HTML)
         self.assertIn("19:00 RD", HTML)
 
