@@ -116,5 +116,19 @@ class SiteContractTests(unittest.TestCase):
         self.assertIsNone(data["total_requirements"])
         self.assertIn("No representa el porcentaje real total", (ROOT / "assets/js/progress34.js").read_text(encoding="utf-8"))
 
+    def test_auto_feed_renders_all_entries_with_editorial_kind_and_status(self):
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertNotIn("data.items.slice(0,30)", script)
+        self.assertIn("item.kind", script)
+        self.assertIn("item.status", script)
+        self.assertIn("Pendiente de verificación", script)
+
+    def test_regional_countdown_targets_spain_psn_and_handles_unlock(self):
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertIn("2026-11-18T23:00:00Z", script)
+        self.assertIn("2026-11-18T11:00:00Z", script)
+        self.assertIn("PS Store España", HTML)
+        self.assertIn("19:00 RD", HTML)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
