@@ -13,6 +13,7 @@ function normalizeFeedUrl(rawUrl){
   [...parsed.searchParams.keys()].forEach(key=>{
    if(key.toLowerCase().startsWith('utm_')||['gclid','fbclid','mc_cid','mc_eid','igshid','ref_src'].includes(key.toLowerCase()))parsed.searchParams.delete(key);
   });
+  parsed.searchParams.sort();
   return parsed.href;
  }catch(_){return '';}
 }
@@ -24,7 +25,7 @@ async function loadAutoNewsFeed(){
   if(!data||!Array.isArray(data.items))return;
   const box=document.getElementById('newsList');
   if(!box)return;
-  const known=new Set([...box.querySelectorAll('.news')].map(el=>normalizeFeedUrl(el.dataset.newsUrl||'')).filter(Boolean));
+  const known=new Set([...box.querySelectorAll('.news')].map(el=>normalizeFeedUrl(el.dataset.newsUrl||el.querySelector('a.source[href]')?.href||'')).filter(Boolean));
   const kinds={confirmed:'confirmado',reported:'reporte',rumor:'rumor'};
   const allowedStatuses=['Confirmado','Reportado','Pendiente de verificación'];
   data.items.forEach(item=>{
@@ -71,7 +72,6 @@ async function loadAutoNewsFeed(){
    root.classList.add('done');root.classList.remove('regional-live');root.dataset.releaseState='spain-available';
    if(status)status.textContent='Disponible en PS Store España';
    if(title)title.textContent='GTA VI · ventana de desbloqueo de España alcanzada';
-   if(foot)foot.firstChild.textContent='La ventana local de desbloqueo de PS Store España ya ha llegado. Si aún aparece bloqueado, comprueba tu biblioteca y el estado de la descarga. ';
    return false;
   }
   const total=Math.floor(ms/1000);
@@ -161,7 +161,7 @@ async function loadAutoNewsFeed(){
  function parseNewsDate(card){const iso=Date.parse(card.dataset.publishedAt||'');if(Number.isFinite(iso))return iso;const label=card.querySelector('time')?.textContent?.trim().toUpperCase()||'';const m=label.match(/(\d{1,2})\s+([A-ZÁÉÍÓÚ]+)\s+(\d{4})/);if(!m||months[m[2]]===undefined)return 0;return new Date(Number(m[3]),months[m[2]],Number(m[1])).getTime();}
  function refresh(){const news=$$('#newsList .news');const count=k=>news.filter(x=>x.dataset.kind===k).length;[['evidenceConfirmed','confirmado'],['evidenceReported','reporte'],['evidenceRumor','rumor'],['evidenceDebunked','desmentido']].forEach(([id,k])=>{const el=$('#'+id);if(el)el.textContent=String(count(k));});
  const timeline=$('#timelineList');if(timeline){timeline.replaceChildren();const entries=news.map(n=>({n,t:parseNewsDate(n)})).sort((a,b)=>b.t-a.t);const countEl=$('#timelineCount');if(countEl)countEl.textContent=entries.length+' REGISTROS';entries.slice(0,40).forEach(({n,t})=>{const row=document.createElement('article');row.className='timeline-entry';const time=document.createElement('time');time.textContent=t?new Intl.DateTimeFormat('es-DO',{day:'2-digit',month:'short',year:'numeric'}).format(new Date(t)).toUpperCase():'FECHA SIN DATOS';const body=document.createElement('div'),h=document.createElement('h3'),p=document.createElement('p');h.textContent=n.querySelector('h3')?.textContent||'Registro editorial';p.textContent=n.querySelector('p')?.textContent||'';body.append(h,p);row.append(time,body);timeline.append(row);});}
- const last=Number(read('lf34:lastVisit','0'))||0,fresh=news.filter(n=>{const t=Date.parse(n.dataset.publishedAt||'');return last>0&&Number.isFinite(t)&&t>last;});const countNode=$('#sinceLastVisitCount'),copy=$('#sinceLastVisitText');if(countNode)countNode.textContent=String(fresh.length);if(copy)copy.textContent=last?(fresh.length?fresh.length+' nueva(s) entrada(s) RSS desde tu visita anterior. Todas siguen pendientes de verificación.':'No se han detectado entradas RSS nuevas desde tu visita anterior.'):'Esta es tu primera visita registrada en este navegador. Las próximas novedades RSS aparecerán aquí.';
+ const last=Number(read('lf34:lastVisit','0'))||0,fresh=news.filter(n=>{const t=Date.parse(n.dataset.publishedAt||'');return last>0&&Number.isFinite(t)&&t>last;});const countNode=$('#sinceLastVisitCount'),copy=$('#sinceLastVisitText');if(countNode)countNode.textContent=String(fresh.length);if(copy)copy.textContent=last?(fresh.length?fresh.length+' nueva(s) entrada(s) editorial(es) desde tu visita anterior. Revisa la etiqueta y la fuente de cada ficha.':'No se han detectado entradas nuevas desde tu visita anterior.'):'Esta es tu primera visita registrada en este navegador. Las próximas novedades aparecerán aquí.';
  syncFavorites();renderFavorites();}
  refresh();window.addEventListener('newsfeed:updated',refresh);window.addEventListener('catalog:updated',refresh);window.addEventListener('pagehide',()=>write('lf34:lastVisit',String(Date.now())));
  if(!reduced&&matchMedia('(hover:hover) and (pointer:fine)').matches){const hero=$('.hero');hero?.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--pointer-x',(((e.clientX-r.left)/r.width-.5)*8).toFixed(2)+'px');hero.style.setProperty('--pointer-y',(((e.clientY-r.top)/r.height-.5)*6).toFixed(2)+'px');},{passive:true});}
