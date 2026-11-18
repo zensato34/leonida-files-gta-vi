@@ -58,7 +58,7 @@ Hangar 34 muestra siete registros oficiales destacados: ’95 Grotti Cheetah, Di
 
 ### Guía de Leonida
 
-La guía incorpora seis módulos: historia y misiones, actividades y desafíos, coleccionables, secretos y easter eggs, trofeos y logros, y ruta del 100 %. El índice vive en `data/guide.json`; cada módulo mantiene su estado y solo publica fichas verificadas directamente en el juego y respaldadas por fuentes fiables. A fecha 18/11/2026, Rockstar y PlayStation no han publicado un recorrido completo de misiones, ubicaciones de coleccionables, requisitos de trofeos ni una cartografía completa. Esos módulos permanecen vacíos hasta que puedan verificarse en la versión jugable; no se rellenan con especulación.
+La guía incorpora seis módulos propios: historia y misiones, actividades y desafíos, coleccionables, secretos y easter eggs, trofeos y logros, y ruta del 100 %. Desde el 18/11/2026 incluye un directorio separado con 15 referencias de VGC y PowerPyx, además de siete consejos de arranque atribuidos a esos medios. Las referencias externas no cuentan como fichas verificadas ni como tareas del 100 %. Las seis categorías propias continúan publicando solo fichas verificadas directamente en la partida, con fuentes documentadas; las listas siguen vacías hasta que se reproduzcan los pasos en la versión del propietario. Se conserva una alerta de meditación potencialmente perdible como reporte incierto, oculta por defecto mediante el control de spoilers.
 
 La interfaz incluye búsqueda, filtros por fichas verificadas o pendientes, contador de cobertura editorial y un interruptor de spoilers ocultos por defecto. La preferencia de spoilers se guarda localmente en el navegador. El contador de la guía mide el contenido editorial publicado, no el porcentaje de la partida.
 
@@ -139,3 +139,6 @@ El caché de catálogos utiliza estrategia de red primero y respaldo local: inte
 El catálogo de música pública incluye únicamente los sencillos que Rockstar muestra en sus páginas oficiales: diez de `The Album` y dos de `Original Score by Justice`. Rockstar anuncia 34 temas en `The Album` y 30 en el score; esas cifras no constituyen una lista oficial completa pista por pista. La documentación de investigación se conserva en `docs/research/2026-11-18-confirmed-gta-vi-facts.md`.
 
 La sección de compra y datos técnicos recoge el espacio libre recomendado por PlayStation España (212 GB), la tabla de idiomas de esa página, el objetivo de rendimiento declarado por Rockstar y las funciones anunciadas para PS5 / PS5 Pro. Los 212 GB se describen como espacio libre requerido, no como tamaño exacto de descarga. Los 30 FPS se describen como objetivo declarado por Rockstar, no como benchmark.
+
+
+La investigación de guías externas se documenta en `docs/research/2026-11-18-launch-guides-research.md`. PowerPyx enumera 557 vehículos en su base (277 modelos base y 280 especiales), pero especifica que la cuota del 100 % es escanear 200 de los 277 modelos base. Las cifras y advertencias de terceros se atribuyen a su autor y no se convierten en requisitos verificados por LEONIDA FILES.
