@@ -4,9 +4,9 @@
   "reviewed_at": "2026-11-18",
   "release_date": "2026-11-19",
   "release_source_url": "https://www.rockstargames.com/VI",
-  "editorial_policy": "No publicar recorridos, ubicaciones, requisitos, coleccionables ni trofeos sin verificación en la versión final y una fuente documentada. Distinguir confirmación oficial, observación de partida y reporte atribuido. Toda revelación argumental debe marcarse como spoiler.",
+  "editorial_policy": "No publicar recorridos, ubicaciones, requisitos, coleccionables ni trofeos como verificados por LEONIDA FILES sin comprobación directa en la versión final y una fuente documentada. Las guías de medios se muestran aparte, con autor y fecha; no elevan el estado editorial de una ficha propia. Distinguir confirmación oficial, observación de partida y reporte atribuido. Toda revelación argumental debe marcarse como spoiler.",
   "spoiler_default_hidden": true,
-  "description": "Índice de seis módulos de guía. Las listas de misiones, actividades, coleccionables, secretos, trofeos y ruta del 100 % permanecen vacías hasta que puedan verificarse en la versión jugable; los materiales promocionales no sustituyen la comprobación en partida.",
+  "description": "Seis módulos para fichas verificadas directamente en partida. Desde el 18/11/2026 se incorpora un directorio separado de guías periodísticas de lanzamiento, claramente atribuidas; esas referencias externas no cuentan como fichas propias verificadas ni como tareas del 100 %.",
   "categories": [
     {
       "id": "story-missions",
@@ -68,5 +68,324 @@
     "total_requirements": null,
     "percent_scope": "verified_published_checklist_only",
     "note": "El portal no afirma un porcentaje global de GTA VI hasta que exista una lista de requisitos completa y verificada."
-  }
+  },
+  "external_references": [
+    {
+      "id": "external-src-042",
+      "source_id": "src-042",
+      "title": "Recorrido completo de misiones",
+      "provider": "PowerPyx",
+      "topic": "Historia y misiones",
+      "description": "Recorrido general de historia, misiones opcionales, tareas secundarias y líneas de desconocidos.",
+      "url": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-043",
+      "source_id": "src-043",
+      "title": "Guía de trofeos y hoja de ruta",
+      "provider": "PowerPyx",
+      "topic": "Trofeos y logros",
+      "description": "Hoja de ruta de trofeos, condiciones potencialmente perdibles, guardados y consejos para el platino.",
+      "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-044",
+      "source_id": "src-044",
+      "title": "Checklist del 100 %",
+      "provider": "PowerPyx",
+      "topic": "Ruta del 100 %",
+      "description": "Lista de requisitos del 100 % y desglose de tareas de historia, exploración, actividades y descubrimientos.",
+      "url": "https://www.powerpyx.com/gta-6-100-completion-checklist-guide/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-045",
+      "source_id": "src-045",
+      "title": "Base de datos de coleccionables",
+      "provider": "PowerPyx",
+      "topic": "Coleccionables y progreso",
+      "description": "Índice externo de vehículos, armas, animales, equipo y otras categorías del menú de progreso.",
+      "url": "https://www.powerpyx.com/gta-6-collectible-guide-progress-database/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-046",
+      "source_id": "src-046",
+      "title": "Guía de desafíos",
+      "provider": "PowerPyx",
+      "topic": "Actividades y desafíos",
+      "description": "Listado de categorías y objetivos de los desafíos.",
+      "url": "https://www.powerpyx.com/gta-6-all-challenges-guide/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-047",
+      "source_id": "src-047",
+      "title": "Centro de guías VGC",
+      "provider": "VGC",
+      "topic": "Centro de guías",
+      "description": "Portal de VGC que reúne guías de inicio, navegación, trucos, misiones y otros tutoriales.",
+      "url": "https://www.videogameschronicle.com/guide/grand-theft-auto-6-complete-walkthrough-hub/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-048",
+      "source_id": "src-048",
+      "title": "Recorrido del Prólogo",
+      "provider": "VGC",
+      "topic": "Misión inicial",
+      "description": "Recorrido del prólogo con acciones y detalles de la primera misión.",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-prologue-mission-walkthrough/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-049",
+      "source_id": "src-049",
+      "title": "Recorrido de Gear Up",
+      "provider": "VGC",
+      "topic": "Misiones iniciales",
+      "description": "Recorrido de Gear Up, identificada por VGC como la tercera misión.",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-gear-up-mission-walkthrough/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-050",
+      "source_id": "src-050",
+      "title": "Consejos para principiantes",
+      "provider": "VGC",
+      "topic": "Primeras horas",
+      "description": "Consejos de primeras horas sobre dinero, ciclo de día y noche, interiores y sistemas iniciales.",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-beginners-guide-6-tips-you-need-to-know-before-starting-gta-6/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-051",
+      "source_id": "src-051",
+      "title": "Opciones de navegación",
+      "provider": "VGC",
+      "topic": "Navegación e interfaz",
+      "description": "Compara minimapa dinámico, minimapa con brújula y modo siempre activo; también explica ajustes posteriores.",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-navigation-experience-explained-which-navigation-experience-should-i-pick/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-052",
+      "source_id": "src-052",
+      "title": "Viaje rápido y RydeMe",
+      "provider": "VGC",
+      "topic": "Viajes y transporte",
+      "description": "Explica el sistema RydeMe y el punto de progresión que, según VGC, desbloquea el viaje rápido.",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-fast-travel-explained-how-to-fast-travel-in-gta-6/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-053",
+      "source_id": "src-053",
+      "title": "Cambio entre personajes",
+      "provider": "VGC",
+      "topic": "Personajes",
+      "description": "Explica cuándo se habilita el cambio libre entre Jason y Lucía y el control indicado por VGC.",
+      "url": "https://www.videogameschronicle.com/guide/how-to-change-characters-in-gta-6/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-054",
+      "source_id": "src-054",
+      "title": "Beneficios de Ultimate Edition",
+      "provider": "VGC",
+      "topic": "Ultimate Edition",
+      "description": "Ubicaciones y progresión de los beneficios de Ultimate Edition; el medio indica que no se desbloquean todos al inicio.",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-ultimate-edition-how-to-claim-your-ultimate-edition-benefits-in-gta-6/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-055",
+      "source_id": "src-055",
+      "title": "Guía de trucos",
+      "provider": "VGC",
+      "topic": "Trucos y trofeos",
+      "description": "Explica cuándo se habilitan los trucos y cómo se accede a ellos.",
+      "url": "https://www.videogameschronicle.com/guide/grand-theft-auto-6-cheats-explained-are-cheats-in-gta-6/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    },
+    {
+      "id": "external-src-056",
+      "source_id": "src-056",
+      "title": "Modo en primera persona",
+      "provider": "VGC",
+      "topic": "Cámara y perspectiva",
+      "description": "Aclara el alcance de la vista en primera persona y las perspectivas puntuales.",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-first-person-mode-explained-does-gta-6-have-a-first-person-mode/",
+      "status": "external_report",
+      "status_label": "Guía externa · no verificada por LEONIDA FILES",
+      "published_at": "2026-11-18",
+      "spoiler": false
+    }
+  ],
+  "quick_tips": [
+    {
+      "id": "tip-cash-start",
+      "title": "Guarda efectivo durante las primeras horas",
+      "category_label": "Primeras horas",
+      "summary": "VGC señala que, antes de tener una cuenta bancaria mediante BuckMe, Jason puede guardar efectivo bajo unas tablas sueltas del dormitorio. El medio advierte que llevar dinero encima puede salir caro si mueres o te arrestan. Es un consejo atribuido a VGC, pendiente de reproducir en nuestra partida.",
+      "status_label": "Reporte de VGC · no verificado por LEONIDA FILES",
+      "spoiler": false,
+      "source_ids": [
+        "src-050"
+      ],
+      "sources": [
+        {
+          "title": "VGC · Consejos para principiantes",
+          "url": "https://www.videogameschronicle.com/guide/gta-6-beginners-guide-6-tips-you-need-to-know-before-starting-gta-6/"
+        }
+      ]
+    },
+    {
+      "id": "tip-navigation",
+      "title": "Puedes cambiar la navegación después de empezar",
+      "category_label": "Interfaz y navegación",
+      "summary": "VGC describe tres presets: minimapa dinámico, minimapa y brújula dinámicos, y minimapa siempre visible. Su guía indica que luego puedes ajustar por separado qué información quieres mantener en pantalla.",
+      "status_label": "Reporte de VGC · no verificado por LEONIDA FILES",
+      "spoiler": false,
+      "source_ids": [
+        "src-051"
+      ],
+      "sources": [
+        {
+          "title": "VGC · Opciones de navegación",
+          "url": "https://www.videogameschronicle.com/guide/gta-6-navigation-experience-explained-which-navigation-experience-should-i-pick/"
+        }
+      ]
+    },
+    {
+      "id": "tip-rydeme",
+      "title": "RydeMe no estaría disponible desde el primer minuto",
+      "category_label": "Viajes y transporte",
+      "summary": "Según VGC, el viaje rápido tradicional usa la app RydeMe y se desbloquea después de BuckMe, cuando se obtiene acceso a una cuenta bancaria. No lo confundas con una función disponible desde el prólogo.",
+      "status_label": "Reporte de VGC · no verificado por LEONIDA FILES",
+      "spoiler": false,
+      "source_ids": [
+        "src-052"
+      ],
+      "sources": [
+        {
+          "title": "VGC · Viaje rápido y RydeMe",
+          "url": "https://www.videogameschronicle.com/guide/gta-6-fast-travel-explained-how-to-fast-travel-in-gta-6/"
+        }
+      ]
+    },
+    {
+      "id": "tip-character-swap",
+      "title": "El cambio libre entre personajes se habilita progresivamente",
+      "category_label": "Personajes",
+      "summary": "VGC advierte que Jason y Lucía no se pueden alternar libremente desde el comienzo. Su guía describe un desbloqueo gradual durante la historia y señala la cruceta derecha cuando el cambio ya está habilitado.",
+      "status_label": "Reporte de VGC · no verificado por LEONIDA FILES",
+      "spoiler": false,
+      "source_ids": [
+        "src-053"
+      ],
+      "sources": [
+        {
+          "title": "VGC · Cómo cambiar entre Jason y Lucía",
+          "url": "https://www.videogameschronicle.com/guide/how-to-change-characters-in-gta-6/"
+        }
+      ]
+    },
+    {
+      "id": "tip-ultimate-unlocks",
+      "title": "Los beneficios de Ultimate llegan en distintos momentos",
+      "category_label": "Ultimate Edition",
+      "summary": "La guía de VGC indica que el juego avisa cuando se desbloquea cada beneficio y que los objetos se distribuyen a lo largo de la historia. No esperes que el paquete completo aparezca disponible nada más empezar.",
+      "status_label": "Reporte de VGC · no verificado por LEONIDA FILES",
+      "spoiler": false,
+      "source_ids": [
+        "src-054"
+      ],
+      "sources": [
+        {
+          "title": "VGC · Beneficios de Ultimate Edition",
+          "url": "https://www.videogameschronicle.com/guide/gta-6-ultimate-edition-how-to-claim-your-ultimate-edition-benefits-in-gta-6/"
+        }
+      ]
+    },
+    {
+      "id": "tip-cheat-warning",
+      "title": "Evita los trucos mientras preparas el platino",
+      "category_label": "Trofeos y logros",
+      "summary": "PowerPyx advierte que utilizar trucos desactiva los trofeos y el guardado. Es una advertencia de una guía externa; antes de probarlos, confirma el comportamiento en tu propia versión.",
+      "status_label": "Advertencia atribuida a PowerPyx · pendiente de reproducción",
+      "spoiler": false,
+      "source_ids": [
+        "src-043"
+      ],
+      "sources": [
+        {
+          "title": "PowerPyx · Guía y hoja de ruta de trofeos",
+          "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/"
+        }
+      ]
+    },
+    {
+      "id": "tip-meditation-caution",
+      "title": "Aviso por una meditación temprana potencialmente perdible",
+      "category_label": "Alerta de trofeos · spoiler ligero",
+      "summary": "PowerPyx marca una interacción de meditación en el Capítulo 1 como potencialmente perdible, pero también aclara que no está seguro de si cuenta para el trofeo. No la presentamos como requisito confirmado: comprueba el contador del juego y la guía antes de avanzar si buscas el platino.",
+      "status_label": "Posible alerta externa · requiere confirmación",
+      "spoiler": true,
+      "source_ids": [
+        "src-043"
+      ],
+      "sources": [
+        {
+          "title": "PowerPyx · Guía y hoja de ruta de trofeos",
+          "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/"
+        }
+      ]
+    }
+  ],
+  "external_research_note": "Las referencias de VGC y PowerPyx son publicaciones periodísticas o guías de terceros, no fuentes oficiales de Rockstar ni observaciones propias de LEONIDA FILES. No se incluyen en categories[].entries, no cuentan para el porcentaje de la guía y no se exportan como fichas verified."
 }
