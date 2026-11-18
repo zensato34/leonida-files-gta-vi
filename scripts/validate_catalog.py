@@ -204,11 +204,15 @@ def validate_catalogs(root: Path = ROOT) -> list[str]:
 
                 published_at = str(item.get("published_at") or "")
                 try:
-                    timestamp = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
-                    if timestamp.tzinfo is None:
-                        raise ValueError("timestamp sin zona horaria")
+                    if "T" in published_at:
+                        timestamp = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
+                        if timestamp.tzinfo is None:
+                            raise ValueError("timestamp sin zona horaria")
+                    else:
+                        # A date-only ISO-8601 value is valid when the source exposes no publication time.
+                        date.fromisoformat(published_at)
                 except ValueError:
-                    errors.append(f"Feed {item_id}: published_at no es ISO-8601 con zona horaria")
+                    errors.append(f"Feed {item_id}: published_at no es ISO-8601 válido")
 
                 date_value = str(item.get("date") or "")
                 try:
