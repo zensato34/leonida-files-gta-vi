@@ -4,13 +4,13 @@ Sitio fan-made en español, adaptable a móviles, con identidad cinematográfica
 
 ## Abrir ahora
 
-Abre `index.html` con un navegador moderno. El contador usa la hora local del dispositivo y llega a las 00:00 del 19/11/2026; Rockstar Support indica que el juego se desbloquea a medianoche local en todas las regiones. Las animaciones respetan `prefers-reduced-motion`. Para que funcione el feed JSON al abrirlo localmente, ejecútalo con un servidor estático (por ejemplo, `python -m http.server 8000`) y visita `http://localhost:8000`.
+Abre `index.html` con un navegador moderno. El contador sigue la región de PS Store España: 00:00 CET del 19/11/2026, equivalente a las 19:00 del 18/11/2026 en República Dominicana. Rockstar Support indica desbloqueo a medianoche local por región; el portal distingue la apertura de otras regiones de la ventana española y cambia a estado disponible al llegar. Las animaciones respetan `prefers-reduced-motion`. Para que funcione el feed JSON al abrirlo localmente, ejecútalo con un servidor estático (por ejemplo, `python -m http.server 8000`) y visita `http://localhost:8000`.
 
 ## Publicación actual
 
 El sitio ya está publicado en GitHub Pages: **https://zensato34.github.io/leonida-files-gta-vi/**. El repositorio público es `zensato34/leonida-files-gta-vi`, en la rama `main`, carpeta `/ (root)`. GitHub Pages está configurado con **Deploy from a branch**.
 
-Para actualizarlo, realiza los cambios en `main`; GitHub Pages inicia una nueva publicación automáticamente. El workflow de noticias dispone de permisos de escritura sobre el contenido del repositorio y se ejecuta cada día a las 08:45 de República Dominicana (12:45 UTC), después del Radar diario de GTA VI, que mantiene su horario de las 08:15.
+Los cambios deben prepararse en una rama y revisarse antes de integrarse en `main`; al actualizar `main`, GitHub Pages inicia una nueva publicación automáticamente. El workflow de noticias dispone de permisos de escritura sobre el contenido del repositorio y se ejecuta cada día a las 08:45 de República Dominicana (12:45 UTC), después del Radar diario de GTA VI, que mantiene su horario de las 08:15.
 
 
 ## Interfaz Dossier 34
@@ -18,7 +18,7 @@ Para actualizarlo, realiza los cambios en `main`; GitHub Pages inicia una nueva 
 - **Búsqueda global:** usa el botón «Buscar archivo» o `Ctrl/⌘ + K`; también puedes abrirla con `/` cuando no estés escribiendo.
 - **Mi archivo:** guarda noticias, personajes, emisoras y regiones en favoritos locales del navegador. No requiere cuenta ni envía datos a un servidor.
 - **Atlas de Leonida:** índice temático de las regiones nombradas en el portal. No es un mapa oficial ni atribuye coordenadas o distancias.
-- **Evidence Center:** muestra recuentos y filtros por estado editorial. Los titulares automáticos mantienen el estado «Pendiente de verificación».
+- **Evidence Center:** muestra recuentos y filtros por estado editorial. Los titulares RSS automáticos permanecen «Pendiente de verificación»; las entradas revisadas pueden mostrarse como «Reportado» o «Confirmado» según su evidencia.
 - **Cronología:** ordena las entradas existentes; no inventa hitos ni fechas.
 - **Hangar 34:** estructura preparada para fichas de movilidad, sin inventar modelos, marcas o estadísticas.
 - **Novedades desde tu última visita:** utiliza fechas del feed RSS y almacenamiento local del navegador.
@@ -45,7 +45,7 @@ El contenido principal está separado de la presentación en catálogos versiona
 - `songs.json`: 34 pistas con estado individual: lanzamiento oficial o pista reportada.
 - `sources.json`: registro común de procedencia y autoridad.
 - `vehicles.json`: siete fichas destacadas con nombre e imagen oficial, distinguiendo beneficios de Ultimate Edition y Vintage Vice City Pack. No es el inventario completo del juego.
-- `news-feed.json`: feed separado de titulares automáticos, siempre pendientes de verificación.
+- `news-feed.json`: feed de titulares descubiertos automáticamente y entradas editoriales añadidas por el radar. Google News RSS permanece pendiente; las revisiones manuales conservan su clasificación y estado.
 
 La presentación se separa en `assets/css/dossier34.css` y `assets/js/dossier34.js`. El motor carga los catálogos locales y reconstruye las fichas sin usar `innerHTML` con contenido editorial; el HTML conserva contenido de respaldo si un JSON no está disponible.
 
@@ -58,11 +58,11 @@ Hangar 34 muestra siete registros oficiales destacados: ’95 Grotti Cheetah, Di
 
 ### Guía de Leonida
 
-La guía incorpora seis módulos preparados: historia y misiones, actividades y desafíos, coleccionables, secretos y easter eggs, trofeos y logros, y ruta del 100 %. El índice vive en `data/guide.json`; cada módulo mantiene su estado y una lista de fichas que solo se publicará tras verificar la información en la versión final. Antes del lanzamiento, las listas permanecen vacías deliberadamente: no se inventan recorridos, ubicaciones, requisitos ni trofeos.
+La guía incorpora seis módulos: historia y misiones, actividades y desafíos, coleccionables, secretos y easter eggs, trofeos y logros, y ruta del 100 %. El índice vive en `data/guide.json`; cada módulo mantiene su estado y solo publica fichas verificadas directamente en el juego y respaldadas por fuentes fiables. Las listas pueden permanecer vacías mientras no haya observaciones comprobadas: no se inventan recorridos, ubicaciones, requisitos ni trofeos.
 
 La interfaz incluye búsqueda, filtros por fichas verificadas o pendientes, contador de cobertura editorial y un interruptor de spoilers ocultos por defecto. La preferencia de spoilers se guarda localmente en el navegador. El contador de la guía mide el contenido editorial publicado, no el porcentaje de la partida.
 
-Rockstar mantiene como fecha oficial de lanzamiento el **19 de noviembre de 2026**: https://www.rockstargames.com/VI. El portal es un proyecto fan independiente y no oficial.
+Rockstar fijó el lanzamiento regional para el **19 de noviembre de 2026**, a medianoche local según la región: https://www.rockstargames.com/VI. Para PS Store España, el objetivo es 00:00 CET (19:00 del 18 de noviembre en RD). El portal es un proyecto fan independiente y no oficial.
 
 
 ### Separación de borradores privados y guía pública
@@ -97,9 +97,9 @@ Las noticias con estado `confirmado` requieren al menos una fuente primaria de R
 
 ## Qué automatiza y qué no
 
-`scripts/update_news.py` consulta Google News RSS con búsquedas sobre Rockstar, GTA VI y filtraciones. Guarda titulares, extractos, fuentes y enlaces en `data/news-feed.json`. El workflow de GitHub Actions lo ejecuta diariamente y sube el feed al repositorio; la página lee ese JSON y añade sus entradas a la sección de noticias.
+`scripts/update_news.py` consulta Google News RSS con búsquedas sobre Rockstar, GTA VI y filtraciones. Guarda titulares, extractos, fuentes y enlaces en `data/news-feed.json`. El workflow de GitHub Actions lo ejecuta diariamente y sube el feed al repositorio; la página lee todas las entradas válidas y conserva el estado editorial de cada ficha.
 
-**Límite editorial deliberado:** las entradas nuevas aparecen como **Pendiente de verificación**. El recolector RSS no tiene capacidad para decidir por sí solo si una filtración es cierta. Comprueba cada historia en el Newswire de Rockstar, soporte oficial, PlayStation/Xbox o medios reconocidos antes de cambiarla a confirmada. Las nuevas funciones del juego, cambios de fecha, precios y detalles de ediciones deben contrastarse con la fuente primaria.
+**Límite editorial deliberado:** las nuevas entradas de Google News RSS aparecen como **Pendiente de verificación**. El recolector no decide por sí solo si una filtración es cierta, no sustituye entradas revisadas y no recorta el historial editorial al límite de descubrimientos diarios. Deduplica por URL normalizada e ID y conserva las clasificaciones manuales. Comprueba cada historia en el Newswire de Rockstar, soporte oficial, PlayStation/Xbox o medios reconocidos antes de cambiarla a confirmada. Las nuevas funciones del juego, cambios de fecha, precios y detalles de ediciones deben contrastarse con la fuente primaria.
 
 La publicación pública ya está activa. Este ZIP es una copia de respaldo del proyecto que también puedes usar para desplegarlo en otro alojamiento.
 
