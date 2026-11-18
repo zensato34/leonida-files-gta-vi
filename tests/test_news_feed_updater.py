@@ -156,8 +156,8 @@ class NewsFeedUpdaterTests(unittest.TestCase):
                 "discovery_source": "Google News RSS",
                 "verification_required": True,
             }
-            with patch.object(update_news, "OUT", feed_path), \\
-                 patch.object(update_news, "fetch_feed", return_value=[rss_duplicate]), \\
+            with patch.object(update_news, "OUT", feed_path), \
+                 patch.object(update_news, "fetch_feed", return_value=[rss_duplicate]), \
                  patch.object(update_news.time, "sleep"):
                 update_news.main()
 
@@ -196,8 +196,8 @@ class NewsFeedUpdaterTests(unittest.TestCase):
                 "discovery_source": "Google News RSS",
                 "verification_required": True,
             }
-            with patch.object(update_news, "OUT", feed_path), \\
-                 patch.object(update_news, "fetch_feed", return_value=[new_item]), \\
+            with patch.object(update_news, "OUT", feed_path), \
+                 patch.object(update_news, "fetch_feed", return_value=[new_item]), \
                  patch.object(update_news.time, "sleep"):
                 update_news.main()
 
