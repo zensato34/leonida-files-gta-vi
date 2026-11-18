@@ -148,3 +148,12 @@ La sección de compra y datos técnicos recoge el espacio libre recomendado por 
 
 
 La investigación de guías externas se documenta en `docs/research/2026-11-18-launch-guides-research.md`. PowerPyx enumera 557 vehículos en su base (277 modelos base y 280 especiales), pero especifica que la cuota del 100 % es escanear 200 de los 277 modelos base. Las cifras y advertencias de terceros se atribuyen a su autor y no se convierten en requisitos verificados por LEONIDA FILES.
+
+
+## Ajustes adicionales del Centro de control
+
+El Centro de control conserva un único perfil local y un asistente integrado. Esta ampliación añade un tema opcional **Vice City · Atardecer** frente al tema **Blue Hour**, un control de movimiento reducido, un archivo de parches cargado desde `data/updates.json` y una comparación de precios fechados de Standard y Ultimate para PS Store España.
+
+El archivo de parches comienza vacío y solo admite versiones oficiales de Rockstar, PlayStation o Xbox con fecha, plataformas, resumen y URL HTTPS del dominio correspondiente. Los precios 79,99 € (Standard) y 99,99 € (Ultimate) son una observación de PS Store España del 18/11/2026, no precios en tiempo real ni importes aplicables a todas las regiones. Para otras regiones no se extrapolan cifras.
+
+El laboratorio recuerda que 30 FPS es un objetivo declarado por Rockstar, que PSSR y sombras con trazado de rayos se anuncian para PS5 Pro y que 212 GB es el espacio libre indicado por PlayStation España para preparar la precarga, no el tamaño exacto descargado. Las pruebas independientes quedan pendientes hasta disponer de mediciones con metodología.

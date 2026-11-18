@@ -1,7 +1,7 @@
 'use strict';
 const CACHE_PREFIX='leonida-files-';
-const CACHE_STATIC=CACHE_PREFIX+'static-v5';
-const CACHE_DATA=CACHE_PREFIX+'data-v5';
+const CACHE_STATIC=CACHE_PREFIX+'static-v6';
+const CACHE_DATA=CACHE_PREFIX+'data-v6';
 const CORE_ASSETS=[
  './',
  './index.html',
@@ -27,7 +27,8 @@ const CORE_ASSETS=[
  './data/songs.json',
  './data/vehicles.json',
  './data/guide.json',
- './data/progress.json'
+ './data/progress.json',
+ './data/updates.json'
 ];
 self.addEventListener('install',event=>{
  event.waitUntil((async()=>{

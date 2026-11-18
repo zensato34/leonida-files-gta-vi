@@ -278,6 +278,7 @@
   <p>Herramientas para configurar tu edición, resolver incidencias habituales, consultar el registro de versiones y separar los datos técnicos anunciados de las mediciones independientes.</p>
  </div>
  <div class="control-livebar"><span class="pulse" aria-hidden="true"></span><strong>LEONIDA SUPPORT DESK</strong><span>Perfil privado · diagnóstico orientativo · fuentes oficiales primero</span><span>Actualización editorial: 18 NOV 2026</span></div>
+ <div class="control-visual-banner"><img src="https://www.rockstargames.com/VI/_next/static/media/Jason_Lucia_Rooftop_landscape.0c6p5do~-8~7..jpg?akim=1&imdensity=1&imwidth=1300" loading="lazy" decoding="async" alt="Jason y Lucía en una imagen promocional oficial de GTA VI"><div><span class="eyebrow">DOSSIER 34 · VICE CITY / LEONIDA</span><strong>Tu centro de operaciones.</strong><small>Soporte, ediciones y datos técnicos reunidos en un solo lugar.</small></div></div>
  <div class="control-layout">
   <article class="control-card">
    <div class="control-card-head"><div><div class="control-code">01 / PLAYER PROFILE</div><h3>Mi configuración</h3></div><span class="control-chip">Solo local</span></div>
@@ -287,7 +288,9 @@
      <div class="control-field"><label for="controlRegion">Región de mi cuenta</label><select id="controlRegion" name="region"><option value="ps-es">PlayStation Store España / Europa</option><option value="ps-us">PlayStation Store Estados Unidos</option><option value="xbox">Microsoft Store / Xbox</option><option value="other">Otra región / no lo sé</option></select></div>
      <div class="control-field"><label for="controlEdition">Edición adquirida</label><select id="controlEdition" name="edition"><option value="ultimate">Ultimate Edition</option><option value="standard">Standard Edition</option><option value="unknown">No estoy seguro</option></select></div>
      <div class="control-field"><label for="controlLanguage">Idioma preferido</label><select id="controlLanguage" name="language"><option value="es">Español</option><option value="en">English</option><option value="other">Otro idioma</option></select></div>
+     <div class="control-field"><label for="controlTheme">Apariencia del archivo</label><select id="controlTheme" name="theme"><option value="blue-hour">Vice City · Blue Hour</option><option value="sunset">Vice City · Atardecer</option></select></div>
     </div>
+    <div class="control-preferences"><label class="control-motion" for="controlReduceMotion"><input type="checkbox" id="controlReduceMotion" name="reduceMotion"><span><strong>Reducir animaciones</strong><small>Respeta tu preferencia de movimiento reducido durante esta visita y las siguientes.</small></span></label></div>
     <div class="control-actions"><button class="control-button" type="submit">Guardar mi perfil</button><button class="control-button secondary" type="reset">Restablecer</button></div>
     <p class="control-status" id="controlProfileStatus" role="status" aria-live="polite"></p>
    </form>
@@ -304,6 +307,7 @@
     <option value="update">No aparece una actualización</option>
     <option value="size">El tamaño de descarga no coincide</option>
     <option value="language">El idioma o las voces no son los esperados</option>
+    <option value="code">El código de compra no se puede canjear</option>
    </select></div></div>
    <div class="support-result" id="supportResult" aria-live="polite"><span class="control-chip">Diagnóstico inicial</span><h4>Selecciona un problema</h4><p>Se mostrarán comprobaciones según la consola seleccionada en tu perfil.</p></div>
    <p class="control-note">Este asistente reúne pasos de comprobación no invasivos. No puede consultar tu consola, tu compra, tu red ni el estado de tu cuenta en tiempo real.</p>
@@ -312,7 +316,11 @@
  <div class="control-subgrid">
   <article class="control-card">
    <div class="control-card-head"><div><div class="control-code">03 / PATCH ARCHIVE</div><h3>Historial de actualizaciones</h3></div><span class="control-chip">Registro editorial</span></div>
-   <div class="patch-empty"><span class="control-chip warm">Archivo preparado</span><h4>Versiones y notas de parche</h4><p>Las versiones se incorporarán aquí cuando exista una nota identificable con fecha, plataformas, número de versión y cambios documentados. No se publicarán tamaños ni correcciones deducidos de comentarios aislados.</p>
+   <div class="patch-archive">
+    <p class="control-status" id="updatesStatus" role="status" aria-live="polite">Registro oficial pendiente de cargar.</p>
+    <div class="patch-list" id="updatesList" aria-live="polite">
+     <article class="patch-empty"><span class="control-chip warm">Archivo preparado</span><h4>Aún no hay notas de parche oficiales registradas</h4><p>El archivo se completará cuando Rockstar, PlayStation o Xbox publiquen notas de versión verificables. Que esta lista esté vacía no significa que no existan actualizaciones fuera del registro.</p></article>
+    </div>
     <div class="patch-links"><a href="https://www.rockstargames.com/newswire" target="_blank" rel="noopener noreferrer">Rockstar Newswire ↗</a><a href="https://status.playstation.com/" target="_blank" rel="noopener noreferrer">Estado de PSN ↗</a><a href="https://support.xbox.com/en-US/xbox-live-status" target="_blank" rel="noopener noreferrer">Estado de Xbox ↗</a></div>
    </div>
    <div class="patch-standard">Criterio: cada entrada distinguirá parche del juego, actualización del sistema de la consola y mantenimiento del servicio en línea. Son cosas diferentes.</div>
@@ -320,12 +328,12 @@
   <article class="control-card">
    <div class="control-card-head"><div><div class="control-code">04 / PERFORMANCE LAB</div><h3>Laboratorio técnico</h3></div><span class="control-chip warm">Datos vs. mediciones</span></div>
    <div class="tech-list">
-    <div class="tech-row"><div class="tech-platform">PS5</div><p><strong>Objetivo de 30 FPS citado por Rockstar.</strong> Es una meta declarada, no un benchmark independiente ni una garantía de rendimiento constante.</p></div>
+    <div class="tech-row"><div class="tech-platform">PS5</div><p><strong>Objetivo de 30 FPS citado por Rockstar.</strong> PlayStation anuncia respuesta háptica, gatillos adaptativos y audio Tempest 3D. La ficha de PlayStation España indica <strong>212 GB de espacio libre</strong> para preparar la precarga; no es el tamaño exacto de descarga.</p></div>
     <div class="tech-row"><div class="tech-platform">PS5 PRO</div><p><strong>PSSR y sombras con trazado de rayos</strong> aparecen entre las características técnicas anunciadas. No se atribuye una resolución concreta sin mediciones verificables.</p></div>
-    <div class="tech-row"><div class="tech-platform">XBOX</div><p><strong>Series X|S:</strong> el expediente no publicará cifras de resolución, FPS o tiempos de carga hasta disponer de pruebas comparables y atribuibles.</p></div>
+    <div class="tech-row"><div class="tech-platform">XBOX</div><p><strong>Series X|S:</strong> el expediente no publicará cifras de resolución, FPS o tiempos de carga hasta disponer de pruebas comparables y atribuibles. El objetivo de 30 FPS sigue siendo una declaración, no un benchmark.</p></div>
    </div>
    <div class="tech-warning">Resolución real, estabilidad de FPS, calidad visual y tiempos de carga: pendientes de mediciones independientes reproducibles por consola.</div>
-   <div class="patch-links"><a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Información oficial de GTA VI ↗</a><a href="https://www.theguardian.com/games/ng-interactive/2026/nov/15/grand-theft-auto-vi-inside-rockstar-games" target="_blank" rel="noopener noreferrer">Entrevista técnica · The Guardian ↗</a></div>
+   <div class="patch-links"><a href="https://www.rockstargames.com/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now" target="_blank" rel="noopener noreferrer">Rockstar · precarga y objetivo de rendimiento ↗</a><a href="https://blog.playstation.com/2026/11/10/pre-load-grand-theft-auto-vi-on-ps5-starting-today/" target="_blank" rel="noopener noreferrer">PlayStation · funciones de PS5 ↗</a><a href="https://www.playstation.com/es-es/support/games/gta-vi-support/" target="_blank" rel="noopener noreferrer">PlayStation · requisitos y soporte ↗</a></div>
   </article>
  </div>
  <article class="control-card" style="margin-top:16px">
@@ -335,6 +343,7 @@
    <div class="control-field"><label>Referencia principal</label><a class="control-button secondary" href="https://support.rockstargames.com/articles/4QfG4FmZCf5W1gS8jy4UVT/grand-theft-auto-vi-platform-editions-and-versions" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none">Ediciones · Rockstar Support ↗</a></div>
   </div>
   <div class="edition-quickview" id="editionQuickview" aria-live="polite" style="margin-top:15px"></div>
+  <div class="edition-price-compare" id="editionPriceCompare" aria-live="polite"></div>
   <p class="control-note">El resumen no sustituye la lista de contenidos de la tienda de tu región ni confirma qué elementos ya se han desbloqueado en tu partida. Consulta la comparación completa en <a href="#ediciones">Standard vs. Ultimate</a>.</p>
  </article>
  <p class="control-footnote">Las recomendaciones de soporte se basan en documentación de las plataformas y se presentan como orientación general. Si un procedimiento puede borrar datos o reinstalar el juego, consulta primero las instrucciones oficiales y conserva tus partidas guardadas.</p>

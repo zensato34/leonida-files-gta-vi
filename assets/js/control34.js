@@ -2,29 +2,32 @@
 const root=document.getElementById('centro-control');if(!root)return;
 const $=id=>document.getElementById(id);
 const form=$('controlProfileForm');
-const fields={platform:$('controlPlatform'),region:$('controlRegion'),edition:$('controlEdition'),language:$('controlLanguage')};
+const fields={platform:$('controlPlatform'),region:$('controlRegion'),edition:$('controlEdition'),language:$('controlLanguage'),theme:$('controlTheme')};
+const reduceMotion=$('controlReduceMotion');
 const status=$('controlProfileStatus'),summary=$('controlProfileSummary'),regionHint=$('controlRegionHint');
 const key='lf34:player-profile';
-const defaults={platform:'ps5',region:'ps-es',edition:'ultimate',language:'es'};
+const defaults={platform:'ps5',region:'ps-es',edition:'ultimate',language:'es',theme:'blue-hour',reduceMotion:false};
 const labels={
  platform:{ps5:'PlayStation 5',ps5pro:'PlayStation 5 Pro',xboxx:'Xbox Series X',xboxs:'Xbox Series S',other:'Otra plataforma'},
  region:{'ps-es':'PlayStation Store España / Europa','ps-us':'PlayStation Store Estados Unidos','xbox':'Microsoft Store / Xbox','other':'Otra región / no lo sé'},
  edition:{standard:'Standard Edition',ultimate:'Ultimate Edition',unknown:'No estoy seguro'},
- language:{es:'Español',en:'English',other:'Otro idioma'}
+ language:{es:'Español',en:'English',other:'Otro idioma'},
+ theme:{'blue-hour':'Vice City · Blue Hour',sunset:'Vice City · Atardecer'}
 };
 function readProfile(){try{const raw=localStorage.getItem(key);if(!raw)return null;const parsed=JSON.parse(raw);return parsed&&typeof parsed==='object'?parsed:null}catch(_){return null}}
-function getProfile(){return Object.fromEntries(Object.entries(fields).map(([k,node])=>[k,node?.value||defaults[k]]))}
+function getProfile(){const p=Object.fromEntries(Object.entries(fields).map(([k,node])=>[k,node?.value||defaults[k]]));p.reduceMotion=reduceMotion?.checked===true;return p}
+function applyVisualPreferences(p){document.documentElement.dataset.theme=labels.theme?.[p.theme]?p.theme:'blue-hour';document.documentElement.dataset.motion=p.reduceMotion?'reduced':'system'}
 function updateSummary(){
  const p=getProfile();
  if(summary){summary.replaceChildren();const strong=document.createElement('strong');strong.textContent=(labels.platform[p.platform]||labels.platform.ps5)+' · '+(labels.edition[p.edition]||labels.edition.unknown);const detail=document.createElement('span');detail.textContent=(labels.region[p.region]||labels.region.other)+' · Idioma: '+(labels.language[p.language]||labels.language.other);summary.append(strong,detail)}
  if(regionHint){regionHint.textContent=p.region==='ps-es'?'Perfil regional: PS Store España / Europa. La región de la cuenta determina la tienda y sus condiciones; tu ubicación física no cambia la región de la cuenta.':p.region==='ps-us'?'Perfil regional: PS Store Estados Unidos. Comprueba siempre la ficha de esa tienda y la región de cualquier código.':p.region==='xbox'?'Perfil regional: Microsoft Store / Xbox. Consulta la disponibilidad y las condiciones que muestre tu propia tienda.':'No hay una región definida. Comprueba la tienda donde se realizó la compra antes de canjear códigos o buscar contenido.'}
 }
-const saved=readProfile();Object.entries(fields).forEach(([k,node])=>{if(node)node.value=(saved&&labels[k]?.[saved[k]])?saved[k]:defaults[k]});
+const saved=readProfile();Object.entries(fields).forEach(([k,node])=>{if(node)node.value=(saved&&labels[k]?.[saved[k]])?saved[k]:defaults[k]});if(reduceMotion)reduceMotion.checked=saved?.reduceMotion===true;applyVisualPreferences(getProfile());
 const editionSelectInitial=$('editionQuickSelect');if(editionSelectInitial)editionSelectInitial.value=fields.edition?.value||defaults.edition;
-form?.addEventListener('submit',event=>{event.preventDefault();const p=getProfile();try{localStorage.setItem(key,JSON.stringify(p));if(status)status.textContent='Perfil guardado en este navegador.'}catch(_){if(status)status.textContent='El navegador no permitió guardar el perfil. Los ajustes siguen activos hasta cerrar esta página.'}updateSummary();renderSupport();renderEdition()});
-form?.addEventListener('reset',()=>{setTimeout(()=>{try{localStorage.removeItem(key)}catch(_){}if(status)status.textContent='Perfil local restablecido.';updateSummary();renderSupport();renderEdition()},0)});
-Object.values(fields).forEach(node=>node?.addEventListener('change',()=>{if(node===fields.edition&&$('editionQuickSelect'))$('editionQuickSelect').value=node.value;updateSummary();renderSupport();renderEdition()}));
-updateSummary();
+form?.addEventListener('submit',event=>{event.preventDefault();const p=getProfile();try{localStorage.setItem(key,JSON.stringify(p));if(status)status.textContent='Perfil guardado en este navegador.'}catch(_){if(status)status.textContent='El navegador no permitió guardar el perfil. Los ajustes siguen activos hasta cerrar esta página.'}updateSummary();applyVisualPreferences(p);renderSupport();renderEdition()});
+form?.addEventListener('reset',()=>{setTimeout(()=>{try{localStorage.removeItem(key)}catch(_){}if(status)status.textContent='Perfil local restablecido.';applyVisualPreferences(getProfile());updateSummary();renderSupport();renderEdition()},0)});
+Object.values(fields).forEach(node=>node?.addEventListener('change',()=>{if(node===fields.edition&&$('editionQuickSelect'))$('editionQuickSelect').value=node.value;applyVisualPreferences(getProfile());updateSummary();renderSupport();renderEdition()}));
+updateSummary();reduceMotion?.addEventListener('change',()=>applyVisualPreferences(getProfile()));
 const issue=$('supportProblem'),result=$('supportResult');
 const commonSources=[
  {label:'Soporte de PlayStation · descargas',url:'https://www.playstation.com/en-us/support/games/troubleshoot-downloaded-playstation-game/'},
@@ -37,11 +40,34 @@ const issues={
  download:{title:'La descarga no inicia o se queda detenida',intro:'Antes de borrar el juego, revisa la cola, el servicio de la plataforma, la conexión y el espacio libre. Sigue primero las comprobaciones menos invasivas.',ps:['En PS5, abre Descargas/Cargas desde el centro de control y prueba Pausar y Reanudar.','Comprueba el estado de PlayStation Network y la conexión de la consola.','Revisa Ajustes > Almacenamiento y confirma que hay espacio libre suficiente.','Comprueba que el sistema de PS5 esté actualizado. Si persiste, sigue el procedimiento oficial de PlayStation antes de cancelar y volver a descargar.'],xbox:['Comprueba el estado de Xbox antes de cambiar la instalación.','Abre Mis juegos y aplicaciones > Administrar > Cola y revisa si la descarga está pausada o esperando otra instalación.','Comprueba el espacio disponible y la conexión de red.','Reinicia la consola y vuelve a revisar la cola. Si persiste, consulta Xbox Support.']},
  locked:{title:'El juego aparece con candado o no reconoce la compra',intro:'La primera comprobación es la cuenta que hizo la compra o canjeó el código. No compres el juego otra vez sin verificar la licencia y el historial.',ps:['Confirma que has iniciado sesión en la cuenta de PlayStation que compró o canjeó GTA VI.','Comprueba el historial de transacciones y la biblioteca de esa misma cuenta.','En PS5: Ajustes > Usuarios y cuentas > Otros > Restaurar licencias. PlayStation indica que este proceso no afecta a tus datos.','Comprueba el estado de PSN y, si el problema continúa, contacta con PlayStation Support con el código de error y una captura.'],xbox:['Confirma que usas la cuenta Microsoft que adquirió o canjeó el juego.','Comprueba el historial de pedidos y la biblioteca de esa cuenta.','Revisa el estado de Xbox y reinicia la consola.','Si continúa bloqueado, consulta Xbox Support antes de comprar de nuevo.']},
  ultimate:{title:'No aparecen todos los beneficios de Ultimate',intro:'No asumas que cada beneficio debe aparecer como una descarga separada o estar disponible desde el primer minuto. Comprueba la edición, los complementos y las condiciones de desbloqueo.',ps:['Verifica la edición adquirida en el historial de transacciones de la cuenta correcta.','Abre la ficha del juego en tu biblioteca y revisa la sección de complementos disponibles.','Cierra el juego por completo y vuelve a iniciarlo después de instalar los complementos que correspondan.','Algunos beneficios pueden depender del progreso de la historia. Consulta la guía externa atribuida y la ficha de Rockstar Support.'],xbox:['Confirma que tu cuenta posee Ultimate Edition y revisa el historial de pedidos.','En Mis juegos y aplicaciones, abre Administrar juego y complementos para comprobar el contenido asociado.','Instala los complementos disponibles y reinicia el juego por completo.','Comprueba dentro del juego si el beneficio depende de avanzar en la historia.']},
+ code:{title:'El código de compra no se puede canjear',intro:'Comprueba la región de la tienda y las condiciones del código antes de reclamar. Conserva el empaque y el comprobante; no compres otro código sin aclarar el error.',ps:['Rockstar indica que los códigos de PlayStation para GTA VI deben coincidir con la región de tu cuenta.','Compara la región indicada por el vendedor o en el empaque con la de la cuenta donde intentas canjearlo.','Revisa los caracteres, conserva el comprobante y toma una captura del mensaje de error.','Si el código no corresponde a tu región, contacta al vendedor; si coincide, consulta PlayStation o Rockstar Support.'],xbox:['Comprueba que el código corresponde a tu región y a la tienda Microsoft donde intentas canjearlo.','Revisa cuidadosamente los caracteres y el historial de canjes de tu cuenta Microsoft.','Conserva el comprobante y el mensaje de error.','Si sigue fallando, contacta con el vendedor o Xbox Support antes de comprar otro código.']},
  update:{title:'No aparece una actualización',intro:'La ausencia de una actualización no demuestra por sí sola que la instalación esté dañada. Verifica primero que exista una versión publicada para tu plataforma.',ps:['En la pantalla de inicio, selecciona GTA VI, pulsa OPTIONS y elige Buscar actualización.','Comprueba Descargas/Cargas por si la actualización está en cola o pausada.','Verifica conexión, espacio disponible y software del sistema.','Consulta Rockstar Newswire y el estado de PSN para confirmar que la actualización esté anunciada.'],xbox:['Comprueba Mis juegos y aplicaciones > Administrar > Actualizaciones.','Revisa la cola y el espacio libre disponible.','Comprueba el estado de Xbox y reinicia la consola.','Verifica que Rockstar haya publicado una actualización para tu plataforma antes de asumir que falta.']},
  size:{title:'El tamaño de descarga no coincide con otra cifra',intro:'Distingue el espacio libre requerido, el tamaño de descarga y el tamaño instalado. Son medidas distintas y pueden cambiar con paquetes o actualizaciones.',ps:['Consulta el espacio libre requerido en la ficha del producto de PlayStation Store desde tu consola.','Compara el espacio libre disponible en Ajustes > Almacenamiento, no solo el número que muestra la cola.','No borres paquetes ni reinstales únicamente porque una cifra sea distinta de una publicación externa.','Si la instalación muestra un error, anota el código y consulta el soporte oficial.'],xbox:['Revisa el espacio de almacenamiento disponible en la consola.','Consulta la cola de instalación y la información del juego en Administrar juego y complementos.','No tomes una cifra de terceros como tamaño universal: puede corresponder a otra versión o actualización.','Si aparece un código de error, consulta Xbox Support.']},
  language:{title:'El idioma o las voces no son los esperados',intro:'La disponibilidad de idiomas puede variar entre interfaz, textos y doblaje. Comprueba los idiomas enumerados en la ficha de la tienda correspondiente a tu cuenta.',ps:['Abre la ficha de GTA VI en la misma región donde realizaste la compra y revisa los idiomas compatibles.','Comprueba el idioma de la consola y los ajustes disponibles dentro del juego.','No confundas el idioma de los textos con el idioma de las voces.','Si la ficha oficial no aclara tu caso, consulta Rockstar Support.'],xbox:['Revisa los idiomas de la ficha de GTA VI en Microsoft Store para tu región.','Comprueba el idioma y la ubicación de la consola.','Distingue los idiomas de interfaz, subtítulos y audio.','Consulta Rockstar Support si el idioma anunciado no aparece.']}
 };
 function make(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el}
+function officialPatchUrl(value){
+ try{const u=new URL(String(value||''));const hosts=['rockstargames.com','playstation.com','xbox.com'];if(u.protocol!=='https:'||u.username||u.password)return null;return hosts.some(host=>u.hostname===host||u.hostname.endsWith('.'+host))?u:null}catch(_){return null}
+}
+function validPatch(item){
+ return !!(item&&item.status==='official'&&typeof item.version==='string'&&item.version.trim()&&item.version.length<=40&&typeof item.title==='string'&&item.title.trim()&&item.title.length<=160&&typeof item.summary==='string'&&item.summary.trim()&&item.summary.length<=1200&&typeof item.source_label==='string'&&item.source_label.trim()&&Array.isArray(item.platforms)&&item.platforms.length>0&&item.platforms.length<=6&&item.platforms.every(x=>typeof x==='string'&&x.length<=40)&&Number.isFinite(Date.parse(item.published_at))&&officialPatchUrl(item.source_url));
+}
+function renderPatchArchive(){
+ const list=$('updatesList'),statusText=$('updatesStatus');if(!list)return;
+ const showEmpty=message=>{list.replaceChildren();const card=make('article','patch-empty');card.append(make('span','control-chip warm','Archivo editorial'),make('h4','','Aún no hay notas de parche oficiales registradas'),make('p','',message));list.append(card)};
+ fetch('./data/updates.json',{cache:'no-cache'}).then(response=>{if(!response.ok)throw new Error('No se pudo consultar el registro');return response.json()}).then(data=>{
+  const items=Array.isArray(data?.items)?data.items.filter(validPatch).sort((a,b)=>Date.parse(b.published_at)-Date.parse(a.published_at)):[];
+  if(!items.length){showEmpty('El archivo no tiene entradas oficiales registradas. Esto no permite concluir que no existan actualizaciones fuera de este registro.');if(statusText)statusText.textContent='0 notas oficiales registradas · pendiente de nuevas fuentes.';return}
+  list.replaceChildren();
+  items.forEach(item=>{
+   const card=make('article','patch-entry');card.append(make('time','',new Intl.DateTimeFormat('es-DO',{dateStyle:'long'}).format(new Date(item.published_at))),make('h4','',item.title),make('p','patch-version','Versión '+item.version),make('p','',item.summary));
+   const platforms=make('div','patch-platforms');item.platforms.forEach(platform=>platforms.append(make('span','',platform)));card.append(platforms);
+   const source=make('a','',item.source_label+' ↗');source.href=officialPatchUrl(item.source_url).href;source.target='_blank';source.rel='noopener noreferrer';card.append(source);list.append(card);
+  });
+  if(statusText)statusText.textContent=items.length+' nota(s) de parche oficiales registradas.';
+ }).catch(()=>{showEmpty('No se pudo cargar el registro en esta visita. Comprueba la conexión y vuelve a intentarlo.');if(statusText)statusText.textContent='Registro de parches no disponible ahora.'});
+}
+renderPatchArchive();
 function renderSupport(){
  if(!issue||!result)return;const item=issues[issue.value]||issues.download;const p=getProfile();const steps=(p.platform==='xboxx'||p.platform==='xboxs')?item.xbox:item.ps;
  result.replaceChildren();result.append(make('span','control-chip',labels.platform[p.platform]||'Plataforma seleccionada'));
@@ -62,6 +88,24 @@ function renderEdition(){
  const ul=make('ul','');
  (choice==='ultimate'?['Juego base GTA VI.','Contenido adicional de Ultimate Edition según la ficha de Rockstar.','Algunos beneficios pueden aparecer mediante desbloqueos de progresión, no necesariamente como descargas independientes.']:choice==='standard'?['Juego base GTA VI.','No incluye automáticamente los artículos exclusivos del paquete Ultimate Edition Upgrade.','Los beneficios de reserva, cuando corresponden, dependen de la compra y sus condiciones.']:['La ficha de cada tienda es la referencia para lo que has comprado.','Revisa el historial de transacciones y la lista oficial de contenidos.']).forEach(x=>ul.append(make('li','',x)));
  editionBox.append(h,p,ul);
+ renderEditionPricing();
+}
+function renderEditionPricing(){
+ const box=$('editionPriceCompare');if(!box)return;box.replaceChildren();
+ const p=getProfile();
+ if(p.region!=='ps-es'){
+  box.append(make('p','control-note','Referencia de precios disponible solo para PS Store España. Elige esa región en tu perfil para consultar los importes históricos; no se extrapolan a otras tiendas.'));
+  return;
+ }
+ const entries=[
+  {name:'Standard Edition',price:'79,99 €',url:'https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVISTANDARD001/'},
+  {name:'Ultimate Edition',price:'99,99 €',url:'https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVIULTIMATE001/'}
+ ];
+ const heading=make('div','edition-price-heading','PS STORE ESPAÑA · REFERENCIA DEL 18/11/2026');
+ box.append(heading);
+ const grid=make('div','edition-price-grid');
+ entries.forEach(entry=>{const card=make('article','edition-price-card');card.append(make('span','',entry.name),make('strong','',entry.price),make('small','','Precio observado el 18/11/2026 · no es precio en tiempo real.'));const link=make('a','', 'Ver ficha oficial ↗');link.href=entry.url;link.target='_blank';link.rel='noopener noreferrer';card.append(link);grid.append(card)});
+ box.append(grid,make('p','control-note','Los precios pueden cambiar y no se aplican a otras regiones. La comparación es informativa y no recomienda recomprar una edición que ya posees.'));
 }
 editionSelect?.addEventListener('change',renderEdition);renderEdition();
 })();
