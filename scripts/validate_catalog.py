@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -18,6 +18,16 @@ ALLOWED_NEWS_STATUS = {"confirmado", "reporte", "rumor", "desmentido"}
 ALLOWED_SONG_STATUS = {"official_release", "reported_leak"}
 ALLOWED_VEHICLE_CATEGORIES = {"car", "motorcycle", "watercraft", "customized_vehicle", "offroad_buggy"}
 ROCKSTAR_CDN = "www.rockstargames.com"
+ALLOWED_FEED_STATUS = {
+    "confirmed": {"Confirmado"},
+    "reported": {"Reportado", "Pendiente de verificación"},
+    "rumor": {"Pendiente de verificación"},
+}
+PRIMARY_FEED_DOMAINS = {
+    "rockstargames.com", "support.rockstargames.com",
+    "playstation.com", "store.playstation.com",
+    "xbox.com", "news.xbox.com", "microsoft.com",
+}
 
 def load_dataset(name: str, root: Path = ROOT) -> dict:
     path = root / "data" / f"{name}.json"
@@ -139,9 +149,72 @@ def validate_catalogs(root: Path = ROOT) -> list[str]:
     if feed_path.exists():
         try:
             feed = json.loads(feed_path.read_text(encoding="utf-8"))
-            for item in feed.get("items", []):
-                if item.get("status") != "Pendiente de verificación":
-                    errors.append(f"Feed RSS {item.get('id')}: no está pendiente de verificación")
+            feed_items = feed.get("items", [])
+            if not isinstance(feed_items, list):
+                errors.append("news-feed.json: items debe ser una lista")
+                feed_items = []
+            feed_ids: set[str] = set()
+            feed_urls: set[str] = set()
+            for item in feed_items:
+                if not isinstance(item, dict):
+                    errors.append("news-feed.json: existe una entrada que no es un objeto")
+                    continue
+                item_id = str(item.get("id") or "")
+                if not item_id:
+                    errors.append("news-feed.json: existe una entrada sin id")
+                elif item_id in feed_ids:
+                    errors.append(f"Feed {item_id}: id duplicado")
+                feed_ids.add(item_id)
+
+                for field in ("title", "description", "source"):
+                    if not str(item.get(field) or "").strip():
+                        errors.append(f"Feed {item_id}: falta {field}")
+
+                parsed_url = urlparse(str(item.get("url") or ""))
+                if parsed_url.scheme != "https" or not parsed_url.netloc:
+                    errors.append(f"Feed {item_id}: URL no HTTPS o inválida")
+                else:
+                    normalized_url = parsed_url._replace(
+                        scheme="https",
+                        netloc=parsed_url.netloc.lower(),
+                        fragment="",
+                    ).geturl()
+                    if normalized_url in feed_urls:
+                        errors.append(f"Feed {item_id}: URL duplicada")
+                    feed_urls.add(normalized_url)
+
+                kind = item.get("kind")
+                status = item.get("status")
+                allowed_statuses = ALLOWED_FEED_STATUS.get(kind)
+                if allowed_statuses is None:
+                    errors.append(f"Feed {item_id}: kind inválido")
+                elif status not in allowed_statuses:
+                    errors.append(f"Feed {item_id}: status no concuerda con kind {kind}")
+
+                discovery_source = item.get("discovery_source")
+                if discovery_source == "Google News RSS" and (
+                    kind != "reported" or status != "Pendiente de verificación"
+                ):
+                    errors.append(f"Google News RSS {item_id}: debe permanecer como reporte pendiente")
+
+                if kind == "confirmed" and parsed_url.scheme == "https" and parsed_url.netloc:
+                    host = parsed_url.hostname.lower() if parsed_url.hostname else ""
+                    if not any(host == domain or host.endswith("." + domain) for domain in PRIMARY_FEED_DOMAINS):
+                        errors.append(f"Feed {item_id}: confirmado sin dominio de fuente primaria")
+
+                published_at = str(item.get("published_at") or "")
+                try:
+                    timestamp = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
+                    if timestamp.tzinfo is None:
+                        raise ValueError("timestamp sin zona horaria")
+                except ValueError:
+                    errors.append(f"Feed {item_id}: published_at no es ISO-8601 con zona horaria")
+
+                date_value = str(item.get("date") or "")
+                try:
+                    date.fromisoformat(date_value)
+                except ValueError:
+                    errors.append(f"Feed {item_id}: date no es YYYY-MM-DD")
         except (OSError, json.JSONDecodeError) as exc:
             errors.append(f"news-feed.json: {exc}")
 
