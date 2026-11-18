@@ -199,6 +199,11 @@ def validate_catalogs(root: Path = ROOT) -> list[str]:
                     parsed = urlparse(str(source.get("url") or ""))
                     if parsed.scheme != "https" or not parsed.netloc:
                         errors.append(f"Consejo {tip_id}: enlace externo no HTTPS")
+                    source_record = source_by_id.get(source.get("source_id"))
+                    if source_record is None:
+                        errors.append(f"Consejo {tip_id}: source_id del enlace no registrado")
+                    elif source.get("url") != source_record.get("url"):
+                        errors.append(f"Consejo {tip_id}: URL del enlace no coincide con sources.json")
         except (OSError, json.JSONDecodeError) as exc:
             errors.append(f"guide.json: {exc}")
 
