@@ -1,6 +1,6 @@
 # LEONIDA FILES — GTA VI por zensato34
 
-Sitio fan-made en español, adaptable a móviles, con identidad cinematográfica de archivo clasificado, Atlas temático no cartográfico, centro de evidencias, cronología editorial, Hangar 34, búsqueda global, favoritos locales y resumen de novedades por visita. Conserva personajes, radios, música, ediciones, tiendas y media oficial de Rockstar. Las imágenes integradas proceden del CDN oficial; no se generan imágenes con IA.
+Sitio fan-made en español, adaptable a móviles, con identidad cinematográfica de Vice City, Centro de control y soporte, laboratorio técnico, perfil local, Atlas temático no cartográfico, centro de evidencias, cronología editorial, Hangar 34, búsqueda global, favoritos locales y resumen de novedades por visita. Conserva personajes, radios, música, ediciones, tiendas y media oficial de Rockstar. Las imágenes integradas proceden del CDN oficial; no se generan imágenes con IA.
 
 ## Abrir ahora
 
@@ -22,6 +22,12 @@ Los cambios deben prepararse en una rama y revisarse antes de integrarse en `mai
 - **Cronología:** ordena las entradas existentes; no inventa hitos ni fechas.
 - **Hangar 34:** estructura preparada para fichas de movilidad, sin inventar modelos, marcas o estadísticas.
 - **Novedades desde tu última visita:** utiliza fechas del feed RSS y almacenamiento local del navegador.
+
+### Centro de control y experiencia visual
+
+El Centro de control permite guardar localmente la consola, la región de la tienda, la edición y el idioma preferido; adapta una guía orientativa de incidencias con enlaces a soporte oficial; y reserva un registro editorial para futuras notas de parche. El laboratorio técnico distingue las declaraciones del desarrollador de las mediciones independientes. No se muestran estadísticas de rendimiento no verificadas. El perfil no sale del navegador.
+
+La renovación visual usa una paleta nocturna azul, turquesa y coral, jerarquía tipográfica con fuentes del sistema, tarjetas con profundidad y microanimaciones. Respeta `prefers-reduced-motion` y mantiene los recursos CSS/JavaScript del sitio alojados localmente para conservar su funcionamiento PWA.
 
 ## Pruebas
 

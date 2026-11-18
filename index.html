@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0a0e12">
+<meta name="theme-color" content="#080d18">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="LEONIDA FILES">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/svg+xml" href="assets/icons/dossier34.svg">
 <link rel="apple-touch-icon" href="assets/icons/dossier34-192.png">
-<meta name="description" content="Archivo fan independiente en español de GTA VI: noticias con fuentes, personajes, regiones, radio, música, vehículos y guías. Curado por zensato34.">
+<meta name="description" content="Archivo fan independiente en español de GTA VI: noticias con fuentes, personajes, regiones, soporte, tecnología, música, vehículos y más. Curado por zensato34.">
 <meta property="og:title" content="LEONIDA FILES — El archivo de GTA VI por zensato34">
 <meta property="og:description" content="Todo sobre Grand Theft Auto VI, Vice City y Leonida. Noticias, música, emisoras, personajes, ediciones y rumores con fuentes.">
 <meta property="og:image" content="https://www.rockstargames.com/VI/_next/static/media/meta.0t8ty~nlmxq2s.jpg?yvw8ZozOI7a7Kz1war9qe">
@@ -17,11 +17,12 @@
 <link rel="stylesheet" href="assets/css/dossier34.css">
 <link rel="stylesheet" href="assets/css/guide34.css">
 <link rel="stylesheet" href="assets/css/progress34.css">
+<link rel="stylesheet" href="assets/css/control34.css">
 </head>
 <body>
 <div class="boot-screen" id="bootScreen" role="status" aria-live="polite"><div class="boot-core"><div class="boot-mark">34</div><h2>ACCESO CONCEDIDO</h2><p>Conectando con el archivo de Leonida</p><button class="boot-skip" id="skipBoot" type="button">Entrar al dossier</button></div></div>
 <div class="top-progress" aria-hidden="true"><span id="pageProgress"></span></div>
-<header class="topbar"><div class="wrap nav"><a class="brand" href="#inicio" aria-label="LEONIDA FILES, volver al inicio"><span class="brand-mark">34</span><span>LEONIDA FILES</span></a><button class="cmd-trigger" id="openCommand" type="button" aria-label="Abrir búsqueda global"><span class="cmd-icon" aria-hidden="true">⌕</span><span class="cmd-label">Buscar archivo</span><kbd>CTRL K</kbd></button><button class="archive-trigger" id="openFavorites" type="button" aria-label="Abrir mi archivo de favoritos">★ <span id="favoriteCount">0</span></button><button class="pwa-install-button" id="pwaInstallButton" type="button" hidden>Instalar</button><button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button><nav class="navlinks" id="navlinks" aria-label="Navegación principal"><a href="#noticias">Inteligencia</a><a href="#atlas">Atlas</a><a href="#personajes">Expedientes</a><a href="#radios">Radio</a><a href="#evidencias">Evidencias</a><a href="#cronologia">Cronología</a><a href="#hangar">Hangar 34</a><a href="#guia">Guía de campo</a><a href="#progreso">Progreso</a><a href="#ediciones">Ediciones</a><a href="#media">Media Vault</a></nav></div></header>
+<header class="topbar"><div class="wrap nav"><a class="brand" href="#inicio" aria-label="LEONIDA FILES, volver al inicio"><span class="brand-mark">34</span><span>LEONIDA FILES</span></a><button class="cmd-trigger" id="openCommand" type="button" aria-label="Abrir búsqueda global"><span class="cmd-icon" aria-hidden="true">⌕</span><span class="cmd-label">Buscar archivo</span><kbd>CTRL K</kbd></button><button class="archive-trigger" id="openFavorites" type="button" aria-label="Abrir mi archivo de favoritos">★ <span id="favoriteCount">0</span></button><button class="pwa-install-button" id="pwaInstallButton" type="button" hidden>Instalar</button><button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button><nav class="navlinks" id="navlinks" aria-label="Navegación principal"><a href="#noticias">Inteligencia</a><a href="#atlas">Atlas</a><a href="#personajes">Expedientes</a><a href="#radios">Radio</a><a href="#evidencias">Evidencias</a><a href="#cronologia">Cronología</a><a href="#hangar">Hangar 34</a><a href="#guia">Guía de campo</a><a href="#progreso">Progreso</a><a href="#centro-control">Centro de control</a><a href="#ediciones">Ediciones</a><a href="#media">Media Vault</a></nav></div></header>
 <section class="hero" id="inicio"><div class="wrap hero-inner"><div class="kicker"><i></i> ARCHIVO EDITORIAL · VICE CITY / LEONIDA</div><h1>LEONIDA <span>FILES</span></h1><p>El expediente de <strong>Grand Theft Auto VI</strong>: noticias verificadas, filtraciones etiquetadas, personajes, lugares, emisoras, música, ediciones y material oficial de Vice City.</p><div class="creditline">Un archivo creado y curado por <strong>zensato34</strong></div><div class="hero-statusline"><span class="live">Señal activa</span><span>Red editorial · Dossier 34</span><span>Fuentes primarias primero</span></div><div class="actions"><a class="btn primary" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Rockstar · GTA VI ↗</a><a class="btn secondary" href="#noticias">Explorar el expediente ↓</a><a class="btn secondary" href="#comprar">Comprar el juego ↗</a></div><div class="fineprint">Proyecto fan-made, independiente y no oficial. No está afiliado ni patrocinado por Rockstar Games o Take-Two. Las imágenes y videos enlazados pertenecen a Rockstar Games; no se han creado imágenes con IA.</div></div></section>
 <section class="countdown-band" id="contador" aria-label="Estado de lanzamiento de GTA VI para PS Store España">
  <div class="wrap">
@@ -46,6 +47,7 @@
   <a href="#musica">Radio y música</a>
   <a href="#guia">Guías</a>
   <a href="#progreso">Mi progreso</a>
+  <a href="#centro-control">Centro de control</a>
  </div>
 </nav>
 <div class="ticker"><div class="wrap ticker-grid"><div class="ticker-item"><b>19 NOV 2026</b><span>Fecha oficial</span></div><div class="ticker-item"><b>00:00 CET</b><span>PS Store España</span></div><div class="ticker-item"><b>19:00 RD</b><span>18 NOV · hora local</span></div><div class="ticker-item"><b>PS5 · Xbox Series X|S</b><span>Plataformas anunciadas</span></div></div></div>
@@ -269,6 +271,75 @@
 </section>
 
 
+
+<section class="section control-section" id="centro-control" aria-labelledby="controlTitle">
+ <div class="section-head">
+  <div><div class="section-no">11 / CONTROL ROOM · DOSSIER 34</div><h2 id="controlTitle">Centro de control</h2></div>
+  <p>Herramientas para configurar tu edición, resolver incidencias habituales, consultar el registro de versiones y separar los datos técnicos anunciados de las mediciones independientes.</p>
+ </div>
+ <div class="control-livebar"><span class="pulse" aria-hidden="true"></span><strong>LEONIDA SUPPORT DESK</strong><span>Perfil privado · diagnóstico orientativo · fuentes oficiales primero</span><span>Actualización editorial: 18 NOV 2026</span></div>
+ <div class="control-layout">
+  <article class="control-card">
+   <div class="control-card-head"><div><div class="control-code">01 / PLAYER PROFILE</div><h3>Mi configuración</h3></div><span class="control-chip">Solo local</span></div>
+   <form id="controlProfileForm">
+    <div class="control-form-grid">
+     <div class="control-field"><label for="controlPlatform">Mi consola</label><select id="controlPlatform" name="platform"><option value="ps5">PlayStation 5</option><option value="ps5pro">PlayStation 5 Pro</option><option value="xboxx">Xbox Series X</option><option value="xboxs">Xbox Series S</option><option value="other">Otra plataforma</option></select></div>
+     <div class="control-field"><label for="controlRegion">Región de mi cuenta</label><select id="controlRegion" name="region"><option value="ps-es">PlayStation Store España / Europa</option><option value="ps-us">PlayStation Store Estados Unidos</option><option value="xbox">Microsoft Store / Xbox</option><option value="other">Otra región / no lo sé</option></select></div>
+     <div class="control-field"><label for="controlEdition">Edición adquirida</label><select id="controlEdition" name="edition"><option value="ultimate">Ultimate Edition</option><option value="standard">Standard Edition</option><option value="unknown">No estoy seguro</option></select></div>
+     <div class="control-field"><label for="controlLanguage">Idioma preferido</label><select id="controlLanguage" name="language"><option value="es">Español</option><option value="en">English</option><option value="other">Otro idioma</option></select></div>
+    </div>
+    <div class="control-actions"><button class="control-button" type="submit">Guardar mi perfil</button><button class="control-button secondary" type="reset">Restablecer</button></div>
+    <p class="control-status" id="controlProfileStatus" role="status" aria-live="polite"></p>
+   </form>
+   <div class="control-profile-summary" id="controlProfileSummary" aria-live="polite"></div>
+   <p class="control-note" id="controlRegionHint">Tu perfil se utiliza para adaptar los consejos de esta página. La región de la cuenta y tu ubicación física son datos distintos.</p>
+   <p class="control-note">El perfil se guarda únicamente en el almacenamiento local de este navegador. No se envía a LEONIDA FILES ni a Rockstar.</p>
+  </article>
+  <article class="control-card">
+   <div class="control-card-head"><div><div class="control-code">02 / TROUBLESHOOTING</div><h3>¿Qué está pasando?</h3></div><span class="control-chip warm">Asistente de soporte</span></div>
+   <div class="control-help-select"><div class="control-field"><label for="supportProblem">Selecciona el problema</label><select class="control-select" id="supportProblem">
+    <option value="download">La descarga no inicia o se detiene</option>
+    <option value="locked">El juego aparece bloqueado o no reconoce la compra</option>
+    <option value="ultimate">No aparecen los beneficios de Ultimate</option>
+    <option value="update">No aparece una actualización</option>
+    <option value="size">El tamaño de descarga no coincide</option>
+    <option value="language">El idioma o las voces no son los esperados</option>
+   </select></div></div>
+   <div class="support-result" id="supportResult" aria-live="polite"><span class="control-chip">Diagnóstico inicial</span><h4>Selecciona un problema</h4><p>Se mostrarán comprobaciones según la consola seleccionada en tu perfil.</p></div>
+   <p class="control-note">Este asistente reúne pasos de comprobación no invasivos. No puede consultar tu consola, tu compra, tu red ni el estado de tu cuenta en tiempo real.</p>
+  </article>
+ </div>
+ <div class="control-subgrid">
+  <article class="control-card">
+   <div class="control-card-head"><div><div class="control-code">03 / PATCH ARCHIVE</div><h3>Historial de actualizaciones</h3></div><span class="control-chip">Registro editorial</span></div>
+   <div class="patch-empty"><span class="control-chip warm">Archivo preparado</span><h4>Versiones y notas de parche</h4><p>Las versiones se incorporarán aquí cuando exista una nota identificable con fecha, plataformas, número de versión y cambios documentados. No se publicarán tamaños ni correcciones deducidos de comentarios aislados.</p>
+    <div class="patch-links"><a href="https://www.rockstargames.com/newswire" target="_blank" rel="noopener noreferrer">Rockstar Newswire ↗</a><a href="https://status.playstation.com/" target="_blank" rel="noopener noreferrer">Estado de PSN ↗</a><a href="https://support.xbox.com/en-US/xbox-live-status" target="_blank" rel="noopener noreferrer">Estado de Xbox ↗</a></div>
+   </div>
+   <div class="patch-standard">Criterio: cada entrada distinguirá parche del juego, actualización del sistema de la consola y mantenimiento del servicio en línea. Son cosas diferentes.</div>
+  </article>
+  <article class="control-card">
+   <div class="control-card-head"><div><div class="control-code">04 / PERFORMANCE LAB</div><h3>Laboratorio técnico</h3></div><span class="control-chip warm">Datos vs. mediciones</span></div>
+   <div class="tech-list">
+    <div class="tech-row"><div class="tech-platform">PS5</div><p><strong>Objetivo de 30 FPS citado por Rockstar.</strong> Es una meta declarada, no un benchmark independiente ni una garantía de rendimiento constante.</p></div>
+    <div class="tech-row"><div class="tech-platform">PS5 PRO</div><p><strong>PSSR y sombras con trazado de rayos</strong> aparecen entre las características técnicas anunciadas. No se atribuye una resolución concreta sin mediciones verificables.</p></div>
+    <div class="tech-row"><div class="tech-platform">XBOX</div><p><strong>Series X|S:</strong> el expediente no publicará cifras de resolución, FPS o tiempos de carga hasta disponer de pruebas comparables y atribuibles.</p></div>
+   </div>
+   <div class="tech-warning">Resolución real, estabilidad de FPS, calidad visual y tiempos de carga: pendientes de mediciones independientes reproducibles por consola.</div>
+   <div class="patch-links"><a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Información oficial de GTA VI ↗</a><a href="https://www.theguardian.com/games/ng-interactive/2026/nov/15/grand-theft-auto-vi-inside-rockstar-games" target="_blank" rel="noopener noreferrer">Entrevista técnica · The Guardian ↗</a></div>
+  </article>
+ </div>
+ <article class="control-card" style="margin-top:16px">
+  <div class="control-card-head"><div><div class="control-code">05 / EDITION CHECK</div><h3>Comprobador rápido de ediciones</h3></div><span class="control-chip">Standard vs. Ultimate</span></div>
+  <div class="control-form-grid">
+   <div class="control-field"><label for="editionQuickSelect">Consultar contenido de</label><select id="editionQuickSelect" class="control-select"><option value="ultimate">Ultimate Edition</option><option value="standard">Standard Edition</option><option value="unknown">No estoy seguro</option></select></div>
+   <div class="control-field"><label>Referencia principal</label><a class="control-button secondary" href="https://support.rockstargames.com/articles/4QfG4FmZCf5W1gS8jy4UVT/grand-theft-auto-vi-platform-editions-and-versions" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none">Ediciones · Rockstar Support ↗</a></div>
+  </div>
+  <div class="edition-quickview" id="editionQuickview" aria-live="polite" style="margin-top:15px"></div>
+  <p class="control-note">El resumen no sustituye la lista de contenidos de la tienda de tu región ni confirma qué elementos ya se han desbloqueado en tu partida. Consulta la comparación completa en <a href="#ediciones">Standard vs. Ultimate</a>.</p>
+ </article>
+ <p class="control-footnote">Las recomendaciones de soporte se basan en documentación de las plataformas y se presentan como orientación general. Si un procedimiento puede borrar datos o reinstalar el juego, consulta primero las instrucciones oficiales y conserva tus partidas guardadas.</p>
+</section>
+
 <section class="section" id="comprar"><div class="section-head"><div><div class="section-no">07 / STOREFRONTS</div><h2>Enlaces oficiales de compra</h2></div><p>Accesos directos a las tiendas de consola y al portal de Rockstar. Los precios y la disponibilidad pueden cambiar.</p></div><div class="grid three"><div class="card"><div class="eyebrow">PlayStation · España</div><h3>Cuenta PSN española</h3><p>Standard: <strong>79,99 €</strong><br>Ultimate: <strong>99,99 €</strong></p><a class="source" href="https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVISTANDARD001" target="_blank" rel="noopener">Standard PS5 ↗</a><br><a class="source" href="https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVIULTIMATE001" target="_blank" rel="noopener">Ultimate PS5 ↗</a></div><div class="card"><div class="eyebrow">Xbox · Estados Unidos</div><h3>Microsoft Store</h3><p>Standard: <strong>US$79.99+</strong><br>Ultimate: <strong>US$99.99+</strong></p><a class="source" href="https://www.xbox.com/en-US/games/store/grand-theft-auto-vi/9NL3WWNZLZZN" target="_blank" rel="noopener">Standard Xbox Series ↗</a><br><a class="source" href="https://www.xbox.com/en-US/games/store/grand-theft-auto-vi/9NNZSNHLR63L" target="_blank" rel="noopener">Ultimate Xbox Series ↗</a></div><div class="card"><div class="eyebrow">Rockstar Games</div><h3>Tienda y ficha oficial</h3><p>Información central, noticias, enlaces de compra y contenidos de la edición Ultimate.</p><a class="source" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Ficha oficial GTA VI ↗</a><br><a class="source" href="https://store.rockstargames.com/game/buy-gta-vi?drm=PlayStation+5" target="_blank" rel="noopener">Rockstar Store ↗</a></div></div><div class="callout" style="margin-top:15px">Tu cuenta de PlayStation está configurada en España, así que los enlaces de PS Store España son los más relevantes. Si vas a comprar un código físico o digital en otra región, revisa la compatibilidad regional con Rockstar antes de pagarlo.</div></section>
 
 <section class="section" id="media"><div class="section-head"><div><div class="section-no">08 / ARCHIVO VISUAL</div><h2>Imágenes y videos oficiales</h2></div><p>Las imágenes visibles aquí se sirven desde los servidores CDN de Rockstar Games. No se incluyen ilustraciones generadas por IA. En la página oficial están disponibles las descargas en tamaño original.</p></div><div class="media-grid"><a class="media-tile" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/poster_full.0az_iud2g3y4j.jpg?akim=1&imdensity=1&imwidth=1000" alt="Arte promocional oficial de GTA VI"><span>Arte principal · GTA VI</span></a><a class="media-tile" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Jason_Lucia_Rooftop_landscape.0c6p5do~-8~7..jpg?akim=1&imdensity=1&imwidth=1000" alt="Jason y Lucía en imagen oficial"><span>Jason & Lucía · Leonida</span></a><a class="media-tile" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Jason_Lucia_Lock_And_Load_landscape.0l9s5w7ih9p~3.jpg?akim=1&imdensity=1&imwidth=1000" alt="Jason y Lucía con armas, arte oficial"><span>Lock & Load · Artwork</span></a><a class="media-tile" href="https://www.rockstargames.com/VI/music" target="_blank" rel="noopener"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/The_Album_Cover_Art_landscape.000ifb9a.j-gp.jpg?akim=1&imdensity=1&imwidth=1000" alt="GTA VI The Album arte oficial"><span>The Album · Portada</span></a><a class="media-tile" href="https://www.rockstargames.com/VI/music" target="_blank" rel="noopener"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Score_CoverArt_1014_1600x1600.0.5dr9slukqhb.jpg?akim=1&imdensity=1&imwidth=800" alt="Justice score arte oficial"><span>Original Score · Justice</span></a><a class="media-tile" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/hero-background-ultrawide.14kyfs_8tksd8.jpg?akim=1&imdensity=1&imwidth=1000" alt="Arte atmosférico oficial de Vice City"><span>Vice City · Ambiente</span></a></div><div class="grid two" style="margin-top:15px"><div class="card"><h3>Catálogo oficial de medios</h3><p>5 videos · 9 clips · 138 capturas · 51 imágenes de beneficios Ultimate · 12 imágenes del pack Vintage Vice City · 27 ilustraciones y fondos de pantalla.</p><a class="source" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener">Abrir imágenes y descargas ↗</a></div><div class="card"><h3>Videos y tráilers oficiales</h3><p>Trailer 1, Trailer 2, An Extended Look, Launch Trailer y Pre-Load Now, además de clips de personajes.</p><a class="source" href="https://www.rockstargames.com/VI/media/videos" target="_blank" rel="noopener">Ver los cinco videos y nueve clips ↗</a></div></div></section>
@@ -380,5 +451,6 @@
 <div class="overlay-panel" id="commandPalette" hidden><div class="dialog-card" role="dialog" aria-modal="true" aria-labelledby="commandTitle"><div class="dialog-head"><h2 id="commandTitle">BÚSQUEDA GLOBAL · DOSSIER 34</h2><button class="dialog-close" id="closeCommand" type="button" aria-label="Cerrar búsqueda">Cerrar ×</button></div><input class="command-input" id="commandInput" type="search" placeholder="Busca personajes, regiones, radios o secciones…" autocomplete="off" aria-label="Buscar en todo el archivo"><p class="command-hint">ENTER · ABRIR RESULTADO / ESC · CERRAR / CTRL K · BUSCAR</p><div class="command-results" id="commandResults" role="listbox" aria-label="Resultados de búsqueda"></div></div></div><div class="overlay-panel" id="favoritesDrawer" hidden><div class="dialog-card" role="dialog" aria-modal="true" aria-labelledby="favoritesTitle"><div class="dialog-head"><h2 id="favoritesTitle">MI ARCHIVO · ELEMENTOS GUARDADOS</h2><button class="dialog-close" id="closeFavorites" type="button" aria-label="Cerrar favoritos">Cerrar ×</button></div><p class="command-hint">TUS FAVORITOS SE GUARDAN SOLO EN ESTE NAVEGADOR.</p><div class="favorites-list" id="favoritesList"></div><p class="muted" id="favoritesEmpty">Todavía no has guardado elementos. Usa “Guardar” en una ficha o noticia.</p></div></div><script src="assets/js/dossier34.js" defer></script>
 <script src="assets/js/guide34.js" defer></script>
 <script src="assets/js/progress34.js" defer></script>
+<script src="assets/js/control34.js" defer></script>
 <script src="assets/js/pwa34.js" defer></script>
 </body></html>
