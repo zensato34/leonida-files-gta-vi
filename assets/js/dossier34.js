@@ -5,6 +5,17 @@ let items=[...document.querySelectorAll('#newsList .news')];
 function filterNews(){const q=(search.value||'').toLocaleLowerCase('es');const f=filter.value;items.forEach(el=>{const matchText=(el.innerText||el.textContent||'').toLocaleLowerCase('es').includes(q);const k=el.dataset.kind;const matchKind=f==='all'||(f==='confirmado'&&k==='confirmado')||(f==='reporte'&&k==='reporte')||(f==='rumor'&&k==='rumor')||(f==='desmentido'&&k==='desmentido');el.classList.toggle('hidden',!(matchText&&matchKind));});}
 search?.addEventListener('input',filterNews);filter?.addEventListener('change',filterNews);
 
+function normalizeFeedUrl(rawUrl){
+ try{
+  const parsed=new URL(String(rawUrl||''));
+  if(parsed.protocol!=='https:')return '';
+  parsed.hash='';
+  [...parsed.searchParams.keys()].forEach(key=>{
+   if(key.toLowerCase().startsWith('utm_')||['gclid','fbclid','mc_cid','mc_eid','igshid','ref_src'].includes(key.toLowerCase()))parsed.searchParams.delete(key);
+  });
+  return parsed.href;
+ }catch(_){return '';}
+}
 async function loadAutoNewsFeed(){
  try{
   const response=await fetch('./data/news-feed.json',{cache:'no-cache'});
@@ -12,21 +23,29 @@ async function loadAutoNewsFeed(){
   const data=await response.json();
   if(!data||!Array.isArray(data.items))return;
   const box=document.getElementById('newsList');
-  const known=new Set([...box.querySelectorAll('.news')].map(el=>el.dataset.newsUrl||'').filter(Boolean));
-  data.items.slice(0,30).forEach(item=>{
-   const rawUrl=String(item.url||'');
-   let safeUrl='';
-   try{const parsed=new URL(rawUrl);if(parsed.protocol==='https:')safeUrl=parsed.href;}catch(_){}
+  if(!box)return;
+  const known=new Set([...box.querySelectorAll('.news')].map(el=>normalizeFeedUrl(el.dataset.newsUrl||'')).filter(Boolean));
+  const kinds={confirmed:'confirmado',reported:'reporte',rumor:'rumor'};
+  const allowedStatuses=['Confirmado','Reportado','Pendiente de verificación'];
+  data.items.forEach(item=>{
+   const safeUrl=normalizeFeedUrl(item.url);
    if(safeUrl&&known.has(safeUrl))return;
-   const el=document.createElement('article');el.className='news';el.dataset.kind='reporte';el.dataset.publishedAt=String(item.published_at||item.date||'');el.dataset.newsUrl=safeUrl;
-   const time=document.createElement('time');time.textContent=String(item.date||'NUEVO').slice(0,40);
+   const kind=Object.prototype.hasOwnProperty.call(kinds,item.kind)?item.kind:'reported';
+   let status=allowedStatuses.includes(item.status)?item.status:'Pendiente de verificación';
+   if((kind==='rumor'&&status!=='Pendiente de verificación')||(kind==='reported'&&status==='Confirmado')||(kind==='confirmed'&&status!=='Confirmado'))status='Pendiente de verificación';
+   if(item.discovery_source==='Google News RSS'&&status!=='Pendiente de verificación')status='Pendiente de verificación';
+   const el=document.createElement('article');el.className='news';el.dataset.kind=kinds[kind];el.dataset.publishedAt=String(item.published_at||item.date||'');el.dataset.newsUrl=safeUrl;el.dataset.feedId=String(item.id||'');
+   const time=document.createElement('time');time.textContent=String(item.date||'NUEVO').slice(0,40);if(item.published_at)time.dateTime=String(item.published_at);
    const content=document.createElement('div'),meta=document.createElement('div');meta.className='meta';
-   const status=document.createElement('span');status.className='tag reported';status.textContent='Pendiente de verificación';
-   const automatic=document.createElement('span');automatic.className='tag system';automatic.textContent='Actualización automática';meta.append(status,automatic);
+   const statusClass=status==='Confirmado'?'confirmed':status==='Reportado'?'reported':kind==='rumor'?'unconfirmed':'pending';
+   const statusTag=document.createElement('span');statusTag.className='tag '+statusClass;statusTag.textContent=status;
+   meta.append(statusTag);
+   if(item.discovery_source){const automatic=document.createElement('span');automatic.className='tag system';automatic.textContent='Detectado automáticamente';meta.append(automatic);}
    const h=document.createElement('h3');h.textContent=String(item.title||'Nueva referencia GTA VI');
    const p=document.createElement('p');p.textContent=String(item.description||'Titular detectado por el recolector RSS. Abrir la fuente y verificar antes de tratarlo como un hecho.');
-   const a=document.createElement('a');a.className='source';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Fuente detectada: '+String(item.source||'Google News')+' ↗';a.href=safeUrl||'#';
-   content.append(meta,h,p,a);el.append(time,content);box.append(el);items.push(el);if(safeUrl)known.add(safeUrl);
+   content.append(meta,h,p);
+   if(safeUrl){const a=document.createElement('a');a.className='source';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Fuente: '+String(item.source||'Fuente externa')+' ↗';a.href=safeUrl;content.append(a);}
+   el.append(time,content);box.append(el);items.push(el);if(safeUrl)known.add(safeUrl);
   });
   filterNews();
  }catch(_){}
@@ -34,19 +53,39 @@ async function loadAutoNewsFeed(){
 }
 
 
-// Cuenta regresiva: Rockstar Support indica medianoche local del 19/11/2026.
+// Lanzamiento regional: PS Store España (00:00 CET, 19/11/2026 = 19:00 RD, 18/11/2026).
 (function(){
- const target=new Date(2026,10,19,0,0,0,0);
+ const target=Date.parse('2026-11-18T23:00:00Z');
+ const firstRegionalRelease=Date.parse('2026-11-18T11:00:00Z');
  const root=document.getElementById('releaseCountdown');
+ if(!root)return;
  const ids={days:document.getElementById('cdDays'),hours:document.getElementById('cdHours'),minutes:document.getElementById('cdMinutes'),seconds:document.getElementById('cdSeconds')};
  const status=document.getElementById('countdownStatus');
+ const title=root.querySelector('.countdown-title');
+ const foot=root.querySelector('.countdown-foot');
  const pad=n=>String(n).padStart(2,'0');
  function tick(){
-  const ms=target.getTime()-Date.now();
-  if(ms<=0){ids.days.textContent='00';ids.hours.textContent='00';ids.minutes.textContent='00';ids.seconds.textContent='00';root.classList.add('done');status.textContent='¡El día de lanzamiento llegó!';return false;}
-  const total=Math.floor(ms/1000);ids.days.textContent=pad(Math.floor(total/86400));ids.hours.textContent=pad(Math.floor(total%86400/3600));ids.minutes.textContent=pad(Math.floor(total%3600/60));ids.seconds.textContent=pad(total%60);return true;
+  const now=Date.now(),ms=target-now;
+  if(ms<=0){
+   Object.values(ids).forEach(node=>{if(node)node.textContent='00';});
+   root.classList.add('done');root.classList.remove('regional-live');root.dataset.releaseState='spain-available';
+   if(status)status.textContent='Disponible en PS Store España';
+   if(title)title.textContent='GTA VI · ventana de desbloqueo de España alcanzada';
+   if(foot)foot.firstChild.textContent='La ventana local de desbloqueo de PS Store España ya ha llegado. Si aún aparece bloqueado, comprueba tu biblioteca y el estado de la descarga. ';
+   return false;
+  }
+  const total=Math.floor(ms/1000);
+  if(ids.days)ids.days.textContent=pad(Math.floor(total/86400));
+  if(ids.hours)ids.hours.textContent=pad(Math.floor(total%86400/3600));
+  if(ids.minutes)ids.minutes.textContent=pad(Math.floor(total%3600/60));
+  if(ids.seconds)ids.seconds.textContent=pad(total%60);
+  const regional=now>=firstRegionalRelease;
+  root.classList.toggle('regional-live',regional);root.dataset.releaseState=regional?'other-regions-live':'awaiting-regional-release';
+  if(status)status.textContent=regional?'Ya disponible en algunas regiones':'Apertura regional próxima';
+  if(title)title.textContent=regional?'Leonida ya abrió en otras regiones · PSN España pendiente':'Cuenta atrás para tu PS Store España';
+  return true;
  }
- if(tick()){const timer=setInterval(()=>{if(!tick())clearInterval(timer)},1000)}
+ if(tick()){const timer=setInterval(()=>{if(!tick())clearInterval(timer)},1000);}
 })();
 // Animaciones de entrada al desplazarse, respetando la preferencia de movimiento reducido.
 (function(){
