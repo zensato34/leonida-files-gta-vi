@@ -115,7 +115,8 @@ def is_editorially_reviewed(item: dict) -> bool:
     """A reviewed record must outrank an unverified RSS duplicate for the same URL."""
     return (
         item.get("discovery_source") != "Google News RSS"
-        and item.get("status") in {"Confirmado", "Reportado"}
+        and item.get("kind") in {"confirmed", "reported", "rumor"}
+        and item.get("status") in {"Confirmado", "Reportado", "Pendiente de verificación"}
     )
 
 
