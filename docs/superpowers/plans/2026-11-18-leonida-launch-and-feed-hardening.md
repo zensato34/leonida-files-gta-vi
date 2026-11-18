@@ -93,7 +93,7 @@
 **Interfaces:**
 - The countdown target is the Spain PSN store region: `2026-11-18T23:00:00Z` (00:00 CET on 19 Nov, which is 19:00 RD on 18 Nov).
 - The first-region threshold is `2026-11-18T11:00:00Z` (00:00 on 19 Nov in New Zealand, UTC+13).
-- Before the target, the UI explains that some regions may already have access; after the target, it displays availability instead of a frozen zero timer.
+- Before the target, the UI explains that some regions may already have access; after the target, it marks the Spain launch window as reached instead of leaving a frozen zero timer.
 
 - [ ] Update the visible countdown copy to identify PSN Spain and its RD conversion.
 - [ ] Use absolute timestamps instead of the visitor's device-local midnight.
