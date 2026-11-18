@@ -130,5 +130,13 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("PS Store España", HTML)
         self.assertIn("19:00 RD", HTML)
 
+
+    def test_homepage_has_quick_navigation_and_post_launch_guide_copy(self):
+        self.assertIn('class="quick-nav"', HTML)
+        for target in ("#noticias", "#atlas", "#personajes", "#musica", "#guia", "#progreso"):
+            self.assertIn(f'href="{target}"', HTML)
+        self.assertIn("PS Store España", HTML)
+        self.assertNotIn("Rockstar mantiene el lanzamiento oficial", HTML)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
