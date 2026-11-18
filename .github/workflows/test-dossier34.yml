@@ -38,6 +38,8 @@ jobs:
         run: node --check assets/js/guide34.js
       - name: Comprobar sintaxis del centro de progreso
         run: node --check assets/js/progress34.js
+      - name: Comprobar sintaxis del centro de control
+        run: node --check assets/js/control34.js
       - name: Comprobar sintaxis del instalador PWA
         run: node --check assets/js/pwa34.js
       - name: Comprobar sintaxis del service worker
