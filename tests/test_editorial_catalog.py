@@ -66,19 +66,31 @@ class EditorialCatalogTests(unittest.TestCase):
             self.assertTrue(radio["background_url"].startswith("https://www.rockstargames.com/VI/_next/static/media/"))
 
     def test_existing_catalog_coverage_is_preserved(self):
-        self.assertEqual(16, len(self.news))
+        self.assertEqual(20, len(self.news))
         self.assertEqual(9, len(self.characters))
         self.assertEqual(6, len(self.regions))
         self.assertEqual(6, len(self.radios))
-        self.assertEqual(34, len(self.songs))
-        self.assertEqual(10, sum(x["status"] == "official_release" for x in self.songs))
-        self.assertEqual(24, sum(x["status"] == "reported_leak" for x in self.songs))
+        self.assertEqual(12, len(self.songs))
+        self.assertEqual(12, sum(x["status"] == "official_release" for x in self.songs))
+        self.assertEqual(10, sum(x["collection"] == "the_album" for x in self.songs))
+        self.assertEqual(2, sum(x["collection"] == "original_score" for x in self.songs))
+        self.assertTrue(all(x["status"] == "official_release" for x in self.songs))
         self.assertEqual(7, len(self.vehicles))
         self.assertEqual(2, sum(x["category"] == "car" for x in self.vehicles))
         self.assertEqual(1, sum(x["category"] == "motorcycle" for x in self.vehicles))
         self.assertEqual(2, sum(x["category"] == "watercraft" for x in self.vehicles))
         self.assertEqual(1, sum(x["category"] == "offroad_buggy" for x in self.vehicles))
         self.assertEqual(1, sum(x["category"] == "customized_vehicle" for x in self.vehicles))
+
+    def test_public_songs_only_include_officially_published_singles(self):
+        source_by_id = {item["id"]: item for item in self.sources}
+        for song in self.songs:
+            self.assertEqual("official_release", song["status"])
+            self.assertIn(song["collection"], {"the_album", "original_score"})
+            self.assertTrue(any(
+                source_by_id[sid]["type"] == "official_primary"
+                for sid in song["source_ids"]
+            ), f"Song lacks a primary source: {song['id']}")
 
     def test_atlas_regions_have_official_images_and_screenshot_groups(self):
         for region in self.regions:

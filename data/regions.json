@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "dataset": "regions",
-  "reviewed_at": "2026-11-15",
+  "reviewed_at": "2026-11-18",
   "description": "Explorador editorial con capturas oficiales agrupadas por región. No contiene coordenadas, distancias ni un mapa oficial.",
   "items": [
     {
       "id": "vice-city",
       "name": "Vice City",
-      "description": "Ciudad costera de neón, ocio, barrios y vida nocturna; reinterpretación ficticia de Miami.",
+      "description": "Rockstar la presenta como el núcleo urbano de Leonida y la describe por sus calles iluminadas por neón. El perfil oficial de Boobie Ike lo sitúa como figura local con negocios de bienes raíces, un club y un estudio de grabación.",
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
@@ -30,7 +30,7 @@
     {
       "id": "leonida-keys",
       "name": "Leonida Keys",
-      "description": "Archipiélago y zona de cayos; ambiente de marinas, embarcaciones y contrabando.",
+      "description": "Rockstar sitúa a Jason trabajando para traficantes locales en los Keys y describe a Brian Heder como contrabandista veterano que sigue operando desde un astillero en la zona.",
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
@@ -54,12 +54,13 @@
     {
       "id": "grassrivers",
       "name": "Grassrivers",
-      "description": "Territorio de humedales y pantanos, con aerodeslizadores y vida salvaje.",
+      "description": "Rockstar vincula Grassrivers con Back Country Radio: MW y Delta Dawne emiten country renegado y el artículo oficial en español menciona reportes meteorológicos desde un aerodeslizador en la zona.",
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
         "src-028",
-        "src-034"
+        "src-034",
+        "src-018"
       ],
       "related_character_ids": [],
       "region_type": "wetlands",
@@ -74,7 +75,7 @@
     {
       "id": "port-gellhorn",
       "name": "Port Gellhorn",
-      "description": "Área portuaria y costera; se relaciona con el mundo de MW y Delta Dawne.",
+      "description": "Destino nombrado en el material oficial de Leonida. La galería de capturas de Rockstar agrupa siete imágenes bajo este rótulo; este índice no asigna coordenadas ni límites geográficos.",
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
@@ -94,7 +95,7 @@
     {
       "id": "ambrosia",
       "name": "Ambrosia",
-      "description": "Región interior de Leonida; Rockstar la presenta entre los destinos por descubrir.",
+      "description": "Destino nombrado en el material oficial de Leonida. La galería de Rockstar agrupa seis imágenes bajo este rótulo; no se infieren ubicación, distancias ni límites.",
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [
@@ -114,7 +115,7 @@
     {
       "id": "mount-kalaga-national-park",
       "name": "Mount Kalaga National Park",
-      "description": "Parque nacional y espacio natural de la región; el detalle completo del mapa no ha sido publicado.",
+      "description": "Parque nacional nombrado en el material oficial de Leonida. La galería de Rockstar agrupa seis imágenes bajo este rótulo; el catálogo no reconstruye su posición en el mapa.",
       "status": "official_named_region",
       "map_status": "no_official_coordinates_in_this_catalog",
       "source_ids": [

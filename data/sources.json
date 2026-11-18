@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "dataset": "sources",
-  "reviewed_at": "2026-11-15",
+  "reviewed_at": "2026-11-18",
   "items": [
     {
       "id": "src-001",
@@ -282,6 +282,54 @@
       "url": "https://store.rockstargames.com/es-419/game/buy-gta-vi?drm=PlayStation+5",
       "type": "official_store",
       "authority": "Tienda oficial · nombres de contenido y bonificaciones"
+    },
+    {
+      "id": "src-036",
+      "name": "Asistencia oficial de PlayStation España: GTA VI ↗",
+      "domain": "playstation.com",
+      "url": "https://www.playstation.com/es-es/support/games/gta-vi-support/",
+      "type": "official_support",
+      "authority": "Fuente primaria · idiomas, almacenamiento y lanzamiento"
+    },
+    {
+      "id": "src-037",
+      "name": "PlayStation Blog: funciones de PS5 para GTA VI ↗",
+      "domain": "blog.playstation.com",
+      "url": "https://blog.playstation.com/2026/11/10/pre-load-grand-theft-auto-vi-on-ps5-starting-today/",
+      "type": "official_primary",
+      "authority": "Fuente primaria · DualSense, Tempest 3D Audio y PS5 Pro"
+    },
+    {
+      "id": "src-038",
+      "name": "Grand Theft Auto VI: Ultimate Edition · PS Store España ↗",
+      "domain": "store.playstation.com",
+      "url": "https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVIULTIMATE001/",
+      "type": "official_store",
+      "authority": "Tienda oficial · precio y condiciones de reserva en España"
+    },
+    {
+      "id": "src-039",
+      "name": "Anuncio oficial de Grand Theft Auto VI: The Album ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/newswire/article/7599a881942544/announcing-grand-theft-auto-vi-the-album-coming-november-19",
+      "type": "official_primary",
+      "authority": "Fuente primaria · anuncio del álbum de 34 pistas y sencillos"
+    },
+    {
+      "id": "src-040",
+      "name": "Rockstar Newswire: precarga y objetivos técnicos (español) ↗",
+      "domain": "rockstargames.com",
+      "url": "https://www.rockstargames.com/mx/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now",
+      "type": "official_primary",
+      "authority": "Fuente primaria · objetivo técnico y detalles PS5 / PS5 Pro"
+    },
+    {
+      "id": "src-041",
+      "name": "Grand Theft Auto VI: Standard Edition · PS Store España ↗",
+      "domain": "store.playstation.com",
+      "url": "https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVISTANDARD001/",
+      "type": "official_store",
+      "authority": "Tienda oficial · precio y condiciones de reserva Standard en España"
     }
   ]
 }

@@ -16,14 +16,14 @@ Todos los catálogos usan UTF-8 y el mismo sobre:
 | `characters.json` | Expedientes, biografías y relaciones entre personajes |
 | `regions.json` | Regiones nombradas, sin coordenadas inventadas |
 | `radios.json` | Emisoras, locutores, descripciones y arte oficial |
-| `songs.json` | Pistas con separación entre sencillos oficiales y lista reportada |
+| `songs.json` | Diez sencillos oficiales de The Album y dos del Original Score by Justice; no incluye tracklists filtrados |
 | `sources.json` | Registro de fuentes, dominio, tipo y autoridad |
 | `vehicles.json` | Siete registros oficiales destacados; no representa el parque vehicular completo |
 | `news-feed.json` | Feed de descubrimientos RSS y entradas editoriales revisadas; los resultados RSS permanecen pendientes |
 
 ## Política editorial
 
-Las noticias admiten `confirmado`, `reporte`, `rumor` y `desmentido`. Para utilizar `confirmado`, al menos una de sus fuentes debe ser un canal primario de Rockstar o Rockstar Support. La cobertura de medios reconocidos se clasifica como `reporte`, aunque cite declaraciones de Rockstar, para no confundir la publicación del medio con un comunicado de la compañía. En `news-feed.json`, las entradas detectadas por Google News RSS deben conservar `kind: reported` y `status: Pendiente de verificación`; las entradas revisadas manualmente pueden tener `Reportado` o `Confirmado` si la evidencia lo permite, y su clasificación no se sustituye por duplicados RSS.
+Las noticias admiten `confirmado`, `reporte`, `rumor` y `desmentido`. El catálogo público `songs.json` es más estricto: solo admite sencillos publicados explícitamente por Rockstar y cada canción requiere una fuente primaria. Para utilizar `confirmado`, al menos una de sus fuentes debe ser un canal primario de Rockstar o Rockstar Support. La cobertura de medios reconocidos se clasifica como `reporte`, aunque cite declaraciones de Rockstar, para no confundir la publicación del medio con un comunicado de la compañía. En `news-feed.json`, las entradas detectadas por Google News RSS deben conservar `kind: reported` y `status: Pendiente de verificación`; las entradas revisadas manualmente pueden tener `Reportado` o `Confirmado` si la evidencia lo permite, y su clasificación no se sustituye por duplicados RSS.
 
 Los expedientes Bae-Luxe y Roxy conservan la indicación de biografía compartida de Real Dimez. Las relaciones de personajes usan IDs, no nombres sueltos, y deben resolver a otro expediente existente.
 

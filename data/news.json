@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "dataset": "news",
-  "reviewed_at": "2026-11-15",
+  "reviewed_at": "2026-11-18",
   "description": "Entradas editoriales manuales. El RSS automático vive por separado en news-feed.json y nunca se confirma por sí solo.",
   "items": [
     {
@@ -336,6 +336,98 @@
       "entity_ids": [],
       "editorial_note": "No confirmado oficialmente; conservar como rumor o interpretación.",
       "origin": "legacy_news_section"
+    },
+    {
+      "id": "objetivo-tecnico-gta-vi-y-funciones-ps5",
+      "title": "Rockstar publica el objetivo de 30 FPS y las funciones técnicas de PS5",
+      "summary": "Rockstar declara que GTA VI apunta a 30 fotogramas por segundo en PS5 y Xbox Series X|S; es un objetivo del desarrollador, no una medición independiente ni una garantía de rendimiento constante. Rockstar destaca PSSR y sombras con trazado de rayos en PS5 Pro. PlayStation detalla el uso de altavoz integrado, respuesta háptica y gatillos adaptativos DualSense, audio Tempest 3D y tiempos de carga optimizados en PS5.",
+      "date_label": "10 NOV 2026",
+      "date_start": "2026-11-10",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "confirmado",
+      "source_ids": [
+        "src-021",
+        "src-037",
+        "src-040"
+      ],
+      "source_label": "10 NOV 2026 · Rockstar Games y PlayStation · objetivo técnico y funciones de consola",
+      "tags": [
+        "Rockstar / PlayStation",
+        "PS5 · PS5 Pro",
+        "Objetivo de rendimiento"
+      ],
+      "entity_ids": [],
+      "editorial_note": "El dato de 30 FPS se cita como objetivo oficial del desarrollador; no debe transformarse en benchmark ni promesa de FPS estables.",
+      "origin": "official_source_review"
+    },
+    {
+      "id": "idiomas-y-almacenamiento-gta-vi-playstation",
+      "title": "PlayStation España publica los idiomas y el espacio libre necesario para GTA VI",
+      "summary": "La asistencia oficial de PlayStation España indica 212 GB de espacio libre para preparar la precarga. Su tabla de idiomas lista voces y texto en inglés; francés, alemán, italiano, coreano, polaco, portugués de Brasil, ruso, chino simplificado, español de México, español de España y chino tradicional aparecen con texto, sin voces. Los 212 GB son espacio necesario, no una afirmación sobre el tamaño exacto del paquete descargado.",
+      "date_label": "18 NOV 2026 · REVISIÓN DE SOPORTE",
+      "date_start": "2026-11-18",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "confirmado",
+      "source_ids": [
+        "src-036"
+      ],
+      "source_label": "18 NOV 2026 · Asistencia oficial de PlayStation España · idiomas y almacenamiento",
+      "tags": [
+        "PlayStation oficial",
+        "Idiomas",
+        "Almacenamiento"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Se conserva la distinción entre espacio libre requerido y tamaño real de descarga; la tabla consultada diferencia idioma de voces y de texto.",
+      "origin": "official_source_review"
+    },
+    {
+      "id": "rockstar-publica-diez-sencillos-de-the-album",
+      "title": "Rockstar identifica diez sencillos de GTA VI: The Album",
+      "summary": "Rockstar confirma que The Album contiene 34 temas originales y su página oficial de música identifica diez sencillos publicados: That's It, RHYNO, Sexy Magic, Flower in a Hurricane, Last Thing You Need, Suzuki, Macacoa 2000, Don't Chart, Blood In Your Eyes y Bright Lights, Big City. La cifra oficial de 34 temas no equivale a que la lista completa esté publicada pista por pista; el archivo muestra solo los diez sencillos nombrados por Rockstar.",
+      "date_label": "18 NOV 2026 · CATÁLOGO OFICIAL CONSULTADO",
+      "date_start": "2026-11-18",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "confirmado",
+      "source_ids": [
+        "src-027",
+        "src-039"
+      ],
+      "source_label": "Rockstar Games · portal oficial de música y anuncio de The Album",
+      "tags": [
+        "Rockstar oficial",
+        "Música",
+        "10 sencillos publicados"
+      ],
+      "entity_ids": [],
+      "editorial_note": "No se incluye una lista no oficial o filtrada como catálogo confirmado.",
+      "origin": "official_source_review"
+    },
+    {
+      "id": "justice-original-score-dos-sencillos-y-treinta-pistas",
+      "title": "Justice prepara un score adaptativo de 30 pistas y Rockstar publica dos sencillos",
+      "summary": "Rockstar confirma que Justice —Gaspard Augé y Xavier de Rosnay— compuso un score adaptativo de 30 pistas para GTA VI, con lanzamiento anunciado para el 11 de diciembre de 2026. La página oficial presenta dos sencillos: Flower in a Hurricane, con Tame Impala, SZA y King Gizzard & The Lizard Wizard, y Pusher, con Gesaffelstein.",
+      "date_label": "29 OCT 2026",
+      "date_start": "2026-10-29",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "confirmado",
+      "source_ids": [
+        "src-020",
+        "src-027"
+      ],
+      "source_label": "29 OCT 2026 · Rockstar Games · anuncio de Original Score by Justice",
+      "tags": [
+        "Rockstar oficial",
+        "Justice",
+        "Score adaptativo"
+      ],
+      "entity_ids": [],
+      "editorial_note": "El Original Score es un lanzamiento separado de The Album; no se mezclan los recuentos de ambos productos.",
+      "origin": "official_source_review"
     }
   ]
 }

@@ -144,5 +144,31 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("PS Store España", HTML)
         self.assertNotIn("Rockstar mantiene el lanzamiento oficial", HTML)
 
+    def test_music_catalog_lists_only_official_singles_and_separates_score(self):
+        songs = json.loads((ROOT / "data/songs.json").read_text(encoding="utf-8"))["items"]
+        self.assertEqual(12, len(songs))
+        self.assertTrue(all(item["status"] == "official_release" for item in songs))
+        self.assertEqual(10, sum(item["collection"] == "the_album" for item in songs))
+        self.assertEqual(2, sum(item["collection"] == "original_score" for item in songs))
+        self.assertIn("The Album", HTML)
+        self.assertIn("Original Score by Justice", HTML)
+        self.assertNotIn("Starting From Zero", HTML)
+        self.assertNotIn("Ahh Yea", HTML)
+        self.assertNotIn("Las 34 canciones reportadas", HTML)
+
+    def test_platform_facts_have_official_language_storage_and_hardware_context(self):
+        self.assertIn("212 GB libres", HTML)
+        self.assertIn("Voces en inglés", HTML)
+        self.assertIn("español (España)", HTML)
+        self.assertIn("30 FPS objetivo", HTML)
+        self.assertIn("PSSR", HTML)
+        self.assertIn("Tempest 3D", HTML)
+        self.assertIn("antes del <strong>19/11/2026 a las 23:59:59", HTML)
+
+    def test_radio_podcasts_are_not_misrepresented_as_a_seventh_station(self):
+        self.assertIn("seis estaciones", HTML)
+        self.assertIn("pódcasts bajo demanda", HTML)
+        self.assertIn("no una séptima emisora", HTML)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

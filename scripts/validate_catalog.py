@@ -15,7 +15,8 @@ ALLOWED_SOURCE_TYPES = {
     "recognized_media", "video_source", "platform_reference", "third_party",
 }
 ALLOWED_NEWS_STATUS = {"confirmado", "reporte", "rumor", "desmentido"}
-ALLOWED_SONG_STATUS = {"official_release", "reported_leak"}
+ALLOWED_SONG_STATUS = {"official_release"}
+ALLOWED_SONG_COLLECTIONS = {"the_album", "original_score"}
 ALLOWED_VEHICLE_CATEGORIES = {"car", "motorcycle", "watercraft", "customized_vehicle", "offroad_buggy"}
 ROCKSTAR_CDN = "www.rockstargames.com"
 ALLOWED_FEED_STATUS = {
@@ -136,14 +137,19 @@ def validate_catalogs(root: Path = ROOT) -> list[str]:
         if vehicle.get("evidence_status") not in {"official_edition_benefit", "official_media_label", "official_preorder_benefit"}:
             errors.append(f"Vehículo {vehicle.get('id')}: estado de evidencia desconocido")
 
-    track_numbers = [item.get("track_number") for item in items["songs"]]
+    track_numbers = [(item.get("collection"), item.get("track_number")) for item in items["songs"]]
     if len(track_numbers) != len(set(track_numbers)):
-        errors.append("songs.json: números de pista duplicados")
+        errors.append("songs.json: números de pista duplicados dentro de una colección")
     for song in items["songs"]:
         if song.get("status") not in ALLOWED_SONG_STATUS:
-            errors.append(f"Pista {song.get('id')}: estado editorial desconocido")
+            errors.append(f"Pista {song.get('id')}: el catálogo público solo admite lanzamientos oficiales")
+        if song.get("collection") not in ALLOWED_SONG_COLLECTIONS:
+            errors.append(f"Pista {song.get('id')}: colección no reconocida")
         if not song.get("source_ids"):
             errors.append(f"Pista {song.get('id')}: falta procedencia")
+        song_authorities = {source_by_id[sid].get("type") for sid in song.get("source_ids", []) if sid in source_by_id}
+        if not song_authorities.intersection({"official_primary", "official_support"}):
+            errors.append(f"Pista {song.get('id')}: falta fuente primaria de publicación")
 
     feed_path = root / "data" / "news-feed.json"
     if feed_path.exists():
