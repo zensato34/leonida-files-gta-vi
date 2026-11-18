@@ -54,10 +54,10 @@ async function loadAutoNewsFeed(){
 }
 
 
-// Lanzamiento regional: PS Store España (00:00 CET, 19/11/2026 = 19:00 RD, 18/11/2026).
+// Lanzamiento regional: la primera zona UTC+14 abre antes que PS Store España (CET).
 (function(){
  const target=Date.parse('2026-11-18T23:00:00Z');
- const firstRegionalRelease=Date.parse('2026-11-18T11:00:00Z');
+ const firstRegionalRelease=Date.parse('2026-11-18T10:00:00Z');
  const root=document.getElementById('releaseCountdown');
  if(!root)return;
  const ids={days:document.getElementById('cdDays'),hours:document.getElementById('cdHours'),minutes:document.getElementById('cdMinutes'),seconds:document.getElementById('cdSeconds')};
