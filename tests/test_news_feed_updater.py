@@ -167,6 +167,37 @@ class NewsFeedUpdaterTests(unittest.TestCase):
             self.assertEqual("Reportado", final["items"][0]["status"])
             self.assertEqual("VGC review, checked by the editor", final["items"][0]["title"])
 
+    def test_existing_editorial_rumor_is_not_replaced_by_earlier_rss_duplicate(self):
+        rss = {
+            "id": "rss-copy",
+            "title": "RSS copy of a reported rumor",
+            "description": "Automatic duplicate.",
+            "url": "https://example.com/rumor?utm_source=rss",
+            "source": "Google News",
+            "published_at": "2026-11-18T12:00:00+00:00",
+            "date": "2026-11-18",
+            "kind": "reported",
+            "status": "Pendiente de verificación",
+            "discovery_source": "Google News RSS",
+        }
+        reviewed_rumor = {
+            "id": "editorial-rumor",
+            "title": "Editorial rumor record",
+            "description": "The editor deliberately classified this as a rumor.",
+            "url": "https://example.com/rumor",
+            "source": "Recognized reporting",
+            "published_at": "2026-11-18T11:00:00+00:00",
+            "date": "2026-11-18",
+            "kind": "rumor",
+            "status": "Pendiente de verificación",
+        }
+
+        merged = update_news.merge_feed_items([rss, reviewed_rumor], [])
+
+        self.assertEqual(1, len(merged))
+        self.assertEqual("editorial-rumor", merged[0]["id"])
+        self.assertEqual("rumor", merged[0]["kind"])
+
     def test_main_does_not_truncate_existing_feed_over_sixty_items(self):
         with tempfile.TemporaryDirectory() as directory:
             feed_path = Path(directory) / "news-feed.json"
