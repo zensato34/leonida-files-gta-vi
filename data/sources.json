@@ -330,6 +330,126 @@
       "url": "https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVISTANDARD001/",
       "type": "official_store",
       "authority": "Tienda oficial · precio y condiciones de reserva Standard en España"
+    },
+    {
+      "id": "src-042",
+      "name": "PowerPyx · Recorrido completo de misiones de GTA VI",
+      "domain": "powerpyx.com",
+      "url": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/",
+      "type": "recognized_media",
+      "authority": "Guía editorial publicada el 18/11/2026; referencia externa, no verificada directamente por LEONIDA FILES."
+    },
+    {
+      "id": "src-043",
+      "name": "PowerPyx · Guía y hoja de ruta de trofeos",
+      "domain": "powerpyx.com",
+      "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/",
+      "type": "recognized_media",
+      "authority": "Guía editorial de trofeos publicada el 18/11/2026; requisitos y alertas atribuidos a PowerPyx."
+    },
+    {
+      "id": "src-044",
+      "name": "PowerPyx · Checklist de completado al 100 %",
+      "domain": "powerpyx.com",
+      "url": "https://www.powerpyx.com/gta-6-100-completion-checklist-guide/",
+      "type": "recognized_media",
+      "authority": "Checklist editorial publicada el 18/11/2026; contrastar con el menú de progreso de la partida."
+    },
+    {
+      "id": "src-045",
+      "name": "PowerPyx · Base de datos de coleccionables y progreso",
+      "domain": "powerpyx.com",
+      "url": "https://www.powerpyx.com/gta-6-collectible-guide-progress-database/",
+      "type": "recognized_media",
+      "authority": "Índice externo de categorías del menú Progress; no es una base de datos propia verificada."
+    },
+    {
+      "id": "src-046",
+      "name": "PowerPyx · Guía de los 80 desafíos",
+      "domain": "powerpyx.com",
+      "url": "https://www.powerpyx.com/gta-6-all-challenges-guide/",
+      "type": "recognized_media",
+      "authority": "Guía editorial de desafíos publicada el 18/11/2026; valores atribuidos a PowerPyx."
+    },
+    {
+      "id": "src-047",
+      "name": "VGC · Centro de guías y recorrido de GTA VI",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/grand-theft-auto-6-complete-walkthrough-hub/",
+      "type": "recognized_media",
+      "authority": "Centro editorial de VGC, actualizado desde el acceso a la versión final; no es una publicación de Rockstar."
+    },
+    {
+      "id": "src-048",
+      "name": "VGC · Recorrido de la misión Prólogo",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-prologue-mission-walkthrough/",
+      "type": "recognized_media",
+      "authority": "Guía de misión de Jordan Middler, VGC, publicada el 18/11/2026; referencia externa."
+    },
+    {
+      "id": "src-049",
+      "name": "VGC · Recorrido de la misión Gear Up",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-gear-up-mission-walkthrough/",
+      "type": "recognized_media",
+      "authority": "Guía de misión de Jordan Middler, VGC, publicada el 18/11/2026; referencia externa."
+    },
+    {
+      "id": "src-050",
+      "name": "VGC · Consejos para principiantes",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-beginners-guide-6-tips-you-need-to-know-before-starting-gta-6/",
+      "type": "recognized_media",
+      "authority": "Guía de inicio de VGC publicada el 18/11/2026; consejos atribuidos al medio."
+    },
+    {
+      "id": "src-051",
+      "name": "VGC · Opciones de navegación",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-navigation-experience-explained-which-navigation-experience-should-i-pick/",
+      "type": "recognized_media",
+      "authority": "Guía de configuración de VGC publicada el 18/11/2026; referencias de interfaz atribuidas al medio."
+    },
+    {
+      "id": "src-052",
+      "name": "VGC · Viaje rápido y aplicación RydeMe",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-fast-travel-explained-how-to-fast-travel-in-gta-6/",
+      "type": "recognized_media",
+      "authority": "Guía de viaje rápido de VGC publicada el 18/11/2026; referencia externa."
+    },
+    {
+      "id": "src-053",
+      "name": "VGC · Cómo cambiar entre Jason y Lucía",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/how-to-change-characters-in-gta-6/",
+      "type": "recognized_media",
+      "authority": "Guía de cambio de personaje de VGC publicada el 18/11/2026; referencia externa."
+    },
+    {
+      "id": "src-054",
+      "name": "VGC · Cómo reclamar los beneficios de Ultimate Edition",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-ultimate-edition-how-to-claim-your-ultimate-edition-benefits-in-gta-6/",
+      "type": "recognized_media",
+      "authority": "Guía de beneficios Ultimate de VGC publicada el 18/11/2026; ubicaciones y desbloqueos atribuidos al medio."
+    },
+    {
+      "id": "src-055",
+      "name": "VGC · Cómo funcionan los trucos en GTA VI",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/grand-theft-auto-6-cheats-explained-are-cheats-in-gta-6/",
+      "type": "recognized_media",
+      "authority": "Guía de trucos de VGC publicada el 18/11/2026; referencia externa."
+    },
+    {
+      "id": "src-056",
+      "name": "VGC · Modo en primera persona",
+      "domain": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/guide/gta-6-first-person-mode-explained-does-gta-6-have-a-first-person-mode/",
+      "type": "recognized_media",
+      "authority": "Guía de cámara de VGC publicada el 18/11/2026; referencia externa."
     }
   ]
 }

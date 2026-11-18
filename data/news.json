@@ -428,6 +428,35 @@
       "entity_ids": [],
       "editorial_note": "El Original Score es un lanzamiento separado de The Album; no se mezclan los recuentos de ambos productos.",
       "origin": "official_source_review"
+    },
+    {
+      "id": "medios-publican-primeras-guias-y-recorridos-de-gta-vi",
+      "title": "VGC y PowerPyx publican las primeras guías de lanzamiento de GTA VI",
+      "summary": "VGC publicó un centro de guías, recorridos del Prólogo y Gear Up, y tutoriales sobre navegación, viaje rápido, cambio de personajes, trucos y beneficios de Ultimate Edition. PowerPyx publicó un recorrido general de misiones, una hoja de ruta de trofeos, una base de datos de progreso, una checklist de 100 % y una guía de desafíos. Son recursos editoriales externos basados en acceso a la versión final; no son comunicados de Rockstar ni verificaciones propias de LEONIDA FILES.",
+      "date_label": "18 NOV 2026",
+      "date_start": "2026-11-18",
+      "date_end": null,
+      "date_precision": "day",
+      "classification": "reporte",
+      "source_ids": [
+        "src-047",
+        "src-048",
+        "src-049",
+        "src-042",
+        "src-043",
+        "src-044",
+        "src-045",
+        "src-046"
+      ],
+      "source_label": "18 NOV 2026 · VGC y PowerPyx · guías editoriales de lanzamiento, atribuidas a sus autores",
+      "tags": [
+        "Guías externas",
+        "Acceso anticipado",
+        "Misiones · trofeos · coleccionables"
+      ],
+      "entity_ids": [],
+      "editorial_note": "Las guías externas se enlazan con atribución. Sus datos no se convierten en fichas verificadas por LEONIDA FILES hasta reproducirlos y contrastarlos en partida.",
+      "origin": "external_launch_guide_review"
     }
   ]
 }

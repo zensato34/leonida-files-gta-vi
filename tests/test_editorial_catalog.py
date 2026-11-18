@@ -66,7 +66,7 @@ class EditorialCatalogTests(unittest.TestCase):
             self.assertTrue(radio["background_url"].startswith("https://www.rockstargames.com/VI/_next/static/media/"))
 
     def test_existing_catalog_coverage_is_preserved(self):
-        self.assertEqual(20, len(self.news))
+        self.assertEqual(21, len(self.news))
         self.assertEqual(9, len(self.characters))
         self.assertEqual(6, len(self.regions))
         self.assertEqual(6, len(self.radios))
