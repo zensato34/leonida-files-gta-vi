@@ -41,8 +41,8 @@ El contenido principal está separado de la presentación en catálogos versiona
 - `news.json`: noticias manuales con estado editorial y fuentes asociadas.
 - `characters.json`: expedientes y relaciones navegables entre personajes.
 - `regions.json`: seis regiones con capturas oficiales agrupadas y advertencia cartográfica. No contiene coordenadas ni reconstruye el mapa.
-- `radios.json`: emisoras, locutores y arte oficial.
-- `songs.json`: 34 pistas con estado individual: lanzamiento oficial o pista reportada.
+- `radios.json`: seis emisoras, locutores y arte oficial; los pódcasts bajo demanda se describen por separado y no se contabilizan como emisoras adicionales.
+- `songs.json`: diez sencillos publicados de The Album y dos del Original Score by Justice. No expone tracklists filtrados.
 - `sources.json`: registro común de procedencia y autoridad.
 - `vehicles.json`: siete fichas destacadas con nombre e imagen oficial, distinguiendo beneficios de Ultimate Edition y Vintage Vice City Pack. No es el inventario completo del juego.
 - `news-feed.json`: feed de titulares descubiertos automáticamente y entradas editoriales añadidas por el radar. Google News RSS permanece pendiente; las revisiones manuales conservan su clasificación y estado.
@@ -58,7 +58,7 @@ Hangar 34 muestra siete registros oficiales destacados: ’95 Grotti Cheetah, Di
 
 ### Guía de Leonida
 
-La guía incorpora seis módulos: historia y misiones, actividades y desafíos, coleccionables, secretos y easter eggs, trofeos y logros, y ruta del 100 %. El índice vive en `data/guide.json`; cada módulo mantiene su estado y solo publica fichas verificadas directamente en el juego y respaldadas por fuentes fiables. Las listas pueden permanecer vacías mientras no haya observaciones comprobadas: no se inventan recorridos, ubicaciones, requisitos ni trofeos.
+La guía incorpora seis módulos: historia y misiones, actividades y desafíos, coleccionables, secretos y easter eggs, trofeos y logros, y ruta del 100 %. El índice vive en `data/guide.json`; cada módulo mantiene su estado y solo publica fichas verificadas directamente en el juego y respaldadas por fuentes fiables. A fecha 18/11/2026, Rockstar y PlayStation no han publicado un recorrido completo de misiones, ubicaciones de coleccionables, requisitos de trofeos ni una cartografía completa. Esos módulos permanecen vacíos hasta que puedan verificarse en la versión jugable; no se rellenan con especulación.
 
 La interfaz incluye búsqueda, filtros por fichas verificadas o pendientes, contador de cobertura editorial y un interruptor de spoilers ocultos por defecto. La preferencia de spoilers se guarda localmente en el navegador. El contador de la guía mide el contenido editorial publicado, no el porcentaje de la partida.
 
@@ -132,3 +132,10 @@ LEONIDA FILES incluye un manifiesto PWA y un service worker para permitir la ins
 La primera visita requiere conexión para descargar la página, los catálogos y los recursos base. Después, el portal puede abrir su estructura, scripts, estilos y catálogos locales sin conexión. Las imágenes oficiales alojadas en Rockstar, las noticias externas y las actualizaciones del feed siguen requiriendo conexión; el service worker no descarga ni redistribuye esas imágenes.
 
 El caché de catálogos utiliza estrategia de red primero y respaldo local: intenta obtener la versión reciente y recurre a la copia guardada cuando no hay conexión. Para recibir cambios publicados, vuelve a abrir el portal con Internet.
+
+
+### Investigación oficial revisada el 18/11/2026
+
+El catálogo de música pública incluye únicamente los sencillos que Rockstar muestra en sus páginas oficiales: diez de `The Album` y dos de `Original Score by Justice`. Rockstar anuncia 34 temas en `The Album` y 30 en el score; esas cifras no constituyen una lista oficial completa pista por pista. La documentación de investigación se conserva en `docs/research/2026-11-18-confirmed-gta-vi-facts.md`.
+
+La sección de compra y datos técnicos recoge el espacio libre recomendado por PlayStation España (212 GB), la tabla de idiomas de esa página, el objetivo de rendimiento declarado por Rockstar y las funciones anunciadas para PS5 / PS5 Pro. Los 212 GB se describen como espacio libre requerido, no como tamaño exacto de descarga. Los 30 FPS se describen como objetivo declarado por Rockstar, no como benchmark.
