@@ -2,6 +2,6 @@
   "schema_version": 1,
   "dataset": "updates",
   "reviewed_at": "2026-11-18",
-  "publication_policy": "Only official version notes and patch records are added after checking an official Rockstar, PlayStation or Xbox source.",
+  "publication_policy": "Only official patch and version notes from Rockstar, PlayStation or Xbox may be registered. Each item must include a verified version, publication date, affected platforms, a concise summary and an HTTPS source URL on an official domain. Do not treat a pre-load announcement, media report or rumor as a game patch.",
   "items": []
 }
