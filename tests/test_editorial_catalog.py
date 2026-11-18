@@ -128,6 +128,25 @@ class EditorialCatalogTests(unittest.TestCase):
         self.assertIn("window.setDossierRegionFilter", script)
         self.assertIn("window.setDossierVehicleFilter", script)
 
+    def test_feed_rejects_https_urls_with_embedded_credentials(self):
+        import shutil
+        import tempfile
+        from scripts.validate_catalog import validate_catalogs
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(DATA, root / "data")
+            feed_path = root / "data" / "news-feed.json"
+            feed = json.loads(feed_path.read_text(encoding="utf-8"))
+            feed["items"][0]["url"] = "https://user:password@example.com/story"
+            feed_path.write_text(json.dumps(feed), encoding="utf-8")
+
+            errors = validate_catalogs(root)
+            self.assertTrue(
+                any("credenciales" in error.lower() for error in errors),
+                f"URL credentials were not rejected: {errors}",
+            )
+
     def test_feed_accepts_iso8601_date_only_without_inventing_time(self):
         import shutil
         import tempfile
