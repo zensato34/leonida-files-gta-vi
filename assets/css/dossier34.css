@@ -228,3 +228,32 @@ body{background:radial-gradient(ellipse at 82% 2%,#16343a88 0,transparent 35%),r
 .verified-fact-card span{font-size:.74rem;color:var(--muted);line-height:1.5}
 @media(max-width:760px){.verified-fact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.tracklist-grid,.verified-fact-grid{grid-template-columns:1fr}.track-group{padding:11px}}
+
+
+/* Launch research — external guides remain separate from LEONIDA FILES verified entries */
+.guide-launch-research{margin:18px 0 22px;padding:18px;border:1px solid #ffffff1c;border-radius:14px;background:linear-gradient(145deg,#151f22,#101719)}
+.guide-research-heading{display:grid;grid-template-columns:minmax(0,.9fr) minmax(240px,1.1fr);gap:18px;align-items:end;margin-bottom:16px}
+.guide-research-heading h3{margin:4px 0 0;font-size:1.25rem}
+.guide-research-heading p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.55}
+.guide-tip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.guide-tip-card,.guide-external-card{min-width:0;padding:13px;border:1px solid #ffffff18;border-radius:10px;background:#0d1417}
+.guide-tip-card h4,.guide-external-card h4{margin:9px 0 6px;font-size:.91rem;line-height:1.35}
+.guide-tip-card p,.guide-external-card p{margin:0;color:var(--muted);font-size:.74rem;line-height:1.55}
+.guide-tip-category{display:block;margin-top:8px;color:var(--aqua);font:800 .62rem ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase}
+.guide-tip-card .guide-state,.guide-external-card .guide-state{display:inline-block;font-size:.58rem;max-width:100%}
+.guide-external-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.guide-external-link{color:var(--aqua);font-size:.68rem;font-weight:800;text-decoration:none}
+.guide-external-link:hover{text-decoration:underline}
+.guide-research-subhead{display:flex;justify-content:space-between;gap:15px;align-items:end;margin:20px 0 10px;padding-top:15px;border-top:1px solid #ffffff16}
+.guide-research-subhead h4{margin:3px 0 0;font-size:.98rem}
+.guide-research-subhead>span{color:var(--muted);font:700 .6rem ui-monospace,monospace;letter-spacing:.08em;text-align:right}
+.guide-external-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.guide-external-meta,.guide-external-footer{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.guide-external-provider{color:var(--muted);font:800 .61rem ui-monospace,monospace;text-transform:uppercase}
+.guide-external-footer{margin-top:11px;padding-top:8px;border-top:1px solid #ffffff12}
+.guide-external-footer small{color:var(--muted);font-size:.64rem}
+.guide-external-footer .guide-external-link{white-space:nowrap}
+.guide-research-loading{padding:10px;color:var(--muted);font-size:.76rem}
+.guide-attribution-note{margin:14px 0 0;padding:11px 12px;border-left:2px solid var(--yellow);background:#201b12;color:#c8bda7;font-size:.7rem;line-height:1.55}
+@media(max-width:850px){.guide-external-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-research-heading{grid-template-columns:1fr}}
+@media(max-width:620px){.guide-launch-research{padding:12px}.guide-tip-grid,.guide-external-grid{grid-template-columns:1fr}.guide-research-subhead{align-items:flex-start;flex-direction:column}.guide-research-subhead>span{text-align:left}}
