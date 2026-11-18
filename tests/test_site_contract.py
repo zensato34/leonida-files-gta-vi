@@ -117,7 +117,7 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("Restaurar licencias", script)
         self.assertIn("support.rockstargames.com", script)
         css = (ROOT / "assets/css/control34.css").read_text(encoding="utf-8")
-        self.assertRegex(css, r"@media\\s*\\(prefers-reduced-motion:\\s*reduce\\)")
+        self.assertRegex(css, r"@media\s*\(prefers-reduced-motion:\s*reduce\)")
         worker = (ROOT / "service-worker.js").read_text(encoding="utf-8")
         self.assertIn("./assets/css/control34.css", worker)
         self.assertIn("./assets/js/control34.js", worker)
