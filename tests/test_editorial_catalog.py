@@ -128,5 +128,26 @@ class EditorialCatalogTests(unittest.TestCase):
         self.assertIn("window.setDossierRegionFilter", script)
         self.assertIn("window.setDossierVehicleFilter", script)
 
+    def test_google_news_rss_cannot_be_promoted_to_confirmed(self):
+        import shutil
+        import tempfile
+        from scripts.validate_catalog import validate_catalogs
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(DATA, root / "data")
+            feed_path = root / "data" / "news-feed.json"
+            feed = json.loads(feed_path.read_text(encoding="utf-8"))
+            feed["items"][0]["kind"] = "confirmed"
+            feed["items"][0]["status"] = "Confirmado"
+            feed["items"][0]["discovery_source"] = "Google News RSS"
+            feed_path.write_text(json.dumps(feed), encoding="utf-8")
+
+            errors = validate_catalogs(root)
+            self.assertTrue(
+                any("Google News RSS" in error for error in errors),
+                f"Automatic RSS confirmation was not rejected: {errors}",
+            )
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
