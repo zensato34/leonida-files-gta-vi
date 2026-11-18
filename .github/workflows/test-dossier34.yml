@@ -40,5 +40,7 @@ jobs:
         run: node --check assets/js/progress34.js
       - name: Comprobar sintaxis del instalador PWA
         run: node --check assets/js/pwa34.js
+      - name: Comprobar sintaxis del centro de experiencia
+        run: node --check assets/js/experience34.js
       - name: Comprobar sintaxis del service worker
         run: node --check service-worker.js
