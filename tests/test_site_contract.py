@@ -116,5 +116,33 @@ class SiteContractTests(unittest.TestCase):
         self.assertIsNone(data["total_requirements"])
         self.assertIn("No representa el porcentaje real total", (ROOT / "assets/js/progress34.js").read_text(encoding="utf-8"))
 
+    def test_auto_feed_renders_all_entries_with_editorial_kind_and_status(self):
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertNotIn("data.items.slice(0,30)", script)
+        self.assertIn("item.kind", script)
+        self.assertIn("item.status", script)
+        self.assertIn("Pendiente de verificación", script)
+
+    def test_regional_countdown_targets_spain_psn_and_handles_unlock(self):
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertIn("2026-11-18T23:00:00Z", script)
+        self.assertIn("2026-11-18T10:00:00Z", script)
+        self.assertIn("PS Store España", HTML)
+        self.assertIn("19:00 RD", HTML)
+
+
+    def test_release_timer_does_not_claim_live_store_availability(self):
+        script = (ROOT / "assets/js/dossier34.js").read_text(encoding="utf-8")
+        self.assertIn("spain-window-reached", script)
+        self.assertNotIn("Disponible en PS Store España", script)
+        self.assertIn("parsed.username", script)
+
+    def test_homepage_has_quick_navigation_and_post_launch_guide_copy(self):
+        self.assertIn('class="quick-nav"', HTML)
+        for target in ("#noticias", "#atlas", "#personajes", "#musica", "#guia", "#progreso"):
+            self.assertIn(f'href="{target}"', HTML)
+        self.assertIn("PS Store España", HTML)
+        self.assertNotIn("Rockstar mantiene el lanzamiento oficial", HTML)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

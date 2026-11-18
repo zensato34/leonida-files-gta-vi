@@ -187,3 +187,29 @@ body{background:radial-gradient(ellipse at 82% 2%,#16343a88 0,transparent 35%),r
 @media(max-width:620px){.atlas-explorer,.hangar-explorer{padding:11px;margin-left:-2px;margin-right:-2px}.region-grid,.vehicle-grid{grid-template-columns:1fr}.region-card,.vehicle-card{max-width:100%}.region-image,.vehicle-image{aspect-ratio:16/9}.region-content,.vehicle-body{padding:13px}.atlas-explorer-head,.hangar-explorer-head{align-items:flex-start;flex-direction:column;gap:6px}.region-meta{font-size:.56rem}}
 
 .pwa-install-button{min-height:36px;padding:7px 11px;border:1px solid #55e1d277;border-radius:6px;background:#15302e;color:var(--aqua);font-size:.7rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap}.pwa-install-button:hover{border-color:var(--aqua);background:#1b403c}.pwa-install-button[hidden]{display:none}@media(max-width:760px){.pwa-install-button{margin-left:auto;min-height:34px;padding:6px 9px;font-size:.64rem}.nav{gap:9px}}
+
+
+/* LEONIDA FILES — launch readiness and quick navigation */
+.quick-nav{position:relative;z-index:5;border-bottom:1px solid #69cfc322;background:linear-gradient(90deg,#0c171b,#10191d 55%,#17151b)}
+.quick-nav-inner{min-height:54px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.quick-nav-label{margin-right:7px;color:#91a69d;font:800 .59rem ui-monospace,monospace;letter-spacing:.14em}
+.quick-nav a{display:inline-flex;align-items:center;min-height:32px;padding:6px 10px;border:1px solid #ffffff20;border-radius:4px;background:#ffffff06;color:#c9d8d0;font:800 .64rem ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;transition:border-color .2s,background .2s,color .2s}
+.quick-nav a:hover,.quick-nav a:focus-visible{border-color:var(--aqua);background:#69cfc318;color:#e8fff8;text-decoration:none}
+.countdown.regional-live{border-color:#f0a45c88;box-shadow:0 18px 55px #0007,0 0 30px #f0a45c12}
+.countdown.regional-live .countdown-status{color:var(--yellow)}
+.countdown.regional-live .countdown-status:before{background:var(--yellow);box-shadow:0 0 12px var(--yellow)}
+.countdown.done{border-color:#a7d6a277}
+.countdown.done .countdown-status{color:var(--green)}
+.countdown.done .countdown-status:before{background:var(--green);box-shadow:0 0 12px var(--green)}
+.tag.pending{color:#a9b5b0;border-color:#a9b5b055;background:#a9b5b010}
+.news[data-kind="confirmado"]{border-left:3px solid var(--green)}
+.news[data-kind="reporte"]{border-left:3px solid var(--yellow)}
+.news[data-kind="rumor"]{border-left:3px solid var(--pink)}
+.news[data-kind="desmentido"]{border-left:3px solid #89959a}
+.news .meta .tag{line-height:1.35}
+@media(max-width:620px){
+ .quick-nav-inner{gap:7px;padding-top:9px;padding-bottom:9px}
+ .quick-nav-label{width:100%;margin:0 0 1px}
+ .quick-nav a{flex:1 1 auto;justify-content:center;padding:7px 8px;font-size:.59rem}
+ .countdown-foot{font-size:.66rem!important}
+}

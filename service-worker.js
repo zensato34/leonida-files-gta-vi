@@ -1,7 +1,7 @@
 'use strict';
 const CACHE_PREFIX='leonida-files-';
-const CACHE_STATIC=CACHE_PREFIX+'static-v1';
-const CACHE_DATA=CACHE_PREFIX+'data-v1';
+const CACHE_STATIC=CACHE_PREFIX+'static-v2';
+const CACHE_DATA=CACHE_PREFIX+'data-v2';
 const CORE_ASSETS=[
  './',
  './index.html',

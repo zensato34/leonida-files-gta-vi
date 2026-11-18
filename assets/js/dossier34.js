@@ -5,6 +5,18 @@ let items=[...document.querySelectorAll('#newsList .news')];
 function filterNews(){const q=(search.value||'').toLocaleLowerCase('es');const f=filter.value;items.forEach(el=>{const matchText=(el.innerText||el.textContent||'').toLocaleLowerCase('es').includes(q);const k=el.dataset.kind;const matchKind=f==='all'||(f==='confirmado'&&k==='confirmado')||(f==='reporte'&&k==='reporte')||(f==='rumor'&&k==='rumor')||(f==='desmentido'&&k==='desmentido');el.classList.toggle('hidden',!(matchText&&matchKind));});}
 search?.addEventListener('input',filterNews);filter?.addEventListener('change',filterNews);
 
+function normalizeFeedUrl(rawUrl){
+ try{
+  const parsed=new URL(String(rawUrl||''));
+  if(parsed.protocol!=='https:'||parsed.username||parsed.password)return '';
+  parsed.hash='';
+  [...parsed.searchParams.keys()].forEach(key=>{
+   if(key.toLowerCase().startsWith('utm_')||['gclid','fbclid','mc_cid','mc_eid','igshid','ref_src'].includes(key.toLowerCase()))parsed.searchParams.delete(key);
+  });
+  parsed.searchParams.sort();
+  return parsed.href;
+ }catch(_){return '';}
+}
 async function loadAutoNewsFeed(){
  try{
   const response=await fetch('./data/news-feed.json',{cache:'no-cache'});
@@ -12,21 +24,29 @@ async function loadAutoNewsFeed(){
   const data=await response.json();
   if(!data||!Array.isArray(data.items))return;
   const box=document.getElementById('newsList');
-  const known=new Set([...box.querySelectorAll('.news')].map(el=>el.dataset.newsUrl||'').filter(Boolean));
-  data.items.slice(0,30).forEach(item=>{
-   const rawUrl=String(item.url||'');
-   let safeUrl='';
-   try{const parsed=new URL(rawUrl);if(parsed.protocol==='https:')safeUrl=parsed.href;}catch(_){}
+  if(!box)return;
+  const known=new Set([...box.querySelectorAll('.news')].map(el=>normalizeFeedUrl(el.dataset.newsUrl||el.querySelector('a.source[href]')?.href||'')).filter(Boolean));
+  const kinds={confirmed:'confirmado',reported:'reporte',rumor:'rumor'};
+  const allowedStatuses=['Confirmado','Reportado','Pendiente de verificación'];
+  data.items.forEach(item=>{
+   const safeUrl=normalizeFeedUrl(item.url);
    if(safeUrl&&known.has(safeUrl))return;
-   const el=document.createElement('article');el.className='news';el.dataset.kind='reporte';el.dataset.publishedAt=String(item.published_at||item.date||'');el.dataset.newsUrl=safeUrl;
-   const time=document.createElement('time');time.textContent=String(item.date||'NUEVO').slice(0,40);
+   const kind=Object.prototype.hasOwnProperty.call(kinds,item.kind)?item.kind:'reported';
+   let status=allowedStatuses.includes(item.status)?item.status:'Pendiente de verificación';
+   if((kind==='rumor'&&status!=='Pendiente de verificación')||(kind==='reported'&&status==='Confirmado')||(kind==='confirmed'&&status!=='Confirmado'))status='Pendiente de verificación';
+   if(item.discovery_source==='Google News RSS'&&status!=='Pendiente de verificación')status='Pendiente de verificación';
+   const el=document.createElement('article');el.className='news';el.dataset.kind=kinds[kind];el.dataset.publishedAt=String(item.published_at||item.date||'');el.dataset.newsUrl=safeUrl;el.dataset.feedId=String(item.id||'');
+   const time=document.createElement('time');time.textContent=String(item.date||'NUEVO').slice(0,40);if(item.published_at)time.dateTime=String(item.published_at);
    const content=document.createElement('div'),meta=document.createElement('div');meta.className='meta';
-   const status=document.createElement('span');status.className='tag reported';status.textContent='Pendiente de verificación';
-   const automatic=document.createElement('span');automatic.className='tag system';automatic.textContent='Actualización automática';meta.append(status,automatic);
+   const statusClass=status==='Confirmado'?'confirmed':status==='Reportado'?'reported':kind==='rumor'?'unconfirmed':'pending';
+   const statusTag=document.createElement('span');statusTag.className='tag '+statusClass;statusTag.textContent=status;
+   meta.append(statusTag);
+   if(item.discovery_source){const automatic=document.createElement('span');automatic.className='tag system';automatic.textContent='Detectado automáticamente';meta.append(automatic);}
    const h=document.createElement('h3');h.textContent=String(item.title||'Nueva referencia GTA VI');
    const p=document.createElement('p');p.textContent=String(item.description||'Titular detectado por el recolector RSS. Abrir la fuente y verificar antes de tratarlo como un hecho.');
-   const a=document.createElement('a');a.className='source';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Fuente detectada: '+String(item.source||'Google News')+' ↗';a.href=safeUrl||'#';
-   content.append(meta,h,p,a);el.append(time,content);box.append(el);items.push(el);if(safeUrl)known.add(safeUrl);
+   content.append(meta,h,p);
+   if(safeUrl){const a=document.createElement('a');a.className='source';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Fuente: '+String(item.source||'Fuente externa')+' ↗';a.href=safeUrl;content.append(a);}
+   el.append(time,content);box.append(el);items.push(el);if(safeUrl)known.add(safeUrl);
   });
   filterNews();
  }catch(_){}
@@ -34,19 +54,37 @@ async function loadAutoNewsFeed(){
 }
 
 
-// Cuenta regresiva: Rockstar Support indica medianoche local del 19/11/2026.
+// Lanzamiento regional: la primera zona UTC+14 abre antes que PS Store España (CET).
 (function(){
- const target=new Date(2026,10,19,0,0,0,0);
+ const target=Date.parse('2026-11-18T23:00:00Z');
+ const firstRegionalRelease=Date.parse('2026-11-18T10:00:00Z');
  const root=document.getElementById('releaseCountdown');
+ if(!root)return;
  const ids={days:document.getElementById('cdDays'),hours:document.getElementById('cdHours'),minutes:document.getElementById('cdMinutes'),seconds:document.getElementById('cdSeconds')};
  const status=document.getElementById('countdownStatus');
+ const title=root.querySelector('.countdown-title');
  const pad=n=>String(n).padStart(2,'0');
  function tick(){
-  const ms=target.getTime()-Date.now();
-  if(ms<=0){ids.days.textContent='00';ids.hours.textContent='00';ids.minutes.textContent='00';ids.seconds.textContent='00';root.classList.add('done');status.textContent='¡El día de lanzamiento llegó!';return false;}
-  const total=Math.floor(ms/1000);ids.days.textContent=pad(Math.floor(total/86400));ids.hours.textContent=pad(Math.floor(total%86400/3600));ids.minutes.textContent=pad(Math.floor(total%3600/60));ids.seconds.textContent=pad(total%60);return true;
+  const now=Date.now(),ms=target-now;
+  if(ms<=0){
+   Object.values(ids).forEach(node=>{if(node)node.textContent='00';});
+   root.classList.add('done');root.classList.remove('regional-live');root.dataset.releaseState='spain-window-reached';
+   if(status)status.textContent='Ventana de lanzamiento alcanzada';
+   if(title)title.textContent='PS Store España · ventana de desbloqueo alcanzada';
+   return false;
+  }
+  const total=Math.floor(ms/1000);
+  if(ids.days)ids.days.textContent=pad(Math.floor(total/86400));
+  if(ids.hours)ids.hours.textContent=pad(Math.floor(total%86400/3600));
+  if(ids.minutes)ids.minutes.textContent=pad(Math.floor(total%3600/60));
+  if(ids.seconds)ids.seconds.textContent=pad(total%60);
+  const regional=now>=firstRegionalRelease;
+  root.classList.toggle('regional-live',regional);root.dataset.releaseState=regional?'other-regions-live':'awaiting-regional-release';
+  if(status)status.textContent=regional?'Ya disponible en algunas regiones':'Apertura regional próxima';
+  if(title)title.textContent=regional?'Leonida ya abrió en otras regiones · PSN España pendiente':'Cuenta atrás para tu PS Store España';
+  return true;
  }
- if(tick()){const timer=setInterval(()=>{if(!tick())clearInterval(timer)},1000)}
+ if(tick()){const timer=setInterval(()=>{if(!tick())clearInterval(timer)},1000);}
 })();
 // Animaciones de entrada al desplazarse, respetando la preferencia de movimiento reducido.
 (function(){
@@ -122,7 +160,7 @@ async function loadAutoNewsFeed(){
  function parseNewsDate(card){const iso=Date.parse(card.dataset.publishedAt||'');if(Number.isFinite(iso))return iso;const label=card.querySelector('time')?.textContent?.trim().toUpperCase()||'';const m=label.match(/(\d{1,2})\s+([A-ZÁÉÍÓÚ]+)\s+(\d{4})/);if(!m||months[m[2]]===undefined)return 0;return new Date(Number(m[3]),months[m[2]],Number(m[1])).getTime();}
  function refresh(){const news=$$('#newsList .news');const count=k=>news.filter(x=>x.dataset.kind===k).length;[['evidenceConfirmed','confirmado'],['evidenceReported','reporte'],['evidenceRumor','rumor'],['evidenceDebunked','desmentido']].forEach(([id,k])=>{const el=$('#'+id);if(el)el.textContent=String(count(k));});
  const timeline=$('#timelineList');if(timeline){timeline.replaceChildren();const entries=news.map(n=>({n,t:parseNewsDate(n)})).sort((a,b)=>b.t-a.t);const countEl=$('#timelineCount');if(countEl)countEl.textContent=entries.length+' REGISTROS';entries.slice(0,40).forEach(({n,t})=>{const row=document.createElement('article');row.className='timeline-entry';const time=document.createElement('time');time.textContent=t?new Intl.DateTimeFormat('es-DO',{day:'2-digit',month:'short',year:'numeric'}).format(new Date(t)).toUpperCase():'FECHA SIN DATOS';const body=document.createElement('div'),h=document.createElement('h3'),p=document.createElement('p');h.textContent=n.querySelector('h3')?.textContent||'Registro editorial';p.textContent=n.querySelector('p')?.textContent||'';body.append(h,p);row.append(time,body);timeline.append(row);});}
- const last=Number(read('lf34:lastVisit','0'))||0,fresh=news.filter(n=>{const t=Date.parse(n.dataset.publishedAt||'');return last>0&&Number.isFinite(t)&&t>last;});const countNode=$('#sinceLastVisitCount'),copy=$('#sinceLastVisitText');if(countNode)countNode.textContent=String(fresh.length);if(copy)copy.textContent=last?(fresh.length?fresh.length+' nueva(s) entrada(s) RSS desde tu visita anterior. Todas siguen pendientes de verificación.':'No se han detectado entradas RSS nuevas desde tu visita anterior.'):'Esta es tu primera visita registrada en este navegador. Las próximas novedades RSS aparecerán aquí.';
+ const last=Number(read('lf34:lastVisit','0'))||0,fresh=news.filter(n=>{const t=Date.parse(n.dataset.publishedAt||'');return last>0&&Number.isFinite(t)&&t>last;});const countNode=$('#sinceLastVisitCount'),copy=$('#sinceLastVisitText');if(countNode)countNode.textContent=String(fresh.length);if(copy)copy.textContent=last?(fresh.length?fresh.length+' nueva(s) entrada(s) editorial(es) desde tu visita anterior. Revisa la etiqueta y la fuente de cada ficha.':'No se han detectado entradas nuevas desde tu visita anterior.'):'Esta es tu primera visita registrada en este navegador. Las próximas novedades aparecerán aquí.';
  syncFavorites();renderFavorites();}
  refresh();window.addEventListener('newsfeed:updated',refresh);window.addEventListener('catalog:updated',refresh);window.addEventListener('pagehide',()=>write('lf34:lastVisit',String(Date.now())));
  if(!reduced&&matchMedia('(hover:hover) and (pointer:fine)').matches){const hero=$('.hero');hero?.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--pointer-x',(((e.clientX-r.left)/r.width-.5)*8).toFixed(2)+'px');hero.style.setProperty('--pointer-y',(((e.clientY-r.top)/r.height-.5)*6).toFixed(2)+'px');},{passive:true});}

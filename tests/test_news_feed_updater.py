@@ -122,5 +122,119 @@ class NewsFeedUpdaterTests(unittest.TestCase):
             self.assertTrue(all(item["status"] == "Pendiente de verificación" for item in final["items"] if item["url"].endswith("/new")))
 
 
+    def test_normalize_url_ignores_tracking_parameters_and_fragment(self):
+        first = "https://Example.com/story?b=2&utm_source=news&a=1#section"
+        second = "https://example.com/story?a=1&b=2"
+        self.assertEqual(update_news.normalize_url(first), update_news.normalize_url(second))
+
+    def test_main_preserves_editorial_review_when_rss_rediscovers_same_url(self):
+        with tempfile.TemporaryDirectory() as directory:
+            feed_path = Path(directory) / "news-feed.json"
+            reviewed = {
+                "id": "reviewed-vgc",
+                "title": "VGC review, checked by the editor",
+                "description": "Editorially reviewed report.",
+                "url": "https://example.com/gta-vi-review?utm_source=editorial",
+                "source": "VGC",
+                "published_at": "2026-11-18T11:00:00+00:00",
+                "date": "2026-11-18",
+                "kind": "reported",
+                "status": "Reportado",
+            }
+            previous = {"generated_at": "2026-11-18T12:00:00+00:00", "items": [reviewed]}
+            feed_path.write_text(json.dumps(previous), encoding="utf-8")
+            rss_duplicate = {
+                "id": "rss-review-duplicate",
+                "title": "Unreviewed RSS version",
+                "description": "Automatic duplicate.",
+                "url": "https://example.com/gta-vi-review?utm_campaign=rss",
+                "source": "Example News",
+                "published_at": "2026-11-18T12:00:00+00:00",
+                "date": "2026-11-18",
+                "status": "Pendiente de verificación",
+                "kind": "reported",
+                "discovery_source": "Google News RSS",
+                "verification_required": True,
+            }
+            with patch.object(update_news, "OUT", feed_path), \
+                 patch.object(update_news, "fetch_feed", return_value=[rss_duplicate]), \
+                 patch.object(update_news.time, "sleep"):
+                update_news.main()
+
+            final = json.loads(feed_path.read_text(encoding="utf-8"))
+            self.assertEqual(1, len(final["items"]))
+            self.assertEqual("reviewed-vgc", final["items"][0]["id"])
+            self.assertEqual("Reportado", final["items"][0]["status"])
+            self.assertEqual("VGC review, checked by the editor", final["items"][0]["title"])
+
+    def test_existing_editorial_rumor_is_not_replaced_by_earlier_rss_duplicate(self):
+        rss = {
+            "id": "rss-copy",
+            "title": "RSS copy of a reported rumor",
+            "description": "Automatic duplicate.",
+            "url": "https://example.com/rumor?utm_source=rss",
+            "source": "Google News",
+            "published_at": "2026-11-18T12:00:00+00:00",
+            "date": "2026-11-18",
+            "kind": "reported",
+            "status": "Pendiente de verificación",
+            "discovery_source": "Google News RSS",
+        }
+        reviewed_rumor = {
+            "id": "editorial-rumor",
+            "title": "Editorial rumor record",
+            "description": "The editor deliberately classified this as a rumor.",
+            "url": "https://example.com/rumor",
+            "source": "Recognized reporting",
+            "published_at": "2026-11-18T11:00:00+00:00",
+            "date": "2026-11-18",
+            "kind": "rumor",
+            "status": "Pendiente de verificación",
+        }
+
+        merged = update_news.merge_feed_items([rss, reviewed_rumor], [])
+
+        self.assertEqual(1, len(merged))
+        self.assertEqual("editorial-rumor", merged[0]["id"])
+        self.assertEqual("rumor", merged[0]["kind"])
+
+    def test_main_does_not_truncate_existing_feed_over_sixty_items(self):
+        with tempfile.TemporaryDirectory() as directory:
+            feed_path = Path(directory) / "news-feed.json"
+            existing_items = [{
+                "id": f"old-{index}",
+                "title": f"Old GTA VI item {index}",
+                "description": "Preserve this historical feed item.",
+                "url": f"https://example.com/archive/{index}",
+                "source": "Example News",
+                "published_at": "2026-11-10T12:00:00+00:00",
+                "date": "2026-11-10",
+                "kind": "reported",
+                "status": "Pendiente de verificación",
+                "discovery_source": "Google News RSS",
+            } for index in range(65)]
+            feed_path.write_text(json.dumps({"items": existing_items}), encoding="utf-8")
+            new_item = {
+                "id": "new-arrival",
+                "title": "New GTA VI item",
+                "description": "New discovery.",
+                "url": "https://example.com/new-arrival",
+                "source": "Example News",
+                "published_at": "2026-11-18T12:00:00+00:00",
+                "date": "2026-11-18",
+                "status": "Pendiente de verificación",
+                "kind": "reported",
+                "discovery_source": "Google News RSS",
+                "verification_required": True,
+            }
+            with patch.object(update_news, "OUT", feed_path), \
+                 patch.object(update_news, "fetch_feed", return_value=[new_item]), \
+                 patch.object(update_news.time, "sleep"):
+                update_news.main()
+
+            final = json.loads(feed_path.read_text(encoding="utf-8"))
+            self.assertEqual(66, len(final["items"]))
+            self.assertIn("old-0", {item["id"] for item in final["items"]})
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -128,5 +128,66 @@ class EditorialCatalogTests(unittest.TestCase):
         self.assertIn("window.setDossierRegionFilter", script)
         self.assertIn("window.setDossierVehicleFilter", script)
 
+    def test_feed_rejects_https_urls_with_embedded_credentials(self):
+        import shutil
+        import tempfile
+        from scripts.validate_catalog import validate_catalogs
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(DATA, root / "data")
+            feed_path = root / "data" / "news-feed.json"
+            feed = json.loads(feed_path.read_text(encoding="utf-8"))
+            feed["items"][0]["url"] = "https://user:password@example.com/story"
+            feed_path.write_text(json.dumps(feed), encoding="utf-8")
+
+            errors = validate_catalogs(root)
+            self.assertTrue(
+                any("credenciales" in error.lower() for error in errors),
+                f"URL credentials were not rejected: {errors}",
+            )
+
+    def test_feed_accepts_iso8601_date_only_without_inventing_time(self):
+        import shutil
+        import tempfile
+        from scripts.validate_catalog import validate_catalogs
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(DATA, root / "data")
+            feed_path = root / "data" / "news-feed.json"
+            feed = json.loads(feed_path.read_text(encoding="utf-8"))
+            item = next(x for x in feed["items"] if x["id"] == "gta-vi-review-score-99-metacritic-nme-2026-11-18")
+            item["published_at"] = "2026-11-18"
+            item["date"] = "2026-11-18"
+            feed_path.write_text(json.dumps(feed), encoding="utf-8")
+
+            errors = validate_catalogs(root)
+            self.assertFalse(
+                any("published_at no es ISO-8601" in error for error in errors),
+                f"Valid date-only ISO-8601 precision was rejected: {errors}",
+            )
+
+    def test_google_news_rss_cannot_be_promoted_to_confirmed(self):
+        import shutil
+        import tempfile
+        from scripts.validate_catalog import validate_catalogs
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(DATA, root / "data")
+            feed_path = root / "data" / "news-feed.json"
+            feed = json.loads(feed_path.read_text(encoding="utf-8"))
+            feed["items"][0]["kind"] = "confirmed"
+            feed["items"][0]["status"] = "Confirmado"
+            feed["items"][0]["discovery_source"] = "Google News RSS"
+            feed_path.write_text(json.dumps(feed), encoding="utf-8")
+
+            errors = validate_catalogs(root)
+            self.assertTrue(
+                any("Google News RSS" in error for error in errors),
+                f"Automatic RSS confirmation was not rejected: {errors}",
+            )
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
