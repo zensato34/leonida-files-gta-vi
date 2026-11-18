@@ -43,8 +43,8 @@ class PwaContractTests(unittest.TestCase):
 
     def test_static_cache_version_bumps_for_redesign_assets(self):
         script = (ROOT / "service-worker.js").read_text(encoding="utf-8")
-        self.assertIn("static-v2", script)
-        self.assertIn("data-v2", script)
+        self.assertIn("static-v3", script)
+        self.assertIn("data-v3", script)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
