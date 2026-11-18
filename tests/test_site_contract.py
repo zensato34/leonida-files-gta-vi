@@ -170,5 +170,35 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("pódcasts bajo demanda", HTML)
         self.assertIn("no una séptima emisora", HTML)
 
+
+    def test_guide_displays_attributed_external_launch_references_separately(self):
+        guide = json.loads((ROOT / "data/guide.json").read_text(encoding="utf-8"))
+        sources = json.loads((ROOT / "data/sources.json").read_text(encoding="utf-8"))["items"]
+        source_by_id = {item["id"]: item for item in sources}
+        self.assertEqual(15, len(guide["external_references"]))
+        self.assertEqual(7, len(guide["quick_tips"]))
+        for item in guide["external_references"]:
+            source = source_by_id[item["source_id"]]
+            self.assertEqual(source["url"], item["url"])
+            self.assertEqual("external_report", item["status"])
+            self.assertIn("no verificada por LEONIDA FILES", item["status_label"])
+            self.assertTrue(item["url"].startswith("https://"))
+        for tip in guide["quick_tips"]:
+            self.assertTrue(tip["source_ids"])
+            for source_id in tip["source_ids"]:
+                self.assertIn(source_id, source_by_id)
+        self.assertTrue(all(not category["entries"] for category in guide["categories"]))
+        self.assertIn('id="guideQuickTips"', HTML)
+        self.assertIn('id="guideExternalSources"', HTML)
+
+    def test_external_guide_spoiler_alerts_are_hidden_by_default(self):
+        guide = json.loads((ROOT / "data/guide.json").read_text(encoding="utf-8"))
+        warnings = [tip for tip in guide["quick_tips"] if tip["spoiler"] is True]
+        self.assertEqual(1, len(warnings))
+        self.assertIn("no está seguro", warnings[0]["summary"])
+        script = (ROOT / "assets/js/guide34.js").read_text(encoding="utf-8")
+        self.assertIn("data-spoiler", script)
+        self.assertIn("spoilerBlocked", script)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
