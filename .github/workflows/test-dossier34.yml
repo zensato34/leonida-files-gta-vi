@@ -2,6 +2,7 @@ name: Validar LEONIDA FILES — Dossier 34
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - 'index.html'
       - 'manifest.webmanifest'
