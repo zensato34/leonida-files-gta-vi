@@ -6,7 +6,7 @@ import json
 import sys
 from datetime import date, datetime
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import parse_qsl, urlencode, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 DATASETS = ("sources", "news", "characters", "regions", "radios", "songs", "vehicles")
@@ -173,10 +173,20 @@ def validate_catalogs(root: Path = ROOT) -> list[str]:
                 parsed_url = urlparse(str(item.get("url") or ""))
                 if parsed_url.scheme != "https" or not parsed_url.netloc:
                     errors.append(f"Feed {item_id}: URL no HTTPS o inválida")
+                elif parsed_url.username or parsed_url.password:
+                    errors.append(f"Feed {item_id}: URL HTTPS contiene credenciales")
                 else:
+                    query = [
+                        (key, value)
+                        for key, value in parse_qsl(parsed_url.query, keep_blank_values=True)
+                        if not key.lower().startswith("utm_")
+                        and key.lower() not in {"gclid", "fbclid", "mc_cid", "mc_eid", "igshid", "ref_src"}
+                    ]
+                    query.sort(key=lambda pair: (pair[0].lower(), pair[1]))
                     normalized_url = parsed_url._replace(
                         scheme="https",
                         netloc=parsed_url.netloc.lower(),
+                        query=urlencode(query, doseq=True),
                         fragment="",
                     ).geturl()
                     if normalized_url in feed_urls:
