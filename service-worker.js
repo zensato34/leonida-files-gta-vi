@@ -1,7 +1,7 @@
 'use strict';
 const CACHE_PREFIX='leonida-files-';
-const CACHE_STATIC=CACHE_PREFIX+'static-v4';
-const CACHE_DATA=CACHE_PREFIX+'data-v4';
+const CACHE_STATIC=CACHE_PREFIX+'static-v5';
+const CACHE_DATA=CACHE_PREFIX+'data-v5';
 const CORE_ASSETS=[
  './',
  './index.html',
@@ -12,9 +12,11 @@ const CORE_ASSETS=[
  './assets/css/dossier34.css',
  './assets/css/guide34.css',
  './assets/css/progress34.css',
+ './assets/css/control34.css',
  './assets/js/dossier34.js',
  './assets/js/guide34.js',
  './assets/js/progress34.js',
+ './assets/js/control34.js',
  './assets/js/pwa34.js',
  './data/sources.json',
  './data/news.json',
