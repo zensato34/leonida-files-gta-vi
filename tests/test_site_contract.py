@@ -159,7 +159,7 @@ class SiteContractTests(unittest.TestCase):
     def test_platform_facts_have_official_language_storage_and_hardware_context(self):
         self.assertIn("212 GB libres", HTML)
         self.assertIn("Voces en inglés", HTML)
-        self.assertIn("Español (España)", HTML)
+        self.assertIn("español (España)", HTML)
         self.assertIn("30 FPS objetivo", HTML)
         self.assertIn("PSSR", HTML)
         self.assertIn("Tempest 3D", HTML)
