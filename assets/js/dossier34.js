@@ -326,14 +326,26 @@ async function loadAutoNewsFeed(){
  }
  function renderSongs(records){
   const grid=byId('tracklist');if(!grid)return;
+  const groups=[
+   {id:'the_album',title:'The Album · diez sencillos publicados',description:'Listado oficial de sencillos; el número mostrado es su orden de presentación, no el orden completo del álbum.'},
+   {id:'original_score',title:'Original Score by Justice · dos sencillos publicados',description:'La obra completa tiene 30 temas y su lanzamiento está anunciado para el 11 de diciembre de 2026.'}
+  ];
   const fragment=document.createDocumentFragment();
-  records.slice().sort((a,b)=>a.track_number-b.track_number).forEach(song=>{
-   const official=song.status==='official_release';
-   const card=node('div','track '+(official?'official':'leak'));card.dataset.songId=song.id;card.dataset.editorialStatus=song.status;
-   const number=node('span','num',String(song.track_number).padStart(2,'0'));
-   const body=node('div'),title=node('b',null,song.title),artist=node('small',null,song.artist);
-   const marker=node('small','track-status',official?'Publicado oficialmente':'Lista reportada · no confirmada pista por pista');
-   body.append(title,artist,marker);card.append(number,body);fragment.append(card);
+  groups.forEach(group=>{
+   const songs=records.filter(song=>song.collection===group.id).slice().sort((a,b)=>a.track_number-b.track_number);
+   if(!songs.length)return;
+   const section=node('section','track-group');
+   const head=node('div','track-group-head');
+   head.append(node('h3',null,group.title),node('p',null,group.description));
+   const list=node('div','tracklist-grid');
+   songs.forEach(song=>{
+    const card=node('div','track official');card.dataset.songId=song.id;card.dataset.editorialStatus=song.status;
+    const number=node('span','num',String(song.track_number).padStart(2,'0'));
+    const body=node('div'),title=node('b',null,song.title),artist=node('small',null,song.artist);
+    const marker=node('small','track-status','Publicado oficialmente');
+    body.append(title,artist,marker);card.append(number,body);list.append(card);
+   });
+   section.append(head,list);fragment.append(section);
   });
   grid.replaceChildren(fragment);
  }
