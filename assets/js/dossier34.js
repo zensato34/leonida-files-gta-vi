@@ -8,7 +8,7 @@ search?.addEventListener('input',filterNews);filter?.addEventListener('change',f
 function normalizeFeedUrl(rawUrl){
  try{
   const parsed=new URL(String(rawUrl||''));
-  if(parsed.protocol!=='https:')return '';
+  if(parsed.protocol!=='https:'||parsed.username||parsed.password)return '';
   parsed.hash='';
   [...parsed.searchParams.keys()].forEach(key=>{
    if(key.toLowerCase().startsWith('utm_')||['gclid','fbclid','mc_cid','mc_eid','igshid','ref_src'].includes(key.toLowerCase()))parsed.searchParams.delete(key);
@@ -63,15 +63,14 @@ async function loadAutoNewsFeed(){
  const ids={days:document.getElementById('cdDays'),hours:document.getElementById('cdHours'),minutes:document.getElementById('cdMinutes'),seconds:document.getElementById('cdSeconds')};
  const status=document.getElementById('countdownStatus');
  const title=root.querySelector('.countdown-title');
- const foot=root.querySelector('.countdown-foot');
  const pad=n=>String(n).padStart(2,'0');
  function tick(){
   const now=Date.now(),ms=target-now;
   if(ms<=0){
    Object.values(ids).forEach(node=>{if(node)node.textContent='00';});
-   root.classList.add('done');root.classList.remove('regional-live');root.dataset.releaseState='spain-available';
-   if(status)status.textContent='Disponible en PS Store España';
-   if(title)title.textContent='GTA VI · ventana de desbloqueo de España alcanzada';
+   root.classList.add('done');root.classList.remove('regional-live');root.dataset.releaseState='spain-window-reached';
+   if(status)status.textContent='Ventana de lanzamiento alcanzada';
+   if(title)title.textContent='PS Store España · ventana de desbloqueo alcanzada';
    return false;
   }
   const total=Math.floor(ms/1000);
