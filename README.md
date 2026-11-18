@@ -4,7 +4,7 @@ Sitio fan-made en español, adaptable a móviles, con identidad cinematográfica
 
 ## Abrir ahora
 
-Abre `index.html` con un navegador moderno. El contador sigue la región de PS Store España: 00:00 CET del 19/11/2026, equivalente a las 19:00 del 18/11/2026 en República Dominicana. Rockstar Support indica desbloqueo a medianoche local por región; el portal distingue la apertura de otras regiones de la ventana española y cambia a estado disponible al llegar. Las animaciones respetan `prefers-reduced-motion`. Para que funcione el feed JSON al abrirlo localmente, ejecútalo con un servidor estático (por ejemplo, `python -m http.server 8000`) y visita `http://localhost:8000`.
+Abre `index.html` con un navegador moderno. El contador sigue la región de PS Store España: 00:00 CET del 19/11/2026, equivalente a las 19:00 del 18/11/2026 en República Dominicana. Rockstar Support indica desbloqueo a medianoche local por región; el portal distingue la apertura de otras regiones de la ventana española y pasa a un estado de ventana de lanzamiento alcanzada al llegar. Las animaciones respetan `prefers-reduced-motion`. Para que funcione el feed JSON al abrirlo localmente, ejecútalo con un servidor estático (por ejemplo, `python -m http.server 8000`) y visita `http://localhost:8000`.
 
 ## Publicación actual
 
