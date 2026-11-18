@@ -20,9 +20,10 @@ function updateSummary(){
  if(regionHint){regionHint.textContent=p.region==='ps-es'?'Perfil regional: PS Store España / Europa. La región de la cuenta determina la tienda y sus condiciones; tu ubicación física no cambia la región de la cuenta.':p.region==='ps-us'?'Perfil regional: PS Store Estados Unidos. Comprueba siempre la ficha de esa tienda y la región de cualquier código.':p.region==='xbox'?'Perfil regional: Microsoft Store / Xbox. Consulta la disponibilidad y las condiciones que muestre tu propia tienda.':'No hay una región definida. Comprueba la tienda donde se realizó la compra antes de canjear códigos o buscar contenido.'}
 }
 const saved=readProfile();Object.entries(fields).forEach(([k,node])=>{if(node)node.value=(saved&&labels[k]?.[saved[k]])?saved[k]:defaults[k]});
+const editionSelectInitial=$('editionQuickSelect');if(editionSelectInitial)editionSelectInitial.value=fields.edition?.value||defaults.edition;
 form?.addEventListener('submit',event=>{event.preventDefault();const p=getProfile();try{localStorage.setItem(key,JSON.stringify(p));if(status)status.textContent='Perfil guardado en este navegador.'}catch(_){if(status)status.textContent='El navegador no permitió guardar el perfil. Los ajustes siguen activos hasta cerrar esta página.'}updateSummary();renderSupport();renderEdition()});
 form?.addEventListener('reset',()=>{setTimeout(()=>{try{localStorage.removeItem(key)}catch(_){}if(status)status.textContent='Perfil local restablecido.';updateSummary();renderSupport();renderEdition()},0)});
-Object.values(fields).forEach(node=>node?.addEventListener('change',()=>{updateSummary();renderSupport();renderEdition()}));
+Object.values(fields).forEach(node=>node?.addEventListener('change',()=>{if(node===fields.edition&&$('editionQuickSelect'))$('editionQuickSelect').value=node.value;updateSummary();renderSupport();renderEdition()}));
 updateSummary();
 const issue=$('supportProblem'),result=$('supportResult');
 const commonSources=[
