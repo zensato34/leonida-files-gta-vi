@@ -142,3 +142,16 @@ La sección de compra y datos técnicos recoge el espacio libre recomendado por 
 
 
 La investigación de guías externas se documenta en `docs/research/2026-11-18-launch-guides-research.md`. PowerPyx enumera 557 vehículos en su base (277 modelos base y 280 especiales), pero especifica que la cuota del 100 % es escanear 200 de los 277 modelos base. Las cifras y advertencias de terceros se atribuyen a su autor y no se convierten en requisitos verificados por LEONIDA FILES.
+
+
+## Centro de experiencia y rediseño (18/11/2026)
+
+- **Centro de soporte:** comprobaciones iniciales no destructivas para bloqueos regionales, descargas, códigos, contenido Ultimate, idiomas y estado de servicios, con enlaces oficiales.
+- **Historial de actualizaciones:** registro exclusivo para notas de versión oficiales. Comienza vacío; una precarga, un rumor o una noticia promocional no se clasifica como parche.
+- **Laboratorio técnico:** separa objetivos declarados por Rockstar, funciones anunciadas por PlayStation y benchmarks independientes aún pendientes.
+- **Mi configuración:** perfil opcional de plataforma, región, edición, idioma y preferencias. Se guarda solo en localStorage; no hay cuenta ni sincronización.
+- **Comparador de ediciones:** consulta Standard y Ultimate con precios de PS Store España fechados al 18/11/2026. Son referencias históricas, no precios actuales garantizados.
+
+La capa visual Vice City / Leonida incorpora Barlow Condensed y DM Sans como mejora progresiva, un tema Atardecer y otro Nocturno, imágenes oficiales ya publicadas y animaciones discretas. Se respetan `prefers-reduced-motion` y el control local para reducir movimientos. Sin conexión, se usan fuentes del sistema como respaldo.
+
+El archivo `data/updates.json` acepta solo registros oficiales con versión, fecha, plataformas, resumen y URL HTTPS bajo dominios de Rockstar, PlayStation o Xbox. No deben añadirse rumores ni inferirse números de versión.
