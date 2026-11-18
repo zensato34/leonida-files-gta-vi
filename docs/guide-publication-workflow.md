@@ -35,3 +35,8 @@ python scripts/validate_catalog.py
 Revisa el diff de `data/guide.json` antes de hacer commit. Solo ese JSON público debe llegar a `main`. No añadas nunca `private-guide/guide-drafts.json` al commit.
 
 La fecha de lanzamiento se mantiene en un solo lugar del índice público y en la plantilla privada. Si Rockstar cambia la fecha, actualiza ambos valores y los tests antes de generar el catálogo.
+
+
+## Referencias externas de lanzamiento
+
+Las guías de medios (por ejemplo VGC o PowerPyx) pueden añadirse a `data/guide.json` bajo `external_references` y resumirse en `quick_tips`, siempre con el identificador de fuente correspondiente en `data/sources.json`, enlace HTTPS, medio y fecha. Deben mantener `status: "external_report"` y la etiqueta `Guía externa · no verificada por LEONIDA FILES`. No se añaden a `categories[].entries`, no cuentan para el progreso, no se exportan como `verified` y no sustituyen la comprobación directa en la partida. Las advertencias inciertas se describen como tales y se ocultan por defecto con el interruptor de spoilers.
