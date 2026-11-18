@@ -119,7 +119,7 @@ class GuidePublicationGateTests(unittest.TestCase):
         self.assertGreater(len(guide.get("external_references", [])), 0)
         for category in guide["categories"]:
             self.assertEqual([], category["entries"])
-        self.assertIn("no cuentan como fichas propias verificadas", guide["external_research_note"])
+        self.assertIn("no cuentan para el porcentaje de la guía", guide["external_research_note"])
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
