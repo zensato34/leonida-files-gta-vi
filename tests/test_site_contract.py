@@ -37,7 +37,7 @@ class SiteContractTests(unittest.TestCase):
         cls.parser.feed(HTML)
 
     def test_new_dossier_modules_and_controls_exist(self):
-        required = {"pwaInstallButton","atlas", "evidencias", "cronologia", "hangar", "guia", "guideTitle", "guideSearch", "guideSpoilers", "guideStatus", "guideCatalog", "guideEmpty", "progreso", "progressTitle", "progressSearch", "progressRegionFilter", "progressStatusFilter", "progressCategories", "progressStatus", "trackedPercent", "trackedBar", "trackedDone", "trackedTotal", "personalGoalForm", "personalGoalTitle", "personalGoalCategory", "personalGoalList", "exportProgress", "importProgress", "importProgressFile", "regionSearch", "regionCards", "regionCount", "vehicleSearch", "vehicleCatalog", "vehicleCount", "commandPalette", "commandInput", "openCommand", "favoritesDrawer", "sinceLastVisit", "bootScreen", "explorerMode", "completistMode", "privateDiscoveryForm", "privateDiscoveryCategory", "privateDiscoveryRegion", "privateDiscoveryTitle", "privateDiscoveryNote", "privateDiscoveryEvidence", "privateDiscoverySource", "privateDiscoverySpoiler", "privateDiscoveryList", "privateDiscoveryCount", "atlasPersonal", "atlasPointForm", "atlasPointRegion", "atlasPointType", "atlasPointStatus", "atlasPointTitle", "atlasPointDetails", "atlasPointSource", "atlasPointSpoiler", "atlasPointCount", "atlasPointSearch", "atlasPointFilterRegion", "atlasPointFilterStatus", "atlasPointList", "miGaraje", "garageSearch", "garageFilter", "garageCatalog", "garageTotal", "garageWanted", "garageOwned", "gameSessionJournal", "gameSessionForm", "gameSessionDate", "gameSessionMinutes", "gameSessionCharacter", "gameSessionRegion", "gameSessionTitle", "gameSessionNotes", "gameSessionSpoiler", "gameSessionCount", "gameSessionDuration", "gameSessionLatest", "gameSessionSearch", "gameSessionCharacterFilter", "gameSessionRegionFilter", "gameSessionList"}
+        required = {"pwaInstallButton","atlas", "evidencias", "cronologia", "hangar", "guia", "guideTitle", "guideSearch", "guideSpoilers", "guideStatus", "guideCatalog", "guideEmpty", "progreso", "progressTitle", "progressSearch", "progressRegionFilter", "progressStatusFilter", "progressCategories", "progressStatus", "trackedPercent", "trackedBar", "trackedDone", "trackedTotal", "personalGoalForm", "personalGoalTitle", "personalGoalCategory", "personalGoalList", "exportProgress", "importProgress", "importProgressFile", "regionSearch", "regionCards", "regionCount", "vehicleSearch", "vehicleCatalog", "vehicleCount", "commandPalette", "commandInput", "openCommand", "favoritesDrawer", "sinceLastVisit", "bootScreen", "explorerMode", "completistMode", "privateDiscoveryForm", "privateDiscoveryCategory", "privateDiscoveryRegion", "privateDiscoveryTitle", "privateDiscoveryNote", "privateDiscoveryEvidence", "privateDiscoverySource", "privateDiscoverySpoiler", "privateDiscoveryList", "privateDiscoveryCount", "atlasPersonal", "atlasPointForm", "atlasPointRegion", "atlasPointType", "atlasPointStatus", "atlasPointTitle", "atlasPointDetails", "atlasPointSource", "atlasPointSpoiler", "atlasPointCount", "atlasPointSearch", "atlasPointFilterRegion", "atlasPointFilterStatus", "atlasPointList", "miGaraje", "garageSearch", "garageFilter", "garageCatalog", "garageTotal", "garageWanted", "garageOwned", "gameSessionJournal", "gameSessionForm", "gameSessionDate", "gameSessionMinutes", "gameSessionCharacter", "gameSessionRegion", "gameSessionTitle", "gameSessionNotes", "gameSessionSpoiler", "gameSessionCount", "gameSessionDuration", "gameSessionLatest", "gameSessionSearch", "gameSessionCharacterFilter", "gameSessionRegionFilter", "gameSessionList", "centro-control", "controlProfileForm", "controlPlatform", "controlRegion", "controlEdition", "controlLanguage", "controlProfileStatus", "controlProfileSummary", "supportProblem", "supportResult", "editionQuickSelect", "editionQuickview"}
         self.assertTrue(required.issubset(self.parser.ids), f"Missing IDs: {sorted(required - self.parser.ids)}")
 
     def test_internal_navigation_links_resolve(self):
@@ -105,6 +105,22 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn("try{", script)
         self.assertIn("catch", script)
 
+
+
+    def test_control_center_is_local_private_and_accessible(self):
+        self.assertIn('href="#centro-control"', HTML)
+        self.assertIn('assets/css/control34.css', HTML)
+        self.assertIn('assets/js/control34.js', HTML)
+        script = (ROOT / "assets/js/control34.js").read_text(encoding="utf-8")
+        self.assertIn("lf34:player-profile", script)
+        self.assertIn("localStorage.setItem(key", script)
+        self.assertIn("Restaurar licencias", script)
+        self.assertIn("support.rockstargames.com", script)
+        css = (ROOT / "assets/css/control34.css").read_text(encoding="utf-8")
+        self.assertRegex(css, r"@media\\s*\\(prefers-reduced-motion:\\s*reduce\\)")
+        worker = (ROOT / "service-worker.js").read_text(encoding="utf-8")
+        self.assertIn("./assets/css/control34.css", worker)
+        self.assertIn("./assets/js/control34.js", worker)
 
     def test_progress_runtime_assets_are_linked(self):
         self.assertIn('assets/css/progress34.css', HTML)
