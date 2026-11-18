@@ -114,6 +114,17 @@ class GuidePublicationGateTests(unittest.TestCase):
         self.assertIsNone(catalog["categories"][0]["entries"][0]["region_id"])
 
 
+    def test_external_references_do_not_enter_trackable_progress(self):
+        guide = json.loads((ROOT / "data" / "guide.json").read_text(encoding="utf-8"))
+        public_entries = [
+            entry
+            for category in guide["categories"]
+            for entry in category["entries"]
+        ]
+        self.assertEqual([], public_entries)
+        self.assertGreater(len(guide["external_references"]), 0)
+        self.assertFalse(any(item.get("trackable") for item in guide["external_references"]))
+
     def test_external_reference_directory_never_counts_as_verified_guide_entries(self):
         guide = json.loads((ROOT / "data" / "guide.json").read_text(encoding="utf-8"))
         self.assertGreater(len(guide.get("external_references", [])), 0)
