@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "dataset": "guide",
-  "reviewed_at": "2026-11-15",
+  "reviewed_at": "2026-11-18",
   "release_date": "2026-11-19",
   "release_source_url": "https://www.rockstargames.com/VI",
   "editorial_policy": "No publicar recorridos, ubicaciones, requisitos, coleccionables ni trofeos sin verificación en la versión final y una fuente documentada. Distinguir confirmación oficial, observación de partida y reporte atribuido. Toda revelación argumental debe marcarse como spoiler.",
   "spoiler_default_hidden": true,
-  "description": "Índice de seis módulos de la guía fan de GTA VI. Las listas de contenido están vacías de forma deliberada hasta la verificación de la versión final.",
+  "description": "Índice de seis módulos de guía. Las listas de misiones, actividades, coleccionables, secretos, trofeos y ruta del 100 % permanecen vacías hasta que puedan verificarse en la versión jugable; los materiales promocionales no sustituyen la comprobación en partida.",
   "categories": [
     {
       "id": "story-missions",
