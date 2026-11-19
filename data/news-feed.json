@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T13:02:00.000Z",
+  "generated_at": "2026-11-19T14:27:00.000Z",
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación. Las entradas editoriales existentes se conservan y no se sustituyen por duplicados RSS.",
   "items": [
     {
@@ -1890,6 +1890,28 @@
       "date": "2026-11-18",
       "kind": "rumor",
       "status": "Pendiente de verificación"
+    },
+    {
+      "id": "gta-vi-now-available-rockstar-2026-11-19",
+      "title": "Grand Theft Auto VI ya está disponible en PS5 y Xbox Series X|S",
+      "description": "La página oficial de Rockstar marca GTA VI como disponible desde el 19 de noviembre de 2026 y enumera PlayStation 5 y Xbox Series X|S como plataformas compatibles.",
+      "url": "https://www.rockstargames.com/VI",
+      "source": "Rockstar Games — sitio oficial",
+      "published_at": "2026-11-19",
+      "date": "2026-11-19",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "rockstar-publica-mapa-oficial-leonida-2026-11-19",
+      "title": "Rockstar publica el mapa oficial descargable de Leonida",
+      "description": "Rockstar añadió a su sección Artwork & Wallpapers el Leonida Map & Cover Art Poster, con cuatro variantes. El póster rotula cinco condados —Lummox, Leonard, Kelly, Vice-Dale y Mariana—, localidades, islas, parques y una leyenda de carreteras. La escala impresa es 1 inch = 0.5 mile / 2 inches = 1 mile.",
+      "url": "https://www.rockstargames.com/VI/media/artwork-wallpapers",
+      "source": "Rockstar Games — Media",
+      "published_at": "2026-11-19",
+      "date": "2026-11-19",
+      "kind": "confirmed",
+      "status": "Confirmado"
     }
   ],
   "diagnostics": {
