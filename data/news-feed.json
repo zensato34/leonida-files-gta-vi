@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:53:00.000Z",
+  "generated_at": "2026-11-19T13:02:00.000Z",
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación. Las entradas editoriales existentes se conservan y no se sustituyen por duplicados RSS.",
   "items": [
     {
@@ -1839,13 +1839,13 @@
     {
       "id": "ps5-firmware-obligatorio-gta-vi-lanzamiento-2026-11-18",
       "title": "PlayStation exige actualizar el software de PS5 antes de jugar GTA VI",
-      "description": "PlayStation Support US indicó que una actualización del software del sistema PS5 es obligatoria antes de jugar GTA VI y pidió instalarla antes del 19 de noviembre. El aviso oficial no especifica versión ni tamaño; se trata de firmware de la consola, no de un parche del juego.",
+      "description": "PlayStation Support US publicó en X que una actualización del software del sistema PS5 es necesaria antes de jugar GTA VI y pidió instalarla antes del 19 de noviembre. El aviso es una publicación oficial en redes, pero no aporta versión ni tamaño; se mantiene como reportado hasta que el dato figure en una página de soporte primaria.",
       "url": "https://x.com/PS_Support_US/status/2122863683881619685",
       "source": "PlayStation Support US (X)",
       "published_at": "2026-11-18",
       "date": "2026-11-18",
-      "kind": "confirmed",
-      "status": "Confirmado"
+      "kind": "reported",
+      "status": "Pendiente de verificación"
     },
     {
       "id": "gta-vi-ajustes-controles-accesibilidad-rockstar-support-2026-11-18",
