@@ -261,7 +261,7 @@ body{background:radial-gradient(ellipse at 82% 2%,#16343a88 0,transparent 35%),r
 
 /* LEONIDA FILES — Atlas cartográfico oficial y estado de lanzamiento */
 .launch-status-band{padding-top:18px;padding-bottom:18px}
-.launch-status-panel{border:1px solid #3b7774;background:radial-gradient(circle at 88% 5%,#174b4a 0,transparent 42%),linear-gradient(135deg,#0e252b,#101923);padding:clamp(18px,3vw,30px)}
+.launch-status-panel{width:100%;max-width:none;margin:18px 0 0;border-radius:12px;border:1px solid #3b7774;background:radial-gradient(circle at 88% 5%,#174b4a 0,transparent 42%),linear-gradient(135deg,#0e252b,#101923);padding:clamp(18px,3vw,30px)}
 .launch-status-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .launch-status-head h2{margin:5px 0 0;color:#f1f3e9;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.04em}
 .launch-status-panel>p{max-width:820px;color:#c1d2cd;line-height:1.7}
