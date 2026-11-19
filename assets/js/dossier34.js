@@ -1,3 +1,4 @@
+// Referencia histórica del desbloqueo regional (ya vencido; no se ejecuta ningún contador): 2026-11-18T10:00:00Z, 2026-11-18T23:00:00Z; estado final: spain-window-reached.
 
 
 const search=document.getElementById('newsSearch'),filter=document.getElementById('newsFilter');
