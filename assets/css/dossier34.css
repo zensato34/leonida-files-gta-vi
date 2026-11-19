@@ -257,3 +257,45 @@ body{background:radial-gradient(ellipse at 82% 2%,#16343a88 0,transparent 35%),r
 .guide-attribution-note{margin:14px 0 0;padding:11px 12px;border-left:2px solid var(--yellow);background:#201b12;color:#c8bda7;font-size:.7rem;line-height:1.55}
 @media(max-width:850px){.guide-external-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-research-heading{grid-template-columns:1fr}}
 @media(max-width:620px){.guide-launch-research{padding:12px}.guide-tip-grid,.guide-external-grid{grid-template-columns:1fr}.guide-research-subhead{align-items:flex-start;flex-direction:column}.guide-research-subhead>span{text-align:left}}
+
+
+/* LEONIDA FILES — Atlas cartográfico oficial y estado de lanzamiento */
+.launch-status-band{padding-top:18px;padding-bottom:18px}
+.launch-status-panel{border:1px solid #3b7774;background:radial-gradient(circle at 88% 5%,#174b4a 0,transparent 42%),linear-gradient(135deg,#0e252b,#101923);padding:clamp(18px,3vw,30px)}
+.launch-status-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.launch-status-head h2{margin:5px 0 0;color:#f1f3e9;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.04em}
+.launch-status-panel>p{max-width:820px;color:#c1d2cd;line-height:1.7}
+.launch-status-pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #68d9b477;border-radius:999px;background:#0c302c;padding:9px 14px;color:#8ce3be;font:900 .72rem ui-monospace,monospace;letter-spacing:.1em}
+.launch-status-pill span{width:8px;height:8px;border-radius:50%;background:#6fe2ae;box-shadow:0 0 13px #6fe2ae}
+.launch-status-links{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}
+.atlas-map-confirmed{border-color:#56cdbb66;border-left-color:#56cdbb;background:#0c2426}
+.atlas-map-confirmed strong{color:#85e0cc}
+.atlas-official-map{margin:20px 0 24px;border:1px solid #315b5c;border-radius:8px;overflow:hidden;background:linear-gradient(145deg,#0d1e23,#101720);box-shadow:0 18px 44px #0003}
+.official-map-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:17px 19px;border-bottom:1px solid #ffffff15;background:linear-gradient(90deg,#122b30,#111c23)}
+.official-map-heading h3{margin:5px 0 4px;color:#f1f3e9;font-size:1.12rem}
+.official-map-heading p{margin:0;color:#a9bdb5;font-size:.77rem}
+.official-map-status{border:1px solid #65d5c477;border-radius:3px;padding:7px 9px;color:#8be1ca;font:850 .62rem ui-monospace,monospace;letter-spacing:.09em}
+.official-map-layout{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(300px,.96fr);gap:0}
+.official-map-image{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;padding:16px;background:#073a4b;border-right:1px solid #ffffff14}
+.official-map-image img{display:block;width:100%;height:auto;max-height:900px;object-fit:contain;object-position:center;border:1px solid #ffffff24;box-shadow:0 12px 35px #00192388}
+.official-map-image>span{position:absolute;right:26px;bottom:26px;padding:9px 12px;border:1px solid #d9ffff66;border-radius:3px;background:#071b20e8;color:#d7fff4;font:850 .62rem ui-monospace,monospace;letter-spacing:.06em}
+.official-map-notes{padding:20px;min-width:0}
+.official-map-kicker{margin:3px 0 8px;color:#79cfc1;font:850 .61rem ui-monospace,monospace;letter-spacing:.12em}
+.official-map-notes h4{margin:0 0 9px;color:#eef1e8;font-size:1rem}
+.official-map-notes p{color:#b5c4bd;font-size:.76rem;line-height:1.65}
+.county-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:12px 0 20px}
+.county-grid span{padding:9px 10px;border:1px solid #4d7470;border-radius:4px;background:#142e30;color:#d3eee4;font-size:.7rem;font-weight:800}
+.county-grid span:last-child{grid-column:1/-1}
+.map-name-list{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 19px}
+.map-name-list span{padding:5px 8px;border:1px solid #ffffff20;border-radius:3px;background:#ffffff08;color:#c7d7cf;font-size:.65rem}
+.map-fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:16px 0}
+.map-fact-grid>div{padding:11px;border:1px solid #ffffff18;border-radius:4px;background:#081519}
+.map-fact-grid b{display:block;margin-bottom:7px;color:#7bd0c4;font:850 .58rem ui-monospace,monospace;letter-spacing:.08em}
+.map-fact-grid span{display:block;color:#d4e0d9;font-size:.69rem;line-height:1.6}
+.official-map-notes .map-caveat{padding:10px 12px;border-left:2px solid #d8ae65;background:#261f15;color:#d3c5a7;font-size:.68rem}
+.official-map-links{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.official-map-links a{color:#7bd7ca;font-size:.72rem;font-weight:800;text-decoration:none}
+.official-map-links a:hover{text-decoration:underline}
+@media(max-width:820px){.official-map-layout{grid-template-columns:1fr}.official-map-image{border-right:0;border-bottom:1px solid #ffffff14}.official-map-image img{max-height:780px;width:min(100%,620px)}.official-map-notes{padding:17px}}
+@media(max-width:520px){.official-map-heading{align-items:flex-start;flex-direction:column}.official-map-image{padding:9px}.official-map-image>span{right:16px;bottom:17px;font-size:.54rem}.county-grid{grid-template-columns:1fr}.county-grid span:last-child{grid-column:auto}.map-fact-grid{grid-template-columns:1fr}.launch-status-head{align-items:flex-start;flex-direction:column}.launch-status-links{flex-direction:column}.launch-status-links .btn{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){.official-map-image img{transition:none!important;scroll-behavior:auto!important}}
