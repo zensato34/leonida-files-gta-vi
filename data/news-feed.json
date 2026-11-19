@@ -1,7 +1,18 @@
 {
-  "generated_at": "2026-11-19T12:25:23.000Z",
+  "generated_at": "2026-11-19T12:32:00.000Z",
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación. Las entradas editoriales existentes se conservan y no se sustituyen por duplicados RSS.",
   "items": [
+    {
+      "id": "psn-dos-incidentes-lanzamiento-gta-vi-2026-11-19",
+      "title": "PlayStation Network registra dos interrupciones breves alrededor del lanzamiento de GTA VI",
+      "description": "Un seguimiento que consulta el estado oficial de Sony registró degradaciones de Gaming & Social en América el 18 y 19 de noviembre y una caída temporal de PlayStation Store en Europa; el servicio volvió a figurar operativo. Sony no ha atribuido las incidencias a GTA VI.",
+      "url": "https://gtaplaybook.com/news/psn-disruptions-gta-6-launch/",
+      "source": "GTA Playbook (monitorización de estado)",
+      "published_at": "2026-11-19T08:31:00Z",
+      "date": "2026-11-19",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
+    },
     {
       "id": "gta-vi-disponible-ps5-playstation-store-espana-2026-11-19",
       "title": "Grand Theft Auto VI ya está disponible en PlayStation Store España",
@@ -1819,7 +1830,7 @@
     "queries": 12,
     "failed_queries": 0,
     "new_discoveries_considered": 60,
-    "total_preserved_items": 132,
-    "editorial_entries_added": 6
+    "total_preserved_items": 133,
+    "editorial_entries_added": 7
   }
 }
