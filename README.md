@@ -1,10 +1,10 @@
 # LEONIDA FILES — GTA VI por zensato34
 
-Sitio fan-made en español, adaptable a móviles, con identidad cinematográfica de Vice City, Centro de control y soporte, laboratorio técnico, perfil local, Atlas temático no cartográfico, centro de evidencias, cronología editorial, Hangar 34, búsqueda global, favoritos locales y resumen de novedades por visita. Conserva personajes, radios, música, ediciones, tiendas y media oficial de Rockstar. Las imágenes integradas proceden del CDN oficial; no se generan imágenes con IA.
+Sitio fan-made en español, adaptable a móviles, con identidad cinematográfica de Vice City, Centro de control y soporte, laboratorio técnico, perfil local, Atlas cartográfico basado en el mapa oficial de Leonida, centro de evidencias, cronología editorial, Hangar 34, búsqueda global, favoritos locales y resumen de novedades por visita. Conserva personajes, radios, música, ediciones, tiendas y media oficial de Rockstar. Las imágenes integradas proceden del CDN oficial; no se generan imágenes con IA.
 
 ## Abrir ahora
 
-Abre `index.html` con un navegador moderno. El contador sigue la región de PS Store España: 00:00 CET del 19/11/2026, equivalente a las 19:00 del 18/11/2026 en República Dominicana. Rockstar Support indica desbloqueo a medianoche local por región; el portal distingue la apertura de otras regiones de la ventana española y pasa a un estado de ventana de lanzamiento alcanzada al llegar. Las animaciones respetan `prefers-reduced-motion`. Para que funcione el feed JSON al abrirlo localmente, ejecútalo con un servidor estático (por ejemplo, `python -m http.server 8000`) y visita `http://localhost:8000`.
+Abre `index.html` con un navegador moderno. El portal refleja que GTA VI ya está disponible desde el 19/11/2026 para PS5 y Xbox Series X|S. El Atlas incluye el mapa oficial descargable de Leonida, los cinco condados rotulados y las seis regiones temáticas oficiales; no calcula coordenadas, distancias ni superficie jugable a partir del póster. Las animaciones respetan `prefers-reduced-motion`. Para que funcione el feed JSON al abrirlo localmente, ejecútalo con un servidor estático (por ejemplo, `python -m http.server 8000`) y visita `http://localhost:8000`.
 
 ## Publicación actual
 
@@ -17,7 +17,7 @@ Los cambios deben prepararse en una rama y revisarse antes de integrarse en `mai
 
 - **Búsqueda global:** usa el botón «Buscar archivo» o `Ctrl/⌘ + K`; también puedes abrirla con `/` cuando no estés escribiendo.
 - **Mi archivo:** guarda noticias, personajes, emisoras y regiones en favoritos locales del navegador. No requiere cuenta ni envía datos a un servidor.
-- **Atlas de Leonida:** índice temático de las regiones nombradas en el portal. No es un mapa oficial ni atribuye coordenadas o distancias.
+- **Atlas de Leonida:** presenta el póster oficial estático, cinco condados impresos, localidades y puntos de referencia legibles, junto al índice independiente de seis regiones de Rockstar. No reconstruye coordenadas ni fronteras digitales.
 - **Evidence Center:** muestra recuentos y filtros por estado editorial. Los titulares RSS automáticos permanecen «Pendiente de verificación»; las entradas revisadas pueden mostrarse como «Reportado» o «Confirmado» según su evidencia.
 - **Cronología:** ordena las entradas existentes; no inventa hitos ni fechas.
 - **Hangar 34:** estructura preparada para fichas de movilidad, sin inventar modelos, marcas o estadísticas.
@@ -46,7 +46,7 @@ El contenido principal está separado de la presentación en catálogos versiona
 
 - `news.json`: noticias manuales con estado editorial y fuentes asociadas.
 - `characters.json`: expedientes y relaciones navegables entre personajes.
-- `regions.json`: seis regiones con capturas oficiales agrupadas y advertencia cartográfica. No contiene coordenadas ni reconstruye el mapa.
+- `regions.json`: seis regiones temáticas con capturas oficiales y metadatos del póster oficial de Leonida, sus cinco condados, localidades visibles, escala impresa y leyenda vial. No contiene coordenadas digitales.
 - `radios.json`: seis emisoras, locutores y arte oficial; los pódcasts bajo demanda se describen por separado y no se contabilizan como emisoras adicionales.
 - `songs.json`: diez sencillos publicados de The Album y dos del Original Score by Justice. No expone tracklists filtrados.
 - `sources.json`: registro común de procedencia y autoridad.
@@ -57,7 +57,7 @@ La presentación se separa en `assets/css/dossier34.css` y `assets/js/dossier34.
 
 ### Atlas regional y Hangar 34
 
-El Atlas funciona como explorador visual de las seis colecciones regionales nombradas en la galería oficial. Cada expediente enlaza con las capturas de Rockstar y muestra cuántas imágenes aparecen bajo ese rótulo. No se colocan pines, coordenadas, distancias o límites territoriales hasta disponer de cartografía oficial verificable.
+El Atlas combina dos capas: (1) el póster estático oficial publicado por Rockstar el 19/11/2026, con cinco condados rotulados, localidades, parques, islas, escala impresa y categorías de carreteras; (2) seis expedientes temáticos que enlazan las postales y capturas oficiales de Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia y Mount Kalaga National Park. El póster no es un conjunto geográfico digital: no se colocan pines ni se calculan coordenadas, distancias reales o km².
 
 Hangar 34 muestra siete registros oficiales destacados: ’95 Grotti Cheetah, Dinka Enduro, Crest Kayak, Ganado Retro Build, Shitzu Squalo, ’67 Vapid Dominator Buggy y ’55 Vapid Stanier Sedan. Cada ficha informa si corresponde a un beneficio de Ultimate Edition o al Vintage Vice City Pack. El filtro distingue autos, motos, transporte acuático, todoterreno y modificaciones. La ausencia de una aeronave o de otro modelo en este índice no significa que no exista en el juego.
 
@@ -68,7 +68,7 @@ La guía incorpora seis módulos propios: historia y misiones, actividades y des
 
 La interfaz incluye búsqueda, filtros por fichas verificadas o pendientes, contador de cobertura editorial y un interruptor de spoilers ocultos por defecto. La preferencia de spoilers se guarda localmente en el navegador. El contador de la guía mide el contenido editorial publicado, no el porcentaje de la partida.
 
-Rockstar fijó el lanzamiento regional para el **19 de noviembre de 2026**, a medianoche local según la región: https://www.rockstargames.com/VI. Para PS Store España, el objetivo es 00:00 CET (19:00 del 18 de noviembre en RD). El portal es un proyecto fan independiente y no oficial.
+Rockstar marca Grand Theft Auto VI como **disponible desde el 19 de noviembre de 2026** para PlayStation 5 y Xbox Series X|S: https://www.rockstargames.com/VI. El mapa oficial de Leonida se ofrece en Media > Artwork & Wallpapers como descarga digital. El portal es un proyecto fan independiente y no oficial.
 
 
 ### Separación de borradores privados y guía pública
