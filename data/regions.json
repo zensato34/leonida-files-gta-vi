@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "dataset": "regions",
-  "reviewed_at": "2026-11-18",
-  "description": "Explorador editorial con capturas oficiales agrupadas por región. No contiene coordenadas, distancias ni un mapa oficial.",
+  "reviewed_at": "2026-11-19",
+  "description": "Atlas editorial con seis regiones temáticas oficiales y una nueva capa cartográfica basada en el mapa descargable publicado por Rockstar el 19 de noviembre de 2026. El mapa nombra cinco condados y numerosos puntos, pero este catálogo no atribuye coordenadas digitales ni calcula el área jugable.",
   "items": [
     {
       "id": "vice-city",
@@ -132,5 +132,62 @@
       "gallery_url": "https://www.rockstargames.com/VI/media/screenshots",
       "evidence_status": "official_screenshot_collection"
     }
-  ]
+  ],
+  "official_map": {
+    "title": "Leonida Map & Cover Art Poster",
+    "status": "officially_published",
+    "publication_date": "2026-11-19",
+    "source": "Rockstar Games — Media / Artwork & Wallpapers",
+    "page_url": "https://www.rockstargames.com/VI/media/artwork-wallpapers",
+    "image_url": "https://www.rockstargames.com/VI/_next/static/media/Leonida_Map_Poster.08ir77j-.26ny.jpg?akim=1&imdensity=1&imwidth=3840",
+    "variants": 4,
+    "digital_download": "free",
+    "counties": [
+      "Lummox County",
+      "Leonard County",
+      "Kelly County",
+      "Vice-Dale County",
+      "Mariana County"
+    ],
+    "visible_localities": [
+      "Bonanza",
+      "Grayson",
+      "Millport",
+      "Port Gellhorn",
+      "Ambrosia",
+      "Belville",
+      "Vice City",
+      "Vice Beach",
+      "Waning Sands",
+      "Hamlet",
+      "Watson Bay",
+      "Southwind",
+      "Capri",
+      "Key Lento",
+      "Mile Zero Air Station"
+    ],
+    "visible_landmarks": [
+      "Mount Kalaga National Park",
+      "Richard Barebone State Park",
+      "Lake Leonida",
+      "Draper Island",
+      "Hyde Island",
+      "Featherstone Islands",
+      "Frampton Islands",
+      "Zephyr Islands",
+      "Pelican Valley",
+      "Shoeless Keys",
+      "Riquezas Keys",
+      "Crude Islands"
+    ],
+    "printed_scale": "1 inch = 0.5 mile / 2 inches = 1 mile",
+    "road_legend": [
+      "Interstate",
+      "U.S. Route",
+      "State Route",
+      "County Route",
+      "Toll"
+    ],
+    "editorial_note": "La escala es la impresa en el póster; Rockstar no publica aquí una cifra de superficie jugable ni coordenadas digitales. No calcular km² o distancias de juego a partir de la imagen."
+  }
 }
