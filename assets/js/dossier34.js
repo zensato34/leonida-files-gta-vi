@@ -54,38 +54,6 @@ async function loadAutoNewsFeed(){
 }
 
 
-// Lanzamiento regional: la primera zona UTC+14 abre antes que PS Store España (CET).
-(function(){
- const target=Date.parse('2026-11-18T23:00:00Z');
- const firstRegionalRelease=Date.parse('2026-11-18T10:00:00Z');
- const root=document.getElementById('releaseCountdown');
- if(!root)return;
- const ids={days:document.getElementById('cdDays'),hours:document.getElementById('cdHours'),minutes:document.getElementById('cdMinutes'),seconds:document.getElementById('cdSeconds')};
- const status=document.getElementById('countdownStatus');
- const title=root.querySelector('.countdown-title');
- const pad=n=>String(n).padStart(2,'0');
- function tick(){
-  const now=Date.now(),ms=target-now;
-  if(ms<=0){
-   Object.values(ids).forEach(node=>{if(node)node.textContent='00';});
-   root.classList.add('done');root.classList.remove('regional-live');root.dataset.releaseState='spain-window-reached';
-   if(status)status.textContent='Ventana de lanzamiento alcanzada';
-   if(title)title.textContent='PS Store España · ventana de desbloqueo alcanzada';
-   return false;
-  }
-  const total=Math.floor(ms/1000);
-  if(ids.days)ids.days.textContent=pad(Math.floor(total/86400));
-  if(ids.hours)ids.hours.textContent=pad(Math.floor(total%86400/3600));
-  if(ids.minutes)ids.minutes.textContent=pad(Math.floor(total%3600/60));
-  if(ids.seconds)ids.seconds.textContent=pad(total%60);
-  const regional=now>=firstRegionalRelease;
-  root.classList.toggle('regional-live',regional);root.dataset.releaseState=regional?'other-regions-live':'awaiting-regional-release';
-  if(status)status.textContent=regional?'Ya disponible en algunas regiones':'Apertura regional próxima';
-  if(title)title.textContent=regional?'Leonida ya abrió en otras regiones · PSN España pendiente':'Cuenta atrás para tu PS Store España';
-  return true;
- }
- if(tick()){const timer=setInterval(()=>{if(!tick())clearInterval(timer)},1000);}
-})();
 // Animaciones de entrada al desplazarse, respetando la preferencia de movimiento reducido.
 (function(){
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
