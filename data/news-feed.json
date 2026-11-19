@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:32:00.000Z",
+  "generated_at": "2026-11-19T12:53:00.000Z",
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación. Las entradas editoriales existentes se conservan y no se sustituyen por duplicados RSS.",
   "items": [
     {
@@ -1824,13 +1824,79 @@
       "discovery_source": "Google News RSS",
       "discovery_locale": "es-419",
       "verification_required": true
+    },
+    {
+      "id": "gta-vi-xbox-cloud-gaming-xbox-one-lanzamiento-2026-11-19",
+      "title": "GTA VI llega a Xbox One mediante Xbox Cloud Gaming desde el lanzamiento",
+      "description": "Xbox confirma que desde el 19 de noviembre GTA VI puede jugarse en Xbox One por streaming mediante Xbox Cloud Gaming; la transmisión usa ajustes gráficos de Xbox Series S. Se requiere comprar el juego y la disponibilidad y las condiciones de juego en la nube varían por mercado.",
+      "url": "https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/",
+      "source": "Xbox Wire",
+      "published_at": "2026-11-10",
+      "date": "2026-11-10",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "ps5-firmware-obligatorio-gta-vi-lanzamiento-2026-11-18",
+      "title": "PlayStation exige actualizar el software de PS5 antes de jugar GTA VI",
+      "description": "PlayStation Support US indicó que una actualización del software del sistema PS5 es obligatoria antes de jugar GTA VI y pidió instalarla antes del 19 de noviembre. El aviso oficial no especifica versión ni tamaño; se trata de firmware de la consola, no de un parche del juego.",
+      "url": "https://x.com/PS_Support_US/status/2122863683881619685",
+      "source": "PlayStation Support US (X)",
+      "published_at": "2026-11-18",
+      "date": "2026-11-18",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-ajustes-controles-accesibilidad-rockstar-support-2026-11-18",
+      "title": "Rockstar Support detalla los ajustes de control, cámara y accesibilidad de GTA VI",
+      "description": "La guía oficial, actualizada el 18 de noviembre, enumera perfiles de control para caminar, apuntar, combate cuerpo a cuerpo, vehículos terrestres y acuáticos, aeronaves, bicicleta, natación y paracaídas; también describe opciones de cámara, interfaz, audio y accesibilidad.",
+      "url": "https://support.rockstargames.com/articles/4jUHNdP22SmaKSF8DWqhXC/how-to-change-grand-theft-auto-vi-settings",
+      "source": "Rockstar Support",
+      "published_at": "2026-11-18",
+      "date": "2026-11-18",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-escalado-fsr-resolucion-consolas-vgc-2026-11-19",
+      "title": "VGC publica detalles del escalado gráfico de GTA VI por consola",
+      "description": "VGC cita una declaración de responsables técnicos de Rockstar: el objetivo es 30 FPS; PS5 y Xbox Series X escalan desde 1440p a 4K con TAA propio, Series S desde 720p a 1080p con AMD FSR 4 y PS5 Pro desde 1440p a 4K con PSSR2. El medio también recoge pruebas de Digital Foundry que señalan dificultades para mantener 30 FPS estables en Series S.",
+      "url": "https://www.videogameschronicle.com/news/the-xbox-series-s-version-of-gta-6-is-seemingly-the-first-to-use-amds-fsr-4-1-upscaling/",
+      "source": "VGC (declaración técnica de Rockstar y análisis de Digital Foundry)",
+      "published_at": "2026-11-19",
+      "date": "2026-11-19",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
+      "id": "gta-vi-dardos-minijuegos-declaracion-rob-nelson-vgc-2026-11-19",
+      "title": "Rob Nelson explica por qué GTA VI no incluye dardos",
+      "description": "En una entrevista con VGC, el productor y cojefe de Rockstar North explicó que el estudio no incluyó dardos porque no logró llevar la actividad al nivel de calidad deseado. Señaló que priorizaron interacciones con mecánicas más trabajadas, como el billar con físicas, las pesas y el baloncesto libre.",
+      "url": "https://www.videogameschronicle.com/news/rockstar-explains-why-you-cant-play-darts-in-gta-6-we-dont-have-unlimited-time/",
+      "source": "VGC (entrevista a Rob Nelson, Rockstar North)",
+      "published_at": "2026-11-19",
+      "date": "2026-11-19",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
+      "id": "gta-vi-casa-san-andreas-definitive-edition-posible-easter-egg-2026-11-18",
+      "title": "Una casa de GTA VI podría coincidir con una imagen de San Andreas Definitive Edition",
+      "description": "VGC recoge una comparación de fans entre una casa de GTA VI y una imagen exclusiva de Grand Theft Auto: San Andreas – The Definitive Edition (2021). La similitud podría ser una pista temprana, pero no demuestra que fuera un adelanto intencional ni ha sido confirmada por Rockstar.",
+      "url": "https://www.videogameschronicle.com/news/gta-6-players-discover-our-real-first-look-at-the-game-was-likely-hidden-in-a-2021-remaster/",
+      "source": "VGC (hallazgo de la comunidad)",
+      "published_at": "2026-11-18",
+      "date": "2026-11-18",
+      "kind": "rumor",
+      "status": "Pendiente de verificación"
     }
   ],
   "diagnostics": {
     "queries": 12,
     "failed_queries": 0,
     "new_discoveries_considered": 60,
-    "total_preserved_items": 133,
-    "editorial_entries_added": 7
+    "total_preserved_items": 139,
+    "editorial_entries_added": 13
   }
 }
