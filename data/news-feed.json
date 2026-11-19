@@ -1,7 +1,73 @@
 {
-  "generated_at": "2026-11-18T20:53:03.520615+00:00",
+  "generated_at": "2026-11-19T12:25:23.000Z",
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación. Las entradas editoriales existentes se conservan y no se sustituyen por duplicados RSS.",
   "items": [
+    {
+      "id": "gta-vi-disponible-ps5-playstation-store-espana-2026-11-19",
+      "title": "Grand Theft Auto VI ya está disponible en PlayStation Store España",
+      "description": "La ficha oficial de PS5 ya permite añadir el juego al carrito; la Standard figura a 79,99 € y la Ultimate a 99,99 € en la región España.",
+      "url": "https://store.playstation.com/es-es/product/EP1004-PPSA01547_00-GTAVISTANDARD001",
+      "source": "PlayStation Store España",
+      "published_at": "2026-11-18T23:00:00Z",
+      "date": "2026-11-19",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-buckme-limites-progresion-historia-2026-11-19",
+      "title": "Rockstar Support explica los límites de BuckMe en GTA VI",
+      "description": "Los topes de BuckMe Checking y Family Savings aumentan al avanzar en la historia principal; los pagos pendientes se procesan al ampliar la cuenta.",
+      "url": "https://support.rockstargames.com/articles/5hSbxodEFeNbU1wARy1p4X/cannot-put-any-more-money-in-your-buckme-account-in-grand-theft-auto-vi",
+      "source": "Rockstar Support",
+      "published_at": "2026-11-19",
+      "date": "2026-11-19",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-critica-internacional-lanzamiento-guardian-2026-11-19",
+      "title": "La crítica recibe GTA VI con reseñas sobresalientes en su estreno",
+      "description": "The Guardian recoge reseñas máximas de IGN, GamesRadar+ y otros medios; cita un Metascore de 99/100 al publicarse y destaca Leonida, la conducción y la relación entre Jason y Lucia.",
+      "url": "https://www.theguardian.com/games/2026/nov/19/grand-theft-auto-vi-critics-response-masterpiece",
+      "source": "The Guardian",
+      "published_at": "2026-11-19T04:00:00Z",
+      "date": "2026-11-19",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
+      "id": "sam-houser-mensaje-lanzamiento-gta-vi-gamesradar-2026-11-19",
+      "title": "Sam Houser comparte un mensaje de bienvenida a Leonida por el lanzamiento de GTA VI",
+      "description": "El presidente de Rockstar agradece a la comunidad y dice que espera compartir estas experiencias durante muchos años; el mensaje fue facilitado a GamesRadar+.",
+      "url": "https://www.gamesradar.com/games/grand-theft-auto/as-gta-6-finally-releases-rockstar-boss-sam-houser-issues-rare-statement-we-are-incredibly-grateful-and-look-forward-to-many-more-years-of-sharing-these-experiences-with-you/",
+      "source": "GamesRadar+",
+      "published_at": "2026-11-19",
+      "date": "2026-11-19",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
+      "id": "gta-vi-sin-mecanica-prostitucion-nme-2026-11-19",
+      "title": "NME informa que GTA VI no incluye la mecánica de prostitución de entregas anteriores",
+      "description": "El medio atribuye a Rockstar una explicación vinculada a la historia de Jason y Lucia; los encuentros íntimos entre ambos se describen como interacciones contextuales.",
+      "url": "https://www.nme.com/news/gaming-news/gta-6-no-prostitution-grand-theft-auto-cheat-strip-relationship-nsfw-3976380",
+      "source": "NME",
+      "published_at": "2026-11-19",
+      "date": "2026-11-19",
+      "kind": "reported",
+      "status": "Reportado"
+    },
+    {
+      "id": "gta-vi-the-album-apple-music-us-fecha-20-nov-2026",
+      "title": "Apple Music EE. UU. muestra The Album para el 20 de noviembre, un día después de la fecha de Rockstar",
+      "description": "La ficha estadounidense de Apple Music aparece como pre-lanzamiento para el 20/11/2026, mientras la página oficial de Rockstar mantiene el 19/11; falta confirmar si es una diferencia regional o un cambio de distribución.",
+      "url": "https://music.apple.com/us/album/grand-theft-auto-vi-the-album/6812476961",
+      "source": "Apple Music EE. UU.",
+      "published_at": "2026-11-19",
+      "date": "2026-11-19",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
+    },
     {
       "id": "the-full-gta-6-soundtrack-reportedly-leaked-see-all-artists-and-tracks-m-c14069f6ceff",
       "title": "The full 'GTA 6' soundtrack reportedly leaked: See all artists and tracks - Mashable",
@@ -1753,6 +1819,7 @@
     "queries": 12,
     "failed_queries": 0,
     "new_discoveries_considered": 60,
-    "total_preserved_items": 126
+    "total_preserved_items": 132,
+    "editorial_entries_added": 6
   }
 }
