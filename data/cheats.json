@@ -1,0 +1,733 @@
+{
+  "schema_version": 1,
+  "dataset": "cheats",
+  "reviewed_at": "2026-11-20",
+  "claimedTotal": 61,
+  "methodology": "Códigos post-lanzamiento atribuidos a guías. Las secuencias no publicadas permanecen vacías; no se adivinan ni se reutilizan códigos de GTA V.",
+  "generalRules": [
+    {
+      "title": "Desbloqueo",
+      "text": "Las guías indican que hay que completar las 91 misiones de la historia; cada truco tiene además su propio objetivo."
+    },
+    {
+      "title": "Entrada del código",
+      "text": "PS5: pulsa ↑ en la cruceta para abrir el teléfono, mantén L1 y pulsa R1, y luego introduce la secuencia. Xbox: LB + RB."
+    },
+    {
+      "title": "Desactivar",
+      "text": "La guía indica que volver a introducir la misma secuencia desactiva el truco."
+    },
+    {
+      "title": "Riesgo",
+      "text": "Mientras un truco está activo, las guías indican que no se puede guardar ni obtener trofeos/logros en esa sesión."
+    },
+    {
+      "title": "Recuento",
+      "text": "GTA Scoop informa 61 trucos; PC Gamer publica una tabla propia y reconoce que algunos códigos o requisitos aún no se conocen. El recuento puede variar."
+    }
+  ],
+  "items": [
+    {
+      "id": "cash-250k",
+      "name": "$250,000",
+      "category": "player",
+      "sequence": [
+        "↑",
+        "→",
+        "↓",
+        "←",
+        "↑",
+        "←",
+        "↓",
+        "→"
+      ],
+      "unlock": "GTA Scoop indica completar la historia; PC Gamer no especifica el requisito individual.",
+      "unlockStatus": "discrepancy",
+      "effect": "Añade $250,000.",
+      "sourceIds": [
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "drunk",
+      "name": "Modo borracho",
+      "category": "player",
+      "sequence": [
+        "↑",
+        "←",
+        "→",
+        "↑",
+        "↑",
+        "←",
+        "→",
+        "↑",
+        "←",
+        "→"
+      ],
+      "unlock": "Gastar $2,500 en alcohol.",
+      "unlockStatus": "reported",
+      "effect": "Activa el efecto de embriaguez.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "raise-heat",
+      "name": "Subir nivel Heat",
+      "category": "player",
+      "sequence": [
+        "←",
+        "↓",
+        "→",
+        "↓",
+        "↑",
+        "↓",
+        "↑"
+      ],
+      "unlock": "GTA Scoop dice perder una búsqueda de 3 estrellas 25 veces; PC Gamer no concreta el requisito.",
+      "unlockStatus": "discrepancy",
+      "effect": "Aumenta el Heat.",
+      "sourceIds": [
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "raise-wanted",
+      "name": "Subir nivel de búsqueda",
+      "category": "player",
+      "sequence": [
+        "←",
+        "↓",
+        "→",
+        "↓",
+        "↑",
+        "→",
+        "↑"
+      ],
+      "unlock": "Perder una búsqueda de 3 estrellas 50 veces (PC Gamer).",
+      "unlockStatus": "reported",
+      "effect": "Aumenta el nivel de búsqueda.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "unlimited-focus",
+      "name": "Focus ilimitado",
+      "category": "player",
+      "sequence": [
+        "↓",
+        "↑",
+        "↑",
+        "↓",
+        "↑",
+        "↓",
+        "↑",
+        "↓",
+        "↑",
+        "→"
+      ],
+      "unlock": "Disponible tras completar la historia; PC Gamer no concreta una prueba individual.",
+      "unlockStatus": "partial",
+      "effect": "Mantiene Focus activo.",
+      "sourceIds": [
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "no-fall-damage",
+      "name": "Sin daño por caída",
+      "category": "player",
+      "sequence": null,
+      "unlock": "Sobrevivir a 20 caídas libres desde 40 pies.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Evita el daño por caída.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "parachute",
+      "name": "Paracaídas",
+      "category": "player",
+      "sequence": null,
+      "unlock": "Completar 50 saltos BASE desde más de 300 pies.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Obtiene un paracaídas.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "body-armor",
+      "name": "Blindaje corporal",
+      "category": "player",
+      "sequence": [
+        "↓",
+        "↑",
+        "←",
+        "↑",
+        "↑",
+        "↑",
+        "↑",
+        "↑",
+        "↓",
+        "↓"
+      ],
+      "unlock": "Completar 100 entrenamientos.",
+      "unlockStatus": "reported",
+      "effect": "Otorga protección corporal.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "repair-vehicle",
+      "name": "Reparar vehículo",
+      "category": "player",
+      "sequence": null,
+      "unlock": "Ganar 10 carreras en Gellhorn Raceway, Thrillby Mud Club y Boone Speedway.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Repara el vehículo actual.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "unlimited-nitrous",
+      "name": "Nitro ilimitado",
+      "category": "player",
+      "sequence": null,
+      "unlock": "Completar 50 saltos acrobáticos.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Permite uso ilimitado de nitro.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "max-ammo",
+      "name": "Munición máxima",
+      "category": "combat",
+      "sequence": [
+        "↓",
+        "↑",
+        "→",
+        "↓",
+        "←",
+        "←",
+        "↑",
+        "↑",
+        "↓",
+        "←"
+      ],
+      "unlock": "Obtener 20 medallas de bronce o superiores en campos de tiro.",
+      "unlockStatus": "reported",
+      "effect": "Rellena la munición.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "infinite-ammo",
+      "name": "Munición infinita",
+      "category": "combat",
+      "sequence": [
+        "↓",
+        "↑",
+        "→",
+        "↓",
+        "←",
+        "←",
+        "↑",
+        "↓",
+        "↓",
+        "↓"
+      ],
+      "unlock": "Obtener 25 medallas de plata o superiores en campos de tiro.",
+      "unlockStatus": "reported",
+      "effect": "Munición infinita.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "no-reload",
+      "name": "Sin recarga",
+      "category": "combat",
+      "sequence": [
+        "↓",
+        "↑",
+        "→",
+        "↓",
+        "←",
+        "←",
+        "↑",
+        "↓",
+        "↓",
+        "↑"
+      ],
+      "unlock": "Obtener 25 medallas de oro en campos de tiro.",
+      "unlockStatus": "reported",
+      "effect": "Elimina la necesidad de recargar.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "all-explosives",
+      "name": "Todas las armas explosivas",
+      "category": "combat",
+      "sequence": null,
+      "unlock": "Lanzar 100 granadas.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Desbloquea armas explosivas.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "incendiary-ammo",
+      "name": "Munición incendiaria",
+      "category": "combat",
+      "sequence": null,
+      "unlock": "Quemar a 100 enemigos con daño de fuego.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Añade efecto incendiario.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "exploding-bottles",
+      "name": "Botellas explosivas",
+      "category": "combat",
+      "sequence": null,
+      "unlock": "Lanzar 100 cócteles molotov.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Efecto explosivo para botellas.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "explosive-shotgun",
+      "name": "Escopeta explosiva",
+      "category": "combat",
+      "sequence": null,
+      "unlock": "Golpear a 100 enemigos con daño explosivo.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Efecto explosivo para escopeta.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "hauners-hat",
+      "name": "Hauners H-AT",
+      "category": "combat",
+      "sequence": null,
+      "unlock": "Destruir 100 vehículos.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Truco de combate citado por PC Gamer.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "attack-force",
+      "name": "Fuerza de ataque",
+      "category": "combat",
+      "sequence": [
+        "↓",
+        "↑",
+        "←",
+        "←",
+        "→",
+        "↓",
+        "↓",
+        "↑",
+        "↓"
+      ],
+      "unlock": "Requisito individual no especificado.",
+      "unlockStatus": "unknown",
+      "effect": "Efecto descrito como Attack Force.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "exploding-balls",
+      "name": "Balones explosivos",
+      "category": "combat",
+      "sequence": [
+        "↓",
+        "↑",
+        "←",
+        "←",
+        "→",
+        "↓",
+        "↓",
+        "↑",
+        "→"
+      ],
+      "unlock": "Requisito individual no especificado.",
+      "unlockStatus": "unknown",
+      "effect": "Hace explosivos los balones.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "vehicle-force",
+      "name": "Fuerza vehicular",
+      "category": "combat",
+      "sequence": [
+        "↓",
+        "↑",
+        "←",
+        "←",
+        "→",
+        "↓",
+        "←",
+        "↑",
+        "↓"
+      ],
+      "unlock": "Matar a 25 enemigos con un vehículo.",
+      "unlockStatus": "reported",
+      "effect": "Efecto de combate asociado a vehículos.",
+      "sourceIds": [
+        "src-062"
+      ]
+    },
+    {
+      "id": "spawn-interstate-ambulance",
+      "name": "Interstate Ambulance",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: discover the Interstate Ambulance in the Progress menu.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Interstate Ambulance.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-airboat-09",
+      "name": "Airboat 09",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete 5 survival challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Airboat 09.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-bravado-banshee",
+      "name": "Bravado Banshee",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout. Also a spawn cheat (unlock: complete all combat challenges).",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Bravado Banshee.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-tuff-bmx",
+      "name": "Tuff BMX",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete 5 fitness challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Tuff BMX.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-maibatsu-boomazoom",
+      "name": "Maibatsu Boomazoom",
+      "category": "vehicle",
+      "sequence": [
+        "←",
+        "↑",
+        "→",
+        "↓",
+        "←",
+        "←",
+        "↑",
+        "←"
+      ],
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete 5 shopping challenges.",
+      "unlockStatus": "sequence_published",
+      "effect": "Aparece el vehículo Maibatsu Boomazoom.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-nagasaki-carbon-rs",
+      "name": "Nagasaki Carbon RS",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete all exploration challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Nagasaki Carbon RS.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-65-vapid-dominator",
+      "name": "'65 Vapid Dominator",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete all fitness challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo '65 Vapid Dominator.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-progen-emerus",
+      "name": "Progen Emerus",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete all vehicle challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Progen Emerus.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-inflatable-flamingo",
+      "name": "Inflatable Flamingo",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: destroy 50 cocaine flamingos.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Inflatable Flamingo.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-mtl-pumper",
+      "name": "MTL Pumper",
+      "category": "vehicle",
+      "sequence": [
+        "←",
+        "↑",
+        "→",
+        "↓",
+        "←",
+        "→",
+        "→",
+        "↑"
+      ],
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: discover the MTL Pumper in the Progress menu.",
+      "unlockStatus": "sequence_published",
+      "effect": "Aparece el vehículo MTL Pumper.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-vapid-stanier-g2-taxi",
+      "name": "Vapid Stanier G2 Taxi",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete 5 sports challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Vapid Stanier G2 Taxi.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-hauners-p-996-lazer",
+      "name": "Hauners P-996 Lazer",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat (unlock: complete all challenges). Also parked on the north side of Mile Zero Air Station; taking it brings a 4-star wanted level and two pursuing jets.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Hauners P-996 Lazer.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-hvy-bulldozer",
+      "name": "HVY Bulldozer",
+      "category": "vehicle",
+      "sequence": [
+        "←",
+        "↑",
+        "→",
+        "↓",
+        "←",
+        "→",
+        "→",
+        "↓"
+      ],
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: discover the HVY Bulldozer in the Progress menu.",
+      "unlockStatus": "sequence_published",
+      "effect": "Aparece el vehículo HVY Bulldozer.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-lapwing-mallard",
+      "name": "Lapwing Mallard",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat (unlock: complete 5 vehicle challenges). nettoge reports it also becomes your own plane after the Kyle McKittrick storyline.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Lapwing Mallard.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-brimstone-golfer",
+      "name": "Brimstone Golfer",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete all sports challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Brimstone Golfer.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-hauners-rhino-tank",
+      "name": "Hauners Rhino Tank",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat (unlock: complete all survival challenges). Can also be taken from Mile Zero Air Station, which triggers a wanted level; a trophy is tied to stealing it.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Hauners Rhino Tank.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-maibatsu-sanchez",
+      "name": "Maibatsu Sanchez",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete 5 criminal challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Maibatsu Sanchez.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-nagasaki-sea-sparrow",
+      "name": "Nagasaki Sea Sparrow",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat (unlock: complete 5 exploration challenges). nettoge reports one is taken from the Kingfishers during the mission SWAMPED.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Nagasaki Sea Sparrow.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-speeder-700-gt",
+      "name": "Speeder 700 GT",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete 5 combat challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Speeder 700 GT.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-truffade-thrax",
+      "name": "Truffade Thrax",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete all shopping challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Truffade Thrax.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    },
+    {
+      "id": "spawn-western-zombie-bobber",
+      "name": "Western Zombie Bobber",
+      "category": "vehicle",
+      "sequence": null,
+      "unlock": "Spawn cheat, usable after the story ends; unlock condition: complete all criminal challenges.",
+      "unlockStatus": "sequence_not_published",
+      "effect": "Aparece el vehículo Western Zombie Bobber.",
+      "sourceIds": [
+        "src-057",
+        "src-062",
+        "src-063"
+      ]
+    }
+  ],
+  "sources": [
+    "src-062",
+    "src-063",
+    "src-057"
+  ]
+}
