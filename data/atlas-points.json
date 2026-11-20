@@ -1,0 +1,690 @@
+{
+  "schema_version": 1,
+  "dataset": "atlas-points",
+  "reviewed_at": "2026-11-20",
+  "description": "Directorio asociado al póster oficial y a hallazgos de terceros. No contiene coordenadas ni pins dibujados sobre la imagen. Los condados solo se asignan cuando una fuente atribuye la localidad de forma explícita.",
+  "countyOptions": [
+    "Lummox County",
+    "Leonard County",
+    "Kelly County",
+    "Vice-Dale County",
+    "Mariana County"
+  ],
+  "regionOptions": [
+    {
+      "id": "vice-city",
+      "name": "Vice City"
+    },
+    {
+      "id": "leonida-keys",
+      "name": "Leonida Keys"
+    },
+    {
+      "id": "grassrivers",
+      "name": "Grassrivers"
+    },
+    {
+      "id": "port-gellhorn",
+      "name": "Port Gellhorn"
+    },
+    {
+      "id": "ambrosia",
+      "name": "Ambrosia"
+    },
+    {
+      "id": "mount-kalaga-national-park",
+      "name": "Mount Kalaga"
+    }
+  ],
+  "externalMaps": [
+    {
+      "name": "GTA Scoop · mapa interactivo",
+      "url": "https://gtascoop.com/map/",
+      "summary": "583 ubicaciones en su última revisión: 213 clasificadas a partir de material oficial y 370 marcadores comunitarios."
+    },
+    {
+      "name": "GTABase · mapa interactivo",
+      "url": "https://www.gtabase.com/gta-6/map/",
+      "summary": "Capas de lugares, servicios, actividades y progreso; mapa externo de terceros."
+    }
+  ],
+  "items": [
+    {
+      "id": "map-bonanza",
+      "name": "Bonanza",
+      "type": "locality",
+      "typeLabel": "Localidad",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-grayson",
+      "name": "Grayson",
+      "type": "locality",
+      "typeLabel": "Localidad",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-millport",
+      "name": "Millport",
+      "type": "locality",
+      "typeLabel": "Localidad",
+      "county": "Lummox County",
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": [
+        "src-065"
+      ]
+    },
+    {
+      "id": "map-port-gellhorn",
+      "name": "Port Gellhorn",
+      "type": "town",
+      "typeLabel": "Ciudad / puerto",
+      "county": null,
+      "region": "port-gellhorn",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-ambrosia",
+      "name": "Ambrosia",
+      "type": "place",
+      "typeLabel": "Localidad",
+      "county": null,
+      "region": "ambrosia",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-belville",
+      "name": "Belville",
+      "type": "locality",
+      "typeLabel": "Localidad",
+      "county": "Leonard County",
+      "region": "ambrosia",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": [
+        "src-065"
+      ]
+    },
+    {
+      "id": "map-vice-city",
+      "name": "Vice City",
+      "type": "city",
+      "typeLabel": "Ciudad",
+      "county": null,
+      "region": "vice-city",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-vice-beach",
+      "name": "Vice Beach",
+      "type": "district",
+      "typeLabel": "Distrito costero",
+      "county": null,
+      "region": "vice-city",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-waning-sands",
+      "name": "Waning Sands",
+      "type": "district",
+      "typeLabel": "Zona costera",
+      "county": null,
+      "region": "vice-city",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-hamlet",
+      "name": "Hamlet",
+      "type": "locality",
+      "typeLabel": "Localidad",
+      "county": "Mariana County",
+      "region": "vice-city",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": [
+        "src-065"
+      ]
+    },
+    {
+      "id": "map-watson-bay",
+      "name": "Watson Bay",
+      "type": "bay",
+      "typeLabel": "Bahía",
+      "county": null,
+      "region": "grassrivers",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-southwind",
+      "name": "Southwind",
+      "type": "locality",
+      "typeLabel": "Localidad",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-capri",
+      "name": "Capri",
+      "type": "locality",
+      "typeLabel": "Localidad",
+      "county": null,
+      "region": "grassrivers",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-key-lento",
+      "name": "Key Lento",
+      "type": "island_settlement",
+      "typeLabel": "Localidad / cayos",
+      "county": null,
+      "region": "leonida-keys",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-mile-zero-air-station",
+      "name": "Mile Zero Air Station",
+      "type": "airfield",
+      "typeLabel": "Aeródromo",
+      "county": "Mariana County",
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Nombre visible en el mapa oficial de Leonida.",
+      "details": "El póster confirma el nombre, no aporta una coordenada digital. El condado se deja sin asignar cuando no hay una atribución clara.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": [
+        "src-065"
+      ]
+    },
+    {
+      "id": "map-mount-kalaga-national-park",
+      "name": "Mount Kalaga National Park",
+      "type": "park",
+      "typeLabel": "Parque",
+      "county": null,
+      "region": "mount-kalaga-national-park",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-richard-barebone-state-park",
+      "name": "Richard Barebone State Park",
+      "type": "park",
+      "typeLabel": "Parque",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-lake-leonida",
+      "name": "Lake Leonida",
+      "type": "lake",
+      "typeLabel": "Lago",
+      "county": null,
+      "region": "ambrosia",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-draper-island",
+      "name": "Draper Island",
+      "type": "island",
+      "typeLabel": "Isla",
+      "county": null,
+      "region": "port-gellhorn",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-hyde-island",
+      "name": "Hyde Island",
+      "type": "island",
+      "typeLabel": "Isla",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-featherstone-islands",
+      "name": "Featherstone Islands",
+      "type": "island_group",
+      "typeLabel": "Grupo de islas",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-frampton-islands",
+      "name": "Frampton Islands",
+      "type": "island_group",
+      "typeLabel": "Grupo de islas",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-zephyr-islands",
+      "name": "Zephyr Islands",
+      "type": "island_group",
+      "typeLabel": "Grupo de islas",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-pelican-valley",
+      "name": "Pelican Valley",
+      "type": "natural_area",
+      "typeLabel": "Área natural",
+      "county": null,
+      "region": "grassrivers",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-shoeless-keys",
+      "name": "Shoeless Keys",
+      "type": "island_group",
+      "typeLabel": "Cayos",
+      "county": null,
+      "region": "leonida-keys",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-riquezas-keys",
+      "name": "Riquezas Keys",
+      "type": "island_group",
+      "typeLabel": "Cayos",
+      "county": null,
+      "region": "leonida-keys",
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "map-crude-islands",
+      "name": "Crude Islands",
+      "type": "island_group",
+      "typeLabel": "Grupo de islas",
+      "county": null,
+      "region": null,
+      "evidence": "official_map_label",
+      "evidenceLabel": "Rótulo del póster de Rockstar",
+      "spoiler": false,
+      "summary": "Topónimo o hito impreso en el póster oficial.",
+      "details": "Nombre reconocido en el mapa; no se ha inferido una coordenada jugable.",
+      "sourceIds": [
+        "src-034"
+      ],
+      "countySourceIds": []
+    },
+    {
+      "id": "easter-red-dead-millport",
+      "name": "Jacob’s Tavern · referencia a Red Dead",
+      "type": "easter_egg",
+      "typeLabel": "Easter egg",
+      "county": "Lummox County",
+      "region": null,
+      "evidence": "reported",
+      "evidenceLabel": "Reportado por guía comunitaria",
+      "spoiler": true,
+      "summary": "Un guiño a Red Dead se reporta dentro de Jacob’s Tavern en Millport.",
+      "details": "La misma guía menciona una novela western sobre un vaquero de New Austin. Atribuido a GTA Scoop; conviene reproducirlo en partida.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "red-dead-millport"
+    },
+    {
+      "id": "easter-jason-liberty-city",
+      "name": "Referencia a Liberty City en casa de Jason",
+      "type": "easter_egg",
+      "typeLabel": "Easter egg",
+      "county": null,
+      "region": "leonida-keys",
+      "evidence": "reported",
+      "evidenceLabel": "Reportado por guía comunitaria",
+      "spoiler": true,
+      "summary": "Se reporta una referencia a Liberty City en la mesa del comedor de Jason.",
+      "details": "La guía la sitúa durante la exploración de su casa al inicio del capítulo 1.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "jason-liberty-city-table"
+    },
+    {
+      "id": "easter-dexter-trinity",
+      "name": "Trinity Apartments · Dexter",
+      "type": "easter_egg",
+      "typeLabel": "Easter egg",
+      "county": null,
+      "region": "vice-city",
+      "evidence": "reported",
+      "evidenceLabel": "Reportado por guía comunitaria",
+      "spoiler": true,
+      "summary": "Bloque residencial en Washington Island, junto a Washington Beach.",
+      "details": "La guía informa que se puede acceder a la azotea y encontrar un kit temático; el apartamento no se puede visitar por dentro.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "dexter-apartment"
+    },
+    {
+      "id": "easter-belville-house",
+      "name": "Casa de Belville · foto de San Andreas",
+      "type": "easter_egg",
+      "typeLabel": "Easter egg",
+      "county": "Leonard County",
+      "region": "ambrosia",
+      "evidence": "reported",
+      "evidenceLabel": "Reportado por guía comunitaria",
+      "spoiler": true,
+      "summary": "La casa de una fotografía de San Andreas: The Definitive Edition se identifica en Belville.",
+      "details": "La guía describe notas de un residente que cree vivir dentro de un videojuego.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "belville-house"
+    },
+    {
+      "id": "easter-ufo-starlet",
+      "name": "Encuentro OVNI · Starlet Motel",
+      "type": "easter_egg",
+      "typeLabel": "Encuentro / easter egg",
+      "county": "Kelly County",
+      "region": "port-gellhorn",
+      "evidence": "reported",
+      "evidenceLabel": "Reportado; ubicación aproximada",
+      "spoiler": true,
+      "summary": "Se reporta un evento nocturno en caminos rurales al este de Port Gellhorn, cerca del Starlet Motel.",
+      "details": "La guía lo sitúa desde el capítulo 2, pasada la medianoche (con más reportes después de las 2:00 a. m. del juego). Sigue el coche con luces intermitentes y el rastro hacia el bosque.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "ufo-starlet"
+    },
+    {
+      "id": "easter-tv-tower-eggs",
+      "name": "Nido en la torre de televisión",
+      "type": "easter_egg",
+      "typeLabel": "Easter egg",
+      "county": "Vice-Dale County",
+      "region": "vice-city",
+      "evidence": "reported",
+      "evidenceLabel": "Reportado; torre exacta pendiente",
+      "spoiler": true,
+      "summary": "Se describe un nido con huevos en lo alto de la torre de televisión más alta.",
+      "details": "La guía afirma que tomar y lanzar un huevo provoca una escena breve. La torre exacta no tiene pin confirmado.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "tv-tower-eggs"
+    },
+    {
+      "id": "encounter-skunk-ape",
+      "name": "Skunk Ape · línea de Kirk",
+      "type": "encounter",
+      "typeLabel": "Encuentro / misión",
+      "county": "Mariana County",
+      "region": "grassrivers",
+      "evidence": "reported",
+      "evidenceLabel": "Reportado por guías",
+      "spoiler": true,
+      "summary": "La línea Strangers & Freaks de Kirk lleva a investigar al Skunk Ape.",
+      "details": "La guía menciona un volante de Kirk en Skeeter’s Bar, Hamlet, y un posible encuentro temprano desde el muelle de la casa de Jason.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "skunk-ape"
+    },
+    {
+      "id": "secret-pelican-outpost",
+      "name": "Puesto de investigación de Pelican Valley",
+      "type": "secret",
+      "typeLabel": "Secreto / acertijo",
+      "county": "Mariana County",
+      "region": "grassrivers",
+      "evidence": "reported",
+      "evidenceLabel": "Reportado por guía comunitaria",
+      "spoiler": true,
+      "summary": "Acertijo en un puesto abandonado de Pelican Valley (Gullett Marsh), cerca de una torre de fracking.",
+      "details": "La guía describe un disyuntor exterior, contraseña CLEAVES, caja fuerte 0072 y teclado 0212 en la caseta del muelle. No hay pin exacto publicado.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "pelican-outpost"
+    },
+    {
+      "id": "rumour-mount-kalaga",
+      "name": "Meteorito de Mount Kalaga",
+      "type": "rumor",
+      "typeLabel": "Rumor / objeto",
+      "county": null,
+      "region": "mount-kalaga-national-park",
+      "evidence": "rumor",
+      "evidenceLabel": "Rumor sin confirmar",
+      "spoiler": true,
+      "summary": "Jugadores reportan un meteorito en un campamento al este de Mount Kalaga.",
+      "details": "No hay función ni punto preciso confirmados.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "mount-kalaga-meteorite"
+    },
+    {
+      "id": "rumour-manifest-canyon",
+      "name": "Monumento de Manifest Canyon",
+      "type": "rumor",
+      "typeLabel": "Rumor / misterio",
+      "county": null,
+      "region": null,
+      "evidence": "rumor",
+      "evidenceLabel": "Rumor sin resolver",
+      "spoiler": true,
+      "summary": "Se reporta vibración del mando y pitidos que podrían ser código Morse.",
+      "details": "La placa supuestamente incluye símbolos y la palabra “Leonidafication”; no hay solución demostrada.",
+      "sourceIds": [
+        "src-064"
+      ],
+      "secretId": "manifest-canyon"
+    }
+  ]
+}
