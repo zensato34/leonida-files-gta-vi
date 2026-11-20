@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "dataset": "sources",
-  "reviewed_at": "2026-11-18",
+  "reviewed_at": "2026-11-20",
   "items": [
     {
       "id": "src-001",
@@ -450,6 +450,102 @@
       "url": "https://www.videogameschronicle.com/guide/gta-6-first-person-mode-explained-does-gta-6-have-a-first-person-mode/",
       "type": "recognized_media",
       "authority": "Guía de cámara de VGC publicada el 18/11/2026; referencia externa."
+    },
+    {
+      "id": "src-057",
+      "name": "Timesaver.gg · base de vehículos GTA VI (CC BY 4.0)",
+      "domain": "timesaver.gg",
+      "url": "https://timesaver.gg/tools/gta-6/cars",
+      "type": "third_party_open_dataset",
+      "authority": "Base comunitaria bajo CC BY 4.0; atribución y fuentes por campo conservadas. No son datos de Rockstar."
+    },
+    {
+      "id": "src-058",
+      "name": "PowerPyx · checklist de 100 % y escaneo de vehículos",
+      "domain": "powerpyx.com",
+      "url": "https://www.powerpyx.com/gta-6-100-completion-checklist-guide/",
+      "type": "recognized_media",
+      "authority": "Guía post-lanzamiento; 200 de 277 modelos base escaneados para completar el requisito de vehículos."
+    },
+    {
+      "id": "src-059",
+      "name": "nettoge · estadísticas WAiNK de vehículos",
+      "domain": "nettoge.com",
+      "url": "https://nettoge.com/gta6-fastest-car/",
+      "type": "third_party_guide",
+      "authority": "Lecturas comunitarias de barras del panel del juego; fuente única para muchas cifras, pendientes de segunda corroboración."
+    },
+    {
+      "id": "src-060",
+      "name": "Push Square · ubicaciones y entregas de vehículos",
+      "domain": "pushsquare.com",
+      "url": "https://www.pushsquare.com/guides/gta-6-moses-vehicle-drop-off-locations",
+      "type": "recognized_media",
+      "authority": "Guía post-lanzamiento de ubicaciones y entregas de vehículos."
+    },
+    {
+      "id": "src-061",
+      "name": "Game8 · catálogo y robo de vehículos",
+      "domain": "game8.co",
+      "url": "https://game8.co/games/GTA-6/archives/637023",
+      "type": "recognized_media",
+      "authority": "Guía post-lanzamiento para nombres, clases y obtención de vehículos."
+    },
+    {
+      "id": "src-062",
+      "name": "PC Gamer · trucos y códigos GTA VI",
+      "domain": "pcgamer.com",
+      "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-cheats-list/",
+      "type": "recognized_media",
+      "authority": "Guía actualizada el 19/11/2026; secuencias publicadas y requisitos conocidos. Algunos códigos siguen sin publicarse."
+    },
+    {
+      "id": "src-063",
+      "name": "GTA Scoop · trucos y desbloqueos",
+      "domain": "gtascoop.com",
+      "url": "https://gtascoop.com/guides/gta-6-cheats/",
+      "type": "third_party_guide",
+      "authority": "Guía comunitaria actualizada el 18/11/2026; informa 61 trucos y reconoce que no ha probado todas las secuencias."
+    },
+    {
+      "id": "src-064",
+      "name": "GTA Scoop · secretos y easter eggs",
+      "domain": "gtascoop.com",
+      "url": "https://gtascoop.com/guides/gta-6-easter-eggs-and-secrets/",
+      "type": "third_party_guide",
+      "authority": "Guía de hallazgos de jugadores actualizada el 20/11/2026; separa reportes, rumores y ubicaciones sin pin exacto."
+    },
+    {
+      "id": "src-065",
+      "name": "GTA Scoop · mapa interactivo comunitario",
+      "domain": "gtascoop.com",
+      "url": "https://gtascoop.com/map/",
+      "type": "third_party_map",
+      "authority": "Mapa fan actualizado el 19/11/2026: 583 ubicaciones, 213 clasificadas desde medios oficiales y 370 comunitarias; muchos marcadores siguen en revisión."
+    },
+    {
+      "id": "src-066",
+      "name": "GTA Playbook · vehículos identificados en material de Rockstar",
+      "domain": "gtaplaybook.com",
+      "url": "https://gtaplaybook.com/gta6/vehicles/",
+      "type": "third_party_catalog",
+      "authority": "Índice por fotogramas, capturas y timecodes; distingue nombres confirmados de vehículos solo descritos visualmente."
+    },
+    {
+      "id": "src-067",
+      "name": "GTABase · mapa interactivo de Leonida",
+      "domain": "gtabase.com",
+      "url": "https://www.gtabase.com/gta-6/map/",
+      "type": "third_party_map",
+      "authority": "Mapa interactivo y capas de terceros; usar como referencia externa, no copiar sus coordenadas o base de datos."
+    },
+    {
+      "id": "src-068",
+      "name": "GTADB · mapas de GTA",
+      "domain": "gtadb.io",
+      "url": "https://gtadb.io/tools/maps",
+      "type": "third_party_map",
+      "authority": "Directorio de mapas interactivos de la comunidad."
     }
   ]
 }
