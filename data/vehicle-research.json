@@ -1,0 +1,5785 @@
+{
+  "schema_version": 1,
+  "dataset": "vehicle-research",
+  "reviewed_at": "2026-11-20",
+  "metadata": {
+    "name": "GTA 6 vehicles: models, classes, in-game stats and how to get them",
+    "url": "https://timesaver.gg/tools/gta-6/cars",
+    "publisher": "Timesaver.gg",
+    "license": "CC BY 4.0",
+    "attribution": "Timesaver.gg GTA 6 Cars List, https://timesaver.gg/tools/gta-6/cars",
+    "checked": "2026-11-19T00:00:01Z",
+    "methodology": "Cada dato conserva sus IDs de fuente. Un nombre se considera corroborado solo con dos grupos editoriales post-lanzamiento independientes y sin derivación. Las estadísticas WAiNK son valores del panel del juego de 0 a 10, no velocidades físicas. Se excluyeron comparaciones con vehículos reales y afirmaciones anteriores al lanzamiento.",
+    "limitations": "El conjunto abierto contiene 90 registros, no los 277 modelos base completos. Los recuentos por clase son de un censo comunitario, no de una declaración de Rockstar. Muchos datos dependen de una sola guía.",
+    "dataCoverage": {
+      "listedModels": 90,
+      "baseModels": 277,
+      "modelsWithAnyPanelStats": 63,
+      "individualStatCounts": {
+        "speed": 63,
+        "acceleration": 58,
+        "handling": 57,
+        "offroad": 57,
+        "durability": 3
+      },
+      "standoutVariants": 280,
+      "standoutSets": 25,
+      "scansRequiredFor100Percent": 200
+    }
+  },
+  "totals": {
+    "base": {
+      "v": 277,
+      "src": [
+        "powerpyx-db",
+        "ppx-100"
+      ]
+    },
+    "standout": {
+      "v": 280,
+      "src": [
+        "powerpyx-db"
+      ]
+    },
+    "scanNeeded": {
+      "v": 200,
+      "src": [
+        "ppx-100"
+      ]
+    },
+    "groups": {
+      "v": {
+        "cars": 157,
+        "bikes": 29,
+        "watercraft": 28,
+        "aircraft": 16,
+        "service": 47
+      },
+      "src": [
+        "powerpyx-db"
+      ]
+    }
+  },
+  "classes": [
+    {
+      "id": "coupes",
+      "name": "Coupes",
+      "group": "cars",
+      "count": {
+        "v": 18,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "muscle-cars",
+      "name": "Muscle Cars",
+      "group": "cars",
+      "count": {
+        "v": 26,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "off-road",
+      "name": "Off-Road",
+      "group": "cars",
+      "count": {
+        "v": 8,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "pickups",
+      "name": "Pickups",
+      "group": "cars",
+      "count": {
+        "v": 17,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "sedans",
+      "name": "Sedans",
+      "group": "cars",
+      "count": {
+        "v": 29,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "sports-cars",
+      "name": "Sports Cars",
+      "group": "cars",
+      "count": {
+        "v": 13,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "supercars",
+      "name": "Supercars",
+      "group": "cars",
+      "count": {
+        "v": 9,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "suvs",
+      "name": "SUVs",
+      "group": "cars",
+      "count": {
+        "v": 23,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "vans",
+      "name": "Vans",
+      "group": "cars",
+      "count": {
+        "v": 14,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "bikes",
+      "name": "Bikes",
+      "group": "bikes",
+      "count": {
+        "v": 29,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "watercraft",
+      "name": "Watercraft",
+      "group": "watercraft",
+      "count": {
+        "v": 28,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "aircraft",
+      "name": "Aircraft",
+      "group": "aircraft",
+      "count": {
+        "v": 16,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "trucks",
+      "name": "Trucks",
+      "group": "service",
+      "count": {
+        "v": 11,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "utility",
+      "name": "Utility",
+      "group": "service",
+      "count": {
+        "v": 9,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "emergency",
+      "name": "Emergency",
+      "group": "service",
+      "count": {
+        "v": 7,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "military",
+      "name": "Military",
+      "group": "service",
+      "count": {
+        "v": 8,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "industrial",
+      "name": "Industrial",
+      "group": "service",
+      "count": {
+        "v": 6,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "group": "service",
+      "count": {
+        "v": 6,
+        "src": [
+          "powerpyx-db"
+        ]
+      }
+    }
+  ],
+  "standoutSets": [
+    {
+      "name": "Ultra-Luxe",
+      "count": 19
+    },
+    {
+      "name": "Street Racer",
+      "count": 16
+    },
+    {
+      "name": "Stock Car",
+      "count": 7
+    },
+    {
+      "name": "Race Bikes",
+      "count": 11
+    },
+    {
+      "name": "Demolition Derby",
+      "count": 6
+    },
+    {
+      "name": "Mudder",
+      "count": 6
+    },
+    {
+      "name": "Donks",
+      "count": 5
+    },
+    {
+      "name": "Lowriders",
+      "count": 5
+    },
+    {
+      "name": "Hot Rods",
+      "count": 10
+    },
+    {
+      "name": "Ripped & Shredded",
+      "count": 13
+    },
+    {
+      "name": "Retro",
+      "count": 20
+    },
+    {
+      "name": "All-Terrain",
+      "count": 17
+    },
+    {
+      "name": "Driveshaft Famous",
+      "count": 8
+    },
+    {
+      "name": "Chopper",
+      "count": 7
+    },
+    {
+      "name": "Topper",
+      "count": 6
+    },
+    {
+      "name": "Blinged Up",
+      "count": 15
+    },
+    {
+      "name": "Girlypop",
+      "count": 16
+    },
+    {
+      "name": "Patriot",
+      "count": 12
+    },
+    {
+      "name": "Swamp Style",
+      "count": 10
+    },
+    {
+      "name": "Leonida Man",
+      "count": 30
+    },
+    {
+      "name": "Fine Art",
+      "count": 17
+    },
+    {
+      "name": "Law & Order",
+      "count": 5
+    },
+    {
+      "name": "Clout Chaser",
+      "count": 8
+    },
+    {
+      "name": "Pedal Power",
+      "count": 6
+    },
+    {
+      "name": "Throwback",
+      "count": 5
+    }
+  ],
+  "mechanics": [
+    {
+      "id": "waink-scan",
+      "fact": "Pointing the WAiNK phone app at a vehicle logs the model in the Progress Database and shows its security type, sale value and registration fee.",
+      "sourceIds": [
+        "ppx-100",
+        "nettoge-sell",
+        "game8-steal"
+      ]
+    },
+    {
+      "id": "scan-200",
+      "fact": "The vehicle part of 100% completion needs 200 of the 277 base models scanned; Standout variants do not count, boats and aircraft do.",
+      "sourceIds": [
+        "ppx-100"
+      ]
+    },
+    {
+      "id": "chapter1-lock",
+      "fact": "During Chapter 1 Jason can only keep his own '70 Vapid Ganado as a personal car.",
+      "sourceIds": [
+        "comicbook-newcar",
+        "ppx-car",
+        "nettoge-personal"
+      ]
+    },
+    {
+      "id": "registration",
+      "fact": "After the Chapter 2 mission Moses in Port Gellhorn, a stolen car with no tracker can be registered as a personal vehicle for a fee through the Scooter Bros service.",
+      "sourceIds": [
+        "ppx-car",
+        "ppx-moses",
+        "nettoge-personal",
+        "game8-steal"
+      ]
+    },
+    {
+      "id": "slim-jim",
+      "fact": "Locked older cars are opened with the Slim Jim, a timed-input tool received in the Moses mission.",
+      "sourceIds": [
+        "ppx-moses",
+        "game8-steal",
+        "nettoge-steal"
+      ]
+    },
+    {
+      "id": "standard-tracker",
+      "fact": "A car with a standard tracker alerts police when taken; from Chapter 3 such cars can be sold or registered at a Pay 'n' Spray.",
+      "sourceIds": [
+        "ppx-car",
+        "nettoge-steal",
+        "nettoge-sell"
+      ]
+    },
+    {
+      "id": "advanced-tracker",
+      "fact": "Keyless high-end cars need the Key Cloner (from the Chapter 3 mission Clonin' Keys, Makin' Gs); an advanced tracker forces you to keep above a set speed until the drop-off.",
+      "sourceIds": [
+        "ppx-zorrusso",
+        "game8-steal",
+        "nettoge-steal"
+      ]
+    },
+    {
+      "id": "moses-fence",
+      "fact": "Moses in Port Gellhorn pays for untracked stolen cars (roughly $1,000 and up per PowerPyx) and offers 7 specific drop-off jobs; finishing all 7 earns his Emperor Sultan.",
+      "sourceIds": [
+        "ppx-money",
+        "pushsquare-moses",
+        "nettoge-sell"
+      ]
+    },
+    {
+      "id": "randy-list",
+      "fact": "Randy at Leonida Auto World in west Vice City pays the most, for a wish list of high-end cars; sources disagree on its length (16 named by PowerPyx's trophy guide and by nettoge, 18 per PowerPyx's money guide, 22 per Push Square's unfinished page); listed cars can also be taken off the street.",
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-randy",
+        "pushsquare-randy",
+        "ppx-money",
+        "promptowy-randy",
+        "gcl-randy"
+      ]
+    },
+    {
+      "id": "pns-payout",
+      "fact": "Reported Pay 'n' Spray payouts for standard-tracker cars differ inside PowerPyx itself: about $2,500+ (100% guide) vs about $4,000+ (money guide); Randy pays about $30,000-35,000+ for sports cars.",
+      "sourceIds": [
+        "ppx-100",
+        "ppx-money"
+      ]
+    },
+    {
+      "id": "fence-target",
+      "fact": "Completion tracking includes a $200,000 total for vehicles fenced.",
+      "sourceIds": [
+        "ppx-100"
+      ]
+    },
+    {
+      "id": "garages",
+      "fact": "There are 12 garages; 8 are purchasable, from $4,000 (Mitchell Auto Center) to $40,000 (Atlantic Court), $160,000 in total, opening after the Chapter 2 mission Daily Driver.",
+      "sourceIds": [
+        "ppx-garages",
+        "ppx-trophy"
+      ]
+    },
+    {
+      "id": "garage-slots",
+      "fact": "Personal vehicle capacity is reported differently: nettoge says 4 slots at first and more than 12 with garages; PowerPyx says 1 garage slot at first and 18 at most.",
+      "sourceIds": [
+        "nettoge-personal",
+        "ppx-garages"
+      ]
+    },
+    {
+      "id": "scooter-bros",
+      "fact": "The Scooter Bros app delivers registered vehicles; nettoge reports a $12,500 premium tier with 3 free deliveries a day and free impound recovery.",
+      "sourceIds": [
+        "nettoge-personal",
+        "ppx-car"
+      ]
+    },
+    {
+      "id": "fuel",
+      "fact": "Every vehicle uses fuel, refilled at 57 gas stations.",
+      "sourceIds": [
+        "ppx-gas"
+      ]
+    },
+    {
+      "id": "pay-n-spray",
+      "fact": "19 Pay 'n' Spray shops repair and repaint vehicles.",
+      "sourceIds": [
+        "ppx-pns"
+      ]
+    },
+    {
+      "id": "mod-shops",
+      "fact": "14 mod shops each serve a vehicle type (for example Euroform Automotive for luxury and supercars, Capri Classic for muscle, Wasteland Off-Road for trucks); 2 of them are Ultimate Edition only.",
+      "sourceIds": [
+        "ppx-modshops",
+        "nettoge-fastest",
+        "pushsquare-ue"
+      ]
+    },
+    {
+      "id": "stat-panel",
+      "fact": "The in-game vehicle panel shows Speed, Acceleration, Handling (asphalt), Handling (off-road) and Durability on a 0-10 scale, plus asphalt and off-road ratings.",
+      "sourceIds": [
+        "nettoge-emerus",
+        "nettoge-vitello",
+        "nettoge-vehicles"
+      ]
+    },
+    {
+      "id": "spawn-cheats",
+      "fact": "21 spawn-vehicle cheats exist; each is unlocked by a challenge and usable only after finishing the story.",
+      "sourceIds": [
+        "ppx-cheats",
+        "rps-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats"
+      ]
+    },
+    {
+      "id": "military-base",
+      "fact": "Mile Zero Air Station in Mariana County holds the tank, the P-996 Lazer and other military vehicles; entering brings a wanted level.",
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-military"
+      ]
+    },
+    {
+      "id": "gta-plus",
+      "fact": "GTA+ members get a Crosstown garage for selling stolen cars and higher sale prices, per nettoge.",
+      "sourceIds": [
+        "nettoge-sell",
+        "nettoge-vehicles"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "powerpyx-db",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-collectible-guide-progress-database/",
+      "title": "GTA 6 Collectible Guide (Progress Database)",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-cheats",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-all-cheats/",
+      "title": "GTA 6 All Cheats",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-100",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-100-completion-checklist-guide/",
+      "title": "GTA 6 100% Completion Checklist",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-trophy",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/",
+      "title": "GTA 6 Trophy Guide & Roadmap",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-money",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/",
+      "title": "GTA 6 Money Guide",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-car",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-how-to-get-new-personal-car/",
+      "title": "GTA 6 How to Get a New Personal Car",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-moses",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-moses-take-a-vehicle-to-moses-walkthrough/",
+      "title": "Moses walkthrough",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-garages",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-all-garage-locations/",
+      "title": "GTA 6 All Garage Locations",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-gas",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-all-gas-stations-locations/",
+      "title": "GTA 6 All Gas Station Locations",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-pns",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-all-pay-n-spray-locations/",
+      "title": "GTA 6 All Pay 'n' Spray Locations",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-modshops",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-all-mod-shops-locations/",
+      "title": "GTA 6 All Mod Shop Locations",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-ultimate",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-how-to-get-ultimate-edition-rewards/",
+      "title": "GTA 6 How to Get Ultimate Edition Rewards",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-zorrusso",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-clonin-keys-makin-gs-steal-the-zorrusso-for-randy-walkthrough/",
+      "title": "Clonin' Keys, Makin' Gs walkthrough",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-crawler",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-daily-driver-steal-the-crawler-for-moses-walkthrough/",
+      "title": "Daily Driver walkthrough",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-carservice",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-car-service-steal-the-car-for-raul-walkthrough/",
+      "title": "Car Service walkthrough",
+      "phase": "postrelease"
+    },
+    {
+      "id": "ppx-scratch",
+      "outlet": "PowerPyx",
+      "group": "powerpyx",
+      "url": "https://www.powerpyx.com/gta-6-just-a-scratch-fix-your-car-walkthrough/",
+      "title": "Just a Scratch walkthrough",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-fastest",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-fastest-car/",
+      "title": "GTA6 fastest car / all car and bike performance table",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-vehicles",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-vehicles/",
+      "title": "GTA6 vehicle list",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-service",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-service-vehicles/",
+      "title": "GTA6 service vehicles (26)",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-sell",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-sell-cars/",
+      "title": "GTA6 selling cars",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-steal",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-steal-cars/",
+      "title": "GTA6 stealing cars",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-randy",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-randys-wish-list/",
+      "title": "GTA6 Randy's Wish List",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-emerus",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-emerus/",
+      "title": "GTA6 Progen Emerus",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-vitello",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-vitello/",
+      "title": "GTA6 Pegassi Vitello",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-boats",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-boats/",
+      "title": "GTA6 boats (20)",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-motorcycles",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-motorcycles/",
+      "title": "GTA6 motorcycles and bicycles",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-military",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-military-aircraft/",
+      "title": "GTA6 military vehicles and aircraft",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-personal",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-personal-vehicle/",
+      "title": "GTA6 personal vehicle",
+      "phase": "postrelease"
+    },
+    {
+      "id": "nettoge-cheats",
+      "outlet": "nettoge (JP)",
+      "group": "nettoge",
+      "url": "https://nettoge.com/gta6-cheats/",
+      "title": "GTA6 cheats",
+      "phase": "postrelease",
+      "derivedFrom": "unspecified English-language cheat lists"
+    },
+    {
+      "id": "pushsquare-randy",
+      "outlet": "Push Square",
+      "group": "pushsquare",
+      "url": "https://www.pushsquare.com/guides/gta-6-randys-wish-list-vehicle-locations",
+      "title": "Randy's Wish List Vehicle Locations",
+      "phase": "postrelease"
+    },
+    {
+      "id": "pushsquare-moses",
+      "outlet": "Push Square",
+      "group": "pushsquare",
+      "url": "https://www.pushsquare.com/guides/gta-6-moses-vehicle-drop-off-locations",
+      "title": "Moses Vehicle Drop-Off Locations",
+      "phase": "postrelease"
+    },
+    {
+      "id": "pushsquare-ue",
+      "outlet": "Push Square",
+      "group": "pushsquare",
+      "url": "https://www.pushsquare.com/guides/gta-6-how-to-get-ultimate-editon-items-and-pre-order-bonuses",
+      "title": "How to Get Ultimate Edition Items & Pre-Order Bonuses",
+      "phase": "postrelease"
+    },
+    {
+      "id": "pushsquare-cheats",
+      "outlet": "Push Square",
+      "group": "pushsquare",
+      "url": "https://www.pushsquare.com/guides/gta-6-cheats-and-unlock-conditions",
+      "title": "Cheats & Unlock Conditions",
+      "phase": "postrelease"
+    },
+    {
+      "id": "game8-vehicles",
+      "outlet": "Game8",
+      "group": "game8",
+      "url": "https://game8.co/games/GTA-6/archives/637023",
+      "title": "List of All Vehicles and Cars",
+      "phase": "postrelease"
+    },
+    {
+      "id": "game8-steal",
+      "outlet": "Game8",
+      "group": "game8",
+      "url": "https://game8.co/games/GTA-6/archives/638081",
+      "title": "How to Steal Cars",
+      "phase": "postrelease"
+    },
+    {
+      "id": "game8-muscle",
+      "outlet": "Game8",
+      "group": "game8",
+      "url": "https://game8.co/games/GTA-6/archives/638551",
+      "title": "List of All Muscle Cars",
+      "phase": "postrelease"
+    },
+    {
+      "id": "gamesradar-cheats",
+      "outlet": "GamesRadar+",
+      "group": "gamesradar",
+      "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-cheats/",
+      "title": "GTA 6 cheats",
+      "phase": "postrelease"
+    },
+    {
+      "id": "rps-cheats",
+      "outlet": "Rock Paper Shotgun",
+      "group": "rps",
+      "url": "https://www.rockpapershotgun.com/gta-6-cheats-list",
+      "title": "GTA 6 Cheats: All 61 Cheat Codes And How To Unlock Them",
+      "phase": "postrelease"
+    },
+    {
+      "id": "comicbook-newcar",
+      "outlet": "ComicBook.com",
+      "group": "comicbook",
+      "url": "https://comicbook.com/gaming/feature/gta-6-when-can-you-get-a-new-car/",
+      "title": "GTA 6: When Can You Get a New Car?",
+      "phase": "postrelease"
+    },
+    {
+      "id": "promptowy-randy",
+      "outlet": "Promptowy",
+      "group": "powerpyx",
+      "url": "https://promptowy.com/gta-6-randy-wish-list/",
+      "title": "GTA 6 Randy's Wish List",
+      "phase": "postrelease",
+      "derivedFrom": "powerpyx"
+    },
+    {
+      "id": "gcl-vehicles",
+      "outlet": "Game-Checklists",
+      "group": "powerpyx",
+      "url": "https://game-checklists.com/gta6/vehicles-checklist/",
+      "title": "GTA 6 Vehicles Checklist",
+      "phase": "postrelease",
+      "derivedFrom": "powerpyx"
+    },
+    {
+      "id": "gcl-randy",
+      "outlet": "Game-Checklists",
+      "group": "powerpyx",
+      "url": "https://game-checklists.com/gta6/randys-wish-list-checklist/",
+      "title": "Randy's Wish List Checklist",
+      "phase": "postrelease",
+      "derivedFrom": "powerpyx"
+    },
+    {
+      "id": "techwiser",
+      "outlet": "TechWiser",
+      "group": "techwiser",
+      "url": "https://techwiser.com/gta-6-cars/",
+      "title": "GTA 6 cars list",
+      "phase": "prerelease"
+    },
+    {
+      "id": "grandtheft",
+      "outlet": "GrandTheft.gg",
+      "group": "grandtheft",
+      "url": "https://grandtheft.gg/gta-6-cars/",
+      "title": "GTA 6 cars",
+      "phase": "prerelease"
+    },
+    {
+      "id": "trn-vehicles",
+      "outlet": "Tracker.gg",
+      "group": "tracker",
+      "url": "https://tracker.gg/gta6/vehicles",
+      "title": "GTA 6 vehicles database",
+      "phase": "prerelease"
+    }
+  ],
+  "items": [
+    {
+      "id": "interstate-ambulance",
+      "name": "Interstate Ambulance",
+      "make": "Interstate",
+      "class": "emergency",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles",
+        "nettoge-service"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: discover the Interstate Ambulance in the Progress menu.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "interstate-ambulance",
+      "notes": "nettoge lists the ambulance as 'Declasse Ambulance' (emergency vehicle, in-game speed 3.0, fastest service vehicle); four English guides give the cheat name 'Interstate Ambulance'. Unclear whether these are two models or a make mix-up, so the 3.0 value is kept as a claim only.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "airboat-09",
+      "name": "Airboat 09",
+      "make": "Airgator",
+      "class": "watercraft",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-boats",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete 5 survival challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "airboat-09",
+      "notes": "Cheat name has no make; nettoge shows it as 'Airgator Airboat 09'. Make is single-source.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "bravado-banshee",
+      "name": "Bravado Banshee",
+      "make": "Bravado",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [
+        "steal",
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "nettoge-cheats",
+        "pushsquare-randy",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout. Also a spawn cheat (unlock: complete all combat challenges).",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy",
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Outside Sweetbay Inn, East Buckley Dr, Capri (seen around 3 AM)"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": "bravado-banshee",
+      "notes": null,
+      "appearanceEra": "2000s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "tuff-bmx",
+      "name": "Tuff BMX",
+      "make": "Tuff",
+      "class": "bikes",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-motorcycles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete 5 fitness challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "tuff-bmx",
+      "notes": "Bicycle. Listed by nettoge among bicycles; that it sits in the Bikes class of the Progress Database is an assumption.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "maibatsu-boomazoom",
+      "name": "Maibatsu Boomazoom",
+      "make": "Maibatsu",
+      "class": "bikes",
+      "subtype": "scooter",
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 0.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 0.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 0.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 0.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete 5 shopping challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "maibatsu-boomazoom",
+      "notes": "Slowest vehicle in the nettoge table.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "nagasaki-carbon-rs",
+      "name": "Nagasaki Carbon RS",
+      "make": "Nagasaki",
+      "class": "bikes",
+      "subtype": "sport bike",
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 7.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 2.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete all exploration challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "nagasaki-carbon-rs",
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Two Wheel Fury Motorsport",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "65-vapid-dominator",
+      "name": "'65 Vapid Dominator",
+      "make": "Vapid",
+      "class": "muscle-cars",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 5.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete all fitness challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "65-vapid-dominator",
+      "notes": "nettoge also notes it as Vicki's car in the story.",
+      "appearanceEra": "1960s",
+      "modShop": "Capri Classic",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "progen-emerus",
+      "name": "Progen Emerus",
+      "make": "Progen",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-service",
+        "nettoge-sell",
+        "nettoge-randy",
+        "nettoge-emerus",
+        "nettoge-vitello",
+        "nettoge-boats",
+        "nettoge-motorcycles",
+        "nettoge-military",
+        "nettoge-personal",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 8.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 8.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 8.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "durability": {
+          "value": 3,
+          "sourceIds": [
+            "nettoge-emerus"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete all vehicle challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "progen-emerus",
+      "notes": "Highest in-game Speed value in the nettoge table (8.3).",
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "inflatable-flamingo",
+      "name": "Inflatable Flamingo",
+      "make": null,
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: destroy 50 cocaine flamingos.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "inflatable-flamingo",
+      "notes": "Class in the Progress Database not stated by any source.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "mtl-pumper",
+      "name": "MTL Pumper",
+      "make": "MTL",
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: discover the MTL Pumper in the Progress menu.",
+        "sourceIds": [
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "mtl-pumper",
+      "notes": "Fire truck by name; class not stated by any source. PowerPyx lists the unlock condition as unknown.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "vapid-stanier-g2-taxi",
+      "name": "Vapid Stanier G2 Taxi",
+      "make": "Vapid",
+      "class": "transport",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles",
+        "nettoge-service"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete 5 sports challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "vapid-stanier-g2-taxi",
+      "notes": "GamesRadar spells it 'Stainer'. nettoge lists a taxi ('Paradise Taxi') under people-transport service vehicles; mapping to this model is by name only. Stats for the civilian Stanier G2 are on its own record.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "hauners-p-996-lazer",
+      "name": "Hauners P-996 Lazer",
+      "make": "Hauners",
+      "class": "aircraft",
+      "subtype": null,
+      "methods": [
+        "cheat",
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-military",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat (unlock: complete all challenges). Also parked on the north side of Mile Zero Air Station; taking it brings a 4-star wanted level and two pursuing jets.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats",
+          "nettoge-military"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Mile Zero Air Station, Mariana County (north side)"
+        ],
+        "sourceIds": [
+          "nettoge-military"
+        ]
+      },
+      "cheat": "hauners-p-996-lazer",
+      "notes": "Fighter jet. Whether the Progress Database files it under Aircraft or Military is not stated.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "hvy-bulldozer",
+      "name": "HVY Bulldozer",
+      "make": "HVY",
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: discover the HVY Bulldozer in the Progress menu.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "hvy-bulldozer",
+      "notes": "Class not stated by any source.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "lapwing-mallard",
+      "name": "Lapwing Mallard",
+      "make": "Lapwing",
+      "class": "aircraft",
+      "subtype": null,
+      "methods": [
+        "cheat",
+        "mission"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-military",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat (unlock: complete 5 vehicle challenges). nettoge reports it also becomes your own plane after the Kyle McKittrick storyline.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats",
+          "nettoge-military",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": "lapwing-mallard",
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "brimstone-golfer",
+      "name": "Brimstone Golfer",
+      "make": "Brimstone",
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete all sports challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "brimstone-golfer",
+      "notes": "Class not stated by any source.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "hauners-rhino-tank",
+      "name": "Hauners Rhino Tank",
+      "make": "Hauners",
+      "class": "military",
+      "subtype": null,
+      "methods": [
+        "cheat",
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-service",
+        "nettoge-military",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat (unlock: complete all survival challenges). Can also be taken from Mile Zero Air Station, which triggers a wanted level; a trophy is tied to stealing it.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats",
+          "nettoge-military",
+          "nettoge-service"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Mile Zero Air Station, Mariana County (south side)"
+        ],
+        "sourceIds": [
+          "nettoge-military",
+          "nettoge-service"
+        ]
+      },
+      "cheat": "hauners-rhino-tank",
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "maibatsu-sanchez",
+      "name": "Maibatsu Sanchez",
+      "make": "Maibatsu",
+      "class": "bikes",
+      "subtype": "off-road bike",
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 7.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete 5 criminal challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "maibatsu-sanchez",
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": "Dirt Merchants",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "nagasaki-sea-sparrow",
+      "name": "Nagasaki Sea Sparrow",
+      "make": "Nagasaki",
+      "class": "aircraft",
+      "subtype": null,
+      "methods": [
+        "cheat",
+        "mission"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-military",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat (unlock: complete 5 exploration challenges). nettoge reports one is taken from the Kingfishers during the mission SWAMPED.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats",
+          "nettoge-military",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": "nagasaki-sea-sparrow",
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "speeder-700-gt",
+      "name": "Speeder 700 GT",
+      "make": null,
+      "class": "watercraft",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-boats",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete 5 combat challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "speeder-700-gt",
+      "notes": "Luxury speedboat per nettoge. No make in the cheat name.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "truffade-thrax",
+      "name": "Truffade Thrax",
+      "make": "Truffade",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-vehicles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete all shopping challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "truffade-thrax",
+      "notes": "Class comes from pre-release lists only. Not in the nettoge stats table; nettoge labels 8 supercars and PowerPyx counts 9 in the class, which fits Thrax being the ninth but no source says so.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "western-zombie-bobber",
+      "name": "Western Zombie Bobber",
+      "make": "Western",
+      "class": "bikes",
+      "subtype": "chopper",
+      "methods": [
+        "cheat"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-cheats",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles",
+        "nettoge-cheats",
+        "pushsquare-cheats",
+        "gamesradar-cheats",
+        "rps-cheats",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 2.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Spawn cheat, usable after the story ends; unlock condition: complete all criminal challenges.",
+        "sourceIds": [
+          "ppx-cheats",
+          "gamesradar-cheats",
+          "rps-cheats",
+          "pushsquare-cheats"
+        ]
+      },
+      "spawn": null,
+      "cheat": "western-zombie-bobber",
+      "notes": null,
+      "appearanceEra": "2000s",
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "pegassi-vitello",
+      "name": "Pegassi Vitello",
+      "make": "Pegassi",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-service",
+        "nettoge-sell",
+        "nettoge-randy",
+        "nettoge-emerus",
+        "nettoge-vitello",
+        "nettoge-boats",
+        "nettoge-motorcycles",
+        "nettoge-military",
+        "nettoge-personal",
+        "pushsquare-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 8.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 8.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 8.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "durability": {
+          "value": 3,
+          "sourceIds": [
+            "nettoge-vitello"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Villa garage on Flamingo Pkwy, Waning Sands, east of Belville, Leonard County"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "piccia-furia",
+      "name": "Piccia Furia",
+      "make": "Piccia",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "nettoge-emerus",
+        "nettoge-vitello",
+        "pushsquare-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 8.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 7.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Mansion garage on Palladia Ln, Peacock Estates, Peacock Bay"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": "Released-game make is Piccia (nettoge, Push Square); pre-release lists call it 'Grotti Furia'.",
+      "appearanceEra": "2020s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "pegassi-tempesta",
+      "name": "Pegassi Tempesta",
+      "make": "Pegassi",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "pushsquare-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 6.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "NE 3rd St, Vice City (random repo event, seen around 1 PM)"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "grotti-itali-rsx",
+      "name": "Grotti Itali RSX",
+      "make": "Grotti",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 8.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2020s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "grandforma-zorrusso",
+      "name": "Grandforma Zorrusso",
+      "make": "Grandforma",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "steal",
+        "mission"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "powerpyx-db",
+        "ppx-trophy",
+        "ppx-money",
+        "ppx-car",
+        "ppx-zorrusso",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 7.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Stolen for Randy in the Chapter 3 mission Clonin' Keys, Makin' Gs (Hathaway Apartments, Ocean Beach); it has an advanced tracker and the mission awards the Key Cloner. Also on Randy's Wish List.",
+        "sourceIds": [
+          "ppx-zorrusso",
+          "nettoge-randy",
+          "nettoge-vehicles",
+          "promptowy-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Hathaway Apartments, Ocean Beach (mission)"
+        ],
+        "sourceIds": [
+          "ppx-zorrusso"
+        ]
+      },
+      "cheat": null,
+      "notes": "Make spelling differs: 'Grandforma' (nettoge) vs 'Granforma' (PowerPyx, Game-Checklists); pre-release lists say 'Pegassi Zorrusso'.",
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": "advanced tracker",
+      "registrationFee": null,
+      "scanSaleValue": 21250
+    },
+    {
+      "id": "96-pegassi-infernus",
+      "name": "'96 Pegassi Infernus",
+      "make": "Pegassi",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "pushsquare-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 6.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Level 7 of the Crosstown Police Station car park, NW 9th St, Vice City"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": "Pre-release lists call it 'Infernus Classic'.",
+      "appearanceEra": "1990s",
+      "modShop": "Euroform Automotive",
+      "security": "tracker",
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "95-grotti-cheetah",
+      "name": "'95 Grotti Cheetah",
+      "make": "Grotti",
+      "class": "supercars",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-ultimate",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-ue"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 6.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Ultimate Edition vehicle: after the Chapter 5 mission Honest Abe it waits in the B1 underground parking of Pegassi Residences, Tequesta Retreat.",
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Pegassi Residences, parking B1, Tequesta Retreat"
+        ],
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate",
+          "nettoge-vehicles"
+        ]
+      },
+      "cheat": null,
+      "notes": "Acceleration value not yet captured by nettoge.",
+      "appearanceEra": null,
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "pfister-comet-s2",
+      "name": "Pfister Comet S2",
+      "make": "Pfister",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 7.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": "Pre-release lists show a 'Comet S2 Cabrio'; nettoge's table name has no Cabrio suffix.",
+      "appearanceEra": "2020s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "pfister-neon",
+      "name": "Pfister Neon",
+      "make": "Pfister",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2020s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "invetero-coquette-d10",
+      "name": "Invetero Coquette D10",
+      "make": "Invetero",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 6.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "nettoge reports one parked at a police tow yard.",
+        "sourceIds": [
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2020s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "64-declasse-mamba-gt",
+      "name": "'64 Declasse Mamba GT",
+      "make": "Declasse",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [
+        "edition",
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-ultimate",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-randy",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 6.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "One of the five Wyman restoration cars (Ultimate Edition Classic Car Collection). Push Square also lists a Mamba GT for Randy via the mission ¡Dale Mamba! at a mansion in Leaf Links, Vice Beach (key from the house, tracker).",
+        "sourceIds": [
+          "ppx-ultimate",
+          "nettoge-vehicles",
+          "pushsquare-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Mansion in Leaf Links, Vice Beach (Randy mission)"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1960s",
+      "modShop": "Euroform Automotive",
+      "security": "tracker",
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "grotti-carbonizzare",
+      "name": "Grotti Carbonizzare",
+      "make": "Grotti",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "invetero-coquette",
+      "name": "Invetero Coquette",
+      "make": "Invetero",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "nettoge reports one in the garage of a party house in Key Lento (keypad code 092319).",
+        "sourceIds": [
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Party-house garage, Key Lento"
+        ],
+        "sourceIds": [
+          "nettoge-vehicles"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "88-pfister-comet",
+      "name": "'88 Pfister Comet",
+      "make": "Pfister",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 6.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1980s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "benefactor-shafter-v12",
+      "name": "Benefactor Shafter V12",
+      "make": "Benefactor",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-carservice",
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": "nettoge spells it 'Shafter'; pre-release lists and earlier games use 'Schafter'. Spelling in the released game not double-checked.",
+      "appearanceEra": "2000s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "emperor-sultan",
+      "name": "Emperor Sultan",
+      "make": "Emperor",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [
+        "reward"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-moses"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Moses gives you his Emperor Sultan after all 7 of his vehicle drop-offs; it must be registered to keep.",
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": "Pre-release lists say 'Karin Sultan'; the released game shows Emperor (nettoge, Push Square).",
+      "appearanceEra": "2000s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": 1600,
+      "scanSaleValue": null
+    },
+    {
+      "id": "85-ubermacht-sentinel",
+      "name": "'85 Ubermacht Sentinel",
+      "make": "Ubermacht",
+      "class": "sports-cars",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 4.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": "Pre-release lists call it 'Sentinel Classic'.",
+      "appearanceEra": "1980s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "bravado-gauntlet-hellfire",
+      "name": "Bravado Gauntlet Hellfire",
+      "make": "Bravado",
+      "class": "muscle-cars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "pushsquare-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "M7 junkyard east of Boone Speedway, Galerina St, Hamlet"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": "Fastest muscle car in the nettoge table (Speed 7.8).",
+      "appearanceEra": "2010s",
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "ocelot-jugular",
+      "name": "Ocelot Jugular",
+      "make": "Ocelot",
+      "class": "sedans",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": "PowerPyx's trophy guide spells it 'Ocelot Jagular' (typo).",
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "ascot-paragon",
+      "name": "Ascot Paragon",
+      "make": "Ascot",
+      "class": "coupes",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "pushsquare-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Outside The Banana Hole Main Bar, Shore Dr, Ocean Beach (around 6 PM)"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": "Pre-release lists call it 'Enus Paragon R'.",
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": "tracker",
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "buckingham-windsor-drop",
+      "name": "Buckingham Windsor Drop",
+      "make": "Buckingham",
+      "class": "coupes",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "pegassi-toros",
+      "name": "Pegassi Toros",
+      "make": "Pegassi",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "pushsquare-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 5.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Outside Pegassi Residences, Bayside Dr, Tequesta Retreat (around 6:30 PM)"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "buckingham-jubilee",
+      "name": "Buckingham Jubilee",
+      "make": "Buckingham",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 5.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 5.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2020s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "gallivanter-baller-st-d",
+      "name": "Gallivanter Baller ST-D",
+      "make": "Gallivanter",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 5.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2020s",
+      "modShop": "Euroform Automotive",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "benefactor-dubsta",
+      "name": "Benefactor Dubsta",
+      "make": "Benefactor",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2000s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "pfister-growler",
+      "name": "Pfister Growler",
+      "make": "Pfister",
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-trophy",
+        "nettoge-vehicles",
+        "nettoge-randy",
+        "pushsquare-randy",
+        "promptowy-randy",
+        "gcl-vehicles",
+        "gcl-randy"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "On Randy's Wish List: steal one and deliver it to Randy at Leonida Auto World in west Vice City for a payout.",
+        "sourceIds": [
+          "ppx-trophy",
+          "nettoge-randy",
+          "pushsquare-randy",
+          "promptowy-randy",
+          "gcl-randy"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Multistorey car park on Fig St, Ocean Beach (around 5 PM)"
+        ],
+        "sourceIds": [
+          "pushsquare-randy"
+        ]
+      },
+      "cheat": null,
+      "notes": "On Randy's list but missing from the nettoge stats table; class not stated post-release.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "70-vapid-ganado",
+      "name": "'70 Vapid Ganado",
+      "make": "Vapid",
+      "class": "muscle-cars",
+      "subtype": null,
+      "methods": [
+        "mission",
+        "edition"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 5,
+      "sourceIds": [
+        "ppx-scratch",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-service",
+        "nettoge-sell",
+        "nettoge-randy",
+        "nettoge-emerus",
+        "nettoge-vitello",
+        "nettoge-boats",
+        "nettoge-motorcycles",
+        "nettoge-military",
+        "nettoge-personal",
+        "pushsquare-ue",
+        "game8-vehicles",
+        "game8-muscle",
+        "comicbook-newcar",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "durability": {
+          "value": 3,
+          "sourceIds": [
+            "nettoge-vehicles"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Jason's starting personal car and the only one available in Chapter 1; it is later replaced and its mods are not kept. Ultimate Edition adds a Retro livery/build for it in Chapter 1.",
+        "sourceIds": [
+          "comicbook-newcar",
+          "nettoge-vehicles",
+          "pushsquare-ue"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": "Game8 lists it as \"Jason's '70 Ganado\" under Muscle Cars. nettoge shows two Speed readings: 4.7 in the table and 4.9/5.5 (speed/acceleration) on the in-game panel write-up; ratings 330 asphalt / 458 off-road (342/469 with the Retro build). Retro pickup place differs: Coastal Auto Care (nettoge) vs any Pay 'n' Spray (Push Square).",
+      "appearanceEra": "1970s",
+      "modShop": "Capri Classic",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "55-vapid-stanier",
+      "name": "'55 Vapid Stanier",
+      "make": "Vapid",
+      "class": "muscle-cars",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-ultimate",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-ue"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 3.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Pre-order bonus (Vintage Vice City Pack): shortly after reaching Vice City in Chapter 3 a marker sends you to the Ocean View Hotel in Vice Beach; entering the car also grants the Shore Court garage.",
+        "sourceIds": [
+          "pushsquare-ue",
+          "nettoge-vehicles",
+          "ppx-ultimate"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Ocean View Hotel, Vice Beach"
+        ],
+        "sourceIds": [
+          "pushsquare-ue",
+          "nettoge-vehicles"
+        ]
+      },
+      "cheat": null,
+      "notes": "PowerPyx files it on its Ultimate Edition rewards page; Push Square and nettoge tie it to the pre-order pack.",
+      "appearanceEra": "1950s",
+      "modShop": "Lowballers Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "venturas-blvd-elegy",
+      "name": "Venturas Blvd Elegy",
+      "make": null,
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "GTA+ member bonus vehicle that comes with a garage, per the in-game store screen as reported by nettoge.",
+        "sourceIds": [
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": "Single source. Likely a variant of the '90 Annis Elegy, but no source states that.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "67-vapid-dominator-buggy",
+      "name": "'67 Vapid Dominator Buggy",
+      "make": "Vapid",
+      "class": "off-road",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-ultimate",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-ue",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 6.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Ultimate Edition vehicle: during Chapter 2 a notification says it is ready to collect from a garage; sit in it to register it.",
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Paradise garage, Watson Bay, Mariana County"
+        ],
+        "sourceIds": [
+          "pushsquare-ue",
+          "nettoge-vehicles"
+        ]
+      },
+      "cheat": null,
+      "notes": "Garage location: Paradise garage, Watson Bay (Push Square, nettoge) vs Grassrivers (PowerPyx). Game-Checklists also mentions it as a dirt-race reward.",
+      "appearanceEra": "1960s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "72-dinka-enduro",
+      "name": "'72 Dinka Enduro",
+      "make": "Dinka",
+      "class": "bikes",
+      "subtype": "off-road bike",
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-ultimate",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles",
+        "pushsquare-ue",
+        "gcl-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 7.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Ultimate Edition motorcycle parked at Jason's house in Key Lento; only collectable during Chapter 1.",
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Jason's house, Key Lento, Mariana County"
+        ],
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate",
+          "nettoge-vehicles"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1970s",
+      "modShop": "Dirt Merchants",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "crest-kayak",
+      "name": "Crest Kayak",
+      "make": "Crest",
+      "class": "watercraft",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-ultimate",
+        "nettoge-vehicles",
+        "nettoge-boats",
+        "pushsquare-ue",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Ultimate Edition kayak found at Jason's house in Key Lento; only collectable during Chapter 1.",
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Jason's house, Key Lento, Mariana County"
+        ],
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate",
+          "nettoge-vehicles"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "shitzu-squalo",
+      "name": "Shitzu Squalo",
+      "make": "Shitzu",
+      "class": "watercraft",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "ppx-ultimate",
+        "nettoge-vehicles",
+        "nettoge-boats",
+        "pushsquare-ue",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Ultimate Edition boat docked near Atlantic Ave, Washington Beach, from Chapter 4.",
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate",
+          "nettoge-vehicles",
+          "nettoge-boats"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Dock near Atlantic Ave, Washington Beach, Vice Beach"
+        ],
+        "sourceIds": [
+          "pushsquare-ue"
+        ]
+      },
+      "cheat": null,
+      "notes": "nettoge names the Ultimate Edition version 'Typhoon Squalo' and says it is Chapter 4 only.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "67-transgressor",
+      "name": "'67 Transgressor",
+      "make": null,
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-ultimate",
+        "pushsquare-ue",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Wyman restoration car (Ultimate Edition Classic Car Collection): find and WAiNK-scan scrap parts so Wyman can rebuild it; the chain starts in Chapter 2.",
+        "sourceIds": [
+          "pushsquare-ue",
+          "ppx-ultimate"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": "Make not given by the sources.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "72-deviant",
+      "name": "'72 Deviant",
+      "make": null,
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "ppx-ultimate",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Wyman restoration car (Ultimate Edition Classic Car Collection).",
+        "sourceIds": [
+          "ppx-ultimate"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": "Make not given post-release; pre-release lists say 'Schyster Deviant'.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "reynolds-kit-car",
+      "name": "Reynolds Kit Car",
+      "make": null,
+      "class": "unclassified",
+      "subtype": null,
+      "methods": [
+        "edition"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "ppx-ultimate",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Wyman restoration car (Ultimate Edition Classic Car Collection).",
+        "sourceIds": [
+          "ppx-ultimate"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "97-maibatsu-penumbra-ff",
+      "name": "'97 Maibatsu Penumbra FF",
+      "make": "Maibatsu",
+      "class": "coupes",
+      "subtype": null,
+      "methods": [
+        "mission"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 5.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Lucia's first personal car, registered for free during the Chapter 2 mission Moses, per nettoge.",
+        "sourceIds": [
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1990s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "74-declasse-vamos",
+      "name": "'74 Declasse Vamos",
+      "make": "Declasse",
+      "class": "muscle-cars",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "pushsquare-moses"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Moses drop-off no. 7: locked in a garage on Rockledge Rd east of Grayson, Lummox County; the keypad code (2727) is found in the main building.",
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Rockledge Rd, Grayson, Lummox County"
+        ],
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "cheat": null,
+      "notes": "Handling values not yet captured by nettoge.",
+      "appearanceEra": "1970s",
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "albany-v-str",
+      "name": "Albany V-STR",
+      "make": "Albany",
+      "class": "sedans",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": "Fastest sedan in the nettoge table (Speed 7.0).",
+      "appearanceEra": "2010s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "vapid-stanier-g2",
+      "name": "Vapid Stanier G2",
+      "make": "Vapid",
+      "class": "sedans",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 4.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2000s",
+      "modShop": "Capri Classic",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "80-declasse-impaler",
+      "name": "'80 Declasse Impaler",
+      "make": "Declasse",
+      "class": "sedans",
+      "subtype": null,
+      "methods": [
+        "mission"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "A police version is taken from the Ambrosia PD impound in the mission The Impaler.",
+        "sourceIds": [
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1980s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "85-karin-futo",
+      "name": "'85 Karin Futo",
+      "make": "Karin",
+      "class": "coupes",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "pushsquare-moses"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Moses drop-off no. 5: parked behind shutters inside the Postal warehouse at the southern tip of Draper Island; a guarded area.",
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Postal building, south Draper Island docks"
+        ],
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1980s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "vapid-aleutian",
+      "name": "Vapid Aleutian",
+      "make": "Vapid",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "game8-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "ubermacht-rebla-gts",
+      "name": "Ubermacht Rebla GTS",
+      "make": "Ubermacht",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "game8-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Vice Auto Customs",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "82-canis-crawler",
+      "name": "'82 Canis Crawler",
+      "make": "Canis",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [
+        "steal",
+        "mission"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 3,
+      "sourceIds": [
+        "powerpyx-db",
+        "ppx-trophy",
+        "ppx-car",
+        "ppx-garages",
+        "ppx-crawler",
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-moses"
+      ],
+      "stats": {
+        "speed": {
+          "value": 2.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 6.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Stolen for Moses in the Chapter 2 mission Daily Driver; a white one sits at Trader's Union, Gellhorn Ave, Port Gellhorn and can be opened with the Slim Jim.",
+        "sourceIds": [
+          "pushsquare-moses",
+          "ppx-crawler",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Trader's Union, Gellhorn Ave, Port Gellhorn, Kelly County"
+        ],
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1980s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "vapid-montagne-xl",
+      "name": "Vapid Montagne XL",
+      "make": "Vapid",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [
+        "steal",
+        "mission"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "ppx-moses",
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 3.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "The car stolen with the Slim Jim in the Chapter 2 mission Moses.",
+        "sourceIds": [
+          "nettoge-vehicles",
+          "ppx-moses"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2000s",
+      "modShop": "Wasteland Off-Road",
+      "security": "none (Slim Jim)",
+      "registrationFee": 3400,
+      "scanSaleValue": 550
+    },
+    {
+      "id": "95-annis-hellion",
+      "name": "'95 Annis Hellion",
+      "make": "Annis",
+      "class": "suvs",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-moses"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 3.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 6.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Moses drop-off no. 4: parked outside a bungalow on Orchard Ave, Port Gellhorn; a dog guards it.",
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Orchard Ave, Port Gellhorn, Kelly County"
+        ],
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1990s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "karin-contender",
+      "name": "Karin Contender",
+      "make": "Karin",
+      "class": "pickups",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "game8-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 6.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": "Pre-release lists say 'Vapid Contender'; nettoge shows Karin.",
+      "appearanceEra": "2010s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "vapid-riata",
+      "name": "Vapid Riata",
+      "make": "Vapid",
+      "class": "pickups",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 6.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": "A separate '70 Riata is one of the Wyman restoration cars (Ultimate Edition).",
+      "appearanceEra": "2010s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": 11250,
+      "scanSaleValue": 1800
+    },
+    {
+      "id": "95-bravado-bison-900",
+      "name": "'95 Bravado Bison 900",
+      "make": "Bravado",
+      "class": "pickups",
+      "subtype": null,
+      "methods": [
+        "mission"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "game8-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 4.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 2.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 6.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Cal's truck in the story, per nettoge.",
+        "sourceIds": [
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1990s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "vapid-reclaimer",
+      "name": "Vapid Reclaimer",
+      "make": "Vapid",
+      "class": "pickups",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "game8-vehicles",
+        "game8-muscle"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 6.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "declasse-yosemite-1500",
+      "name": "Declasse Yosemite 1500",
+      "make": "Declasse",
+      "class": "pickups",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-moses"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 4.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 4.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Moses drop-off no. 2: being towed by a truck around Bastion St, Port Gellhorn; stop the tow truck and release it.",
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Bastion St, Port Gellhorn, Kelly County"
+        ],
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "78-osprey-journey",
+      "name": "'78 Osprey Journey",
+      "make": "Osprey",
+      "class": "vans",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "game8-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 2.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 1.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 2.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 2.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1970s",
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "98-declasse-burrito",
+      "name": "'98 Declasse Burrito",
+      "make": "Declasse",
+      "class": "vans",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 3.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1990s",
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "mer-can-outlaw",
+      "name": "Mer-Can Outlaw",
+      "make": "Mer-Can",
+      "class": "off-road",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 8.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": "Highest off-road handling in the nettoge table (8.4). Pre-release lists say 'Nagasaki Outlaw'.",
+      "appearanceEra": "2010s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "77-bf-bandito",
+      "name": "'77 BF Bandito",
+      "make": "BF",
+      "class": "off-road",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "pushsquare-moses"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 3.5,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 7.6,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Moses drop-off no. 3: driving a dirt trail in the north-east of Buckskin Swamp, Kelly County.",
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Buckskin Swamp (north-east), Kelly County"
+        ],
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "1970s",
+      "modShop": "Wasteland Off-Road",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "nagasaki-sfb-1000",
+      "name": "Nagasaki SFB 1000",
+      "make": "Nagasaki",
+      "class": "bikes",
+      "subtype": "sport bike",
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 7.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 8.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 8.1,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 2.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": "Fastest bike in the nettoge table (Speed 7.1).",
+      "appearanceEra": "2020s",
+      "modShop": "Two Wheel Fury Motorsport",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "principe-alvino-v1",
+      "name": "Principe Alvino V1",
+      "make": "Principe",
+      "class": "bikes",
+      "subtype": "sport bike",
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 6.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 7.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 7.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 2.3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2020s",
+      "modShop": "Two Wheel Fury Motorsport",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "western-nightblade",
+      "name": "Western Nightblade",
+      "make": "Western",
+      "class": "bikes",
+      "subtype": "chopper",
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles",
+        "pushsquare-moses"
+      ],
+      "stats": {
+        "speed": {
+          "value": 4.4,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 3,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Moses drop-off no. 6: inside the Final Chapter motorcycle club warehouse on Birch St, Ambrosia; needs hotwiring.",
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Final Chapter MC, Birch St, Ambrosia, Kelly County"
+        ],
+        "sourceIds": [
+          "pushsquare-moses"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Ledford Motorcycle Workshop",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "maibatsu-manchez",
+      "name": "Maibatsu Manchez",
+      "make": "Maibatsu",
+      "class": "bikes",
+      "subtype": "off-road bike",
+      "methods": [
+        "mission"
+      ],
+      "nameEvidence": "multiple_independent_sources",
+      "nameEvidenceGroups": 2,
+      "sourceIds": [
+        "nettoge-fastest",
+        "nettoge-vehicles",
+        "nettoge-motorcycles",
+        "game8-vehicles"
+      ],
+      "stats": {
+        "speed": {
+          "value": 3.9,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "acceleration": {
+          "value": 5.8,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "handling": {
+          "value": 5.2,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        },
+        "offroad": {
+          "value": 7.7,
+          "sourceIds": [
+            "nettoge-fastest"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": {
+        "text": "Lent to you for the Thrillbillies race, per nettoge.",
+        "sourceIds": [
+          "nettoge-vehicles",
+          "nettoge-motorcycles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": "2010s",
+      "modShop": "Dirt Merchants",
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "bombora-s23-ccs",
+      "name": "Bombora S23 CCS",
+      "make": "Bombora",
+      "class": "watercraft",
+      "subtype": null,
+      "methods": [
+        "mission"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-boats"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Jason's boat, per nettoge.",
+        "sourceIds": [
+          "nettoge-boats",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "mammoth-dodo",
+      "name": "Mammoth Dodo",
+      "make": "Mammoth",
+      "class": "aircraft",
+      "subtype": null,
+      "methods": [
+        "mission"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-military"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Brian's seaplane, flown in Chapter 1, per nettoge.",
+        "sourceIds": [
+          "nettoge-military",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "bottcher-duster",
+      "name": "Bottcher Duster",
+      "make": "Bottcher",
+      "class": "aircraft",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-military"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Found at airfields from Chapter 1, per nettoge.",
+        "sourceIds": [
+          "nettoge-military",
+          "nettoge-vehicles"
+        ]
+      },
+      "spawn": null,
+      "cheat": null,
+      "notes": "Game-Checklists spells the make 'Botticher'.",
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "bottcher-buzzard",
+      "name": "Bottcher Buzzard",
+      "make": "Bottcher",
+      "class": "military",
+      "subtype": null,
+      "methods": [
+        "steal"
+      ],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-service",
+        "nettoge-military",
+        "gcl-vehicles"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": {
+        "text": "Military light helicopter kept at Mile Zero Air Station; high security.",
+        "sourceIds": [
+          "nettoge-service",
+          "nettoge-military"
+        ]
+      },
+      "spawn": {
+        "locations": [
+          "Mile Zero Air Station, Mariana County"
+        ],
+        "sourceIds": [
+          "nettoge-military",
+          "nettoge-service"
+        ]
+      },
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "brute-police-riot",
+      "name": "Brute Police Riot",
+      "make": "Brute",
+      "class": "emergency",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-service"
+      ],
+      "stats": {
+        "speed": {
+          "value": 2.4,
+          "sourceIds": [
+            "nettoge-service"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "81-jobuilt-phantom-custom",
+      "name": "'81 Jobuilt Phantom Custom",
+      "make": "Jobuilt",
+      "class": "trucks",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-service"
+      ],
+      "stats": {
+        "speed": {
+          "value": 2,
+          "sourceIds": [
+            "nettoge-service"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "hvy-airtug",
+      "name": "HVY Airtug",
+      "make": "HVY",
+      "class": "utility",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-service"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "b3000-excavator",
+      "name": "B3000 Excavator",
+      "make": null,
+      "class": "industrial",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-service"
+      ],
+      "stats": {},
+      "statEvidence": "no_published_stats",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    },
+    {
+      "id": "whiffler-dashound",
+      "name": "Whiffler Dashound",
+      "make": "Whiffler",
+      "class": "transport",
+      "subtype": null,
+      "methods": [],
+      "nameEvidence": "single_source_or_pending",
+      "nameEvidenceGroups": 1,
+      "sourceIds": [
+        "nettoge-vehicles",
+        "nettoge-service"
+      ],
+      "stats": {
+        "speed": {
+          "value": 2,
+          "sourceIds": [
+            "nettoge-service"
+          ]
+        }
+      },
+      "statEvidence": "single_guide_pending",
+      "how": null,
+      "spawn": null,
+      "cheat": null,
+      "notes": null,
+      "appearanceEra": null,
+      "modShop": null,
+      "security": null,
+      "registrationFee": null,
+      "scanSaleValue": null
+    }
+  ]
+}
