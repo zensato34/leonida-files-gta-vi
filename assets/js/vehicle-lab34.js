@@ -124,7 +124,7 @@ async function init(){
  if(!responses[0].ok||!responses[1].ok)throw new Error('No se pudo cargar la base de vehículos');
  catalogue=await responses[0].json();
  const sourceData=await responses[1].json();
- sources=new Map((sourceData.items||[]).map(x=>[x.id,x]));
+ sources=new Map((catalogue.sources||[]).map(x=>[x.id,x]));
  records=(catalogue.items||[]).map(v=>({
   ...v,
   classLabel:(catalogue.classes||[]).find(c=>c.id===v.class)?.name||'Clase no verificada'
