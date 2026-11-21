@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:42:54.956973+00:00",
+  "generated_at": "2026-11-21T12:20:40.000Z",
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación. Las entradas editoriales existentes se conservan y no se sustituyen por duplicados RSS.",
   "items": [
     {
@@ -3578,6 +3578,50 @@
       "date": "2026-11-10",
       "kind": "confirmed",
       "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-day-one-sales-3-79b-take-two-2026-11-20",
+      "title": "Take-Two confirma US$3.79 mil millones en ventas minoristas del primer día de GTA VI",
+      "description": "Rockstar Games, a través de Take-Two, informó ventas minoristas estimadas de US$3.79 mil millones hasta el cierre del 19 de noviembre y 32.5 millones de unidades vendidas antes del lanzamiento.",
+      "url": "https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records",
+      "source": "Take-Two Interactive / Rockstar Games",
+      "published_at": "2026-11-20",
+      "date": "2026-11-20",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-the-festival-mana-wynwood-2026-11-21",
+      "title": "Rockstar y PlayStation celebran GTA VI: The Festival en Miami",
+      "description": "Evento oficial programado para el 21 de noviembre en Mana Wynwood, con dos escenarios y actuaciones de Travis Scott, Don Toliver, Cardi B, Justice, Metro Boomin, Rauw & Friends y más; la lotería de entradas cerró y la página ofrece lista de espera.",
+      "url": "https://www.rockstargames.com/newswire/article/o39o87a435a25a/grand-theft-auto-vi-the-festival",
+      "source": "Rockstar Games / PlayStation",
+      "published_at": "2026-11-09",
+      "date": "2026-11-09",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-kamikazi-dangelo-worldwide-fm-rockstar-credits-2026-11-21",
+      "title": "Créditos oficiales de GTA VI incluyen “Kamikazi” de D’Angelo en Worldwide FM",
+      "description": "La página de créditos de Rockstar lista “Kamikazi” de D’Angelo en Worldwide FM, con Terry Slingbaum y D’Angelo como autores y cortesía de RCA Records.",
+      "url": "https://www.rockstargames.com/VI/credits",
+      "source": "Rockstar Games",
+      "published_at": "2026-11-21T12:20:40Z",
+      "date": "2026-11-21",
+      "kind": "confirmed",
+      "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-guardian-player-experiences-world-building-2026-11-21",
+      "title": "Jugadores destacan actividades cotidianas y exploración en GTA VI",
+      "description": "En una pieza actualizada el 21 de noviembre, The Guardian reúne experiencias de jugadores sobre tareas domésticas, compras, cuidado personal, ejercicio, observación de fauna y exploración; son testimonios de jugadores, no un catálogo oficial completo.",
+      "url": "https://www.theguardian.com/games/2026/nov/20/grand-theft-auto-vi-players-review",
+      "source": "The Guardian",
+      "published_at": "2026-11-21T10:46:00Z",
+      "date": "2026-11-21",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
     }
   ],
   "diagnostics": {
