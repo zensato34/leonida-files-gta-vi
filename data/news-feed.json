@@ -1,7 +1,40 @@
 {
-  "generated_at": "2026-11-21T19:46:14.055562+00:00",
+  "generated_at": "2026-11-22T13:09:41.000Z",
   "notice": "Descubrimiento automático mediante Google News RSS. Es un agregador de titulares, no una fuente primaria ni una confirmación editorial; cada entrada requiere verificación. Las entradas editoriales existentes se conservan y no se sustituyen por duplicados RSS.",
   "items": [
+    {
+      "id": "gta-vi-secret-radio-playlists-poster-unlocks-gamingbible-2026-11-22",
+      "title": "Descubren cómo desbloquear las dos playlists secretas de GTA VI",
+      "description": "GamingBible informa que The Sniper of La Perle (22 canciones, con Kodak Black como anfitrión) y The Vault Radio son playlists ocultas que se desbloquean escaneando carteles con la app WAINK; ambas cuentan para el progreso del 100%. Los créditos oficiales de Rockstar identifican a Kodak Black, Michaël Brun y DJ Pretzel en esas emisoras.",
+      "url": "https://www.gamingbible.com/news/gta-6-how-to-unlock-secret-radio-stations-790145-20261122",
+      "source": "GamingBible",
+      "published_at": "2026-11-22T12:00:00Z",
+      "date": "2026-11-22",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
+    },
+    {
+      "id": "gta-vi-snapmatic-social-feed-doomscrolling-business-insider-2026-11-22",
+      "title": "Snapmatic introduce un feed social que invita a hacer doomscrolling en GTA VI",
+      "description": "Business Insider describe el feed de Snapmatic, accesible desde el iFruit del juego, como una red social ficticia con publicaciones, memes y fotos que los jugadores pueden recorrer; el artículo recoge una sesión de juego y reacciones de usuarios.",
+      "url": "https://www.businessinsider.com/gta-6-doomscrolling-snapmatic-gaming-2026-11",
+      "source": "Business Insider",
+      "published_at": "2026-11-22T10:23:01.257Z",
+      "date": "2026-11-22",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
+    },
+    {
+      "id": "gta-vi-apollo-aggregates-hamlet-hidden-warehouse-loot-gamingbible-2026-11-21",
+      "title": "Guía reporta un almacén oculto con botín temprano cerca de Hamlet",
+      "description": "GamingBible sitúa el almacén Apollo Aggregates al este de Hamlet, en South Vice-Dale County. El lugar contendría billetes marcados, drogas y otros objetos que, tras transportarlos y venderlos a un comprador, podrían rendir alrededor de 14.000 dólares del juego; la cifra es aproximada y no está confirmada por Rockstar.",
+      "url": "https://www.gamingbible.com/news/gta-6-hidden-warehouse-14000-easy-money-location-951211-20261120",
+      "source": "GamingBible",
+      "published_at": "2026-11-21T20:00:00Z",
+      "date": "2026-11-21",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
+    },
     {
       "id": "a-guide-to-the-best-way-to-play-gta-6-according-to-rockstar-kotaku-0693967c5892",
       "title": "A Guide to The Best Way To Play GTA 6, According To Rockstar - Kotaku",
@@ -4440,6 +4473,6 @@
     "queries": 12,
     "failed_queries": 1,
     "new_discoveries_considered": 60,
-    "total_preserved_items": 322
+    "total_preserved_items": 325
   }
 }
