@@ -5293,6 +5293,17 @@
       "date": "2026-11-09",
       "kind": "confirmed",
       "status": "Confirmado"
+    },
+    {
+      "id": "gta-vi-reynolds-kit-car-five-wreck-locations-pc-gamer-2026-11-23",
+      "title": "PC Gamer localiza los cinco restos del Reynolds Kit Car para la colección de Wyman",
+      "description": "Una guía publicada el 23 de noviembre ubica los cinco restos del Reynolds Kit Car en el sur de Vice City, Casanova Island, Wild Hog Point, Watson Bay y Capri. Uno está dentro de un contenedor cerrado que requiere una herramienta de corte disponible al avanzar en el capítulo 3. La colección clásica forma parte del contenido de Ultimate Edition; los detalles de ubicaciones proceden de la guía, no de una lista oficial de Rockstar.",
+      "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-kit-car-locations/",
+      "source": "PC Gamer",
+      "published_at": "2026-11-23",
+      "date": "2026-11-23",
+      "kind": "reported",
+      "status": "Pendiente de verificación"
     }
   ],
   "diagnostics": {
